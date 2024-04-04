@@ -1,0 +1,249 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.logInBox {
+    width: 70%;
+    display: flex;
+    border: 1px solid #EBEBEB;
+    border-radius: 10px;
+}
+
+.boxLelt {
+    width: 50%;
+    background-image: url(../asset/bgImg.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.backWrapper {
+    margin-top: 80px;
+    width: 75%;
+}
+
+.backBTn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.backArrow {
+    height: 25px;
+
+}
+
+.logo {
+    width: 450px;
+    margin-top: 220px;
+}
+
+.logoHeading {
+    margin-top: 150px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    width: 52%;
+    text-align: center;
+    color: #8C8C8C;
+}
+
+
+
+.boxRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.logInHeading {
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.textField {
+    margin-top: 10px;
+    width: 70%;
+    height: 80px;
+    gap: 25px;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    z-index: 2;
+
+}
+
+.userInput {
+    margin-left: 20px;
+    outline: none;
+    border: none;
+    background: none;
+    width: 95%;
+    height: 35px;
+    font-size: 22px;
+    z-index: 1;
+}
+
+
+.userInputTwo {
+    margin-left: 20px;
+    outline: none;
+    border: none;
+    background: none;
+    width: 90%;
+    font-size: 22px;
+}
+
+.conutrySelect {
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+
+}
+
+.checkBox {
+    display: flex;
+    align-items: start;
+    width: 70%;
+    margin-top: 30px;
+
+}
+
+.checkBoxBtn {
+    width: 15px;
+    margin-top: 5px;
+}
+
+.terms {
+    font-weight: 400;
+    font-size: 18px;
+    margin-left: 10px;
+
+}
+
+.termpara {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    height: 70px;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.arrowImg {
+    width: 20px;
+}
+.btnheading{
+    margin-left: 10px;
+}
+.adminWrapper {
+    display: flex;
+    gap: 10px;
+    width: 70%;
+}
+
+.inputHeading {
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #8C8C8C;
+}
+
+.countryName {
+    border-bottom: 1px solid #00000027;
+    height: 30px;
+    background-color: #F3F3F3;
+    font-size: 24px;
+    border-radius: 2px;
+
+}
+
+.country {
+    margin-top: 30px;
+    height: 300px;
+    overflow-y: scroll;
+    border-radius: 5px;
+}
+.custom_phone_input{
+    width: 90%;
+    height: 35px;
+    margin-left: 20px;
+}
+
+
+.custom_phone_input > input{
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 25px;
+    z-index: 1;
+}
+
+.textFieldTwo {
+    margin-top: 10px;
+    width: 70%;
+    height: 70px;
+    gap: 20px;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+
+
+.inputWrapper {
+    margin-top: 10px;
+    width: 60%;
+    height: 70px;
+    gap: 25px;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    z-index: 2;
+
+}
+
+.btnWrapper {
+    width: 70%;
+    margin-top: 20px;
+}

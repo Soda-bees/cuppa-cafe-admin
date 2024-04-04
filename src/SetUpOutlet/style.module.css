@@ -1,0 +1,210 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.logInBox {
+    width: 70%;
+    display: flex;
+    border: 1px solid #EBEBEB;
+    border-radius: 10px;
+}
+
+.boxLelt {
+    width: 50%;
+    background-image: url(../asset/bgImg.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.backWrapper {
+    margin-top: 50px;
+    width: 75%;
+}
+
+.backBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.backArrow {
+    height: 25px;
+
+}
+
+.logo {
+    width: 450px;
+    margin-top: 220px;
+}
+
+.logoHeading {
+    margin-top: 150px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    width: 52%;
+    text-align: center;
+    color: #8C8C8C;
+}
+
+.bold {
+    font-weight: 700;
+    color: #555555;
+}
+
+.boxRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.logInHeading {
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+}
+
+.textFeild {
+    margin-top: 10px;
+    width: 70%;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+
+}
+
+.uploadImage {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+}
+
+.seletedImg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.inputImg {
+    visibility: none;
+    display: none;
+}
+
+.userInput {
+    outline: none;
+    border: none;
+    background: none;
+    width: 90%;
+    padding: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.uploadImgtext {
+    margin-top: 10px;
+}
+
+.clock {
+    width: 20px;
+    object-fit: contain;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    padding: 15px;
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+
+}
+
+.arrowImg {
+    width: 20px;
+}
+
+.btnWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.inputHaeding {
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #8C8C8C;
+}
+
+.country {
+    margin-top: 30px;
+    height: 300px;
+    overflow-y: scroll;
+    border-radius: 5px;
+
+
+}
+
+.countryName {
+    height: 30px;
+    background-color: #F3F3F3;
+    font-size: 24px;
+    border-radius: 2px;
+    border-bottom: 1px solid #00000027;
+
+}
+
+
+.conutrySelect {
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px;
+}

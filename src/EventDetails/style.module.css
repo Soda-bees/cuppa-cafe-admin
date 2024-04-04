@@ -1,0 +1,115 @@
+.headingWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+}
+
+.heading {
+    font-size: 30px;
+    font-weight: 600
+}
+
+.backBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.backArrow {
+    height: 25px;
+}
+
+.btn {
+    padding: 10px 50px;
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    color: #fff;
+}
+
+.EvnetDetailImg {
+    width: 450px;
+}
+
+.eventDeatailWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.eventDeatailRight {
+    width: 50%;
+}
+
+.EventDetailsInfo {
+    width: 100%;
+}
+
+.textField {
+    background-color: #F3F3F3;
+    width: 50%;
+   border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.inputHeading {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #8C8C8C;
+
+}
+
+.infoWrapper {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.btnWrapper {
+    margin: 15px;
+    width: 15%;
+}
+
+.userIput {
+    width: 98%;
+    background: none;
+    outline: none;
+    border: none;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 22px;
+}
+
+.registrationDropDown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.dropDownIcon {
+    width: 20px;
+}
+
+.registrationHeading {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.dropDown{
+    position: absolute;
+    top: 50px;
+    background-color: #F3F3F3;
+    width: 100%;
+} 
