@@ -61,11 +61,11 @@ export default function SignUp() {
                                 <img src={images.downArrow} /></div>}
                     </div>
                     <div className={style.textField}>
-                    <div className={style.inputHeading}>Email</div>
-                        <input className={style.userInput} type="text"  onChange={(e) => setEmail(e.target.value)} />
+                        <div className={style.inputHeading}>Email</div>
+                        <input className={style.userInput} type="text" onChange={(e) => setEmail(e.target.value)} />
                     </div>
                     <div className={style.textField}>
-                    <div className={style.inputHeading}>Contact Numbe</div>
+                        <div className={style.inputHeading}>Contact Numbe</div>
                         <PhoneInput
                             value={value}
                             defaultCountry='US'
@@ -74,8 +74,8 @@ export default function SignUp() {
                         />
                     </div>
                     <div className={style.textField}>
-                    <div className={style.inputHeading}>Password</div>
-                        <input className={style.userInput} type="text"  onChange={(e) => setPassword(e.target.value)} />
+                        <div className={style.inputHeading}>Password</div>
+                        <input className={style.userInput} type="text" onChange={(e) => setPassword(e.target.value)} />
                     </div>
                     <div className={style.checkBox}>
                         <img onClick={() => setIsChecked(!isChecked)} className={style.checkBoxBtn} src={isChecked ? images.checked : images.unChecked} />
@@ -85,19 +85,20 @@ export default function SignUp() {
                         </div>
                     </div>
                     <div className={style.btnWrapper}>
-                    <div className={style.btn}>
-                   <div className={style.btnheading}>
-                   Get Started
+                        <div className={style.btn}>
+                            <div className={style.btnheading}>
+                                Get Started
+                            </div>
+                            <div className={style.arrow}>
+                                <img className={style.arrowImg} src={images.singInArrow} />
+                            </div>
                         </div>
-                        <div className={style.arrow}>
-                            <img className={style.arrowImg} src={images.singInArrow} />
-                        </div>
-                    </div>
 
                     </div>
-                   
+
                 </div>
             </div>
+
         </div>
     )
 }

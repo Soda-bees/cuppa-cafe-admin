@@ -822,13 +822,12 @@
     align-items: center;
     background-color: #F3F3F3;
     border-radius: 10px;
-    height: 150px;
-    gap: 5px;
+    gap: 3px;
 }
 
 .textInput {
     outline: none;
-    width: 110px;
+    width: 150px;
     border: 2px solid #0000001b;
     border-radius: 5px;
     font-size: 20px;
@@ -838,7 +837,8 @@
 .inputWrapper {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+    margin-bottom: 5px;
 
 }
 
@@ -1055,13 +1055,12 @@
 
 .modalTime {
     width: 25%;
-    height: 30vh;
     position: absolute;
-    left: 25%;
-    top: 15%;
+    left: 37%;
+    top: 37%;
     background-color: #fff;
     outline: none;
-    background-color: red;
+    padding: 20px 0;
 }
 
 .timeWrapper {
@@ -1077,56 +1076,89 @@
 }
 
 .inputTitle {
-    padding: 0.01 * 100vw;
-    /* Adjust the padding based on the screen width */
-    color: gray;
     font-weight: 300;
+    width: 70%;
+    text-align: center;
+    color: #8C8C8C;
+
 }
 
 .timeRow {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 5px;
+}
+.timeTextRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px 100px;
+    margin-bottom: 10px;
+    width: 45%;
+    color: #8C8C8C;
+}
+.datePicker{
+    width: 98%;
+    background: none;
+    outline: none;
+    border: none;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 22px;
+
 }
 
-/* .timeInput {
-    font-size:;
-    background-color:;
-    padding: 0.03 * 100vw;;
-    margin: 0.02 * 100vw; ;
-    width: 0.28 * 100vw; ;
-    border-radius: 0.02 * 100vw; ;
-    color: Define your text color here;
-    font-family: 'Satoshi';
+.timeInput {
+    height: 50px;
+    width: 70px;
+    font-size: x-large;
     text-align: center;
-    font-weight: 400;
-  } */
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #60B0AA;
+}
 
-/* .semicolon {
-    font-size: ;
-} */
-/* 
-.timeView {
-    background-color:
-      
-    ;
+.columnEqual {
+    font-size: xx-large;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.btnCol {
+    flex-direction: column;
+    margin-left: 10px;
     align-items: center;
-    border-width:
-       
-    ;
-    border-radius:
-       
-    ;
-    border-color:
-       
-    ;
-} */
+    justify-content: center;
+    border: 2px solid #8C8C8C;
+    border-radius: 5px;
+}
 
-/* .focusedTimeInput {
-    border-width:
-      
-    ;
-    border-color:
-       
-    ;
-} */
+.clickable {
+    cursor: pointer;
+    color: #F3F3F3;
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    font-size: 20px;
+    border: 1px solid #8C8C8C;
+
+}
+.clickableTwo {
+    cursor: pointer;
+    background-color: #F3F3F3;
+    font-size: 20px;
+    border: 1px solid #8C8C8C;
+
+}
+
+.clickable:focus {
+    opacity: 0.5;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.calenderImg{
+    object-fit: contain;
+}

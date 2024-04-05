@@ -187,7 +187,7 @@ export default function Menu() {
         setSelectedImage(file);
     };
 
-    const [dateModal, setDateModal] = useState(false)
+    const [timeModal, setTimeModal] = useState(false)
     const [startTimeHour, setStartTimeHour] = useState('00');
     const [startTimeMinutes, setStartTimeMinutes] = useState('00');
     const [startTime, setStartTime] = useState('AM');
@@ -216,6 +216,47 @@ export default function Menu() {
                 setClosingTimeFinal(time);
             }
         }
+    };
+
+
+
+
+    const [amStart, setAmStart] = useState("AM")
+    const [amClose, setAmClose] = useState("PM")
+
+    const toggleAmPmStart  =(amPm)=>{
+        setAmStart(amPm)
+    }
+    const toggleAmPmClose  =(amPm)=>{
+        setAmClose(amPm)
+    }
+
+
+    // const [selectBtn, setSelectBtn] = useState(false)
+    // const [selectBtnTwo, setSelectBtnTwo] = useState(false)
+
+    const [filterTodo, setFilterTodo] = useState([]);
+
+    const addFilterTodo = () => {
+        // Create a new todo object and add it to the todos array
+        const newFilterTodo = {
+            name: '',
+            price: ''
+
+        };
+        setFilterTodo([...filterTodo, newFilterTodo]);
+    };
+
+    const handleFilterTodoChange = (index, field, value) => {
+        const updatedFilterTodos = [...filterTodo];
+        updatedFilterTodos[index] = { ...updatedFilterTodos[index], [field]: value };
+        setFilterTodo(updatedFilterTodos);
+    };
+
+    const deleteFilterTodo = (index) => {
+        const updatedFilterTodos = [...[...filterTodo]];
+        updatedFilterTodos.splice(index, 1);
+        setFilterTodo(updatedFilterTodos);
     };
 
 
@@ -535,7 +576,15 @@ export default function Menu() {
                                         </div>
                                         <div className={style.textfield}>
                                             <div className={style.inputHeading}>Valid Till</div>
-                                            <input className={style.userIput} onChange={(e) => setOfferValid(e.target.value)} />
+                                            <div className={style.dataWrapper}>
+                                                <DatePicker
+                                                    selected={startDate}
+                                                    onChange={(date) => setStartDate(date)}
+                                                    className={style.datePicker}
+                                                />
+                                                <img className={style.calenderImg} src={images.calendar} />
+                                            </div>
+
                                         </div>
                                     </div>
                                     <div className={style.offerInfoWrapper}>
@@ -559,12 +608,27 @@ export default function Menu() {
                                         <div className={style.infoWrapper}>
                                             <div className={style.discount}>
                                                 <div className={style.inputHeading}>Discount</div>
-                                                <div className={style.inputWrapper} >
+                                                {filterTodo.map((index, todo) => (
+                                                     <div key={index} className={style.inputWrapper} >
+                                                     <input type='text'onChange={(e) => handleFilterTodoChange(index, 'name', e.target.value)} value={todo.name} className={style.textInput} />
+                                                     <input type='text' onChange={(e) => handleFilterTodoChange(index, 'price', e.target.value)} value={todo.price} className={style.textInput} />
+                                                     <div onClick={() => deleteFilterTodo(index)} className={style.circle}><div className={style.greenLine}></div></div>
+                                                 </div>
+                                                ))}
+                                                    {/* <div className={style.row} key={index}>
+                                                        <div onClick={() => deleteFilterTodo(index)} className={style.circle}><div className={style.greenLine}></div></div>
+                                                        <div><input className={style.textInputFour} type='text' onChange={(e) => handleFilterTodoChange(index, 'name', e.target.value)} value={todo.name} /></div>
+                                                        <div><input className={style.textInputFour} type='text' onChange={(e) => handleFilterTodoChange(index, 'price', e.target.value)} value={todo.price} /></div>
+                                                    </div> */}
+
+
+
+                                                {/* <div className={style.inputWrapper} >
                                                     <input type='text' onChange={(e) => setDiscountOfferName(e.target.value)} className={style.textInput} />
                                                     <input type='text' onChange={(e) => setDiscountOfferPrice(e.target.value)} className={style.textInput} />
                                                     <div className={style.circle}><div className={style.greenLine}></div></div>
-                                                </div>
-                                                <div className={style.inputWrapper} >
+                                                </div> */}
+                                                {/* <div className={style.inputWrapper} >
                                                     <input type='text' onChange={(e) => setDiscountOfferNameTwo(e.target.value)} className={style.textInput} />
                                                     <input type='text' onChange={(e) => setDiscountOfferPriceTwo(e.target.value)} className={style.textInput} />
                                                     <div className={style.circle}><div className={style.greenLine}></div></div>
@@ -573,11 +637,11 @@ export default function Menu() {
                                                     <input type='text' className={style.textInput} onChange={(e) => setDiscountOfferNameThree(e.target.value)} />
                                                     <input type='text' className={style.textInput} onChange={(e) => setDiscountOfferPriceThree(e.target.value)} />
                                                     <div className={style.circle}><div className={style.greenLine}></div></div>
-                                                </div>
+                                                </div> */}
                                             </div>
                                             <div className={style.offerModalBtn}>
                                                 <div className={style.modalBtnWrapper}>
-                                                    <div className={style.modalBtn}>
+                                                    <div onClick={addFilterTodo} className={style.modalBtn}>
                                                         <img src={images.plusIcon} />
                                                         Add product
                                                     </div>
@@ -636,12 +700,9 @@ export default function Menu() {
                                                 Upcoming
                                             </div>
                                         </div>
-
                                     </div>
                                 ))}
                             </div>
-
-
                         </div>
 
                         <Modal isOpen={isEventModalVisible} onRequestClose={() => setIsEventModalVisible(false)} className={style.modalEvent}>
@@ -692,24 +753,29 @@ export default function Menu() {
                                             <div className={style.eventinputHeading}>
                                                 <div className={style.inputHeading}>Date</div>
                                                 <div className={style.dataWrapper}>
-                                                    <DatePicker selected={startDate}
+                                                    <DatePicker
+                                                        selected={startDate}
                                                         onChange={(date) => setStartDate(date)}
                                                         className={style.datePicker}
                                                     />
-                                                    <img src={images.calendar} />
+                                                    <img className={style.calenderImg} src={images.calendar} />
                                                 </div>
                                             </div>
                                         </div>
                                         <div className={style.eventInfoWrapper}>
                                             <div className={style.eventinputHeading}>
                                                 <div className={style.inputHeading}>Time</div>
-                                                <div className={style.timeWrapper} onClick={() => setDateModal(true)}>
-                                                    <input className={style.userIput} />
+                                                <div className={style.timeWrapper} onClick={() => setTimeModal(true)}>
+                                                    <div className={style.userIput}>{startTimeHour}:{startTimeMinutes} {amStart} - {closingTimeHour} : {closingTimeMinutes} {amClose} </div>
                                                     <img className={style.clockImg} src={images.clock} />
                                                 </div>
                                             </div>
                                             <div className={style.eventinputHeading}>
                                                 <div className={style.inputHeading}>Event Type</div>
+                                                <div className={style.registrationDropDown}>
+                                                    <div className={style.registrationHeading}>Exclusive</div>
+                                                    <img className={style.dropDownIcon} src={images.downArrow} />
+                                                </div>
                                             </div>
                                         </div>
                                         <div className={style.eventInfoWrapper}>
@@ -732,53 +798,64 @@ export default function Menu() {
                                 </div>
                             </div>
                         </Modal>
-                        <Modal isOpen={dateModal} onRequestClose={() => setDateModal(false)} className={style.modalTime}>
+                        <Modal isOpen={timeModal} onRequestClose={() => setTimeModal(false)} className={style.modalTime}>
                             <>
                                 <div>
                                     <div>
-                                        <label className={style.inputTitle}>Opening Time</label>
-                                        <div class ={style.timeRow} >
+                                        <div className={style.inputTitle}>Opening Time</div>
+                                        <div class={style.timeRow} >
                                             <input
-                                                style={{ borderColor: focusedInput === 'startHour' ? 'blue' : 'gray' }}
                                                 value={startTimeHour}
                                                 onChange={(e) => handleInputChange(e.target.value, setStartTimeHour, 12)}
                                                 type="number"
-                                                class ={style.timeInput}
+                                                class={style.timeInput}
                                                 onFocus={() => handleFocus('startHour')}
                                             />
-                                            :
+                                            <div class={style.columnEqual}>:</div>
                                             <input
-                                                style={{ borderColor: focusedInput === 'startMinutes' ? 'blue' : 'gray' }}
                                                 value={startTimeMinutes}
                                                 onChange={(e) => handleInputChange(e.target.value, setStartTimeMinutes, 60)}
                                                 type="number"
+                                                class={style.timeInput}
                                                 onFocus={() => handleFocus('startMinutes')}
                                             />
-                                            <button onClick={() => handleTimeToggle('AM')} style={{ color: startTime === 'AM' ? 'blue' : 'black' }}>AM</button>
-                                            <button onClick={() => handleTimeToggle('PM')} style={{ color: startTime === 'PM' ? 'blue' : 'black' }}>PM</button>
+                                            <div className={style.btnCol}>
+                                                <div className={amStart === "AM"?style.clickable  : style.clickableTwo } onClick={() => {toggleAmPmStart("AM")}} >AM</div>
+                                                <div className={amStart === "PM" ?style.clickable: style.clickableTwo} onClick={() => { toggleAmPmStart("PM")}} >PM</div>
+                                            </div>
+                                        </div>
+                                        <div class={style.timeTextRow}>
+                                            <div>Hour</div>
+                                            <div>Minute</div>
                                         </div>
                                     </div>
 
                                     <div>
-                                        <label class={style.inputTitle}>Closing Time</label>
-                                        <div class ={style.timeRow}>
-                                            <input  class ={style.timeInput}
-                                                style={{ borderColor: focusedInput === 'closingHour' ? 'blue' : 'gray' }}
+                                        <div class={style.inputTitle}>Closing Time</div>
+                                        <div class={style.timeRow}>
+                                            <input class={style.timeInput}
                                                 value={closingTimeHour}
                                                 onChange={(e) => handleInputChange(e.target.value, setClosingTimeHour, 12)}
                                                 type="number"
                                                 onFocus={() => handleFocus('closingHour')}
                                             />
-                                            :
+                                            <div class={style.columnEqual}>:</div>
+
                                             <input
-                                                style={{ borderColor: focusedInput === 'closingMinutes' ? 'blue' : 'gray' }}
                                                 value={closingTimeMinutes}
                                                 onChange={(e) => handleInputChange(e.target.value, setClosingTimeMinutes, 60)}
                                                 type="number"
+                                                class={style.timeInput}
                                                 onFocus={() => handleFocus('closingMinutes')}
                                             />
-                                            <button onClick={() => handleTimeToggle('AM')} style={{ color: closingTime === 'AM' ? 'blue' : 'black' }}>AM</button>
-                                            <button onClick={() => handleTimeToggle('PM')} style={{ color: closingTime === 'PM' ? 'blue' : 'black' }}>PM</button>
+                                            <div className={style.btnCol}>
+                                                <div className={amClose === "AM"?style.clickable  : style.clickableTwo } onClick={() => toggleAmPmClose("AM")} >AM</div>
+                                                <div className={amClose === "PM" ?style.clickable: style.clickableTwo} onClick={() =>toggleAmPmClose("PM")}>PM</div>
+                                            </div>
+                                        </div>
+                                        <div class={style.timeTextRow}>
+                                            <div>Hour</div>
+                                            <div>Minute</div>
                                         </div>
                                     </div>
                                 </div>
