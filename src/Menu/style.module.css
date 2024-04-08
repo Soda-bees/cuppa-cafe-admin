@@ -774,12 +774,6 @@
     font: 500;
 }
 
-.addOffer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-}
 
 .textFieldWrapper {
     width: 90%;
