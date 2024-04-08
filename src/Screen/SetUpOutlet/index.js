@@ -1,6 +1,6 @@
 import { React, useState } from 'react'
 import style from './style.module.css'
-import images from '../asset/index'
+import images from '../../asset/index'
 import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css';
 import { Country } from 'country-state-city';
