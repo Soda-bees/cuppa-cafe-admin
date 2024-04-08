@@ -689,11 +689,11 @@ export default function Menu() {
                                 <div className={style.offerHeadingWrapper}>
                                     <div onClick={() => setBtn(!btn)}>
                                         <div className={btn ? style.word : style.greenBtn} >
-                                            Current  Offers
+                                        Upcoming Events
                                         </div>
                                     </div>
                                     <div onClick={() => setBtn(!btn)}  >
-                                        <div className={btn ? style.greenBtn : style.word} >Past Offers</div>
+                                        <div className={btn ? style.greenBtn : style.word} >Past Events</div>
                                     </div>
                                 </div>
 
