@@ -59,10 +59,10 @@ export default function SetUpOutlet() {
     const [amStart, setAmStart] = useState("AM")
     const [amClose, setAmClose] = useState("PM")
 
-    const toggleAmPmStart  =(amPm)=>{
+    const toggleAmPmStart = (amPm) => {
         setAmStart(amPm)
     }
-    const toggleAmPmClose  =(amPm)=>{
+    const toggleAmPmClose = (amPm) => {
         setAmClose(amPm)
     }
 
@@ -89,14 +89,14 @@ export default function SetUpOutlet() {
                     <div className={style.logInHeading}>Set-Up Outlet</div>
                     <div className={style.textFeild}>
                         <label for="img" className={style.uploadImage}  >
-                        <img src={selectedImage ? URL.createObjectURL(selectedImage) : images.uploadImgIcon} className={selectedImage ?   style.seletedImg : style.icon} alt="Upload Image" />
-                                <input
-                                    id="img"
-                                    className={style.inputImg}
-                                    type='file'
-                                    accept="image/png,image/jpeg"
-                                    onChange={handleImageChange}
-                                />
+                            <img src={selectedImage ? URL.createObjectURL(selectedImage) : images.uploadImgIcon} className={selectedImage ? style.seletedImg : style.icon} alt="Upload Image" />
+                            <input
+                                id="img"
+                                className={style.inputImg}
+                                type='file'
+                                accept="image/png,image/jpeg"
+                                onChange={handleImageChange}
+                            />
                             {/* <img src={images.uploadImgIcon} />
                             <input className={style.inputImg} id="img" type='file' accept="image/png,image/jpeg" /> */}
                         </label>
@@ -104,7 +104,6 @@ export default function SetUpOutlet() {
                     <div className={style.uploadImgtext}>
                         Upload Cover
                     </div>
-
                     <div className={style.textFeild}>
                         <div className={style.inputHaeding}>Outlet Name</div>
                         <input className={style.userInput} type="text" onChange={(e) => setOutletName(e.target.value)} />
@@ -113,26 +112,61 @@ export default function SetUpOutlet() {
                         <div className={style.inputHaeding}>Description</div>
                         <input className={style.userInput} type="text" onChange={(e) => setDescription(e.target.value)} />
                     </div>
-
                     <div className={style.textFeild}>
                         <div className={style.inputHaeding}>Time</div>
-                        <div onClick={()=> setTimeModal(!timeModal)} className={style.userInput}>
-                        <div className={style.userIput}>{startTimeHour}:{startTimeMinutes} {amStart} - {closingTimeHour} : {closingTimeMinutes} {amClose} </div>
+                        <div onClick={() => setTimeModal(!timeModal)} className={style.userInput}>
+                            <div className={style.userIput}>{startTimeHour}:{startTimeMinutes} {amStart} - {closingTimeHour} : {closingTimeMinutes} {amClose} </div>
                             <img className={style.clock} src={images.clock} />
                         </div>
                     </div>
-                    <div className={style.textFeild}>
-                        <div className={style.inputHaeding}>Location</div>
-                        {selectedCountry ? <div className={style.country}>
-                            {country.map((country, index) => (
-                                <div key={index} onClick={() => {
-                                    setcountryName(country.name)
-                                    setSelectedCountry(!selectedCountry)
-                                }} className={style.countryName}>{country.name}</div>
-                            ))}
+                    {/* <div className={style.dropdownWraper}>
+                        <div className={style.textFeildTwo}>
+                            <div className={style.inputHaeding}>Location</div>
+                            {selectedCountry ? <div className={style.country}>
+                                {country.map((country, index) => (
+                                    <div key={index} onClick={() => {
+                                        setcountryName(country.name)
+                                        setSelectedCountry(!selectedCountry)
+                                    }} className={style.countryName}>{country.name}</div>
+                                ))}
+                            </div>
+                                :
+                                <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName} <img src={images.downArrow} /></div>}
                         </div>
-                            :
-                            <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName} <img src={images.downArrow} /></div>}
+                        <div className={style.btnWrapper}>
+                            <div className={style.btn}>
+                                Get Started
+                                <div className={style.arrow}>
+                                    <img className={style.arrowImg} src={images.singInArrow} />
+                                </div>
+                            </div>
+                        </div>
+                    </div> */}
+                    <div className={style.textFeildTwo}>
+                        <div className={style.inputHaeding}>Location</div>
+                        {/* {selectedCountry ? <div className={style.country}>
+                                {country.map((country, index) => (
+                                    <div key={index} onClick={() => {
+                                        setcountryName(country.name)
+                                        setSelectedCountry(!selectedCountry)
+                                    }} className={style.countryName}>{country.name}</div>
+                                ))}
+                            </div>
+                                :
+                                </div>} */}
+                        <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName}
+                            <img src={images.downArrow} />
+                        </div>
+                            {selectedCountry && (
+                                <div className={style.country}>
+                                    {country.map((country, index) => (
+                                        <div key={index} onClick={() => {
+                                            setcountryName(country.name)
+                                            setSelectedCountry(!selectedCountry)
+                                        }} className={style.countryName}>{country.name}</div>
+                                    ))}
+                                </div>
+                            )}
                     </div>
                     <div className={style.btnWrapper}>
                         <div className={style.btn}>
@@ -142,6 +176,7 @@ export default function SetUpOutlet() {
                             </div>
                         </div>
                     </div>
+
                     {/* <div className={style.btn}>
                         Get Started
                         <div className={style.arrow}>
@@ -152,68 +187,68 @@ export default function SetUpOutlet() {
                 </div>
             </div>
             <Modal isOpen={timeModal} onRequestClose={() => setTimeModal(false)} className={style.modalTime}>
-                            <>
-                                <div>
-                                    <div>
-                                        <div className={style.inputTitle}>Opening Time</div>
-                                        <div class={style.timeRow} >
-                                            <input
-                                                value={startTimeHour}
-                                                onChange={(e) => handleInputChange(e.target.value, setStartTimeHour, 12)}
-                                                type="number"
-                                                class={style.timeInput}
-                                                onFocus={() => handleFocus('startHour')}
-                                            />
-                                            <div class={style.columnEqual}>:</div>
-                                            <input
-                                                value={startTimeMinutes}
-                                                onChange={(e) => handleInputChange(e.target.value, setStartTimeMinutes, 60)}
-                                                type="number"
-                                                class={style.timeInput}
-                                                onFocus={() => handleFocus('startMinutes')}
-                                            />
-                                            <div className={style.btnCol}>
-                                                <div className={amStart === "AM"?style.clickable  : style.clickableTwo } onClick={() => {toggleAmPmStart("AM")}} >AM</div>
-                                                <div className={amStart === "PM" ?style.clickable: style.clickableTwo} onClick={() => { toggleAmPmStart("PM")}} >PM</div>
-                                            </div>
-                                        </div>
-                                        <div class={style.timeTextRow}>
-                                            <div>Hour</div>
-                                            <div>Minute</div>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <div class={style.inputTitle}>Closing Time</div>
-                                        <div class={style.timeRow}>
-                                            <input class={style.timeInput}
-                                                value={closingTimeHour}
-                                                onChange={(e) => handleInputChange(e.target.value, setClosingTimeHour, 12)}
-                                                type="number"
-                                                onFocus={() => handleFocus('closingHour')}
-                                            />
-                                            <div class={style.columnEqual}>:</div>
-
-                                            <input
-                                                value={closingTimeMinutes}
-                                                onChange={(e) => handleInputChange(e.target.value, setClosingTimeMinutes, 60)}
-                                                type="number"
-                                                class={style.timeInput}
-                                                onFocus={() => handleFocus('closingMinutes')}
-                                            />
-                                            <div className={style.btnCol}>
-                                                <div className={amClose === "AM"?style.clickable  : style.clickableTwo } onClick={() => toggleAmPmClose("AM")} >AM</div>
-                                                <div className={amClose === "PM" ?style.clickable: style.clickableTwo} onClick={() =>toggleAmPmClose("PM")}>PM</div>
-                                            </div>
-                                        </div>
-                                        <div class={style.timeTextRow}>
-                                            <div>Hour</div>
-                                            <div>Minute</div>
-                                        </div>
-                                    </div>
+                <>
+                    <div>
+                        <div>
+                            <div className={style.inputTitle}>Opening Time</div>
+                            <div class={style.timeRow} >
+                                <input
+                                    value={startTimeHour}
+                                    onChange={(e) => handleInputChange(e.target.value, setStartTimeHour, 12)}
+                                    type="number"
+                                    class={style.timeInput}
+                                    onFocus={() => handleFocus('startHour')}
+                                />
+                                <div class={style.columnEqual}>:</div>
+                                <input
+                                    value={startTimeMinutes}
+                                    onChange={(e) => handleInputChange(e.target.value, setStartTimeMinutes, 60)}
+                                    type="number"
+                                    class={style.timeInput}
+                                    onFocus={() => handleFocus('startMinutes')}
+                                />
+                                <div className={style.btnCol}>
+                                    <div className={amStart === "AM" ? style.clickable : style.clickableTwo} onClick={() => { toggleAmPmStart("AM") }} >AM</div>
+                                    <div className={amStart === "PM" ? style.clickable : style.clickableTwo} onClick={() => { toggleAmPmStart("PM") }} >PM</div>
                                 </div>
-                            </>
-                        </Modal>
+                            </div>
+                            <div class={style.timeTextRow}>
+                                <div>Hour</div>
+                                <div>Minute</div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class={style.inputTitle}>Closing Time</div>
+                            <div class={style.timeRow}>
+                                <input class={style.timeInput}
+                                    value={closingTimeHour}
+                                    onChange={(e) => handleInputChange(e.target.value, setClosingTimeHour, 12)}
+                                    type="number"
+                                    onFocus={() => handleFocus('closingHour')}
+                                />
+                                <div class={style.columnEqual}>:</div>
+
+                                <input
+                                    value={closingTimeMinutes}
+                                    onChange={(e) => handleInputChange(e.target.value, setClosingTimeMinutes, 60)}
+                                    type="number"
+                                    class={style.timeInput}
+                                    onFocus={() => handleFocus('closingMinutes')}
+                                />
+                                <div className={style.btnCol}>
+                                    <div className={amClose === "AM" ? style.clickable : style.clickableTwo} onClick={() => toggleAmPmClose("AM")} >AM</div>
+                                    <div className={amClose === "PM" ? style.clickable : style.clickableTwo} onClick={() => toggleAmPmClose("PM")}>PM</div>
+                                </div>
+                            </div>
+                            <div class={style.timeTextRow}>
+                                <div>Hour</div>
+                                <div>Minute</div>
+                            </div>
+                        </div>
+                    </div>
+                </>
+            </Modal>
         </div>
     )
 }

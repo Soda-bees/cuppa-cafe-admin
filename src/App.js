@@ -16,9 +16,9 @@ function App() {
   return (
     <div >
     {/* <AdminLogIn/> */}
-    <SignUp/>
-    <SetUpOutlet/>
-    {/* <Menu/> */}
+    {/* <SignUp/> */}
+    {/* <SetUpOutlet/> */}
+    <Menu/>
     {/* <AddItem/> */}
     {/* <ItemDetails/> */}
     {/* <OfferDetails/> */}

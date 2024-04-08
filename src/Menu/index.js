@@ -168,7 +168,6 @@ export default function Menu() {
     const [eventDropDown, seteventDropDown] = useState(false)
     const [registration, setRegistration] = useState("select")
 
-
     const [categoryName, setCategoryName] = useState('')
     const [offerTitle, setOfferTitle] = useState('')
     const [offerValid, setOfferValid] = useState('')
@@ -197,6 +196,7 @@ export default function Menu() {
     const [focusedInput, setFocusedInput] = useState(null);
     const [closingTimeFinal, setClosingTimeFinal] = useState('AM');
     const [startTimeFinal, setStartTimeFinal] = useState('AM');
+    const [selectBtn, setSelectBtn] = useState(false)
 
     const handleInputChange = (text, setter, maxValue) => {
         if (text === '' || (Number(text) >= 0 && Number(text) <= maxValue)) {
@@ -222,12 +222,12 @@ export default function Menu() {
 
 
     const [amStart, setAmStart] = useState("AM")
-    const [amClose, setAmClose] = useState("PM")
+    const [amClose, setAmClose] = useState("AM")
 
-    const toggleAmPmStart  =(amPm)=>{
+    const toggleAmPmStart = (amPm) => {
         setAmStart(amPm)
     }
-    const toggleAmPmClose  =(amPm)=>{
+    const toggleAmPmClose = (amPm) => {
         setAmClose(amPm)
     }
 
@@ -416,9 +416,16 @@ export default function Menu() {
                                         <div className={style.activeHeading}>
                                             Active on Menu
                                         </div>
-                                        <div className={style.ovalBtn}>
-                                            <div className={style.whiteBtn}></div>
-                                        </div>
+                                        {selectBtn ? (
+                                            <div className={style.ovalBtn} onClick={() => setSelectBtn(!selectBtn)}>
+                                                <div className={style.whiteBtn}></div>
+                                            </div>
+                                        ) : (
+                                            <div className={style.notSelectedBtn} onClick={() => setSelectBtn(!selectBtn)}>
+                                                <div className={style.notSelectedgreen}></div>
+                                            </div>
+                                        )}
+
                                     </div>
                                 </div>
                             </div>
@@ -466,9 +473,16 @@ export default function Menu() {
                                         <div className={style.activeHeading}>
                                             Active on Menu
                                         </div>
-                                        <div className={style.ovalBtn}>
-                                            <div className={style.whiteBtn}></div>
-                                        </div>
+                                        {selectBtn ? (
+                                            <div className={style.ovalBtn} onClick={() => setSelectBtn(!selectBtn)}>
+                                                <div className={style.whiteBtn}></div>
+                                            </div>
+                                        ) : (
+                                            <div className={style.notSelectedBtn} onClick={() => setSelectBtn(!selectBtn)}>
+                                                <div className={style.notSelectedgreen}></div>
+                                            </div>
+                                        )}
+
                                     </div>
                                 </div>
                             </div>
@@ -609,13 +623,13 @@ export default function Menu() {
                                             <div className={style.discount}>
                                                 <div className={style.inputHeading}>Discount</div>
                                                 {filterTodo.map((index, todo) => (
-                                                     <div key={index} className={style.inputWrapper} >
-                                                     <input type='text'onChange={(e) => handleFilterTodoChange(index, 'name', e.target.value)} value={todo.name} className={style.textInput} />
-                                                     <input type='text' onChange={(e) => handleFilterTodoChange(index, 'price', e.target.value)} value={todo.price} className={style.textInput} />
-                                                     <div onClick={() => deleteFilterTodo(index)} className={style.circle}><div className={style.greenLine}></div></div>
-                                                 </div>
+                                                    <div key={index} className={style.inputWrapper} >
+                                                        <input type='text' onChange={(e) => handleFilterTodoChange(index, 'name', e.target.value)} value={todo.name} className={style.textInput} />
+                                                        <input type='text' onChange={(e) => handleFilterTodoChange(index, 'price', e.target.value)} value={todo.price} className={style.textInput} />
+                                                        <div onClick={() => deleteFilterTodo(index)} className={style.circle}><div className={style.greenLine}></div></div>
+                                                    </div>
                                                 ))}
-                                                    {/* <div className={style.row} key={index}>
+                                                {/* <div className={style.row} key={index}>
                                                         <div onClick={() => deleteFilterTodo(index)} className={style.circle}><div className={style.greenLine}></div></div>
                                                         <div><input className={style.textInputFour} type='text' onChange={(e) => handleFilterTodoChange(index, 'name', e.target.value)} value={todo.name} /></div>
                                                         <div><input className={style.textInputFour} type='text' onChange={(e) => handleFilterTodoChange(index, 'price', e.target.value)} value={todo.price} /></div>
@@ -820,8 +834,8 @@ export default function Menu() {
                                                 onFocus={() => handleFocus('startMinutes')}
                                             />
                                             <div className={style.btnCol}>
-                                                <div className={amStart === "AM"?style.clickable  : style.clickableTwo } onClick={() => {toggleAmPmStart("AM")}} >AM</div>
-                                                <div className={amStart === "PM" ?style.clickable: style.clickableTwo} onClick={() => { toggleAmPmStart("PM")}} >PM</div>
+                                                <div className={amStart === "AM" ? style.clickable : style.clickableTwo} onClick={() => { toggleAmPmStart("AM") }} >AM</div>
+                                                <div className={amStart === "PM" ? style.clickable : style.clickableTwo} onClick={() => { toggleAmPmStart("PM") }} >PM</div>
                                             </div>
                                         </div>
                                         <div class={style.timeTextRow}>
@@ -849,8 +863,8 @@ export default function Menu() {
                                                 onFocus={() => handleFocus('closingMinutes')}
                                             />
                                             <div className={style.btnCol}>
-                                                <div className={amClose === "AM"?style.clickable  : style.clickableTwo } onClick={() => toggleAmPmClose("AM")} >AM</div>
-                                                <div className={amClose === "PM" ?style.clickable: style.clickableTwo} onClick={() =>toggleAmPmClose("PM")}>PM</div>
+                                                <div className={amClose === "AM" ? style.clickable : style.clickableTwo} onClick={() => toggleAmPmClose("AM")} >AM</div>
+                                                <div className={amClose === "PM" ? style.clickable : style.clickableTwo} onClick={() => toggleAmPmClose("PM")}>PM</div>
                                             </div>
                                         </div>
                                         <div class={style.timeTextRow}>

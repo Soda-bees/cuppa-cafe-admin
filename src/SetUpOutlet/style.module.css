@@ -87,7 +87,23 @@
     width: 70%;
     background-color: #F3F3F3;
     border-radius: 10px;
-    z-index: 2;
+
+}
+
+.dropdownWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textFeildTwo {
+    margin-top: 10px;
+    width: 70%;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    z-index: 3;
+    position: relative;
 
 }
 
@@ -111,6 +127,7 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .inputImg {
@@ -155,6 +172,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     cursor: pointer;
+    z-index: 2;
 }
 
 .arrow {
@@ -165,6 +183,7 @@
     width: 40px;
     height: 40px;
     border-radius: 5px;
+    z-index: 1;
 
 }
 
@@ -186,11 +205,11 @@
 }
 
 .country {
-    margin-top: 30px;
-    height: 300px;
+    width: 100%;
+    height: 110px;
     overflow-y: scroll;
     border-radius: 5px;
-
+    position: absolute;
 
 }
 
@@ -200,7 +219,6 @@
     font-size: 24px;
     border-radius: 2px;
     border-bottom: 1px solid #00000027;
-
 }
 
 
@@ -250,6 +268,7 @@
     justify-content: center;
     margin-top: 5px;
 }
+
 .timeTextRow {
     display: flex;
     align-items: center;
@@ -259,7 +278,8 @@
     width: 45%;
     color: #8C8C8C;
 }
-.datePicker{
+
+.datePicker {
     width: 98%;
     background: none;
     outline: none;
@@ -303,6 +323,7 @@
     border: 1px solid #8C8C8C;
 
 }
+
 .clickableTwo {
     cursor: pointer;
     background-color: #F3F3F3;
@@ -314,13 +335,14 @@
 .clickable:focus {
     opacity: 0.5;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-.calenderImg{
+.calenderImg {
     object-fit: contain;
 }
 
@@ -333,4 +355,8 @@ input::-webkit-inner-spin-button {
     /* padding-left: 10px; */
     font-size: 22px;
     resize: none;
+}
+
+.dropDown {
+    height: 2px;
 }
