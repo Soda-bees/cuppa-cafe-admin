@@ -25,9 +25,6 @@ export default function Menu() {
 
 
     const [startDate, setStartDate] = useState(new Date());
-
-
-
     const [cardData, setCardData] = useState([
         {
 
@@ -489,7 +486,6 @@ export default function Menu() {
                         </Modal>
                     </>
                 }
-
                 {isSelected === "offer" &&
                     <>
                         <div className={style.menu}>
