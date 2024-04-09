@@ -148,6 +148,7 @@
     align-items: center;
     font-size: 20px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .optionIcon {
@@ -237,4 +238,54 @@
     margin-right: 10px;
     border-radius: 10px;
     width: 380px;
+}
+
+
+.textField {
+    margin-top: 10px;
+    width: 40%;
+    height: 80px;
+    gap: 25px;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+
+.inputHeading {
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #8C8C8C;
+    /* font-size: 14px; */
+    
+}
+
+.userInput {
+    margin-left: 20px;
+    outline: none;
+    border: none;
+    background: none;
+    width: 95%;
+    height: 35px;
+    font-size: 17px;
+    z-index: 1;
+    outline: none;
+
+}
+
+
+.custom_phone_input{
+    width: 90%;
+    height: 35px;
+    margin-left: 20px;
+
+}
+
+
+.custom_phone_input > input{
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 17px;
+    z-index: 1;
 }

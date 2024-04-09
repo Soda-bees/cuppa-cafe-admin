@@ -4,6 +4,9 @@ import images from '../../asset/index'
 import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css';
 import { Country } from 'country-state-city';
+import { useNavigate } from "react-router-dom";
+import {useDispatch} from "react-redux"
+import { setAuthToken } from '../../store/authTokenSlice';
 
 export default function SignUp() {
     const [value, setValue] = useState('')
@@ -14,9 +17,17 @@ export default function SignUp() {
     const [password, setPassword] = useState('')
     const [isChecked, setIsChecked] = useState(false)
     const [countryName, setcountryName] = useState("Select Country")
-
-
     const country = Country.getAllCountries()
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch()
+
+  const handleSignin = () => {
+    const token = "authToken";
+    dispatch(setAuthToken(token));
+    navigate("/menu");
+  };
+
 
     return (
 
@@ -65,7 +76,7 @@ export default function SignUp() {
                         <input className={style.userInput} type="text" onChange={(e) => setEmail(e.target.value)} />
                     </div>
                     <div className={style.textField}>
-                        <div className={style.inputHeading}>Contact Numbe</div>
+                        <div className={style.inputHeading}>Contact Number</div>
                         <PhoneInput
                             value={value}
                             defaultCountry='US'
@@ -75,7 +86,7 @@ export default function SignUp() {
                     </div>
                     <div className={style.textField}>
                         <div className={style.inputHeading}>Password</div>
-                        <input className={style.userInput} type="text" onChange={(e) => setPassword(e.target.value)} />
+                        <input className={style.userInput} type="password" onChange={(e) => setPassword(e.target.value)} />
                     </div>
                     <div className={style.checkBox}>
                         <img onClick={() => setIsChecked(!isChecked)} className={style.checkBoxBtn} src={isChecked ? images.checked : images.unChecked} />
@@ -85,7 +96,8 @@ export default function SignUp() {
                         </div>
                     </div>
                     <div className={style.btnWrapper}>
-                        <div className={style.btn}>
+                        <div className={style.btn}
+                        onClick={handleSignin}>
                             <div className={style.btnheading}>
                                 Get Started
                             </div>

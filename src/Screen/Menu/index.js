@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import style from "./style.module.css";
 import Modal from "react-modal";
 import images from "../../asset";
+import { useNavigate } from "react-router-dom";
+import Pagination from "../../Component/Pagination";
 
 export default function Menu() {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -9,11 +11,16 @@ export default function Menu() {
     setDropDown(dropDown === index ? null : index);
   };
 
+  const navigate = useNavigate();
+
+  // import { useDispatch } from 'react-redux';
+  // const dispatch = useDispatch()
+  // dispatch(clearAuthToken())
+
   const [dropDown, setDropDown] = useState(null);
 
   const [isEditModalVisible, setIsEditModalVisible] = useState(false);
-  const [search, setSearch] = useState('')
-
+  const [search, setSearch] = useState("");
 
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -90,14 +97,203 @@ export default function Menu() {
     {
       images: images.cappuccino,
     },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
+    {
+      images: images.cappuccino,
+    },
   ]);
 
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const productsPerPage = 10;
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = itemCard.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  );
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
-    // <div className={style.container}>
-    //   <div className={style.childContainer}>
-    //     Hello
-    //   </div>
-    // </div>
     <div className={style.container}>
       <div className={style.searchWrapper}>
         <div className={style.searh}>
@@ -147,7 +343,7 @@ export default function Menu() {
                         className={style.edit}
                       >
                         <img className={style.editIcon} src={images.editIcon} />
-                        Edit
+                        <div >Edit</div>
                       </div>
                       <div className={style.line}></div>
                       <div className={style.remove}>
@@ -159,7 +355,10 @@ export default function Menu() {
                       </div>
                     </div>
                   ) : (
-                    <img src={images.dotMenuIcon} />
+                    <img
+                      className={style.itemsCenter}
+                      src={images.dotMenuIcon}
+                    />
                   )}
                 </div>
                 <div className={style.itemsCenter}>
@@ -175,13 +374,13 @@ export default function Menu() {
             <img className={style.headingIcon} src={images.coffeeItemIcon} />
             Coffees Items
           </div>
-          <div className={style.btn}>
+          <div className={style.btn} onClick={() => navigate("/AddItem")}>
             <img className={style.plusIcon} src={images.plusIcon} />
             Add Items
           </div>
         </div>
         <div className={style.row}>
-          {itemCard.map((item, index) => (
+          {currentProducts.map((item, index) => (
             <div key={index} className={style.itemCard}>
               <img className={style.itemCardImg} src={item.images} />
               <div>
@@ -352,6 +551,11 @@ export default function Menu() {
           </div>
         </div>
       </Modal>
+      <Pagination
+        currentPage={currentPage}
+        totalPages={Math.ceil(itemCard.length / productsPerPage)}
+        onPageChange={handlePageChange}
+      />
     </div>
   );
 }

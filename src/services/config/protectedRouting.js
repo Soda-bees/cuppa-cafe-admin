@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 function ProtectedRoute(props) {
   const { Compunent } = props;
   const navigate = useNavigate();
-  //   const [authToken, setAuthToken] = useState('');
   const authToken = useSelector(selectAuthToken);
 
   const haveUser = async () => {
@@ -17,7 +16,7 @@ function ProtectedRoute(props) {
 
   useEffect(() => {
     haveUser();
-  });
+  }, [authToken]);
 
   return (
     <>

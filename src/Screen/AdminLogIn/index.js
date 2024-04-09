@@ -7,10 +7,17 @@ import { setAuthToken } from "../../store/authTokenSlice";
 
 export default function AdminLogIn() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [userName, setUserName] = useState("");
   const [Password, setUserPassword] = useState("");
-  const navigate = useNavigate();
+
+  const handleSignin = () => {
+    const token = "authToken";
+    dispatch(setAuthToken(token));
+    navigate("/menu");
+  };
+
   return (
     <div className={style.container}>
       <div className={style.logInBox}>
@@ -41,16 +48,11 @@ export default function AdminLogIn() {
             <div className={style.inputHeading}>Password</div>
             <input
               className={style.userInput}
-              type="text"
+              type="password"
               onChange={(e) => setUserPassword(e.target.value)}
             />
           </div>
-          <div className={style.btnWrapper} 
-          // onClick={() => navigate("/menu")}
-          onClick={() => {
-            dispatch(setAuthToken('dadshDGAdDGDDghlgDGHLdghlD'))
-          }}
-          >
+          <div className={style.btnWrapper} onClick={handleSignin}>
             <div className={style.btn}>
               Sign In
               <div className={style.arrow}>
@@ -67,7 +69,7 @@ export default function AdminLogIn() {
           </div>
           <div className={style.otherSignIn}>
             <img className={style.googleLogo} src={images.googleLogo} />
-            Continue with google
+            Continue with Google
           </div>
           <div className={style.otherSignIn}>
             <img className={style.googleLogo} src={images.facebookLogo} />
@@ -79,7 +81,7 @@ export default function AdminLogIn() {
               onClick={() => navigate("/signup")}
               className={style.signUpBtn}
             >
-              Sign Up Today!
+               Sign Up Today!
             </span>
           </div>
         </div>

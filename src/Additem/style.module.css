@@ -149,6 +149,7 @@
     height: 40px;
     border-radius: 100%;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .row {
@@ -200,6 +201,7 @@
     font-size: 22px;
     color: #fff;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .plusIcon {
@@ -290,6 +292,7 @@
 
 .btnWrapperTwo {
     display: flex;
+    cursor: pointer;
 }
 
 .btnThree {
@@ -322,6 +325,7 @@
     padding: 15px;
     width: 40%;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .chooseMany {
@@ -330,11 +334,13 @@
     padding: 15px;
     width: 40%;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .btnWrapperFour {
     margin: 0 10px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .actionWrapper {

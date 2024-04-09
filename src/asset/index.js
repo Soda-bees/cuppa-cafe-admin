@@ -52,9 +52,11 @@ import eventGreen from './eventGreen.png'
 import offerGreen from './offerGreen.png'
 import settingGreen from './settingsGreen.png'
 import calendar from './calendar.png'
+import arrowRight from './arrowRight.png'
 
 
 const Images = {
+    arrowRight,
     bgBoxLeft,
     singInArrow,
     googleLogo,

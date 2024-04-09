@@ -96,7 +96,7 @@
     background: none;
     width: 95%;
     height: 35px;
-    font-size: 22px;
+    font-size: 17px;
     z-index: 1;
 }
 
@@ -107,19 +107,21 @@
     border: none;
     background: none;
     width: 90%;
-    font-size: 22px;
+    font-size: 17px;
+    padding-top: 7px;
 }
 
 .conutrySelect {
     outline: none;
     border: none;
     background: none;
-    font-size: 25px;
+    font-size: 17px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 20px;
-
+    padding-top: 4px;
+    font-weight: 500;
 }
 
 .checkBox {
@@ -133,6 +135,7 @@
 .checkBoxBtn {
     width: 15px;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .terms {
@@ -188,15 +191,18 @@
     margin-top: 10px;
     margin-left: 20px;
     color: #8C8C8C;
+    /* font-size: 14px; */
+    
 }
 
 .countryName {
     border-bottom: 1px solid #00000027;
     height: 30px;
     background-color: #F3F3F3;
-    font-size: 24px;
+    font-size: 16px;
     border-radius: 2px;
-
+    padding-bottom: 7px;
+    padding-left: 20px;
 }
 
 .country {
@@ -209,6 +215,7 @@
     width: 90%;
     height: 35px;
     margin-left: 20px;
+
 }
 
 
@@ -216,7 +223,7 @@
     outline: none;
     border: none;
     background: none;
-    font-size: 25px;
+    font-size: 17px;
     z-index: 1;
 }
 

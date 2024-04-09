@@ -60,12 +60,14 @@
     font-size: 22px;
     color: #fff;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .btnTwo {
     padding: 10px;
     border-radius: 10px;
     font-size: 22px;
+    cursor: pointer;
 }
 
 
@@ -260,6 +262,7 @@
 
 .cross {
     width: 50px;
+    cursor: pointer;
 }
 
 .EventDetailsInfo {
@@ -302,6 +305,7 @@
     font-size: 19px;
     font-weight: 600;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .greenBtn {
@@ -316,4 +320,6 @@
     font-size: 20px;
     border-radius: 10px;
     margin-right: 10px;
+    cursor: pointer;
+
 }

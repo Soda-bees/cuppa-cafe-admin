@@ -1,15 +1,19 @@
 import React, { useState, createContext, useContext, useEffect } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
-import SideNav from "../Component/SideNav";
-import AdminLogIn from "../Screen/AdminLogIn";
-import { selectAuthToken } from "../store/authTokenSlice";
+import { Outlet, useNavigate, useLocation } from "react-router-dom";
+// import AdminLogIn from "../Screen/AdminLogIn";
 import { useSelector } from "react-redux";
+import SideNav from "../../Component/SideNav";
+import { selectAuthToken } from "../../store/authTokenSlice";
 
 const ModalContext = createContext();
 
 const Layout = () => {
   const authToken = useSelector(selectAuthToken);
   const navigate = useNavigate();
+  const location = useLocation();
+  const activePath = location.pathname;
+
+  console.log("running from layout --->", activePath);
 
   // useEffect(() => {
   //   if (!authToken) {
@@ -27,6 +31,13 @@ const Layout = () => {
     return context;
   };
 
+  if (authToken) {
+    if (activePath === "/login" || activePath === "/signup") {
+      navigate("/menu");
+       return null; 
+    }
+  }
+
   // if (!authToken) {
   //   return <AdminLogIn  />;
   // }
@@ -34,7 +45,9 @@ const Layout = () => {
   return (
     <>
       <ModalContext.Provider value={useModal}>
-        {authToken && <SideNav />}
+        {authToken &&
+          activePath !== "/AddItem" &&
+          activePath !== "/createoffer" && <SideNav />}
         <Outlet />
       </ModalContext.Provider>
     </>

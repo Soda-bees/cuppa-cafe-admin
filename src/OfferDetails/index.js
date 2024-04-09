@@ -1,8 +1,16 @@
 import React from 'react'
 import style from './style.module.css'
 import images from '../asset'
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function OfferDetails() {
+
+    const location = useLocation();
+
+    const activePath = location.pathname;
+    
+    const navigate = useNavigate();
+
     return (
         <div className={style.container} >
             <div className={style.headingWrapper}>

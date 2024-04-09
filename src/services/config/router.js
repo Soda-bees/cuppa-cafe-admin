@@ -1,12 +1,17 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "../../Layout";
 import Menu from "../../Screen/Menu";
 import Home from "../../Screen/Home";
 import SignUp from "../../Screen/SignUp";
 import AdminLogIn from "../../Screen/AdminLogIn";
 import SetUpOutlet from "../../Screen/SetUpOutlet";
 import ProtectedRoute from "./protectedRouting";
+import Offer from "../../Screen/Offers";
+import Events from "../../Screen/Events";
+import Setting from "../../Screen/Setting";
+import Layout from "../../Screen/Layout";
+import AddItem from "../../Additem";
+import OfferDetails from "../../OfferDetails";
 
 const router = createBrowserRouter([
   {
@@ -15,16 +20,10 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        // element: <Home />,
         element: <ProtectedRoute Compunent={Home} />,
       },
-      // {
-      //   path: "/menu",
-      //   element: <Menu />,
-      // },
       {
         path: "/menu",
-        // element: <Menu />,
         element: <ProtectedRoute Compunent={Menu} />,
       },
       {
@@ -38,6 +37,26 @@ const router = createBrowserRouter([
       {
         path: "/outlet",
         element: <SetUpOutlet />,
+      },
+      {
+        path: "/offer",
+        element: <Offer />,
+      },
+      {
+        path: "/event",
+        element: <Events />,
+      },
+      {
+        path: "/setting",
+        element: <Setting />,
+      },
+      {
+        path: "/AddItem",
+        element: <AddItem />,
+      },
+      {
+        path: "/createoffer",
+        element: <OfferDetails/>,
       },
     ],
   },
