@@ -14,7 +14,7 @@ export default function OfferDetails() {
     return (
         <div className={style.container} >
             <div className={style.headingWrapper}>
-                <div className={style.backBtn}>
+                <div className={style.backBtn} onClick={() => navigate('/offer')}>
                     <img className={style.backArrow} src={images.backArrow} />
                 </div>
                 <div className={style.heading}>

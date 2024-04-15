@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import style from "./style.module.css";
 import images from "../asset/index";
 import Modal from "react-modal";
+import { useNavigate } from "react-router-dom";
 
 export default function Events() {
   const [isSelected, setIsSelect] = useState(false);
@@ -36,6 +37,8 @@ export default function Events() {
   const handleDropdownToggle = (index) => {
     setDropDown(dropDown === index ? false : index);
   };
+
+  const navigate = useNavigate()
 
   const [btn, setbtn] = useState("upComing");
   const [isEventModalVisible, setIsEventModalVisible] = useState(false);
@@ -114,7 +117,7 @@ export default function Events() {
         </div>
         <div className={style.row}>
           {currentProducts.map((item, index) => (
-            <div key={index} className={style.itemCard}>
+            <div key={index} className={style.itemCard} >
               <img className={style.offerCardImg} src={item.images} />
               <div className={style.cardHeading}>
                 <div>

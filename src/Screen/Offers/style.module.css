@@ -184,43 +184,6 @@
     background-color: #A26A3F;
 }
 
-
-.modal {
-    width: 50%;
-    height: 85vh;
-    position: absolute;
-    left: 25%;
-    top: 10%;
-    background-color: #fff;
-    outline: none;
-}
-
-.ModalheadingWrapper {
-    display: flex;
-    justify-content: space-between;
-    margin: 30px;
-}
-
-.heading {
-    font-size: 30px;
-    font-weight: 600
-}
-
-.backBtn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(to right, #287C76, #60B0AA);
-    height: 45px;
-    width: 45px;
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.backArrow {
-    height: 25px;
-}
-
 .InputImg {
     margin-top: 10px;
     width: 90%;
@@ -294,12 +257,14 @@
     margin-left: 10px;
     color: #8C8C8C
 }
+
 .dataWrapper {
     display: flex;
     justify-content: space-between;
     margin: 0 10px;
 }
-.datePicker{
+
+.datePicker {
     width: 98%;
     background: none;
     outline: none;
@@ -309,9 +274,11 @@
     font-size: 22px;
 
 }
-.calenderImg{
+
+.calenderImg {
     object-fit: contain;
 }
+
 .offerInfoWrapper {
     width: 90%;
     display: flex;
@@ -334,6 +301,7 @@
     background-color: #F3F3F3;
     border-radius: 5px;
     position: relative;
+    height: 60px;
 }
 
 .discount {
@@ -343,11 +311,13 @@
     background-color: #F3F3F3;
     border-radius: 10px;
     gap: 5px;
+    height: 160px;
+    overflow-y: scroll;
 }
 
 .textInput {
     outline: none;
-    width: 110px;
+    width: 150px;
     border: 2px solid #0000001b;
     border-radius: 5px;
     font-size: 20px;
@@ -358,12 +328,12 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 0;
 
 }
-    
+
 .greenLine {
-    width: 60%;
+    width: 50%;
     height: 3px;
     background-image: linear-gradient(to right, #287C76, #60B0AA);
 }
@@ -373,9 +343,9 @@
     align-items: center;
     justify-content: center;
     background-color: #fff;
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
     cursor: pointer;
 
 }
@@ -441,6 +411,7 @@
     font-size: 20px;
     font-weight: 400;
 }
+
 .offersIcon {
     width: 30px;
     margin-right: 10px;
@@ -454,6 +425,7 @@
 .btnCentre {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .modalOffer {
@@ -461,7 +433,7 @@
     height: 90vh;
     position: absolute;
     left: 25%;
-    top: 13%;
+    top: 10%;
     background-color: #fff;
     outline: none;
 }
@@ -511,18 +483,21 @@
     font-size: 22px;
     resize: none;
 }
+
 .registrationHeading {
     font-size: 20px;
     font-weight: 400;
 }
 
-.dropDown {
+.dropDownTwo {
     position: absolute;
     top: 21px;
     background-color: #F3F3F3;
     width: 100%;
     border-radius: 5px;
+    margin-bottom: 30px;
 }
+
 .registrationDropDown {
     display: flex;
     justify-content: space-between;
@@ -530,6 +505,7 @@
     margin-top: 10px;
     padding: 0 10px;
 }
+
 .modalOfferCard {
     width: 40%;
     height: 60px;
@@ -551,8 +527,9 @@
     align-items: center;
     justify-content: end;
     cursor: pointer;
-  }
-  .notSelectedBtn {
+}
+
+.notSelectedBtn {
     width: 65px;
     height: 35px;
     border-radius: 30px;
@@ -561,21 +538,28 @@
     align-items: center;
     justify-content: start;
     cursor: pointer;
-  
-  }
-  
-  .whiteBtn {
+
+}
+
+.whiteBtn {
     margin-right: 5px;
     width: 28px;
     height: 28px;
     background-color: #f3f3f3;
     border-radius: 100%;
-  }
-  
-  .notSelectedgreen {
+}
+
+.notSelectedgreen {
     margin-left: 5px;
     width: 28px;
     height: 28px;
     background-color: #60b0aa;
     border-radius: 100%;
-  }
+}
+
+.plusIcon {
+    width: 15px;
+}
+.dropDownIcon {
+    width: 20px;
+}

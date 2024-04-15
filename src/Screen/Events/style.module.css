@@ -136,48 +136,11 @@
     margin-bottom: 0;
     position: relative;
 }
-
-.dropdown {
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    border: 1px solid #727272;
-    margin-right: 10px;
-    height: 70px;
-    width: 120px;
-    position: absolute;
-    right: -15px;
-
-}
-
 .editIcon {
     width: 25px;
     object-fit: contain;
 }
 
-.removeIcon {
-    width: 25px;
-    object-fit: contain;
-}
-
-.edit {
-    display: flex;
-    font-size: 18px;
-}
-
-.remove {
-    display: flex;
-    font-size: 18px;
-}
-
-.line {
-    width: 80%;
-    height: 1px;
-    background-color: #A26A3F;
-}
 
 
 /* Modal */
@@ -192,30 +155,16 @@
     outline: none;
 }
 
-.ModalheadingWrapper {
+.modalHeadingWrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 30px;
 }
 
-.heading {
+.modalHeading {
     font-size: 30px;
     font-weight: 600
-}
-
-.backBtn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(to right, #287C76, #60B0AA);
-    height: 45px;
-    width: 45px;
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.backArrow {
-    height: 25px;
 }
 
 .InputImg {
@@ -233,7 +182,7 @@
 }
 
 .uploadImage {
-    width: 100%;
+    width: 80%;
     height: 200px;
     display: flex;
     align-items: center;
@@ -273,22 +222,21 @@
     display: flex;
     gap: 20px;
     margin-bottom: 10px;
+    position: relative;
+    cursor: pointer;
 }
 
-.eventlable {
+.eventInputHeading {
     background-color: #F3F3F3;
     width: 50%;
-    height: 80px;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
 .inputHeading {
     margin-top: 10px;
-    margin-bottom: 10px;
     margin-left: 10px;
-    color: #8C8C8C;
-
+    color: #8C8C8C
 }
 
 .AddEvent {
@@ -323,3 +271,188 @@
     cursor: pointer;
 
 }
+
+.userIput {
+    width: 98%;
+    background: none;
+    outline: none;
+    border: none;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 22px;
+    resize: none;
+    cursor: pointer;
+}
+
+.dataWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+.datePicker{
+    width: 98%;
+    background: none;
+    outline: none;
+    border: none;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 22px;
+    cursor: pointer;
+
+}
+.calenderImg{
+    object-fit: contain;
+}
+
+.timeWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.clockImg {
+    width: 25px;
+    height: 25px;
+}
+
+.registrationDropDown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 10px;
+    cursor: pointer;
+
+}
+
+.dropDownIcon {
+    width: 20px;
+}
+
+.registrationHeading {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.dropDown {
+    position: absolute;
+    top: 50px;
+    background-color: #F3F3F3;
+    width: 48.6%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* time Modal */
+.modalTime {
+    width: 25%;
+    position: absolute;
+    left: 37%;
+    top: 37%;
+    background-color: #fff;
+    outline: none;
+    padding: 20px 0;
+}
+
+.timeWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.clockImg {
+    width: 25px;
+    height: 25px;
+}
+
+.inputTitle {
+    font-weight: 300;
+    width: 70%;
+    text-align: center;
+    color: #8C8C8C;
+
+}
+
+.timeRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+.timeTextRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px 100px;
+    margin-bottom: 10px;
+    width: 45%;
+    color: #8C8C8C;
+}
+.datePicker{
+    width: 98%;
+    background: none;
+    outline: none;
+    border: none;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 22px;
+
+}
+
+.timeInput {
+    height: 50px;
+    width: 70px;
+    font-size: x-large;
+    text-align: center;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #60B0AA;
+    cursor: pointer;
+}
+
+.columnEqual {
+    font-size: xx-large;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.btnCol {
+    flex-direction: column;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #8C8C8C;
+    border-radius: 5px;
+}
+
+.clickable {
+    cursor: pointer;
+    color: #F3F3F3;
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    font-size: 20px;
+    border: 1px solid #8C8C8C;
+
+}
+.clickableTwo {
+    cursor: pointer;
+    background-color: #F3F3F3;
+    font-size: 20px;
+    border: 1px solid #8C8C8C;
+
+}
+
+.clickable:focus {
+    opacity: 0.5;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.calenderImg{
+    object-fit: contain;
+}
+

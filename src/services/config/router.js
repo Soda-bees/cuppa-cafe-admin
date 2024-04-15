@@ -12,6 +12,7 @@ import Setting from "../../Screen/Setting";
 import Layout from "../../Screen/Layout";
 import AddItem from "../../Additem";
 import OfferDetails from "../../OfferDetails";
+import EventDetails from "../../EventDetails";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
       {
         path: "/createoffer",
         element: <OfferDetails/>,
+      },
+      {
+        path: "/eventdetails",
+        element: <EventDetails/>,
       },
     ],
   },

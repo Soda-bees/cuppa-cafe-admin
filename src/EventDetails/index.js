@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import style from './style.module.css'
 import images from '../asset'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -8,10 +9,12 @@ export default function EventDetails() {
     const [description, setDescription] = useState('')
     const [eventDropDown, seteventDropDown] = useState(false)
     const [registration, setRegistration] = useState("select")
+
+    const navigate = useNavigate()
     return (
         <div className={style.container}>
             <div className={style.headingWrapper}>
-                <div className={style.backBtn}>
+                <div className={style.backBtn} onClick={() => navigate('/event')}>
                     <img className={style.backArrow} src={images.backArrow} />
                 </div>
                 <div className={style.heading}>

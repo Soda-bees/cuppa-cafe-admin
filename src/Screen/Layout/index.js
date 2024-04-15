@@ -47,6 +47,7 @@ const Layout = () => {
       <ModalContext.Provider value={useModal}>
         {authToken &&
           activePath !== "/AddItem" &&
+          activePath !== "/eventdetails" &&
           activePath !== "/createoffer" && <SideNav />}
         <Outlet />
       </ModalContext.Provider>

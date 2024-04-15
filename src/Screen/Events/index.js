@@ -8,6 +8,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import "react-time-picker/dist/TimePicker.css";
 import "react-clock/dist/Clock.css";
 import Pagination from "../../Component/Pagination";
+import { useNavigate } from "react-router-dom";
 
 export default function Events() {
   const [isSelected, setIsSelect] = useState(false);
@@ -170,6 +171,8 @@ export default function Events() {
     setSelectedImage(file);
   };
 
+  const navigate = useNavigate()
+
   const [btn, setBtn] = useState(false);
   const [isEventModalVisible, setIsEventModalVisible] = useState(false);
   const [eventName, setEventName] = useState("");
@@ -270,7 +273,7 @@ export default function Events() {
           </div>
 
           <div
-            // onClick={() => setIsEventModalVisible(!isEventModalVisible)}
+            onClick={() => setIsEventModalVisible(!isEventModalVisible)}
             className={style.btn}
           >
             Create Event
@@ -278,7 +281,7 @@ export default function Events() {
         </div>
         <div className={style.row}>
           {currentProducts.map((item, index) => (
-            <div key={index} className={style.eventCard}>
+            <div key={index} className={style.eventCard} onClick={() => navigate('/eventdetails')}>
               <img className={style.offerCardImg} src={item.images} />
               <div className={style.cardHeading}>
                 <div>
@@ -306,13 +309,13 @@ export default function Events() {
                 className={style.cross}
               />
             </div>
-            <div className={style.modalHeading}>Add Category</div>
+            <div className={style.modalHeading}>Add Event</div>
 
             <div
               onClick={() => setIsEventModalVisible(false)}
               className={style.btn}
             >
-              Save
+              Add
             </div>
           </div>
           <div className={style.imageUploadWrapper}>
@@ -346,14 +349,14 @@ export default function Events() {
           <div className={style.AddEvent}>
             <div className={style.EventDetailsInfo}>
               <div className={style.eventInfoWrapper}>
-                <div className={style.eventinputHeading}>
+                <div className={style.eventInputHeading}>
                   <div className={style.inputHeading}>Event Name</div>
                   <input
                     className={style.userIput}
                     onChange={(e) => setEventName(e.target.value)}
                   />
                 </div>
-                <div className={style.eventinputHeading}>
+                <div className={style.eventInputHeading}>
                   <div className={style.inputHeading}>Date</div>
                   <div className={style.dataWrapper}>
                     <DatePicker
@@ -366,7 +369,7 @@ export default function Events() {
                 </div>
               </div>
               <div className={style.eventInfoWrapper}>
-                <div className={style.eventinputHeading}>
+                <div className={style.eventInputHeading}>
                   <div className={style.inputHeading}>Time</div>
                   <div
                     className={style.timeWrapper}
@@ -379,7 +382,7 @@ export default function Events() {
                     <img className={style.clockImg} src={images.clock} />
                   </div>
                 </div>
-                <div className={style.eventinputHeading}>
+                <div className={style.eventInputHeading}>
                   <div className={style.inputHeading}>Event Type</div>
                   <div className={style.registrationDropDown}>
                     <div className={style.registrationHeading}>Exclusive</div>
@@ -391,7 +394,7 @@ export default function Events() {
                 </div>
               </div>
               <div className={style.eventInfoWrapper}>
-                <div className={style.eventinputHeading}>
+                <div className={style.eventInputHeading}>
                   <div className={style.inputHeading}>Registration</div>
                   {eventDropDown ? (
                     <div className={style.dropDown}>
@@ -429,7 +432,7 @@ export default function Events() {
                     </div>
                   )}
                 </div>
-                <div className={style.eventinputHeading}>
+                <div className={style.eventInputHeading}>
                   <div className={style.inputHeading}>Description</div>
                   <input
                     className={style.userIput}

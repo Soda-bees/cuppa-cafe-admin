@@ -8,6 +8,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import "react-time-picker/dist/TimePicker.css";
 import "react-clock/dist/Clock.css";
 import Pagination from "../../Component/Pagination";
+import { useNavigate } from "react-router-dom";
 
 export default function Offer() {
   const [isSelected, setIsSelect] = useState(false);
@@ -165,7 +166,14 @@ export default function Offer() {
   };
   const [isOfferModalVisible, setIsOfferModalVisible] = useState(false);
 
-  const [filterTodo, setFilterTodo] = useState([]);
+  const navigate = useNavigate();
+
+
+  const [filterTodo, setFilterTodo] = useState([
+    { name: "Name 1", price: "Price 1" },
+    { name: "Name 2", price: "Price 2" },
+    { name: "Name 3", price: "Price 3" }
+  ]);
 
   const addFilterTodo = () => {
     // Create a new todo object and add it to the todos array
@@ -261,7 +269,7 @@ export default function Offer() {
         </div>
         <div className={style.row}>
           {currentProducts.map((item, index) => (
-            <div key={index} className={style.itemCard}>
+            <div key={index} className={style.itemCard} onClick={() => navigate('/createoffer')}>
               <img className={style.offerCardImg} src={item.images} />
               <div className={style.cardHeading}>
                 <div className={style.itenName}>Free Coffee Just For You</div>
@@ -315,13 +323,13 @@ export default function Offer() {
                 className={style.cross}
               />
             </div>
-            <div className={style.modalHeading}>Add Category</div>
+            <div className={style.modalHeading}>Create Offer</div>
 
             <div
               onClick={() => setIsOfferModalVisible(false)}
               className={style.btn}
             >
-              Save
+              Add
             </div>
           </div>
           <div className={style.imageUploadWrapper}>
@@ -387,7 +395,7 @@ export default function Offer() {
                 <div className={style.promo}>
                   <div className={style.inputHeading}>Exclusive Promo</div>
                   {eventDropDown ? (
-                    <div className={style.dropDown}>
+                    <div className={style.dropDownTwo}>
                       <div
                         className={style.registrationHeading}
                         onClick={() => {
@@ -456,7 +464,7 @@ export default function Offer() {
                 <div className={style.offerModalBtn}>
                   <div className={style.modalBtnWrapper}>
                     <div onClick={addFilterTodo} className={style.modalBtn}>
-                      <img src={images.plusIcon} />
+                      <img className={style.plusIcon} src={images.plusIcon} />
                       Add product
                     </div>
                   </div>
