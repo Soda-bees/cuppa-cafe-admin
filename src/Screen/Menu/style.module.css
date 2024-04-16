@@ -44,6 +44,7 @@
   border-radius: 10px;
   font-weight: 600;
   padding: 10px;
+  cursor: pointer;
 }
 
 .notificationIcon {
@@ -53,6 +54,7 @@
 .headingWrappper {
   display: flex;
   justify-content: space-between;
+  margin-right: 50px;
 }
 
 .heading {
@@ -87,6 +89,7 @@
 .categoriesCard {
   position: relative;
   margin: 30px 0;
+  cursor: pointer;
 }
 
 .categoriesCardImg {
@@ -182,6 +185,7 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  margin-right: 30px;
 }
 
 .itemCard {
@@ -189,6 +193,7 @@
   width: 15%;
   border-radius: 10px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .itemCardImg {
