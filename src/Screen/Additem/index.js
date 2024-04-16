@@ -20,7 +20,13 @@ export default function AddItem() {
 
   const [chooseBtn, setChooseBtn] = useState(false);
 
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([
+    {
+      size: "",
+      price: "",
+      serves: "",
+    }
+  ]);
   const addTodo = () => {
     const newTodo = {
       size: "",
@@ -42,7 +48,10 @@ export default function AddItem() {
     setTodos(updatedTodos);
   };
 
-  const [filterTodo, setFilterTodo] = useState([]);
+  const [filterTodo, setFilterTodo] = useState([{
+    name: "",
+    price: "",
+  }]);
 
   const addFilterTodo = () => {
     // Create a new todo object and add it to the todos array
@@ -190,20 +199,8 @@ export default function AddItem() {
             Add Specifications
             <img className={style.rightArrow} src={images.rightArrow} />
           </div>
-          <div className={style.filter}>
-            <div className={style.filterName}>
-              Filter Name
-              <img className={style.menuDot} src={images.menuDot} />
-            </div>
-            <div>Milk</div>
-          </div>
-          <div className={style.filter}>
-            <div className={style.filterName}>
-              Filter Name
-              <img className={style.menuDot} src={images.menuDot} />
-            </div>
-            <div>Milk</div>
-          </div>
+          
+       
           <div className={style.filteritem}>
             <div className={style.filter}>
               <div className={style.filterName}>Filter Name</div>

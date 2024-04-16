@@ -147,6 +147,7 @@
     padding-top: 1px;
     position: relative;
     height: 70px;
+    padding-bottom: 8px;
 }
 
 .discount {
@@ -157,12 +158,12 @@
     background-color: #F3F3F3;
     border-radius: 10px;
     padding-top: 1px;
-    gap: 5px;
+    padding-bottom: 12px;
+    gap: 8px;
 }
 .textInput{
     outline: none;
     width: 110px;
-    margin-left: 10px;
     border: 2px solid #0000001b;
     border-radius: 5px;
     font-size: 20px;
@@ -250,17 +251,22 @@
     margin-top: 20px;
 }
 
+
 .uploadImg {
     width: 25px;
     margin-right: 10px;
 }
+
+
 .dropDownTwo {
     position: absolute;
-    top:30px;
+    top:42px;
     background-color: #F3F3F3;
-    width: 100%;
+    width: 287px;
     border-radius: 5px;
     margin-bottom: 30px;
+    padding-left: 10px;
+
 }
 
 .registrationDropDown {
@@ -270,9 +276,10 @@
     margin-top: 10px;
     padding: 0 10px;
 }
+
 .registrationHeading {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 360;
 }
 
 .dataWrapper {
@@ -305,4 +312,9 @@
     padding-left: 10px;
     font-size: 22px;
     resize: none;
+}
+
+.inputWrapper{
+    display:  flex;
+    gap: 8px;
 }

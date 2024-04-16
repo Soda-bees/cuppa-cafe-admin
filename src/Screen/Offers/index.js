@@ -217,7 +217,7 @@ export default function Offer() {
 
   const [currentPage, setCurrentPage] = useState(1);
 
-  const productsPerPage = 8;
+  const productsPerPage = 9;
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = offerCard.slice(

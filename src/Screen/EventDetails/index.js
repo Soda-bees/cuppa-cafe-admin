@@ -40,7 +40,7 @@ export default function EventDetails() {
                         <div className={style.infoWrapper}>
                             <div className={style.textField}>
                                 <div className={style.inputHeading}>Event Name</div>
-                                <input className={style.userIput} placeholder='ABC Event Name' />
+                                <input className={style.userIput} value='ABC Event Name'  />
                             </div>
                             <div className={style.textField}>
                                 <div className={style.inputHeading}>Date</div>
@@ -69,10 +69,10 @@ export default function EventDetails() {
                                 <div className={style.inputHeading}>Event Type</div>
                                 <div className={style.registrationDropDown}>
                                     <div className={style.registrationHeading}>Exclusive</div>
-                                    <img
+                                    {/* <img
                                         className={style.dropDownIcon}
                                         src={images.downArrow}
-                                    />
+                                    /> */}
                                 </div>
                             </div>
                         </div>
@@ -81,16 +81,16 @@ export default function EventDetails() {
                                 <div className={style.inputHeading}>Registration</div>
                                 <div className={style.registrationDropDown}>
                                     <div className={style.registrationHeading}>No</div>
-                                    <img
+                                    {/* <img
                                         className={style.dropDownIcon}
                                         src={images.downArrow}
-                                    />
+                                    /> */}
                                 </div>
 
                             </div>
                             <div className={style.textField}>
                                 <div className={style.inputHeading}>Description</div>
-                                <input className={style.userIput} placeholder='Lowkey Book Read' onChange={(e) => setDescription(e.target.value)} />
+                                <input className={style.userIput} value='Lowkey Book Read' onChange={(e) => setDescription(e.target.value)} />
                             </div>
                         </div>
                     </div>

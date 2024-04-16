@@ -134,7 +134,7 @@ export default function OfferDetails() {
                     <div className={style.textfield}>
                         <div className={style.inputHeading}>Offer Title</div>
                         <input
-                            placeholder='Offer Title'
+                            value='Offer Title'
                             onChange={(e) => setOfferTitle(e.target.value)}
                             className={style.editInput}
                             type="text"
@@ -157,7 +157,7 @@ export default function OfferDetails() {
                         <div className={style.description}>
                             <div className={style.inputHeading}>Description</div>
                             <textarea
-                                placeholder='Description'
+                                value='Description'
                                 rows="20"
                                 cols="50"
                                 onChange={(e) => setOfferDescription(e.target.value)}
@@ -209,29 +209,24 @@ export default function OfferDetails() {
                             {filterTodo.map((index, todo) => (
                                 <div key={index} className={style.inputWrapper}>
                                     <input
-                                    placeholder='Name'
+                                    value='Name'
                                         type="text"
                                         onChange={(e) =>
                                             handleFilterTodoChange(index, "name", e.target.value)
                                         }
-                                        value={todo.name}
+                                        // value={todo.name}
                                         className={style.textInput}
                                     />
                                     <input
-                                    placeholder='Price'
+                                    value='Price'
                                         type="text"
                                         onChange={(e) =>
                                             handleFilterTodoChange(index, "price", e.target.value)
                                         }
-                                        value={todo.price}
+                                        // value={todo.price}
                                         className={style.textInput}
                                     />
-                                    <div
-                                        onClick={() => deleteFilterTodo(index)}
-                                        className={style.circle}
-                                    >
-                                        <div className={style.greenLine}></div>
-                                    </div>
+
                                 </div>
                             ))}
                         </div>

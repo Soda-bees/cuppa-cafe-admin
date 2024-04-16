@@ -13,6 +13,10 @@ import { useNavigate } from "react-router-dom";
 export default function Events() {
   const [isSelected, setIsSelect] = useState(false);
   const [search, setSearch] = useState("");
+  const [eventTypeDD, setEventTypeDD] = useState(false)
+  const [eventType, setEventType] = useState('Open')
+
+
   const [eventCard, setEventCard] = useState([
     {
       images: images.eventCardImg,
@@ -225,7 +229,7 @@ export default function Events() {
 
   const [currentPage, setCurrentPage] = useState(1);
 
-  const productsPerPage = 10;
+  const productsPerPage = 12;
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = eventCard.slice(
@@ -382,15 +386,43 @@ export default function Events() {
                     <img className={style.clockImg} src={images.clock} />
                   </div>
                 </div>
-                <div className={style.eventInputHeading}>
+                <div className={style.eventInputHeading2}>
                   <div className={style.inputHeading}>Event Type</div>
-                  <div className={style.registrationDropDown}>
-                    <div className={style.registrationHeading}>Exclusive</div>
-                    <img
-                      className={style.dropDownIcon}
-                      src={images.downArrow}
-                    />
-                  </div>
+                  {eventTypeDD ? (
+                    <div className={style.dropDown}>
+                      <div
+                        className={style.registrationHeading}
+                        onClick={() => {
+                          setEventTypeDD(!eventTypeDD);
+                          setEventType('Open')
+                        }}
+                      >
+                        Open
+                      </div>
+                      <div
+                        className={style.registrationHeading}
+                        onClick={() => {
+                          setEventTypeDD(!eventTypeDD);
+                          setEventType('Exclusive')
+                        }}
+                      >
+                        Exclusive
+                      </div>
+                    </div>
+                  ) : (
+                    <div
+                      onClick={() => setEventTypeDD(!eventTypeDD)}
+                      className={style.registrationDropDown}
+                    >
+                      <div className={style.registrationHeading}>
+                        {eventType}
+                      </div>
+                      <img
+                        className={style.dropDownIcon}
+                        src={images.downArrow}
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
               <div className={style.eventInfoWrapper}>

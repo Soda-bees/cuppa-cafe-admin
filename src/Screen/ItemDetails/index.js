@@ -52,12 +52,12 @@ export default function ItemDetails() {
                         <div className={style.infoWrapper}>
                             <div className={style.textFeild}>
                                 <div className={style.inputHeading}>Item Name</div>
-                                <input className={`${style.textInput} ${style.placeholderText}`} placeholder='Caramel Latte' type='text' onChange={(e) => setItenName(e.target.value)} />
+                                <input className={`${style.textInput}`} value='Caramel Latte' type='text' onChange={(e) => setItenName(e.target.value)} />
                             </div>
                             <div className={style.textFeildTwo}>
                                 <div className={style.inputHeading}>Description</div>
                                 <textarea
-                                    className={`${style.textInputTwo} ${style.placeholderText}`} placeholder='A Caramel Latte is prepared with equal parts double espresso, ice, milk and cream.' type='text' onChange={(e) => setItenDescription(e.target.value)}
+                                    className={`${style.textInputTwo}`} value='A Caramel Latte is prepared with equal parts double espresso, ice, milk and cream.' type='text' onChange={(e) => setItenDescription(e.target.value)}
                                     rows={5}
                                 />
                             </div>
@@ -71,21 +71,21 @@ export default function ItemDetails() {
                     </div>
                     <div className={style.row}>
 
-                        <div><input className={style.textInputThree} placeholder='Small' type='text' onChange={(e) => setSizeSmall(e.target.value)} /></div>
-                        <div><input className={style.textInputThree} placeholder='$4.50' type='text' onChange={(e) => setSizeMedium(e.target.value)} /></div>
-                        <div><input className={style.textInputThree} placeholder='01' type='text' onChange={(e) => setSizelarge(e.target.value)} /></div>
+                        <div><input className={style.textInputThree} value='Small' type='text' onChange={(e) => setSizeSmall(e.target.value)} /></div>
+                        <div><input className={style.textInputThree} value='$4.50' type='text' onChange={(e) => setSizeMedium(e.target.value)} /></div>
+                        <div><input className={style.textInputThree} value='01' type='text' onChange={(e) => setSizelarge(e.target.value)} /></div>
                     </div>
                     <div className={style.row}>
 
-                        <div><input className={style.textInputThree} placeholder='Medium' type='text' onChange={(e) => setSmallPrice(e.target.value)} /></div>
-                        <div><input className={style.textInputThree} placeholder='$4.50' type='text' onChange={(e) => setMediumPrice(e.target.value)} /></div>
-                        <div><input className={style.textInputThree} placeholder='02' type='text' onChange={(e) => setLargePrice(e.target.value)} /></div>
+                        <div><input className={style.textInputThree} value='Medium' type='text' onChange={(e) => setSmallPrice(e.target.value)} /></div>
+                        <div><input className={style.textInputThree} value='$4.50' type='text' onChange={(e) => setMediumPrice(e.target.value)} /></div>
+                        <div><input className={style.textInputThree} value='02' type='text' onChange={(e) => setLargePrice(e.target.value)} /></div>
                     </div>
                     <div className={style.row}>
 
-                        <div><input className={style.textInputThree} placeholder='Large' type='text' onChange={(e) => setSmallServes(e.target.value)} /></div>
-                        <div><input className={style.textInputThree} placeholder='$4.50' type='text' onChange={(e) => setMediumServes(e.target.value)} /></div>
-                        <div><input className={style.textInputThree} placeholder='03' type='text' onChange={(e) => setLargeServes(e.target.value)} /></div>
+                        <div><input className={style.textInputThree} value='Large' type='text' onChange={(e) => setSmallServes(e.target.value)} /></div>
+                        <div><input className={style.textInputThree} value='$4.50' type='text' onChange={(e) => setMediumServes(e.target.value)} /></div>
+                        <div><input className={style.textInputThree} value='03' type='text' onChange={(e) => setLargeServes(e.target.value)} /></div>
                     </div>
                 </div>
                 <div className={style.addItemRight}>
@@ -106,24 +106,24 @@ export default function ItemDetails() {
                                 <div className={style.infoheadingTwo}>Extra Charges</div>
                             </div>
                             <div className={style.row}>
-                                <div><input className={style.textInputFour} placeholder='Whole Milk' type='text' /></div>
-                                <div><input className={style.textInputFour} placeholder='$4.50' type='text' /></div>
+                                <div><input className={style.textInputFour} value='Whole Milk' type='text' /></div>
+                                <div><input className={style.textInputFour} value='$4.50' type='text' /></div>
                             </div>
                             <div className={style.row}>
-                                <div><input className={style.textInputFour} placeholder='2% Milk' type='text' /></div>
-                                <div><input className={style.textInputFour} placeholder='$4.50' type='text' /></div>
+                                <div><input className={style.textInputFour} value='2% Milk' type='text' /></div>
+                                <div><input className={style.textInputFour} value='$4.50' type='text' /></div>
                             </div>
                             <div className={style.row}>
-                                <div><input className={style.textInputFour} placeholder='Skim Milk' type='text' /></div>
-                                <div><input className={style.textInputFour} placeholder='$4.50' type='text' /></div>
+                                <div><input className={style.textInputFour} value='Skim Milk' type='text' /></div>
+                                <div><input className={style.textInputFour} value='$4.50' type='text' /></div>
                             </div>
                             <div className={style.row}>
-                                <div><input className={style.textInputFour} placeholder='Almond Milk' type='text' /></div>
-                                <div><input className={style.textInputFour} placeholder='$4.50' type='text' /></div>
+                                <div><input className={style.textInputFour} value='Almond Milk' type='text' /></div>
+                                <div><input className={style.textInputFour} value='$4.50' type='text' /></div>
                             </div>
                             <div className={style.row}>
-                                <div><input className={style.textInputFour} placeholder='Lactose-Free Milk' type='text' /></div>
-                                <div><input className={style.textInputFour} placeholder='$4.50' type='text' /></div>
+                                <div><input className={style.textInputFour} value='Lactose-Free Milk' type='text' /></div>
+                                <div><input className={style.textInputFour} value='$4.50' type='text' /></div>
                             </div>
                         </div>
                     </div>

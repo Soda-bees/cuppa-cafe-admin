@@ -284,7 +284,7 @@ export default function Menu() {
 
   const [currentPage, setCurrentPage] = useState(1);
 
-  const productsPerPage = 10;
+  const productsPerPage = 12;
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = itemCard.slice(
