@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import style from './style.module.css'
 import images from '../../asset'
+import { useNavigate } from 'react-router-dom'
 
 export default function ItemDetails() {
+
+    const navigate = useNavigate()
+
     const [itenName, setItenName] = useState('')
     const [itenDescription, setItenDescription] = useState('')
     const [sizeSmall, setSizeSmall] = useState('')
@@ -17,8 +21,10 @@ export default function ItemDetails() {
     return (
         <div className={style.container}>
             <div className={style.headingWrapper}>
-                <div className={style.backBtn}>
-                    <img className={style.backArrow} src={images.backArrow} />
+                <div className={style.backBtn}  onClick={() => navigate('/menu')}>
+                    <img className={style.backArrow} src={images.backArrow}
+                   
+                    />
                 </div>
                 <div className={style.heading}>
                     Items Details

@@ -489,22 +489,24 @@
 
 .modal {
     outline: none;
-    width: 40%;
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    background-color: #F3F3F3;
-    border-radius: 20px;
+    width:100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .modalContainer {
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    height: 300px;
-
+    padding: 50px 0px;
+    width: 30%;
+    background-color: #F3F3F3;
 }
 
 .modalHeading {
