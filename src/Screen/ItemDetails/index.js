@@ -1,8 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './style.module.css'
 import images from '../../asset'
+import { useLocation } from 'react-router-dom';
 
 export default function ItemDetails() {
+
+
+    const location = useLocation();
+    const [item, setItem] = useState()
+
+    useEffect(() => {
+        if (location.state && location.state.item) {
+            setItem(location.state.item);
+            console.log("-==-offer details=-", location?.state?.item);
+        }
+    }, [location.state]);
+
+
     const [itenName, setItenName] = useState('')
     const [itenDescription, setItenDescription] = useState('')
     const [sizeSmall, setSizeSmall] = useState('')
@@ -31,7 +45,7 @@ export default function ItemDetails() {
             <div className={style.itemDetailsWrapper}>
                 <div className={style.addItemLeft}>
                     <div className={style.addItemDetails}>
-                        <img className={style.itemImg} src={images.cappuccino} />
+                        <img className={style.itemImg} src={item?.images} />
                         <div className={style.infoWrapper}>
                             <div className={style.textFeild}>
                                 <div className={style.inputHeading}>Item Name</div>
@@ -39,13 +53,7 @@ export default function ItemDetails() {
                             </div>
                             <div className={style.textFeildTwo}>
                                 <div className={style.inputHeading}>Description</div>
-                                {/* <textarea className={style.textInputTwo}>
-                            A Caramel Latte is prepared with equal parts double espresso, ice, milk and cream.
-                            </textarea> */}
-                                {/* <input className={`${style.textInputTwo} ${style.placeholderText}`} placeholder='A Caramel Latte is prepared with equal parts double espresso, ice, milk and cream.'  type='text' onChange={(e) => setItenDescription(e.target.value)} /> */}
                                 <textarea
-                                    //   value={text}
-                                    //   onChange={handleChange}
                                     className={`${style.textInputTwo} ${style.placeholderText}`} placeholder='A Caramel Latte is prepared with equal parts double espresso, ice, milk and cream.' type='text' onChange={(e) => setItenDescription(e.target.value)}
                                     rows={5}
                                 />
