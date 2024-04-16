@@ -277,6 +277,9 @@ export default function Menu() {
     {
       images: images.cappuccino,
     },
+    {
+      images: images.coffeeImg,
+    },
   ]);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -381,7 +384,7 @@ export default function Menu() {
         </div>
         <div className={style.row}>
           {currentProducts.map((item, index) => (
-            <div key={index} className={style.itemCard} onClick={() => navigate("/itemdetails")}>
+            <div key={index} className={style.itemCard} onClick={() => navigate("/itemdetails" , {state: {item}})}>
               <img className={style.itemCardImg} src={item.images} />
               <div>
                 <div className={style.itemName}>cappuccino</div>
