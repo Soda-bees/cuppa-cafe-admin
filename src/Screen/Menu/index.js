@@ -381,7 +381,7 @@ export default function Menu() {
         </div>
         <div className={style.row}>
           {currentProducts.map((item, index) => (
-            <div key={index} className={style.itemCard}>
+            <div key={index} className={style.itemCard} onClick={() => navigate("/itemdetails")}>
               <img className={style.itemCardImg} src={item.images} />
               <div>
                 <div className={style.itemName}>cappuccino</div>

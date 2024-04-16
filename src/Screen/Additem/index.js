@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import style from "./style.module.css";
-import images from "../asset/index";
+import images from "../../asset/index";
 import { useNavigate } from "react-router-dom";
 
 
@@ -74,7 +74,7 @@ export default function AddItem() {
     const file = e.target.files[0];
     setSelectedImage(file);
   };
-
+  const [selectBtn, setSelectBtn] = useState(false);
   return (
     <div className={style.container}>
       <div className={style.headingWrapper}>
@@ -256,9 +256,21 @@ export default function AddItem() {
             </div>
             <div className={style.required}>
               Make it required
-              <div className={style.owal}>
-                <div className={style.circleTwo}></div>
-              </div>
+              {selectBtn ? (
+                      <div
+                        className={style.ovalBtn}
+                        onClick={() => setSelectBtn(!selectBtn)}
+                      >
+                        <div className={style.whiteBtn}></div>
+                      </div>
+                    ) : (
+                      <div
+                        className={style.notSelectedBtn}
+                        onClick={() => setSelectBtn(!selectBtn)}
+                      >
+                        <div className={style.notSelectedgreen}></div>
+                      </div>
+                    )}
             </div>
             <div className={style.actionWrapper}>
               <div className={style.actionHeading}>Action</div>

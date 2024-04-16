@@ -198,6 +198,9 @@ export default function Offer() {
     updatedFilterTodos.splice(index, 1);
     setFilterTodo(updatedFilterTodos);
   };
+
+
+
   const [selectedImage, setSelectedImage] = useState(null);
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -269,7 +272,10 @@ export default function Offer() {
         </div>
         <div className={style.row}>
           {currentProducts.map((item, index) => (
-            <div key={index} className={style.itemCard} onClick={() => navigate('/createoffer')}>
+            <div key={index} className={style.itemCard}
+              onClick={() => navigate('/createoffer')}
+              //  onClick={() => navigate('/createoffer', { state: { item } })}
+            >
               <img className={style.offerCardImg} src={item.images} />
               <div className={style.cardHeading}>
                 <div className={style.itenName}>Free Coffee Just For You</div>

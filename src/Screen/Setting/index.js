@@ -6,6 +6,7 @@ import { clearAuthToken } from "../../store/authTokenSlice";
 import { useNavigate } from "react-router-dom";
 import PhoneInput from "react-phone-number-input";
 import Modal from "react-modal";
+import { Country } from 'country-state-city';
 
 export default function Setting() {
   const [isSelected, setIsSelect] = useState(false);
@@ -15,6 +16,11 @@ export default function Setting() {
   const navigate = useNavigate();
   const [value, setValue] = useState("");
   const [panel, setPanel] = useState('profile')
+  const [selectedCountry, setSelectedCountry] = useState(false)
+  const [countryName, setcountryName] = useState("Select Country")
+  const country = Country.getAllCountries()
+  const [outletNmae, setOutletNmae] = useState('')
+  const [description, setDescription] = useState('')
 
   const handleLogout = () => {
     dispatch(clearAuthToken());
@@ -36,6 +42,12 @@ export default function Setting() {
 
 
   const [selectBtn, setSelectBtn] = useState(false);
+  const [sound, setSound] = useState(false);
+  const [vibrate, setVibrate] = useState(false);
+  const [appUpdates, setAppUpdates] = useState(false);
+  const [faceId, setFaceId] = useState(false);
+  const [touchId, setTouchId] = useState(false);
+  const [remember, setRemember] = useState(false);
   return (
     <div className={style.container}>
       <div className={style.menu}>
@@ -141,8 +153,8 @@ export default function Setting() {
                 />
               </div>
             </div>
-            <div className={style.div}>
-              <div className={style.editinputWrapper}>
+            <div className={style.contactInfoWrapper}>
+              <div className={style.contactWrapper}>
                 <div className={style.inputHeadingTwo}>Contact Number</div>
                 <PhoneInput
                   value={value}
@@ -151,13 +163,19 @@ export default function Setting() {
                   className={style.custom_phone_input}
                 />
               </div>
-              <div className={style.inputdiv}>
+              <div className={style.locationWrapper}>
                 <div className={style.inputHeadingTwo}>location</div>
-                <input
-                  onChange={(e) => setEmail(e.target.value)}
-                  className={style.editInput}
-                  type="text"
-                />
+                {selectedCountry ? <div className={style.country}>
+                  {country.map((country, index) => (
+                    <div key={index} onClick={() => {
+                      setcountryName(country.name)
+                      setSelectedCountry(!selectedCountry)
+                    }} className={style.countryName}>{country.name}</div>
+                  ))}
+                </div>
+                  :
+                  <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName}
+                    <img src={images.downArrow} /></div>}
               </div>
             </div>
           </div></>) :
@@ -202,7 +220,7 @@ export default function Setting() {
                   <div className={style.editinputWrapper}>
                     <div className={style.inputHeadingTwo}>Outlet Name</div>
                     <input
-                      onChange={(e) => setAdminName(e.target.value)}
+                      onChange={(e) => setOutletNmae(e.target.value)}
                       className={style.editInput}
                       type="text"
                     />
@@ -210,24 +228,35 @@ export default function Setting() {
                   <div className={style.editinputWrapper}>
                     <div className={style.inputHeadingTwo}>Description</div>
                     <input
-                      onChange={(e) => setEmail(e.target.value)}
+                      onChange={(e) => setDescription(e.target.value)}
                       className={style.editInput}
                       type="text"
                     />
                   </div>
                 </div>
-                <div className={style.div}>
-                  <div className={style.editinputWrapper}>
+                <div className={style.contactInfoWrapper}>
+                  <div className={style.contactWrapper}>
                     <div className={style.inputHeadingTwo}>Contact Number</div>
-
-                  </div>
-                  <div className={style.inputdiv}>
-                    <div className={style.inputHeadingTwo}>location</div>
-                    <input
-                      onChange={(e) => setEmail(e.target.value)}
-                      className={style.editInput}
-                      type="text"
+                    <PhoneInput
+                      value={value}
+                      defaultCountry="US"
+                      onChange={setValue}
+                      className={style.custom_phone_input}
                     />
+                  </div>
+                  <div className={style.locationWrapper}>
+                    <div className={style.inputHeadingTwo}>location</div>
+                    {selectedCountry ? <div className={style.country}>
+                      {country.map((country, index) => (
+                        <div key={index} onClick={() => {
+                          setcountryName(country.name)
+                          setSelectedCountry(!selectedCountry)
+                        }} className={style.countryName}>{country.name}</div>
+                      ))}
+                    </div>
+                      :
+                      <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName}
+                        <img src={images.downArrow} /></div>}
                   </div>
                 </div>
               </div></>) :
@@ -268,17 +297,17 @@ export default function Setting() {
                     <div className={style.offerCardHeading}>
                       Sound
                     </div>
-                    {selectBtn ? (
+                    {sound ? (
                       <div
                         className={style.ovalBtn}
-                        onClick={() => setSelectBtn(!selectBtn)}
+                        onClick={() => setSound(!sound)}
                       >
                         <div className={style.whiteBtn}></div>
                       </div>
                     ) : (
                       <div
                         className={style.notSelectedBtn}
-                        onClick={() => setSelectBtn(!selectBtn)}
+                        onClick={() => setSound(!sound)}
                       >
                         <div className={style.notSelectedgreen}></div>
                       </div>
@@ -290,17 +319,17 @@ export default function Setting() {
                     <div className={style.offerCardHeading}>
                       Vibrate
                     </div>
-                    {selectBtn ? (
+                    {vibrate ? (
                       <div
                         className={style.ovalBtn}
-                        onClick={() => setSelectBtn(!selectBtn)}
+                        onClick={() => setVibrate(!vibrate)}
                       >
                         <div className={style.whiteBtn}></div>
                       </div>
                     ) : (
                       <div
                         className={style.notSelectedBtn}
-                        onClick={() => setSelectBtn(!selectBtn)}
+                        onClick={() => setVibrate(!vibrate)}
                       >
                         <div className={style.notSelectedgreen}></div>
                       </div>
@@ -311,17 +340,17 @@ export default function Setting() {
                     <div className={style.offerCardHeading}>
                       App Updates
                     </div>
-                    {selectBtn ? (
+                    {appUpdates ? (
                       <div
                         className={style.ovalBtn}
-                        onClick={() => setSelectBtn(!selectBtn)}
+                        onClick={() => setAppUpdates(!appUpdates)}
                       >
                         <div className={style.whiteBtn}></div>
                       </div>
                     ) : (
                       <div
                         className={style.notSelectedBtn}
-                        onClick={() => setSelectBtn(!selectBtn)}
+                        onClick={() => setAppUpdates(!appUpdates)}
                       >
                         <div className={style.notSelectedgreen}></div>
                       </div>
@@ -369,17 +398,17 @@ export default function Setting() {
                         <div className={style.offerCardHeading}>
                           Face ID
                         </div>
-                        {selectBtn ? (
+                        {faceId ? (
                           <div
                             className={style.ovalBtn}
-                            onClick={() => setSelectBtn(!selectBtn)}
+                            onClick={() => setFaceId(!faceId)}
                           >
                             <div className={style.whiteBtn}></div>
                           </div>
                         ) : (
                           <div
                             className={style.notSelectedBtn}
-                            onClick={() => setSelectBtn(!selectBtn)}
+                            onClick={() => setFaceId(!faceId)}
                           >
                             <div className={style.notSelectedgreen}></div>
                           </div>
@@ -389,24 +418,24 @@ export default function Setting() {
                         <div className={style.offerCardHeading}>
                           Touch ID
                         </div>
-                        {selectBtn ? (
+                        {touchId ? (
                           <div
                             className={style.ovalBtn}
-                            onClick={() => setSelectBtn(!selectBtn)}
+                            onClick={() => setTouchId(!touchId)}
                           >
                             <div className={style.whiteBtn}></div>
                           </div>
                         ) : (
                           <div
                             className={style.notSelectedBtn}
-                            onClick={() => setSelectBtn(!selectBtn)}
+                            onClick={() => setTouchId(!touchId)}
                           >
                             <div className={style.notSelectedgreen}></div>
                           </div>
                         )}
                       </div>
                       <div className={style.passwordHeading}>Create Your New Password</div>
-                      <div className={style.editinputWrapper}>
+                      <div className={style.passwordInfo}>
                         <div className={style.inputHeadingTwo}>Enter Current Password</div>
                         <input
 
@@ -414,14 +443,14 @@ export default function Setting() {
                           type="text"
                         />
                       </div>
-                      <div className={style.editinputWrapper}>
+                      <div className={style.passwordInfo}>
                         <div className={style.inputHeadingTwo}>Enter New Password</div>
                         <input
                           className={style.editInput}
                           type="text"
                         />
                       </div>
-                      <div className={style.editinputWrapper}>
+                      <div className={style.passwordInfo}>
                         <div className={style.inputHeadingTwo}>Enter Password Again</div>
                         <input
                           className={style.editInput}
@@ -434,17 +463,17 @@ export default function Setting() {
                         <div className={style.offerCardHeading}>
                           Remember login details
                         </div>
-                        {selectBtn ? (
+                        {remember ? (
                           <div
                             className={style.ovalBtn}
-                            onClick={() => setSelectBtn(!selectBtn)}
+                            onClick={() => setRemember(!remember)}
                           >
                             <div className={style.whiteBtn}></div>
                           </div>
                         ) : (
                           <div
                             className={style.notSelectedBtn}
-                            onClick={() => setSelectBtn(!selectBtn)}
+                            onClick={() => setRemember(!remember)}
                           >
                             <div className={style.notSelectedgreen}></div>
                           </div>
@@ -467,14 +496,14 @@ export default function Setting() {
                           Thanks for stopping by. See you again soon!
                         </div>
                         <div className={style.logoutBtnWrapper}>
-                        <div className={style.cancelBtn}  onClick={() => setIsModalVisible(false)}>
-                          Cancel
+                          <div className={style.cancelBtn} onClick={() => setIsModalVisible(false)}>
+                            Cancel
+                          </div>
+                          <div className={style.logoutBtn} onClick={handleLogout}>
+                            logout
+                          </div>
                         </div>
-                        <div className={style.logoutBtn}  onClick={handleLogout}>
-                          logout
-                        </div>
-                        </div>
-                        
+
 
 
                       </div>

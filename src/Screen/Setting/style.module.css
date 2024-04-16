@@ -208,17 +208,35 @@
 .editinputWrapper {
     background-color: #fff;
     border-radius: 10px;
-    width: 380px;
     margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
+    width: 43%;
 
+}
+.passwordInfo{
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.contactWrapper{
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 43%;
+    height: 70px;
 }
 
 .inputHeadingTwo {
     font-size: 20px;
     color: #8C8C8C;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .editInput {
@@ -231,25 +249,26 @@
     padding-left: 10px;
 }
 
-.div {
+.contactInfoWrapper {
     display: flex;
     justify-content: center;
     margin: 10px 0;
 
 }
 
-.inputdiv {
+.locationWrapper {
     background-color: #fff;
-    margin-right: 10px;
+    margin-left: 10px;
     border-radius: 10px;
-    width: 380px;
+    width: 43%;
+    height: 70px;
+
 }
 
 
 .textField {
     margin-top: 10px;
     width: 40%;
-    height: 80px;
     gap: 25px;
     background-color: #F3F3F3;
     border-radius: 10px;
@@ -305,7 +324,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #8C8C8C;
+    background-color: #fff;
     border-radius: 10px;
     cursor: pointer;
     width: 800px;
@@ -519,4 +538,31 @@
     font-weight: 600;
     margin-bottom: 10px;
 }
+.countryName {
+    border-bottom: 1px solid #00000027;
+    height: 30px;
+    background-color: #fff;
+    font-size: 16px;
+    border-radius: 2px;
+    padding-bottom: 7px;
+    padding-left: 20px;
+}
 
+.country {
+    margin-top: 30px;
+    height: 300px;
+    overflow-y: scroll;
+    border-radius: 5px;
+}
+.conutrySelect {
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+    padding-top: 4px;
+    font-weight: 500;
+}

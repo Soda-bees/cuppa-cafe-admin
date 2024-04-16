@@ -10,9 +10,10 @@ import Offer from "../../Screen/Offers";
 import Events from "../../Screen/Events";
 import Setting from "../../Screen/Setting";
 import Layout from "../../Screen/Layout";
-import AddItem from "../../Additem";
-import OfferDetails from "../../OfferDetails";
-import EventDetails from "../../EventDetails";
+import AddItem from "../../Screen/Additem";
+import OfferDetails from "../../Screen/OfferDetails";
+import EventDetails from "../../Screen/EventDetails";
+import ItemDetails from "../../Screen/ItemDetails";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
       {
         path: "/eventdetails",
         element: <EventDetails/>,
+      },
+      {
+        path: "/itemdetails",
+        element: <ItemDetails/>,
       },
     ],
   },

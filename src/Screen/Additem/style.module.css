@@ -358,32 +358,48 @@
     font-size: 24px;
 }
 
-.owal {
-    display: flex;
-    background-color: #60B0AA;
-    width: 70px;
-    height: 40px;
-    border-radius: 20px;
-    align-items: center;
-    justify-content: end;
-
-}
-
-.circleTwo {
-    display: flex;
-    align-items: center;
-    background-color: #F3F3F3;
-    width: 35px;
-    height: 35px;
-    border-radius: 100%;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-right: 5px;
-
-}
 
 .filterOption {
     margin-top: 10px;
     font-size: 20px;
     color: #8C8C8C;
+}
+
+.ovalBtn {
+    width: 65px;
+    height: 35px;
+    border-radius: 30px;
+    background-color: #60b0aa;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    cursor: pointer;
+}
+
+.notSelectedBtn {
+    width: 65px;
+    height: 35px;
+    border-radius: 30px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    cursor: pointer;
+
+}
+
+.whiteBtn {
+    margin-right: 5px;
+    width: 28px;
+    height: 28px;
+    background-color: #f3f3f3;
+    border-radius: 100%;
+}
+
+.notSelectedgreen {
+    margin-left: 5px;
+    width: 28px;
+    height: 28px;
+    background-color: #60b0aa;
+    border-radius: 100%;
 }
