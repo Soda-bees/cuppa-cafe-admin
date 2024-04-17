@@ -48,6 +48,12 @@ export default function Setting() {
   const [faceId, setFaceId] = useState(false);
   const [touchId, setTouchId] = useState(false);
   const [remember, setRemember] = useState(false);
+
+
+  const [eventDropDown, seteventDropDown] = useState(false);
+  const [registration, setRegistration] = useState("Push Notification & Email");
+  const [message, setMessage] = useState(false);
+  const [messageOption, setMessageOption] = useState("Messages");
   return (
     <div className={style.container}>
       <div className={style.menu}>
@@ -190,8 +196,8 @@ export default function Setting() {
                     <div className={style.btn}>Save</div>
                   </div>
                 </div>
-                <div className={style.imageUploadWrapper}>
                   <div className={style.InputImg}>
+                    <div className={style.imageWrapper}>
                     <label for="img" className={style.uploadImage}>
                       <img
                         src={
@@ -210,12 +216,12 @@ export default function Setting() {
                         onChange={handleImageChange}
                       />
                     </label>
+                    </div>
                     <div className={style.uploadImgtext}>
                       <img className={style.uploadImg} src={images.uploadImg} />
                       Upload Images
                     </div>
                   </div>
-                </div>
                 <div className={style.InputFeild}>
                   <div className={style.editinputWrapper}>
                     <div className={style.inputHeadingTwo}>Outlet Name</div>
@@ -360,23 +366,95 @@ export default function Setting() {
                 <div className={style.notificationBtnWrapper}>
                   <div className={style.eventInputHeading}>
                     <div className={style.inputHeading}>Receive Notifications Via</div>
-                    <div className={style.registrationDropDown}>
+                    {eventDropDown ? (
+                      <div className={style.dropDownTwo}>
+                        <div
+                          className={style.registrationHeading}
+                          onClick={() => {
+                            seteventDropDown(!eventDropDown);
+                            setRegistration("Push Notification & Email");
+                          }}
+                        >
+                          Push Notification & Email
+                        </div>
+                        <div
+                          className={style.registrationHeading}
+                          onClick={() => {
+                            seteventDropDown(!eventDropDown);
+                            setRegistration("Push Notification & Email");
+                          }}
+                        >
+                          Push Notification & Email
+                        </div>
+                      </div>
+                    ) : (
+                      <div
+                        onClick={() => seteventDropDown(!eventDropDown)}
+                        className={style.registrationDropDown}
+                      >
+                        <div className={style.registrationHeading}>
+                          {registration}
+                        </div>
+                        <img
+                          className={style.dropDownIcon}
+                          src={images.downArrow}
+                        />
+                      </div>
+                    )}
+                    {/* <div className={style.registrationDropDown}>
                       <div className={style.registrationHeading}>Push Notification & Email</div>
                       <img
                         className={style.dropDownIcon}
                         src={images.downArrow}
                       />
-                    </div>
+                    </div> */}
                   </div>
                   <div className={style.eventInputHeading}>
                     <div className={style.inputHeading}>Do not Receive Notifications</div>
-                    <div className={style.registrationDropDown}>
+                    {message ? (
+                      <div className={style.dropDownTwo}>
+                        <div
+                          className={style.registrationHeading}
+                          onClick={() => {
+                            setMessage(!message);
+                            setMessageOption("Messages");
+                          }}
+                        >
+                          Messages
+                        </div>
+                        <div
+                          className={style.registrationHeading}
+                          onClick={() => {
+                            setMessage(!message);
+                            setMessageOption("Messages");
+                          }}
+                        >
+                          Messages
+                        </div>
+                      </div>
+                    ) : (
+                      <div
+                        onClick={() => setMessage(!message)}
+                        className={style.registrationDropDown}
+                      >
+                        <div className={style.registrationHeading}>
+                          {messageOption}
+                        </div>
+                        <img
+                          className={style.dropDownIcon}
+                          src={images.downArrow}
+                        />
+                      </div>
+                    )}
+
+
+                    {/* <div className={style.registrationDropDown}>
                       <div className={style.registrationHeading}>Messages</div>
                       <img
                         className={style.dropDownIcon}
                         src={images.downArrow}
                       />
-                    </div>
+                    </div> */}
                   </div>
 
 
@@ -492,7 +570,7 @@ export default function Setting() {
                         <div className={style.modalHeading}>
                           Logging Out?
                         </div>
-                        <div className={style.asdasd}>
+                        <div className={style.logoutPara}>
                           Thanks for stopping by. See you again soon!
                         </div>
                         <div className={style.logoutBtnWrapper}>
