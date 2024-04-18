@@ -221,20 +221,6 @@ export default function Events() {
     setClosingTimeMinutes(minutes)
     setAmClose(amPm)
 
-
-
-
-    // if(startTimeHour === 13){
-    //   setClosingTimeHour(1)
-    //   setClosingTimeMinutes(minutes)
-    //   setAmClose(amPm)
-    // }
-    // else{
-    //   setClosingTimeHour( +hour +1 )
-    //   setClosingTimeMinutes(minutes)
-    //   setAmClose(amPm)
-    // }
-
   }, []);
 
 
@@ -242,7 +228,6 @@ export default function Events() {
   // const [startTimeHour, setStartTimeHour] = useState(startDate.getHours());
   // const [startTimeMinutes, setStartTimeMinutes] = useState(startDate.getMinutes());
   const [startTime, setStartTime] = useState("AM");
-
   const [closingTime, setClosingTime] = useState("AM");
   const [focusedInput, setFocusedInput] = useState(null);
   const [closingTimeFinal, setClosingTimeFinal] = useState("AM");
@@ -257,6 +242,36 @@ export default function Events() {
           setter(0)
           if(amStart === 'AM') setAmStart('PM')
           else setAmStart('AM')
+        }
+        else {
+          setter(text);
+        }
+      }
+      else {
+        if (+text > 59) {
+          setter(0)
+          if (+startTimeHour+1 > 11) {
+            setStartTimeHour(0)
+            if(amStart === 'AM') setAmStart('PM')
+            else setAmStart('AM')
+          }
+          else {
+            setStartTimeHour(+startTimeHour + 1);
+          }
+        }
+        else {
+          setter(text);
+        }
+      }
+    }
+  };
+  const handleInputChangeTwo = (text, setter, type) => {
+    if (text === "" || (Number(text) >= 0)) {
+      if (type === "hours") {
+        if (+text > 12) {
+          setter(0)
+          if(amClose === 'AM') setAmClose('PM')
+          else setAmClose('AM')
         }
         else {
           setter(text);
@@ -443,7 +458,7 @@ export default function Events() {
                     onChange={(e) => setEventName(e.target.value)}
                   />
                 </div>
-                <div className={style.eventInputHeading}>
+                <div className={style.eventInputHeading3}>
                   <div className={style.inputHeading}>Date</div>
                   <div className={style.dataWrapper}>
                     <DatePicker
@@ -626,7 +641,7 @@ export default function Events() {
                   value={closingTimeHour}
                   onChange={(e) => {
                     const value = e.target.value.replace(/^0+/, ''); // Remove leading zeros
-                    handleInputChange(value, setClosingTimeHour, "hours");
+                    handleInputChangeTwo(value, setClosingTimeHour, "hours");
                   }}
                   type="number"
                   onFocus={() => handleFocus("closingHour")}

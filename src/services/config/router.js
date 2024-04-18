@@ -14,6 +14,8 @@ import AddItem from "../../Screen/Additem";
 import OfferDetails from "../../Screen/OfferDetails";
 import EventDetails from "../../Screen/EventDetails";
 import ItemDetails from "../../Screen/ItemDetails";
+import Rewards from "../../Screen/Rewards"
+import RewardDetail from "../../Screen/RewardDetails";
 
 const router = createBrowserRouter([
   {
@@ -67,6 +69,14 @@ const router = createBrowserRouter([
       {
         path: "/itemdetails",
         element: <ItemDetails/>,
+      },
+      {
+        path: "/rewards",
+        element: <Rewards/>,
+      },
+      {
+        path: "/rewardsDetails",
+        element: <RewardDetail/>,
       },
     ],
   },

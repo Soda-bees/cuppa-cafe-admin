@@ -53,6 +53,10 @@ import offerGreen from './offerGreen.png'
 import settingGreen from './settingsGreen.png'
 import calendar from './calendar.png'
 import arrowRight from './arrowRight.png'
+import rewardGreen from './rewardGreen.png'
+import rewardCardImg from './rewardCardImg.png'
+import arrowUp from './arrowUp.png'
+import completeImg from './completeCoffee.png'
 
 
 const Images = {
@@ -112,6 +116,10 @@ const Images = {
     settingGreen,
     calendar,
     clock,
+    rewardGreen,
+    rewardCardImg,
+    arrowUp,
+    completeImg,
 
 
 }

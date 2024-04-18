@@ -233,6 +233,15 @@
     border-radius: 10px;
     margin-bottom: 10px;
     padding-bottom: 8px;
+  
+}
+.eventInputHeading3 {
+    background-color: #F3F3F3;
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    z-index: 3;
 }
 
 .eventInputHeading2 {
@@ -242,13 +251,14 @@
     margin-bottom: 10px;
     z-index: 2;
     padding-bottom: 8px;
+    height: 70px;
 
 }
 
 .inputHeading {
     margin-top: 10px;
     margin-left: 10px;
-    color: #8C8C8C
+    color: #8C8C8C;
 }
 
 .AddEvent {
@@ -351,7 +361,7 @@
 
 .dropDown {
     position: absolute;
-    top: 50px;
+    top: 40px;
     background-color: #F3F3F3;
     width: 48.6%;
     border-radius: 5px;

@@ -1,0 +1,429 @@
+.container {
+    /* display: flex; */
+    /* background-color: red; */
+    /* width: 70%; */
+    margin-left: 18%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.menu {
+    width: 96%;
+    margin: 30px 0px;
+    border-radius: 10px;
+}
+
+.searchWrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.searchIcon {
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.searchInput {
+    width: 1297px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid #EBEBEB;
+    padding-left: 50px;
+
+}
+
+.noticationBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #EBEBEB;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.notificationIcon {
+    width: 20px;
+}
+
+.btn {
+    padding: 10px;
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.btnWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rewardHeading {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.offerHeadingWrapper {
+    display: flex;
+    align-items: center;
+}
+
+
+.row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.rewardCard {
+    border: 2px solid #EBEBEB;
+    width: 32%;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #57a19c, #b6dbd9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.rewardHeadingWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
+}
+
+.rewardCardHeading {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.reawadPara {
+    font-size: 18px;
+}
+
+.rewardImgWrapper {
+    margin: 20px;
+}
+
+.rewardImg {
+    width: 80px;
+}
+
+.greenBtn {
+    background-image: linear-gradient(to right, #287c76, #60b0aa);
+    height: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.word {
+    font-size: 19px;
+    font-weight: 600;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+/* modal Css */
+
+.modalReward {
+    outline: none;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 40%;
+    height: 40vh;
+    background-color: #FFF;
+    border-radius: 10px;
+
+}
+
+.modalContainer {
+    width: 100%;
+    margin: 20px;
+}
+
+.modalHeadingWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.cross {
+    width: 40px;
+    cursor: pointer;
+}
+
+.modalHeading {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.modalBtn {
+    padding: 5px;
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.dropDownWrappper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.dropDownleft {
+    background-color: #F4F4F4;
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding-bottom: 10px;
+
+}
+
+.dropDownHeading {
+    font-size: 18px;
+    margin-top: 10px;
+
+}
+
+.dropDownSelect {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+
+
+}
+
+.dropDownOpen {
+    margin-top: 20px;
+    background-color: #fff;
+    width: 95%;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+
+.dropDownPara {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.dropDownIcon {
+    width: 20px;
+    object-fit: contain;
+}
+
+.dropDownRight {
+    background-color: #F4F4F4;
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+.dropDown {
+    width: 100%;
+}
+
+.dropDownOption {
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    border-top: 2px solid #00000018;
+}
+
+
+/* nextModal */
+
+.reviewModal {
+    outline: none;
+    position: absolute;
+    top: 40%;
+    left: 37%;
+    width: 25%;
+    height: 25vh;
+    background-color: #FFF;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid #0000003d;
+}
+
+.ReiewContainer {
+    width: 100%;
+}
+
+.reviewHeading {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 30px;
+}
+
+.orderInfoWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.orderHeading {
+    font-size: 18px;
+}
+
+.orderQuantity {
+    font-weight: 500;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.logoutBtnWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logoutBtn {
+    padding: 5px 70px;
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    border-radius: 10px;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cancelBtn {
+    padding: 5px 70px;
+    border-radius: 10px;
+    font-size: 22px;
+    color: #000;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+.crossTwo {
+    width: 25px;
+    cursor: pointer;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+}
+
+/* completeModal */
+
+.completeModal {
+    outline: none;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 15%;
+    height: 30vh;
+    background-color: #FFF;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid #0000003d;
+
+}
+
+.completeContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.completebtnWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.completeHeading {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+
+}
+
+.completebtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 80%;
+    height: 50px;
+    padding: 0 10px;
+
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+
+}
+
+.arrowImg {
+    width: 15px;
+}
+
+.completeImg {
+    width: 150px;
+}
+
+.completePara {
+    font-weight: 500;
+}

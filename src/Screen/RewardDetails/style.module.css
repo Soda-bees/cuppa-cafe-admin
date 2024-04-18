@@ -1,0 +1,124 @@
+.container {
+    /* display: flex; */
+    /* background-color: red; */
+    /* width: 70%; */
+    margin-left: 18%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.menu {
+    width: 96%;
+    margin: 30px 0px;
+    border-radius: 10px;
+}
+
+.searchWrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.searchIcon {
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.searchInput {
+    width: 1297px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid #EBEBEB;
+    padding-left: 50px;
+
+}
+
+.noticationBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #EBEBEB;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.notificationIcon {
+    width: 20px;
+}
+
+.btn {
+    padding: 10px;
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.btnWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rewardDetailWrapper{
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.rewardHeading {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.rewardsName{
+    color: #8C8C8C;
+    margin-bottom: 10px;
+}
+.orderDetailWrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.rewardsNameInfo{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.rewardNameWrapper{
+    margin-bottom: 20px;
+}
+
+.orderInput{
+    outline: none;
+    border: 2px solid #8C8C8C;
+    border-radius: 10px;
+    font-size: 25px;
+    width: 80%;
+    padding-left: 10px;
+}
+.dropdownWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f3f3;
+    width: 200px;
+}
+
+.dropdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
