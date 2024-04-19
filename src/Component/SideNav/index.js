@@ -15,9 +15,9 @@ export default function SideNav() {
         <div className={style.logo}>
           <img src={images.menulogo} />
         </div>
-        <div className={style.menuList}>
-          <img className={style.menuImg} src={images.dashBoardIcon} />
-          <div className={style.word}>Dashboard</div>
+        <div className={style.menuList} onClick={() => navigate("/dashboard")}>
+          <img className={style.menuImg} src={activePath === "/dashboard" ? images.dashboardGreen : images.dashBoardIcon} />
+          <div className={activePath === "/dashboard" ? style.greenWord : style.word} >Dashboard</div>
         </div>
         <div className={style.menuList} onClick={() => navigate("/menu")}>
           <img

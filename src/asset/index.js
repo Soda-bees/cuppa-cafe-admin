@@ -57,6 +57,16 @@ import rewardGreen from './rewardGreen.png'
 import rewardCardImg from './rewardCardImg.png'
 import arrowUp from './arrowUp.png'
 import completeImg from './completeCoffee.png'
+import blackArrowUp from './blackArrowUp.png'
+import blackArrowDown from './blackArrowDown.png'
+import dashboardGreen from './dashboardGreen.png'
+import coffeeIcon from './coffeeIcon.png'
+import coffeeCrossIcon from './coffeeCrossIcon.png'
+import customerIcon from './customerIcom.png'
+import graphSetting from './graphSetting.png'
+import ratingImg from './ratingImg.png'
+import replyback from './replyImg.png'
+
 
 
 const Images = {
@@ -120,8 +130,15 @@ const Images = {
     rewardCardImg,
     arrowUp,
     completeImg,
-
-
+    blackArrowUp,
+    blackArrowDown,
+    dashboardGreen,
+    coffeeIcon,
+    coffeeCrossIcon,
+    customerIcon,
+    graphSetting,
+    ratingImg,
+    replyback,
 }
 
 export default Images

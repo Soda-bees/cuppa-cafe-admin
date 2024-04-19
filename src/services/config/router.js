@@ -1,7 +1,7 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Menu from "../../Screen/Menu";
-import Home from "../../Screen/Home";
+import dashboard from "../../Screen/Dashboard";
 import SignUp from "../../Screen/SignUp";
 import AdminLogIn from "../../Screen/AdminLogIn";
 import SetUpOutlet from "../../Screen/SetUpOutlet";
@@ -24,7 +24,8 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <ProtectedRoute Compunent={Home} />,
+        path: "/dashboard",
+        element: <ProtectedRoute Compunent={dashboard} />,
       },
       {
         path: "/menu",

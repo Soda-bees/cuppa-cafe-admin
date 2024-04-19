@@ -1,0 +1,299 @@
+.container {
+    /* display: flex; */
+    /* background-color: red; */
+    /* width: 70%; */
+    margin-left: 18%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.menu {
+    width: 96%;
+    margin: 30px 0px;
+    border-radius: 10px;
+}
+
+.searchWrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.searchIcon {
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.searchInput {
+    width: 1297px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid #EBEBEB;
+    padding-left: 50px;
+
+}
+
+.noticationBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #EBEBEB;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.notificationIcon {
+    width: 20px;
+}
+
+.btn {
+    padding: 10px;
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.btnWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashBoardWrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.dashBoardLeft {
+    width: 65%;
+}
+
+.cardWrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.dashBoardCard {
+    width: 23%;
+    border: 1px solid #EBEBEB;
+    border-radius: 10px;
+}
+
+.cardInfo {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    align-items: center;
+}
+
+.Icon {
+    width: 40px;
+}
+
+.IconTwo {
+    width: 60px;
+}
+
+.orderHeading {
+    display: flex;
+    justify-content: end;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.quantity {
+    font-size: 33px;
+    font-weight: 500;
+}
+
+.graphHeadingWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+.graphHeading {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.graphSettingIcon {
+    width: 20px;
+}
+
+.heading {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.recentOrderWrapper {
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    border-radius: 10px;
+    width: 99%;
+    margin-top: 10px;
+}
+
+.itemHeadingList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.listWrapper {
+    margin: 20px;
+}
+
+.HeadingList {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: 20px;
+}
+
+.itemHeading {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.OrderWrapper {
+    border-radius: 10px;
+    width: 99%;
+    margin-top: 10px;
+    border: 1px solid #EBEBEB;
+}
+
+.itemName {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.itemImg {
+    width: 90px;
+}
+
+.listItem {
+    display: flex;
+    justify-content: end;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.listItemTwo {
+    display: flex;
+    justify-content: end;
+    width: 50px;
+    font-weight: 500;
+}
+
+.listItemThree {
+    display: flex;
+    justify-content: end;
+    width: 70px;
+    color: #60B0AA;
+    font-weight: 500;
+}
+
+.listItemFour {
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+    font-weight: 500;
+}
+
+.blackArrow {
+    width: 20px;
+}
+
+.listItemWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 47%;
+    margin: 20px;
+}
+.dropDown{
+    position: absolute;
+    top: 25px;
+    border: 1px solid #EBEBEB;
+    border-radius: 5px;
+    width: 90px;
+    background-color: #fff;
+}
+.dropDownOption{
+    margin: 5px;
+}
+.dashBoardRight {
+    width: 35%;
+}
+.ratingHeading{
+    font-size: 22px;
+    font-weight: 500;
+}
+.ratingCard{
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    width: 100%;
+}
+.ratingCardInner{
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+
+}
+
+.ratingCardInfoWrapper{
+    display: flex;
+    gap: 10px;
+}
+.RatingInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.ratingImg{
+    width: 80px;
+}
+.ratings{
+    color: #8C8C8C;
+}
+.replyBack{
+    width: 30px;
+}
+.customerName{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.replyInput{
+    border: none;
+    outline: none;
+    margin:10px;
+    margin-left: 10px;
+    width: 92%;
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 10px 0;
+    padding-left: 10px;
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    color: #fff;
+}

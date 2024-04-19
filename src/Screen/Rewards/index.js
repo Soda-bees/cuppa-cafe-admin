@@ -225,7 +225,7 @@ export default function Rewards() {
         </div>
         <div className={style.row}>
           {currentProducts.map((item, index) => (
-            <div key={index} className={style.rewardCard}>
+            <div key={index} className={style.rewardCard} onClick={()=> navigate("/rewardsDetails")}>
               <div className={style.rewardHeadingWrapper}>
                 <div className={style.rewardCardHeading}>Buy 5 Get 1 Free</div>
                 <div className={style.reawadPara}>Order 5 Coffees & Get 1 Free</div>

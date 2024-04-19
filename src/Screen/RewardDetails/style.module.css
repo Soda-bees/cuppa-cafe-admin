@@ -85,6 +85,7 @@
 .rewardsName{
     color: #8C8C8C;
     margin-bottom: 10px;
+    font-size: 20px;
 }
 .orderDetailWrapper{
     display: flex;
@@ -111,14 +112,46 @@
 }
 .dropdownWrapper{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     background-color: #f3f3f3;
-    width: 200px;
+    border-radius: 10px;
+    align-items: start;
+    z-index: 2;
 }
 
 .dropdown{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 200px;
+    margin: 0 10px;
+    font-size: 20px;
+    color: #8C8C8C;
+    
+}
+.blackArrow{
+    width: 15px;
+}
+
+.dropDownOption{
+    font-size: 20px;
+    padding: 5px 0;
+    padding-left: 10px;
+}
+
+.rewardtermWrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 40px;
+ 
+}
+.termWrapper{
+    width: 45%;
+}
+
+.termPara{
+    font-size: 20px;
+    font-weight: 500;
 }
