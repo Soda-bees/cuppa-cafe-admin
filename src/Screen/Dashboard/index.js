@@ -1,10 +1,28 @@
 import React, { useState } from 'react'
 import style from './style.module.css'
 import images from '../../asset';
+import StarRatings from 'react-star-ratings';
+import ProgressBar from "@ramonak/react-progress-bar";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+
+
 
 export default function Dashboard() {
   const [search, setSearch] = useState("");
   const [dropDown, setDropDown] = useState(null);
+  const [todayOrder, setTodayOrder] = useState('1000');
+  const [cancelledOrder, setCancelOrder] = useState('5');
+  const [menu, setMenu] = useState('6');
+  const [totalCustomer, setTotalCustomer] = useState('2,486');
+  const [totalProfit, setTotalProfit] = useState('$15,239.58');
+  const [growth, setGrowth] = useState('$192.20');
+  const [orderDate, setOrderData] = useState('Oct 24 , 2024');
+  const [quantity, setQuantity] = useState('1');
+  const [coffeePrice, setCoffeePrice] = useState('$3.45');
+  const [totalAveragesRating, setTotalAveragesRating] = useState('4.8');
+
+
+
   const [card, setCard] = useState([
     {
       images: images.cappuccino,
@@ -24,10 +42,49 @@ export default function Dashboard() {
     },
   ]);
 
+  const [commitCard, setCommitCard] = useState([
+    {
+      image: images.ratingImg
+    },
+    {
+      image: images.ratingImg
+    },
+    {
+      image: images.ratingImg
+    },
+    {
+      image: images.ratingImg
+    },
+    {
+      image: images.ratingImg
+    },
+    {
+      image: images.ratingImg
+    },
+
+  ])
 
   const toggleDropDown = (index) => {
     setDropDown((prevIndex) => (prevIndex === index ? null : index));
   };
+
+  const [reply, setReply] = useState(null)
+  const togglereply = (index) => {
+    setReply((prevIndex) => (prevIndex === index ? null : index));
+  };
+
+  const data = [
+    { name: 'Mon',  pv: 2400, amt: 2400 },
+    { name: 'Tue',  pv: 1398, amt: 2210 },
+    { name: 'Wed',  pv: 9800, amt: 2290 },
+    { name: 'Thu',  pv: 7800, amt: 2290 },
+    { name: 'Fri',  pv: 8800, amt: 2290 },
+    { name: 'Sat',  pv: 4800, amt: 2290 },
+    { name: 'Sun',  pv: 6800, amt: 2290 },
+  ];
+
+
+
   return (
     <div className={style.container}>
       <div className={style.searchWrapper}>
@@ -55,7 +112,7 @@ export default function Dashboard() {
               <div className={style.dashBoardCard}>
                 <div className={style.cardInfo}>
                   <div><img className={style.Icon} src={images.coffeeIcon} /></div>
-                  <div className={style.quantity}>1000</div>
+                  <div className={style.quantity}>{todayOrder}</div>
                 </div>
                 <div className={style.orderHeading}>
                   Orders Today
@@ -64,7 +121,7 @@ export default function Dashboard() {
               <div className={style.dashBoardCard}>
                 <div className={style.cardInfo}>
                   <div><img className={style.IconTwo} src={images.coffeeCrossIcon} /></div>
-                  <div className={style.quantity}>5</div>
+                  <div className={style.quantity}>{cancelledOrder}</div>
                 </div>
                 <div className={style.orderHeading}>
                   Cancelled Orders
@@ -73,7 +130,7 @@ export default function Dashboard() {
               <div className={style.dashBoardCard}>
                 <div className={style.cardInfo}>
                   <div><img className={style.Icon} src={images.menuGreenIcon} /></div>
-                  <div className={style.quantity}>6</div>
+                  <div className={style.quantity}>{menu}</div>
                 </div>
                 <div className={style.orderHeading}>
                   Total Menus
@@ -82,7 +139,7 @@ export default function Dashboard() {
               <div className={style.dashBoardCard}>
                 <div className={style.cardInfo}>
                   <div><img className={style.Icon} src={images.customerIcon} /></div>
-                  <div className={style.quantity}>2,486</div>
+                  <div className={style.quantity}>{totalCustomer}</div>
                 </div>
                 <div className={style.orderHeading}>
                   Total Customer
@@ -98,7 +155,25 @@ export default function Dashboard() {
                   <img className={style.graphSettingIcon} src={images.graphSetting} />
                 </div>
               </div>
-              <div className={style.graph}></div>
+              <div className={style.graph}>
+                <div className={style.saleWrapper}>
+                  <div className={style.saleHeading}>Sales</div>
+                  <div className={style.growthWrapper}>
+                    <div className={style.totalPrice}>{totalProfit}</div>
+                    <div className={style.grothPrice}>+{growth} <img className={style.growthArrow} src={images.growthArrow}/></div>
+                  </div>
+                </div>
+                <LineChart width={950} height={300} data={data}>
+                <Tooltip />
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <CartesianGrid stroke="#eee" />
+                  <Line type="monotone"
+                    dataKey="pv"
+                    stroke="#4CAD00" 
+                    strokeWidth={5}/>
+                </LineChart>
+              </div>
             </div>
             <div className={style.heading}>
               Recent Orders
@@ -123,22 +198,22 @@ export default function Dashboard() {
                   <div className={style.listWrapper}>
                     <div className={style.itemName}>
                       <img className={style.itemImg} src={item.images} />
-                     {item.name}
+                      {item.name}
                     </div>
                   </div>
                   <div className={style.listItemWrapper}>
-                    <div className={style.listItem}>Oct 24 , 2024</div>
-                    <div className={style.listItemTwo}>1</div>
-                    <div className={style.listItemThree}>$3.45</div>
+                    <div className={style.listItem}>{orderDate}</div>
+                    <div className={style.listItemTwo}>{quantity}</div>
+                    <div className={style.listItemThree}>{coffeePrice}</div>
                     <div onClick={() => toggleDropDown(index)} className={style.listItemFour} >Pending
                       <img className={style.blackArrow} src={dropDown === index ? images.blackArrowUp : images.blackArrowDown} />
                       {dropDown === index &&
-                       (<div className={style.dropDown}>
-                        <div className={style.dropDownOption}>Ready</div>
-                        <div className={style.dropDownOption}>Picked</div>
-                        <div className={style.dropDownOption}>Cancelled</div>
-                      </div>
-                      )}
+                        (<div className={style.dropDown}>
+                          <div className={style.dropDownOption}>Ready</div>
+                          <div className={style.dropDownOption}>Picked</div>
+                          <div className={style.dropDownOption}>Cancelled</div>
+                        </div>
+                        )}
                     </div>
                   </div>
                 </div>
@@ -147,24 +222,139 @@ export default function Dashboard() {
           </div>
           <div className={style.dashBoardRight}>
             <div className={style.ratingHeading}>
-            Rating & Reviews
+              Rating & Reviews
+            </div>
+            <div className={style.ratingwrapper}>
+              <div className={style.ratingReviewCard}>
+                <div className={style.headingRating}>Rating</div>
+                <div className={style.ratingReviewCardWrapper}>
+                  <div className={style.ratingLeft}>
+                    <div className={style.ratingAverage}>{totalAveragesRating}</div>
+                    <div className={style.ratingStar}>
+                      <StarRatings
+                        rating={3}
+                        starDimension="25px"
+                        starSpacing="1px"
+                        starRatedColor="#FCC767"
+
+                      />
+                    </div>
+                    <div className={style.ratingTotalNumber}>All ratings (1000+)</div>
+                  </div>
+                  <div className={style.ratingRight}>
+                    <div className={style.ProgressBarWrapper}>
+                      <div className={style.starNumbar}>5</div>
+                      <div>
+                        <img className={style.starImg} src={images.star} />
+                      </div>
+                      <div className={style.ProgressBar}>
+                        <ProgressBar
+                          completed={60}
+                          maxCompleted={100}
+                          bgColor="#FCC767"
+                          height="5px"
+                          width='100%'
+                          isLabelVisible={false}
+                        /></div>
+                      <div className={style.totalAverage}>60%</div>
+                    </div>
+                    <div className={style.ProgressBarWrapper}>
+                      <div className={style.starNumbar}>4</div>
+                      <div>
+                        <img className={style.starImg} src={images.star} />
+                      </div>
+                      <div className={style.ProgressBar}>
+                        <ProgressBar
+                          completed={50}
+                          maxCompleted={100}
+                          bgColor="#FCC767"
+                          height="5px"
+                          width='100%'
+                          isLabelVisible={false}
+                        /></div>
+                      <div className={style.totalAverage}>50%</div>
+                    </div>
+                    <div className={style.ProgressBarWrapper}>
+                      <div className={style.starNumbar}>3</div>
+                      <div>
+                        <img className={style.starImg} src={images.star} />
+                      </div>
+                      <div className={style.ProgressBar}>
+                        <ProgressBar
+                          completed={40}
+                          maxCompleted={100}
+                          bgColor="#FCC767"
+                          height="5px"
+                          width='100%'
+                          isLabelVisible={false}
+                        /></div>
+                      <div className={style.totalAverage}>40%</div>
+                    </div>
+                    <div className={style.ProgressBarWrapper}>
+                      <div className={style.starNumbar}>2</div>
+                      <div>
+                        <img className={style.starImg} src={images.star} />
+                      </div>
+                      <div className={style.ProgressBar}>
+                        <ProgressBar
+                          completed={30}
+                          maxCompleted={100}
+                          bgColor="#FCC767"
+                          height="5px"
+                          width='100%'
+                          isLabelVisible={false}
+                        /></div>
+                      <div className={style.totalAverage}>30%</div>
+                    </div>
+                    <div className={style.ProgressBarWrapper}>
+                      <div className={style.starNumbar}>1</div>
+                      <div>
+                        <img className={style.starImg} src={images.star} />
+                      </div>
+                      <div className={style.ProgressBar}>
+                        <ProgressBar
+                          completed={20}
+                          maxCompleted={100}
+                          bgColor="#FCC767"
+                          height="5px"
+                          width='100%'
+                          isLabelVisible={false}
+                        /></div>
+                      <div className={style.totalAverage}>20%</div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
             </div>
             <div className={style.ratingCardWrapper}>
-              <div className={style.ratingCard}>
-              <div className={style.ratingCardInner}>
-                <div className={style.ratingCardInfoWrapper}>
-                  <div className={style.ratingImgWrapper}><img className={style.ratingImg} src={images.ratingImg}/></div>
-                  <div className={style.RatingInfo}>
-                  <div className={style.customerName}>Mark</div>
-                  <div className={style.ratings}> . Yesterday</div>
-                  <div className={style.commit}>The coffee was really good and milky</div>
+              {commitCard.map((item, index) => (
+                <div key={index} className={style.ratingCard}>
+                  <div className={style.ratingCardInner}>
+                    <div className={style.ratingCardInfoWrapper}>
+                      <div className={style.ratingImgWrapper}><img className={style.ratingImg} src={item.image} /></div>
+                      <div className={style.RatingInfo}>
+                        <div className={style.customerName}>Mark</div>
+                        <div className={style.ratings}> <StarRatings
+                          rating={4}
+                          starDimension="20px"
+                          starSpacing="0.5px"
+                          starRatedColor="#FCC767"
+
+                        /> . Yesterday</div>
+                        <div className={style.commit}>The coffee was really good and milky</div>
+                      </div>
+                    </div>
+                    <div className={style.replyBackWrapper}><img onClick={() => togglereply(index)} className={style.replyBack} src={images.replyback} /></div>
+                  </div>
+                  {reply === index &&
+                    <div className={style.inputWraaper}><input className={style.replyInput} /><img className={style.whitearrow} src={images.whiteLeftArrow} /></div>
+                  }
                 </div>
-                </div>
-               <div className={style.replyBackWrapper}><img className={style.replyBack} src={images.replyback}/></div>
-              </div>
-               <div className={style.inputWraaper}><input className={style.replyInput}/></div>
-              </div>
-             
+
+              ))}
+
+
             </div>
           </div>
         </div>

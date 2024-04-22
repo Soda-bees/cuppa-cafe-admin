@@ -136,6 +136,43 @@
     width: 20px;
 }
 
+.graph {
+    border: 1px solid #8C8C8C;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.saleWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.saleHeading {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.growthWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.totalPrice {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.grothPrice {
+    color: #4CAD00;
+    font-size: 22px;
+    font-weight: 500;
+}
+.growthArrow{
+    width: 30px;
+    margin-left: 5px;
+}
 .heading {
     font-size: 22px;
     font-weight: 500;
@@ -183,6 +220,8 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: 500;
+    font-size: 20px;
 }
 
 .itemImg {
@@ -231,7 +270,8 @@
     width: 47%;
     margin: 20px;
 }
-.dropDown{
+
+.dropDown {
     position: absolute;
     top: 25px;
     border: 1px solid #EBEBEB;
@@ -239,55 +279,140 @@
     width: 90px;
     background-color: #fff;
 }
-.dropDownOption{
+
+.dropDownOption {
     margin: 5px;
 }
+
 .dashBoardRight {
     width: 35%;
 }
-.ratingHeading{
-    font-size: 22px;
+
+.ratingwrapper {
+    border: 1px solid #8C8C8C;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.ratingReviewCard {
+    margin: 20px;
+}
+
+.ratingLeft {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.headingRating {
+    font-size: 25px;
     font-weight: 500;
 }
-.ratingCard{
+
+.ratingReviewCardWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ratingAverage {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+.ratingTotalNumber {
+    font-size: 20px;
+    color: #8C8C8C;
+}
+
+.ratingRight {
+    width: 50%;
+
+}
+
+.ProgressBarWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.ProgressBar {
+    width: 90%;
+}
+
+.starImg {
+    width: 22px;
+}
+
+.starNumbar {
+    color: #8C8C8C;
+    font-size: 22px;
+}
+
+.totalAverage {
+    color: #8C8C8C;
+    font-size: 22px;
+}
+
+.ratingHeading {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.ratingCard {
     background-color: #F2F2F2;
     border-radius: 10px;
     width: 100%;
+    margin-bottom: 10px;
 }
-.ratingCardInner{
+
+.ratingCardInner {
     display: flex;
     justify-content: space-between;
-    padding:20px;
+    padding: 20px;
 
 }
 
-.ratingCardInfoWrapper{
+.ratingCardInfoWrapper {
     display: flex;
     gap: 10px;
 }
-.RatingInfo{
+
+.RatingInfo {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.ratingImg{
+
+.ratingImg {
     width: 80px;
 }
-.ratings{
+
+.ratings {
     color: #8C8C8C;
 }
-.replyBack{
+
+.replyBack {
     width: 30px;
 }
-.customerName{
+
+.customerName {
     font-size: 20px;
     font-weight: 500;
 }
 
-.replyInput{
+.inputWraaper {
+    position: relative;
+}
+
+.replyInput {
     border: none;
     outline: none;
-    margin:10px;
+    margin: 10px;
     margin-left: 10px;
     width: 92%;
     font-size: 25px;
@@ -296,4 +421,11 @@
     padding-left: 10px;
     background-image: linear-gradient(to right, #287C76, #60B0AA);
     color: #fff;
+}
+
+.whitearrow {
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
 }

@@ -66,6 +66,9 @@ import customerIcon from './customerIcom.png'
 import graphSetting from './graphSetting.png'
 import ratingImg from './ratingImg.png'
 import replyback from './replyImg.png'
+import whiteLeftArrow from './whiteLeftArrow.png'
+import star from './star.png'
+import growthArrow from './grothArrow.png'
 
 
 
@@ -139,6 +142,9 @@ const Images = {
     graphSetting,
     ratingImg,
     replyback,
+    whiteLeftArrow,
+    star,
+    growthArrow,
 }
 
 export default Images
