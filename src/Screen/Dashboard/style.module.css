@@ -19,6 +19,7 @@
     gap: 10px;
     margin-bottom: 20px;
     position: relative;
+    width: 100%;
 }
 
 .searchIcon {
@@ -169,10 +170,12 @@
     font-size: 22px;
     font-weight: 500;
 }
-.growthArrow{
+
+.growthArrow {
     width: 30px;
     margin-left: 5px;
 }
+
 .heading {
     font-size: 22px;
     font-weight: 500;
@@ -428,4 +431,91 @@
     position: absolute;
     top: 20px;
     right: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .searchWrapper {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .searchInput {
+        width: 100%;
+
+    }
+
+    .dashBoardWrapper {
+        flex-direction: column;
+    }
+
+    .dashBoardLeft {
+        width: 100%;
+    }
+
+    .cardWrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+
+    }
+
+    .dashBoardCard {
+        width: 48%;
+    }
+
+    .graphHeadingWrapper {
+        width: 100%;
+        margin-right: 50px;
+    }
+
+    .recentOrderWrapper {
+        width: 100%;
+    }
+
+    .itemHeadingList {
+        margin: 0;
+    }
+
+    .HeadingList {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+        margin: 20px;
+    }
+
+    .listItemWrapper {
+        width: 60%;
+        ;
+        margin: 0px;
+        align-items: center;
+    }
+
+    .itemImg {
+        width: 50px;
+    }
+
+    .itemName {
+
+        font-size: 16px;
+    }
+
+    .listItemFour {
+
+    }
+
+    .dashBoardRight {
+        width: 100%;
+    }
+    .saleWrapper {
+        flex-direction: column;
+    }
+    .totalPrice {
+        font-size: 25px;
+        font-weight: 700;
+    }
+    
+    .grothPrice {
+        font-size: 20px;
+    }
 }

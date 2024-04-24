@@ -14,7 +14,7 @@
   margin: 50px 20px;
 }
 
-.logo img {
+.LogoImg {
   width: 200px;
   object-fit: contain;
 }
@@ -42,4 +42,41 @@
   color: #60b0aa;
   font-size: 19px;
   font-weight: 600;
+}
+
+
+@media screen and (max-width: 768px) {
+  .logo {
+    margin:50px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .LogoImg {
+    display: none;
+  }
+  .mobLogo{
+    width: 35px;
+    height: 35px;
+  }
+  .word {
+    display: none;
+  }
+  
+  .greenWord {
+    display: none;
+  }
+  .menubar {
+    width: 10%;
+  }
+  .menuList {
+    margin: 15px 0;
+    justify-content: center;
+  }
+  .menuImg {
+    width: 30px;
+    height: 30px;
+  }
+  .menubar {
+    margin-left: 15px;
+  }
 }

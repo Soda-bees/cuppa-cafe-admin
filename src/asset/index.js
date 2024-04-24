@@ -69,6 +69,9 @@ import replyback from './replyImg.png'
 import whiteLeftArrow from './whiteLeftArrow.png'
 import star from './star.png'
 import growthArrow from './grothArrow.png'
+import notSelectedBtn from './notSelectedBtn.png'
+import selectBtn from './selectedBtn.png'
+import mobLogo from './mobLogo.png'
 
 
 
@@ -145,6 +148,9 @@ const Images = {
     whiteLeftArrow,
     star,
     growthArrow,
+    selectBtn,
+    notSelectedBtn,
+    mobLogo,
 }
 
 export default Images

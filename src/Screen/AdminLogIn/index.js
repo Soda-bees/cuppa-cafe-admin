@@ -11,6 +11,7 @@ export default function AdminLogIn() {
 
   const [userName, setUserName] = useState("");
   const [Password, setUserPassword] = useState("");
+  const [isSelected, setIsSelected] = useState(false);
 
   const handleSignin = () => {
     const token = "authToken";
@@ -22,13 +23,20 @@ export default function AdminLogIn() {
     <div className={style.container}>
       <div className={style.logInBox}>
         <div className={style.boxLelt}>
-          <div>
+          <div className={style.adminBtnWrapper}>
+            <div onClick={() => setIsSelected(!isSelected)} className={isSelected ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected ? images.selectBtn : images.notSelectedBtn} />Admin Panel</div>
+            <div onClick={() => setIsSelected(!isSelected)} className={isSelected ? style.adminBtnWhite : style.adminBtnGreen}><img className={style.selectBtn} src={isSelected ? images.notSelectedBtn : images.selectBtn} />Cafe  Owner</div>
+          </div>
+          <div className={style.logoWrapper}>
             <img className={style.logo} src={images.logo} />
           </div>
-          <div className={style.logoHeading}>
-            Welcome to the Admin Panel for{" "}
-            <span className={style.bold}>Cuppa!</span>
+          <div className={style.headingWrapper}>
+            <div className={style.logoHeading}>
+              Welcome to the Admin Panel for{" "}
+              <span className={style.bold}>Cuppa!</span>
+            </div>
           </div>
+
         </div>
         <div className={style.boxRight}>
           <div className={style.logInHeading}>Admin Log In</div>
@@ -81,7 +89,7 @@ export default function AdminLogIn() {
               onClick={() => navigate("/signup")}
               className={style.signUpBtn}
             >
-               Sign Up Today!
+              Sign Up Today!
             </span>
           </div>
         </div>

@@ -3,7 +3,7 @@ import style from './style.module.css'
 import images from '../../asset';
 import StarRatings from 'react-star-ratings';
 import ProgressBar from "@ramonak/react-progress-bar";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import {ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 
 
@@ -163,7 +163,8 @@ export default function Dashboard() {
                     <div className={style.grothPrice}>+{growth} <img className={style.growthArrow} src={images.growthArrow}/></div>
                   </div>
                 </div>
-                <LineChart width={950} height={300} data={data}>
+                <ResponsiveContainer width="100%" height={400}>
+                <LineChart  data={data}>
                 <Tooltip />
                   <XAxis dataKey="name" />
                   <YAxis />
@@ -173,6 +174,7 @@ export default function Dashboard() {
                     stroke="#4CAD00" 
                     strokeWidth={5}/>
                 </LineChart>
+                </ResponsiveContainer>
               </div>
             </div>
             <div className={style.heading}>

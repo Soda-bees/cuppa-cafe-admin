@@ -15,20 +15,80 @@
     border: 1px solid #EBEBEB;
     border-radius: 10px;
 }
-
 .boxLelt {
     width: 50%;
     background-image: url(../../asset/bgImg.png);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+    justify-content: space-between;
 }
 
+.adminBtnWrapper {
+    display: flex;
+    gap: 10px;
+    margin: 50px 50px;
+}
+
+.adminBtnWhite {
+    border: 2px solid #287C76;
+    color: #287C76;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.adminBtnGreen {
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.selectBtn {
+    width: 20px;
+}
+
+.logoWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 450px;
+}
+
+.headingWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.logoHeading {
+    font-size: 24px;
+    width: 52%;
+    text-align: center;
+    color: #8C8C8C;
+}
+
+.bold {
+    font-weight: 700;
+    color: #555555;
+}
+
+
 .backWrapper {
-    margin-top: 80px;
-    width: 75%;
+    margin-top: 50px;
+    margin-left: 20px;
+    width: 100%;
 }
 
 .backBTn {
@@ -46,21 +106,6 @@
     height: 25px;
 
 }
-
-.logo {
-    width: 450px;
-    margin-top: 220px;
-}
-
-.logoHeading {
-    margin-top: 150px;
-    margin-bottom: 20px;
-    font-size: 24px;
-    width: 52%;
-    text-align: center;
-    color: #8C8C8C;
-}
-
 
 
 .boxRight {
@@ -191,8 +236,6 @@
     margin-top: 10px;
     margin-left: 20px;
     color: #8C8C8C;
-    /* font-size: 14px; */
-    
 }
 
 .countryName {
@@ -253,5 +296,221 @@
 .btnWrapper {
     width: 70%;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
+@media screen and (max-width : 767px) {
+    .container {
+        height: 212vh;
+        align-items: start;
+    }
+
+    .logInBox {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .boxLelt {
+        width: 100%;
+        height: 100vh;
+    }
+    .backWrapper {
+        margin-top: 80px;
+        margin-left: 30px;
+        width: 90%;
+    }
+    .backBTn {
+
+        height: 40px;
+        width: 40px;
+    }
+    
+    .backArrow {
+        height: 20px;
+    
+    }
+    .adminBtnWrapper {
+        justify-content: center;
+        flex-direction: column;
+        margin: 40px 20px;
+    }
+
+    .adminBtnWhite {
+        justify-content: center;
+        padding: 10px 0px;
+    }
+
+    .adminBtnGreen {
+        justify-content: center;
+        padding: 10px 0px;
+    }
+
+    .logo {
+        width: 300px;
+    }
+
+    .headingWrapper {
+        margin-bottom: 20px;
+    }
+
+    .logoHeading {
+        width: 80%;
+    }
+
+    .boxRight {
+        width: 100%;
+    }
+
+    .logInPara {
+        width: 75%;
+    }
+
+    .forgotBtn {
+        font-size: 18px;
+    }
+
+    .otherAccount {
+        width: 80%;
+        flex-direction: column;
+        gap: 20px;
+        margin: 30px;
+    }
+
+    .line {
+        width: 90%;
+    }
+
+    .userInput {
+        width: 95%;
+        margin-left: 5px;
+    }
+
+    .inputHeading {
+        margin-left: 5px;
+    }
+
+    .otherSignIn {
+        width: 70%;
+        text-align: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .googleLogo {
+        margin-right: 0px;
+
+    }
+
+    .lastPara {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        align-items: start;
+        height: 0;
+    }
+
+    .logInBox {
+        width: 100%;
+    }
+    .adminBtnWrapper {
+        margin: 20px 20px;
+    }
+    .adminBtnWhite {
+        font-size: 16px;
+        padding: 5px 10px;
+
+    }
+
+    .adminBtnGreen {
+        font-size: 16px;
+
+    }
+
+    .logo {
+        width: 350px;
+    }
+
+    .logoHeading {
+        width: 70%;
+    }
+
+    .logInPara {
+        width: 70%;
+    }
+
+    .otherAccount {
+        width: 75%;
+    }
+
+    .line {
+        width: 30%;
+    }
+
+    .googleLogo {
+        width: 30px;
+        margin-left: 10px;
+        margin-right: 15px;
+    }
+
+    .backWrapper {
+        margin-top: 50px;
+        margin-left: 20px;
+        width: 90%;
+    }
+    .backBTn {
+        height: 35px;
+        width: 35px;
+
+    }
+    
+    .backArrow {
+        height: 15px;
+    
+    }
+    .adminWrapper {
+        flex-direction: column;
+    }
+    .inputWrapper {
+        width: 100%;
+    }
+    
+}
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+    .container {
+        height: 130vh;
+    }
+
+    .logInBox {
+        width: 90%;
+    }
+
+    .adminBtnWhite {
+        padding: 5px 30px;
+        font-size: 18px;
+    }
+    
+    .adminBtnGreen {
+        padding: 10px 30px;
+        font-size: 18px;
+    }
+    .adminBtnWrapper {
+        margin: 30px 50px;
+    }
+    .backBTn {
+        height: 35px;
+        width: 35px;
+    }
+    
+    .backArrow {
+        height: 20px;
+    
+    }
+}

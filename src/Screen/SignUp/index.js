@@ -5,7 +5,7 @@ import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css';
 import { Country } from 'country-state-city';
 import { useNavigate } from "react-router-dom";
-import {useDispatch} from "react-redux"
+import { useDispatch } from "react-redux"
 import { setAuthToken } from '../../store/authTokenSlice';
 
 export default function SignUp() {
@@ -19,30 +19,43 @@ export default function SignUp() {
     const [countryName, setcountryName] = useState("Select Country")
     const country = Country.getAllCountries()
 
-  const navigate = useNavigate();
-  const dispatch = useDispatch()
+    const navigate = useNavigate();
+    const dispatch = useDispatch()
 
-  const handleSignin = () => {
-    const token = "authToken";
-    dispatch(setAuthToken(token));
-    navigate("/menu");
-  };
+    const handleSignin = () => {
+        const token = "authToken";
+        dispatch(setAuthToken(token));
+        navigate("/menu");
+    };
 
-
+    const [isSelected, setIsSelected] = useState(false);
     return (
 
         <div className={style.container}>
             <div className={style.logInBox}>
                 <div className={style.boxLelt}>
+                    <div>
                     <div className={style.backWrapper}>
                         <div className={style.backBTn}>
                             <img className={style.backArrow} src={images.backArrow} />
                         </div>
                     </div>
-                    <div>
+                    <div className={style.adminBtnWrapper}>
+                        <div onClick={() => setIsSelected(!isSelected)} className={isSelected ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected ? images.selectBtn : images.notSelectedBtn} />Admin Panel</div>
+                        <div onClick={() => setIsSelected(!isSelected)} className={isSelected ? style.adminBtnWhite : style.adminBtnGreen}><img className={style.selectBtn} src={isSelected ? images.notSelectedBtn : images.selectBtn} />Cafe  Owner</div>
+                    </div>
+                    </div>
+                    
+                    <div className={style.logoWrapper}>
                         <img className={style.logo} src={images.logo} />
                     </div>
-                    <div className={style.logoHeading}>Welcome to the Admin Panel for  <span className={style.bold}>Cuppa!</span></div>
+                    <div className={style.headingWrapper}>
+                        <div className={style.logoHeading}>
+                            Welcome to the Admin Panel for{" "}
+                            <span className={style.bold}>Cuppa!</span>
+                        </div>
+                    </div>
+
                 </div>
                 <div className={style.boxRight}>
                     <div className={style.logInHeading}>Sign Up</div>
@@ -97,7 +110,7 @@ export default function SignUp() {
                     </div>
                     <div className={style.btnWrapper}>
                         <div className={style.btn}
-                        onClick={handleSignin}>
+                            onClick={handleSignin}>
                             <div className={style.btnheading}>
                                 Get Started
                             </div>

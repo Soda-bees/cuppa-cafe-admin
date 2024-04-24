@@ -13,7 +13,8 @@ export default function SideNav() {
     <div className={style.sideBar}>
       <div className={style.menubar}>
         <div className={style.logo}>
-          <img src={images.menulogo} />
+          <img className={style.LogoImg} src={images.menulogo} />
+          <img className={style.mobLogo} src={images.mobLogo} />
         </div>
         <div className={style.menuList} onClick={() => navigate("/dashboard")}>
           <img className={style.menuImg} src={activePath === "/dashboard" ? images.dashboardGreen : images.dashBoardIcon} />

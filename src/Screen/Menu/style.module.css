@@ -6,12 +6,11 @@
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
-.menuWrapper {
-  width: 80%;
-  margin: 30px 0;
+.menu {
+  width: 96%;
+  margin: 30px 0px;
+  border-radius: 10px;
 }
-
 .searchWrapper {
   display: flex;
   gap: 10px;
@@ -794,4 +793,38 @@ input::-webkit-inner-spin-button {
 
 .calenderImg {
   object-fit: contain;
+}
+
+
+@media screen and (max-width: 768px) {
+  .headingWrappper {
+    margin-right: 10px;
+  }
+  .categoryRow {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .categoriesCardImg {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .cardCover {
+    width: 200px;
+    height: 200px;
+  }
+  .itemCard {
+    width: 48%;
+    margin: 0;
+  }
+  
+  .itemCardImg {
+    width: 98%;
+    margin: 0;
+  }
+  .row {
+    margin-top: 10px;
+    width: 100%;
+    gap: 10px;
+  }
 }

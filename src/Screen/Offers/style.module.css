@@ -564,3 +564,12 @@
 .dropDownIcon {
     width: 20px;
 }
+
+
+
+@media screen and (max-width: 768px) {
+    .menu {
+        width: 100%;
+    }
+    
+  }

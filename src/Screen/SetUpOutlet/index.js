@@ -119,41 +119,8 @@ export default function SetUpOutlet() {
                             <img className={style.clock} src={images.clock} />
                         </div>
                     </div>
-                    {/* <div className={style.dropdownWraper}>
-                        <div className={style.textFeildTwo}>
-                            <div className={style.inputHaeding}>Location</div>
-                            {selectedCountry ? <div className={style.country}>
-                                {country.map((country, index) => (
-                                    <div key={index} onClick={() => {
-                                        setcountryName(country.name)
-                                        setSelectedCountry(!selectedCountry)
-                                    }} className={style.countryName}>{country.name}</div>
-                                ))}
-                            </div>
-                                :
-                                <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName} <img src={images.downArrow} /></div>}
-                        </div>
-                        <div className={style.btnWrapper}>
-                            <div className={style.btn}>
-                                Get Started
-                                <div className={style.arrow}>
-                                    <img className={style.arrowImg} src={images.singInArrow} />
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
                     <div className={style.textFeildTwo}>
                         <div className={style.inputHaeding}>Location</div>
-                        {/* {selectedCountry ? <div className={style.country}>
-                                {country.map((country, index) => (
-                                    <div key={index} onClick={() => {
-                                        setcountryName(country.name)
-                                        setSelectedCountry(!selectedCountry)
-                                    }} className={style.countryName}>{country.name}</div>
-                                ))}
-                            </div>
-                                :
-                                </div>} */}
                         <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName}
                             <img src={images.downArrow} />
                         </div>
@@ -176,13 +143,6 @@ export default function SetUpOutlet() {
                             </div>
                         </div>
                     </div>
-
-                    {/* <div className={style.btn}>
-                        Get Started
-                        <div className={style.arrow}>
-                            <img className={style.arrowImg} src={images.singInArrow} />
-                        </div>
-                    </div> */}
 
                 </div>
             </div>
