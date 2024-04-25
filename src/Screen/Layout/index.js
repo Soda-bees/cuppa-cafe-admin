@@ -32,8 +32,8 @@ const Layout = () => {
   };
 
   if (authToken) {
-    if (activePath === "/login" || activePath === "/signup") {
-      navigate("/menu");
+    if (activePath === "/login" || activePath === "/signup" ||  activePath === "/outlet"  ) {
+      navigate("/");
        return null; 
     }
   }

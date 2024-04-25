@@ -21,14 +21,75 @@
     background-image: url(../../asset/bgImg.png);
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
-
 }
 
+.adminBtnWrapper {
+    display: flex;
+    gap: 10px;
+    margin: 50px 50px;
+}
+
+.adminBtnWhite {
+    border: 2px solid #287C76;
+    color: #287C76;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}   
+
+.adminBtnGreen {
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.selectBtn {
+    width: 20px;
+}
+
+.logoWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 450px;
+}
+
+.headingWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.logoHeading {
+    font-size: 24px;
+    width: 52%;
+    text-align: center;
+    color: #8C8C8C;
+}
+
+.bold {
+    font-weight: 700;
+    color: #555555;
+}
 .backWrapper {
     margin-top: 50px;
-    width: 75%;
+    margin-left: 20px;
+    width: 100%;
 }
 
 .backBtn {
@@ -45,25 +106,6 @@
 .backArrow {
     height: 25px;
 
-}
-
-.logo {
-    width: 450px;
-    margin-top: 220px;
-}
-
-.logoHeading {
-    margin-top: 150px;
-    margin-bottom: 20px;
-    font-size: 24px;
-    width: 52%;
-    text-align: center;
-    color: #8C8C8C;
-}
-
-.bold {
-    font-weight: 700;
-    color: #555555;
 }
 
 .boxRight {

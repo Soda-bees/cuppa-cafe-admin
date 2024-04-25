@@ -22,30 +22,31 @@ export default function SignUp() {
     const navigate = useNavigate();
     const dispatch = useDispatch()
 
-    const handleSignin = () => {
-        const token = "authToken";
-        dispatch(setAuthToken(token));
-        navigate("/menu");
-    };
+    // const handleSignin = () => {
+    //     const token = "authToken";
+    //     dispatch(setAuthToken(token));
+    //     navigate("/menu");
+    // };
 
-    const [isSelected, setIsSelected] = useState(false);
+    const [isSelected, setIsSelected] = useState('cafe');
     return (
 
         <div className={style.container}>
             <div className={style.logInBox}>
                 <div className={style.boxLelt}>
                     <div>
-                    <div className={style.backWrapper}>
-                        <div className={style.backBTn}>
-                            <img className={style.backArrow} src={images.backArrow} />
+                        <div className={style.backWrapper}
+                            onClick={() => navigate('/login')}>
+                            <div className={style.backBTn}>
+                                <img className={style.backArrow} src={images.backArrow} />
+                            </div>
+                        </div>
+                        <div className={style.adminBtnWrapper}>
+                            <div onClick={() => setIsSelected('admin')} className={isSelected === 'admin' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'admin' ? images.selectBtn : images.notSelectedBtn} />Admin Panel</div>
+                            <div onClick={() => setIsSelected('cafe')} className={isSelected === 'cafe' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'cafe' ? images.selectBtn : images.notSelectedBtn} />Cafe  Owner</div>
                         </div>
                     </div>
-                    <div className={style.adminBtnWrapper}>
-                        <div onClick={() => setIsSelected(!isSelected)} className={isSelected ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected ? images.selectBtn : images.notSelectedBtn} />Admin Panel</div>
-                        <div onClick={() => setIsSelected(!isSelected)} className={isSelected ? style.adminBtnWhite : style.adminBtnGreen}><img className={style.selectBtn} src={isSelected ? images.notSelectedBtn : images.selectBtn} />Cafe  Owner</div>
-                    </div>
-                    </div>
-                    
+
                     <div className={style.logoWrapper}>
                         <img className={style.logo} src={images.logo} />
                     </div>
@@ -110,7 +111,7 @@ export default function SignUp() {
                     </div>
                     <div className={style.btnWrapper}>
                         <div className={style.btn}
-                            onClick={handleSignin}>
+                            onClick={() => navigate('/outlet')}>
                             <div className={style.btnheading}>
                                 Get Started
                             </div>

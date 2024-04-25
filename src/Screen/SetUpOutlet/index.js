@@ -5,7 +5,9 @@ import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css';
 import { Country } from 'country-state-city';
 import Modal from 'react-modal'
-
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { setAuthToken } from '../../store/authTokenSlice';
 
 export default function SetUpOutlet() {
     const [value, setValue] = useState('')
@@ -14,14 +16,8 @@ export default function SetUpOutlet() {
     const [description, setDescription] = useState('')
     const country = Country.getAllCountries()
     const [countryName, setcountryName] = useState("Select Country")
-
+    const [isSelected, setIsSelected] = useState('cafe');
     const [selectedImage, setSelectedImage] = useState(null);
-
-    const handleImageChange = (e) => {
-        const file = e.target.files[0];
-        setSelectedImage(file);
-    };
-
     const [timeModal, setTimeModal] = useState(false)
     const [startTimeHour, setStartTimeHour] = useState('00');
     const [startTimeMinutes, setStartTimeMinutes] = useState('00');
@@ -31,7 +27,19 @@ export default function SetUpOutlet() {
     const [closingTime, setClosingTime] = useState('AM');
     const [focusedInput, setFocusedInput] = useState(null);
     const [closingTimeFinal, setClosingTimeFinal] = useState('AM');
-    const [startTimeFinal, setStartTimeFinal] = useState('AM');
+    const [startTimeFinal, setStartTimeFinal] = useState('AM');    
+    const [amStart, setAmStart] = useState("AM")
+    const [amClose, setAmClose] = useState("PM")
+    
+    
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        setSelectedImage(file);
+    };    
 
     const handleInputChange = (text, setter, maxValue) => {
         if (text === '' || (Number(text) >= 0 && Number(text) <= maxValue)) {
@@ -53,12 +61,6 @@ export default function SetUpOutlet() {
         }
     };
 
-
-
-
-    const [amStart, setAmStart] = useState("AM")
-    const [amClose, setAmClose] = useState("PM")
-
     const toggleAmPmStart = (amPm) => {
         setAmStart(amPm)
     }
@@ -66,24 +68,42 @@ export default function SetUpOutlet() {
         setAmClose(amPm)
     }
 
+     const handleSignin = () => {
+        const token = "authToken";
+        dispatch(setAuthToken(token));
+        navigate("/");
+    };
 
-
-
+    
 
     return (
 
         <div className={style.container}>
             <div className={style.logInBox}>
-                <div className={style.boxLelt}>
-                    <div className={style.backWrapper}>
-                        <div className={style.backBtn}>
-                            <img className={style.backArrow} src={images.backArrow} />
+            <div className={style.boxLelt}>
+                    <div>
+                        <div className={style.backWrapper}
+                            onClick={() => navigate('/signup')}>
+                            <div className={style.backBtn}>
+                                <img className={style.backArrow} src={images.backArrow} />
+                            </div>
+                        </div>
+                        <div className={style.adminBtnWrapper}>
+                            <div onClick={() => setIsSelected('admin')} className={isSelected === 'admin' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'admin' ? images.selectBtn : images.notSelectedBtn} />Admin Panel</div>
+                            <div onClick={() => setIsSelected('cafe')} className={isSelected === 'cafe' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'cafe' ? images.selectBtn : images.notSelectedBtn} />Cafe  Owner</div>
                         </div>
                     </div>
-                    <div>
+
+                    <div className={style.logoWrapper}>
                         <img className={style.logo} src={images.logo} />
                     </div>
-                    <div className={style.logoHeading}>Welcome to the Admin Panel for  <span className={style.bold}>Cuppa!</span></div>
+                    <div className={style.headingWrapper}>
+                        <div className={style.logoHeading}>
+                            Welcome to the Admin Panel for{" "}
+                            <span className={style.bold}>Cuppa!</span>
+                        </div>
+                    </div>
+
                 </div>
                 <div className={style.boxRight}>
                     <div className={style.logInHeading}>Set-Up Outlet</div>
@@ -135,7 +155,8 @@ export default function SetUpOutlet() {
                                 </div>
                             )}
                     </div>
-                    <div className={style.btnWrapper}>
+                    <div className={style.btnWrapper}
+                    onClick={handleSignin}>
                         <div className={style.btn}>
                             Get Started
                             <div className={style.arrow}>

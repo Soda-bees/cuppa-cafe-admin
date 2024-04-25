@@ -11,12 +11,12 @@ export default function AdminLogIn() {
 
   const [userName, setUserName] = useState("");
   const [Password, setUserPassword] = useState("");
-  const [isSelected, setIsSelected] = useState(false);
+  const [isSelected, setIsSelected] = useState('cafe');
 
   const handleSignin = () => {
     const token = "authToken";
     dispatch(setAuthToken(token));
-    navigate("/menu");
+    navigate("/");
   };
 
   return (
@@ -24,8 +24,8 @@ export default function AdminLogIn() {
       <div className={style.logInBox}>
         <div className={style.boxLelt}>
           <div className={style.adminBtnWrapper}>
-            <div onClick={() => setIsSelected(!isSelected)} className={isSelected ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected ? images.selectBtn : images.notSelectedBtn} />Admin Panel</div>
-            <div onClick={() => setIsSelected(!isSelected)} className={isSelected ? style.adminBtnWhite : style.adminBtnGreen}><img className={style.selectBtn} src={isSelected ? images.notSelectedBtn : images.selectBtn} />Cafe  Owner</div>
+            <div onClick={() => setIsSelected('admin')} className={isSelected === 'admin' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'admin' ? images.selectBtn : images.notSelectedBtn} />Admin Panel</div>
+            <div onClick={() => setIsSelected('cafe')} className={isSelected === 'cafe' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'cafe' ? images.selectBtn : images.notSelectedBtn} />Cafe  Owner</div>
           </div>
           <div className={style.logoWrapper}>
             <img className={style.logo} src={images.logo} />

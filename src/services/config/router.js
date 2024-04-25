@@ -24,12 +24,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        path: "/dashboard",
         element: <ProtectedRoute Compunent={dashboard} />,
       },
       {
         path: "/menu",
-        element: <ProtectedRoute Compunent={Menu} />,
+        element: <Menu/>,
       },
       {
         path: "/signup",
@@ -38,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <AdminLogIn />,
+      },
+      {
+        path: "/outlet",
+        element: <SetUpOutlet/>,
       },
       {
         path: "/outlet",

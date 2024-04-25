@@ -39,7 +39,8 @@
     border-radius: 10px;
     font-size: 20px;
     font-weight: 500;
-}
+    cursor: pointer;
+}   
 
 .adminBtnGreen {
     background-image: linear-gradient(to right, #287C76, #60B0AA);
@@ -51,6 +52,7 @@
     border-radius: 10px;
     font-size: 20px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .selectBtn {
@@ -343,6 +345,7 @@
     .adminBtnGreen {
         justify-content: center;
         padding: 10px 0px;
+        cursor: pointer;
     }
 
     .logo {
@@ -482,35 +485,3 @@
 
 
 
-
-@media screen and (min-width: 1024px) {
-    .container {
-        height: 130vh;
-    }
-
-    .logInBox {
-        width: 90%;
-    }
-
-    .adminBtnWhite {
-        padding: 5px 30px;
-        font-size: 18px;
-    }
-    
-    .adminBtnGreen {
-        padding: 10px 30px;
-        font-size: 18px;
-    }
-    .adminBtnWrapper {
-        margin: 30px 50px;
-    }
-    .backBTn {
-        height: 35px;
-        width: 35px;
-    }
-    
-    .backArrow {
-        height: 20px;
-    
-    }
-}
