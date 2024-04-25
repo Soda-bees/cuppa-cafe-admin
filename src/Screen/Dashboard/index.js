@@ -3,7 +3,7 @@ import style from './style.module.css'
 import images from '../../asset';
 import StarRatings from 'react-star-ratings';
 import ProgressBar from "@ramonak/react-progress-bar";
-import {ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 
 
@@ -74,37 +74,46 @@ export default function Dashboard() {
   };
 
   const data = [
-    { name: 'Mon',  pv: 2400, amt: 2400 },
-    { name: 'Tue',  pv: 1398, amt: 2210 },
-    { name: 'Wed',  pv: 9800, amt: 2290 },
-    { name: 'Thu',  pv: 7800, amt: 2290 },
-    { name: 'Fri',  pv: 8800, amt: 2290 },
-    { name: 'Sat',  pv: 4800, amt: 2290 },
-    { name: 'Sun',  pv: 6800, amt: 2290 },
+    { name: 'Mon', pv: 2400, amt: 2400 },
+    { name: 'Tue', pv: 1398, amt: 2210 },
+    { name: 'Wed', pv: 9800, amt: 2290 },
+    { name: 'Thu', pv: 7800, amt: 2290 },
+    { name: 'Fri', pv: 8800, amt: 2290 },
+    { name: 'Sat', pv: 4800, amt: 2290 },
+    { name: 'Sun', pv: 6800, amt: 2290 },
   ];
 
 
 
   return (
     <div className={style.container}>
-      <div className={style.searchWrapper}>
-        <div className={style.searh}>
-          <img className={style.searchIcon} src={images.searchIcon} />
-          <input
-            className={style.searchInput}
-            type="text"
-            placeholder="Search"
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </div>
-        <div className={style.noticationBtn}>
-          <img
-            className={style.notificationIcon}
-            src={images.notificationIcon}
-          />
-          Notifications
+      <div className={style.menuTwo}>
+        <div className={style.searchWrapper}>
+          <div className={style.search}>
+            <img className={style.searchIcon} src={images.searchIcon} />
+            <input
+              className={style.searchInput}
+              type="text"
+              placeholder="Search"
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </div>
+          <div className={style.noticationWrapper}>
+            <div className={style.noticationBtn}>
+              <img
+                className={style.notificationIcon}
+                src={images.notificationIcon}
+              />
+              <div className={style.noticationText}>
+                Notifications
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </div>
+
       <div className={style.menu}>
         <div className={style.dashBoardWrapper}>
           <div className={style.dashBoardLeft}>
@@ -160,20 +169,20 @@ export default function Dashboard() {
                   <div className={style.saleHeading}>Sales</div>
                   <div className={style.growthWrapper}>
                     <div className={style.totalPrice}>{totalProfit}</div>
-                    <div className={style.grothPrice}>+{growth} <img className={style.growthArrow} src={images.growthArrow}/></div>
+                    <div className={style.grothPrice}>+{growth} <img className={style.growthArrow} src={images.growthArrow} /></div>
                   </div>
                 </div>
                 <ResponsiveContainer width="100%" height={400}>
-                <LineChart  data={data}>
-                <Tooltip />
-                  <XAxis dataKey="name" />
-                  <YAxis />
-                  <CartesianGrid stroke="#eee" />
-                  <Line type="monotone"
-                    dataKey="pv"
-                    stroke="#4CAD00" 
-                    strokeWidth={5}/>
-                </LineChart>
+                  <LineChart data={data}>
+                    <Tooltip />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <CartesianGrid stroke="#eee" />
+                    <Line type="monotone"
+                      dataKey="pv"
+                      stroke="#4CAD00"
+                      strokeWidth={5} />
+                  </LineChart>
                 </ResponsiveContainer>
               </div>
             </div>

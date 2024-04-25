@@ -14,32 +14,48 @@
     border-radius: 10px;
 }
 
-.searchWrapper {
+.menuTwo {
+    width: 96%;
+  }
+  
+  .searchWrapper {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
     margin-bottom: 20px;
     position: relative;
-}
-
-.searchIcon {
-    width: 20px;
-    position: absolute;
-    top: 10px;
-    left: 15px;
-}
-
-.searchInput {
-    width: 1297px;
+    width: 100%;
+  
+  }
+  
+  .search {
+    width: 60%;
+  }
+  
+  .searchInput {
+    width: 142%;
     height: 40px;
     border-radius: 10px;
     font-size: 18px;
     outline: none;
     border: 1px solid #EBEBEB;
     padding-left: 50px;
-
-}
-
-.noticationBtn {
+  
+  }
+  
+  .searchIcon {
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+  }
+  
+  .noticationWrapper {
+    width: 30%;
+    display: flex;
+    justify-content: end;
+  }
+  
+  .noticationBtn {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -47,11 +63,13 @@
     border-radius: 10px;
     font-weight: 600;
     padding: 10px;
-}
-
-.notificationIcon {
+    width: 30%;
+  }
+  
+  .notificationIcon {
     width: 20px;
-}
+  }
+  
 
 .btn {
     padding: 10px;
@@ -480,3 +498,86 @@ input::-webkit-inner-spin-button {
     object-fit: contain;
 }
 
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+      margin-left: 20%;
+    }
+  
+    .searchWrapper {
+      justify-content: space-between;
+      gap: 0;
+    }
+  
+    .search {
+      width: 60%;
+    }
+  
+    .searchInput {
+      width: 105%;
+  
+    }
+  
+    .noticationWrapper {
+      width: 25%;
+  
+    }
+  
+    .noticationBtn {
+      width: 80%;
+      justify-content: center;
+      margin-left: 15px;
+    }
+    .row {
+        gap: 10px;
+    }
+    
+    .eventCard {
+        width: 48%;
+    }
+
+  
+  }
+  
+  
+  
+  @media screen and (max-width: 767px) {
+    .searchWrapper {
+      justify-content: space-between;
+      gap: 0;
+    }
+  
+    .search {
+      width: 60%;
+    }
+  
+    .searchInput {
+      width: 120%;
+  
+    }
+  
+    .noticationWrapper {
+      width: 25%;
+  
+    }
+  
+    .noticationText {
+      display: none;
+    }
+  
+    .noticationBtn {
+      width: 30%;
+      justify-content: center;
+      margin-left: 50px;
+    }
+    .row {
+        gap: 10px;
+    }
+    
+    .eventCard {
+        width: 100%;
+    }
+  
+    
+  
+  }

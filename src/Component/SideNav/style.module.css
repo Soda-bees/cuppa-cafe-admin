@@ -1,17 +1,19 @@
-
 .menubar {
   border: 2px solid #ebebeb;
   border-radius: 10px;
   width: 15%;
   margin-top: 30px;
   margin-left: 30px;
-  /* background-color: orange; */
   position: fixed;
   height: 90vh;
 }
 
 .logo {
   margin: 50px 20px;
+}
+
+.mobLogo {
+  display: none;
 }
 
 .LogoImg {
@@ -45,37 +47,95 @@
 }
 
 
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+
+  .mobLogo {
+    display: none;
+  }
+
+  .LogoImg {
+    width: 100px;
+    object-fit: contain;
+  }
+
+  .menuImg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .menuList {
+    margin: 30px 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .word {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+
+  .greenWord {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
 @media screen and (max-width: 768px) {
   .logo {
-    margin:50px 0;
+    margin: 50px 0;
     display: flex;
     justify-content: center;
   }
+
   .LogoImg {
     display: none;
   }
-  .mobLogo{
+
+  .mobLogo {
+    display: block;
     width: 35px;
     height: 35px;
   }
+
   .word {
     display: none;
   }
-  
+
   .greenWord {
     display: none;
   }
+
   .menubar {
     width: 10%;
   }
+
   .menuList {
     margin: 15px 0;
     justify-content: center;
   }
+
   .menuImg {
     width: 30px;
     height: 30px;
   }
+
   .menubar {
     margin-left: 15px;
   }

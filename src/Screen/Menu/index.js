@@ -298,22 +298,30 @@ export default function Menu() {
 
   return (
     <div className={style.container}>
-      <div className={style.searchWrapper}>
-        <div className={style.searh}>
-          <img className={style.searchIcon} src={images.searchIcon} />
-          <input
-            className={style.searchInput}
-            type="text"
-            placeholder="Search"
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </div>
-        <div className={style.noticationBtn}>
-          <img
-            className={style.notificationIcon}
-            src={images.notificationIcon}
-          />
-          Notifications
+      <div className={style.menuTwo}>
+        <div className={style.searchWrapper}>
+          <div className={style.search}>
+            <img className={style.searchIcon} src={images.searchIcon} />
+            <input
+              className={style.searchInput}
+              type="text"
+              placeholder="Search"
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </div>
+          <div className={style.noticationWrapper}>
+            <div className={style.noticationBtn}>
+              <img
+                className={style.notificationIcon}
+                src={images.notificationIcon}
+              />
+              <div className={style.noticationText}>
+                Notifications
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </div>
       <div className={style.menu}>
