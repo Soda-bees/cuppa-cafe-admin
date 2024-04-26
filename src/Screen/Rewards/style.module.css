@@ -7,24 +7,25 @@
     padding-bottom: 30px;
 
 }
+
 .menuTwo {
     width: 96%;
-  }
-  
-  .searchWrapper {
+}
+
+.searchWrapper {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
     position: relative;
     width: 100%;
-  
-  }
-  
-  .search {
+
+}
+
+.search {
     width: 60%;
-  }
-  
-  .searchInput {
+}
+
+.searchInput {
     width: 142%;
     height: 40px;
     border-radius: 10px;
@@ -32,23 +33,23 @@
     outline: none;
     border: 1px solid #EBEBEB;
     padding-left: 50px;
-  
-  }
-  
-  .searchIcon {
+
+}
+
+.searchIcon {
     width: 20px;
     position: absolute;
     top: 10px;
     left: 15px;
-  }
-  
-  .noticationWrapper {
+}
+
+.noticationWrapper {
     width: 30%;
     display: flex;
     justify-content: end;
-  }
-  
-  .noticationBtn {
+}
+
+.noticationBtn {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -57,12 +58,12 @@
     font-weight: 600;
     padding: 10px;
     width: 30%;
-  }
-  
-  .notificationIcon {
+}
+
+.notificationIcon {
     width: 20px;
-  }
-  
+}
+
 .menu {
     width: 96%;
     margin: 30px 0px;
@@ -236,10 +237,13 @@
 
 }
 
-.dropDownHeading {
-    font-size: 18px;
-    margin-top: 10px;
+.headingWrapper {
+    width: 100%;
+}
 
+.dropDownHeading {
+    margin: 0 10px ;
+    margin-top: 5px;
 }
 
 .dropDownSelect {
@@ -294,7 +298,7 @@
 }
 
 
-/* nextModal */
+/* reviewModal */
 
 .reviewModal {
     outline: none;
@@ -380,7 +384,6 @@
     border-radius: 10px;
     position: relative;
     border: 1px solid #0000003d;
-
 }
 
 .completeContainer {
@@ -448,73 +451,369 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .container {
-      margin-left: 20%;
-    }
-  
-    .searchWrapper {
-      justify-content: space-between;
-      gap: 0;
-    }
-  
-    .search {
-      width: 60%;
-    }
-  
-    .searchInput {
-      width: 105%;
-  
-    }
-  
-    .noticationWrapper {
-      width: 25%;
-  
-    }
-  
-    .noticationBtn {
-      width: 80%;
-      justify-content: center;
-      margin-left: 15px;
+        margin-left: 20%;
     }
 
-  
-     /* modal Css  */
-  
-  }
-  
-  
-  
-  @media screen and (max-width: 767px) {
     .searchWrapper {
-      justify-content: space-between;
-      gap: 0;
+        justify-content: space-between;
+        gap: 0;
     }
-  
-    .search {
-      width: 60%;
-    }
-  
-    .searchInput {
-      width: 120%;
-  
-    }
-  
-    .noticationWrapper {
-      width: 25%;
-  
-    }
-  
-    .noticationText {
-      display: none;
-    }
-  
-    .noticationBtn {
-      width: 30%;
-      justify-content: center;
-      margin-left: 50px;
-    }
-  
 
-  
+    .search {
+        width: 60%;
+    }
+
+    .searchInput {
+        width: 105%;
+
+    }
+
+    .noticationWrapper {
+        width: 25%;
+
+    }
+
+    .noticationBtn {
+        width: 80%;
+        justify-content: center;
+        margin-left: 15px;
+    }
+
+    .rewardCard {
+        width: 48%;
+    }
+
+    .rewardCardHeading {
+        font-size: 25px;
+    }
+
+    .rewardImg {
+        width: 70px;
+    }
+
+
+    .reawadPara {
+        font-size: 16px;
+    }
+
+
+    .btn {
+        font-size: 20px;
+    }
+
+    .rewardHeading {
+        font-size: 22px;
+    }
+
+    .greenBtn {
+        height: 50px;
+        font-size: 18px;
+
+    }
+
+    .word {
+        font-size: 18px;
+    }
+
     /* modal Css  */
-     
-  }
+
+    .modalReward {
+        outline: none;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 30%;
+        left: 15%;
+        width: 70%;
+        height: 55vh;
+        background-color: #FFF;
+        border-radius: 10px;
+
+    }
+
+    .cross {
+        width: 30px;
+    }
+
+    .modalHeading {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    .modalBtn {
+        font-size: 20px;
+    }
+
+    .dropDownPara {
+        font-size: 18px;
+    }
+    /* reviewModal */
+    .reviewModal {
+        left: 30%;
+        width: 40%;
+        height: 30vh;
+    }
+
+    .reviewHeading {
+        font-size: 18px;
+        margin: 20px;
+    }
+    
+    .orderInfoWrapper {
+        margin: 20px;
+    }
+    
+    .orderHeading {
+        font-size: 16px;
+    }
+    
+    .orderQuantity {
+        font-size: 16px;
+    }
+    .logoutBtn {
+        padding: 5px 45px;
+        font-size: 18px;
+    }
+    
+    .cancelBtn {
+        padding: 5px 45px;
+        font-size: 18px;
+    }
+
+    /* completeModal  */
+    .completeModal {
+        width: 22%;
+        height: 33vh;
+    }
+
+
+    .completeHeading {
+        font-size: 18px;
+        margin-top: 10px;
+    
+    }
+    
+    .completebtn {
+        font-size: 18px;
+        height: 35px;
+    
+    }
+    
+    .arrow {
+        width: 25px;
+        height: 25px;
+    
+    }
+    
+    .arrowImg {
+        width: 10px;
+    }
+    
+    .completeImg {
+        width: 100px;
+    }
+    .completeParaWrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .completePara {
+        width: 95%;
+        text-align: center;
+    }
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .container {
+        margin-left: 15%;
+
+    }
+
+    .searchWrapper {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .search {
+        width: 60%;
+    }
+
+    .searchInput {
+        width: 120%;
+
+    }
+
+    .noticationWrapper {
+        width: 25%;
+
+    }
+
+    .noticationText {
+        display: none;
+    }
+
+    .noticationBtn {
+        width: 30%;
+        justify-content: center;
+        margin-left: 50px;
+    }
+
+    .rewardCard {
+        width: 80%;
+    }
+
+    .rewardCardHeading {
+        font-size: 22px;
+    }
+
+    .rewardImg {
+        width: 60px;
+    }
+
+    .reawadPara {
+        font-size: 16px;
+    }
+
+
+    .btn {
+        font-size: 18px;
+    }
+
+    .rewardHeading {
+        font-size: 20px;
+    }
+
+    .greenBtn {
+        height: 40px;
+        font-size: 16px;
+
+    }
+
+    .word {
+        font-size: 16px;
+    }
+
+
+    /* modal Css  */
+
+    .modalReward {
+        top: 5%;
+        left: 20%;
+        width: 70%;
+        height: 93vh;
+
+    }
+
+    .dropDownWrappper {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    .dropDownleft {
+        width: 95%;
+
+    }
+
+    .dropDownRight {
+        width: 95%;
+    }
+
+    .cross {
+        width: 30px;
+    }
+
+    .modalHeading {
+        font-size: 20px;
+    }
+
+    .modalBtn {
+        font-size: 18px;
+    }
+
+    /* reviewModal  */
+    .reviewModal {
+        top: 25%;
+        left: 30%;
+        width: 55%;
+        height: 30vh;
+    }
+
+
+    .reviewHeading {
+        font-size: 20px;
+        margin: 20px;
+    }
+
+    .orderInfoWrapper {
+        margin: 20px;
+    }
+
+    .orderHeading {
+        font-size: 16px;
+    }
+
+
+    .logoutBtnWrapper {
+        gap: 10px;
+    }
+
+    .logoutBtn {
+        padding: 5px 40px;
+        font-size: 18px;
+    }
+
+    .cancelBtn {
+        padding: 5px 40px;
+        font-size: 18px;
+    }
+
+    /* completeModal */
+
+    .completeModal {
+        width: 25%;
+        height: 32vh;
+    }
+
+
+
+    .completeHeading {
+        font-size: 16px;
+        margin-top: 10px;
+
+    }
+
+    .completebtn {
+        font-size: 16px;
+        height: 30px;
+
+    }
+
+    .arrow {
+        width: 20px;
+        height: 20px;
+
+    }
+
+    .arrowImg {
+        width: 10px;
+    }
+
+    .completeImg {
+        width: 75px;
+    }
+
+    .completeParaWrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .completePara {
+        width: 85%;
+        text-align: center;
+    }
+}

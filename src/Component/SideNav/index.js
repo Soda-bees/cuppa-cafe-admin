@@ -68,7 +68,7 @@ export default function SideNav() {
           <img
             className={style.menuImg}
             src={
-              activePath === "setting"
+              activePath === "/setting"
                 ? images.settingGreen
                 : images.settingsIcon
             }

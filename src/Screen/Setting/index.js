@@ -196,8 +196,8 @@ export default function Setting() {
                     <div className={style.btn}>Save</div>
                   </div>
                 </div>
-                  <div className={style.InputImg}>
-                    <div className={style.imageWrapper}>
+                <div className={style.InputImg}>
+                  <div className={style.imageWrapper}>
                     <label for="img" className={style.uploadImage}>
                       <img
                         src={
@@ -216,12 +216,12 @@ export default function Setting() {
                         onChange={handleImageChange}
                       />
                     </label>
-                    </div>
-                    <div className={style.uploadImgtext}>
-                      <img className={style.uploadImg} src={images.uploadImg} />
-                      Upload Images
-                    </div>
                   </div>
+                  <div className={style.uploadImgtext}>
+                    <img className={style.uploadImg} src={images.uploadImg} />
+                    Upload Images
+                  </div>
+                </div>
                 <div className={style.InputFeild}>
                   <div className={style.editinputWrapper}>
                     <div className={style.inputHeadingTwo}>Outlet Name</div>
@@ -512,29 +512,6 @@ export default function Setting() {
                           </div>
                         )}
                       </div>
-                      <div className={style.passwordHeading}>Create Your New Password</div>
-                      <div className={style.passwordInfo}>
-                        <div className={style.inputHeadingTwo}>Enter Current Password</div>
-                        <input
-
-                          className={style.editInput}
-                          type="text"
-                        />
-                      </div>
-                      <div className={style.passwordInfo}>
-                        <div className={style.inputHeadingTwo}>Enter New Password</div>
-                        <input
-                          className={style.editInput}
-                          type="text"
-                        />
-                      </div>
-                      <div className={style.passwordInfo}>
-                        <div className={style.inputHeadingTwo}>Enter Password Again</div>
-                        <input
-                          className={style.editInput}
-                          type="text"
-                        />
-                      </div>
                     </div>
                     <div className={style.right}>
                       <div className={style.modalOfferCardBtn}>
@@ -559,6 +536,31 @@ export default function Setting() {
                       </div>
                     </div>
                   </div>
+                  <div className={style.passwordHeading}>Create Your New Password</div>
+                  <div className={style.InputWrapper}>
+                    <div className={style.passwordInfo}>
+                      <div className={style.inputHeadingTwo}>Enter Current Password</div>
+                      <input
+                        className={style.editInput}
+                        type="text"
+                      />
+                    </div>
+                    <div className={style.passwordInfo}>
+                      <div className={style.inputHeadingTwo}>Enter New Password</div>
+                      <input
+                        className={style.editInput}
+                        type="text"
+                      />
+                    </div>
+                    <div className={style.passwordInfo}>
+                      <div className={style.inputHeadingTwo}>Enter Password Again</div>
+                      <input
+                        className={style.editInput}
+                        type="text"
+                      />
+                    </div>
+                  </div>
+
                 </div></>) :
                   panel === 'logout' && (<>
                     <Modal
@@ -570,8 +572,10 @@ export default function Setting() {
                         <div className={style.modalHeading}>
                           Logging Out?
                         </div>
-                        <div className={style.logoutPara}>
-                          Thanks for stopping by. See you again soon!
+                        <div className={style.logoutParaWrapper} >
+                          <div className={style.logoutPara}>
+                            Thanks for stopping by. See you again soon!
+                          </div>
                         </div>
                         <div className={style.logoutBtnWrapper}>
                           <div className={style.cancelBtn} onClick={() => setIsModalVisible(false)}>

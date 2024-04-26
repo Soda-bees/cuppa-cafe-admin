@@ -628,7 +628,20 @@
         margin: 10px;
 
     }
-
+    .greenBtn {
+        height: 40px;
+        width: 160px;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    
+    .word {
+        font-size: 19px;
+        font-weight: 600;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    
     /* modal CSS */
     .modalOffer {
         width: 90%;
@@ -652,6 +665,8 @@
     .btn {
         padding: 7px;
         font-size: 16px;
+        font-weight: 500;
+
     }
 
     .seletedImg {
@@ -716,6 +731,10 @@
     .offerCardImg {
         margin: 10px;
 
+    }
+    .btn {
+        font-size: 20px;
+        font-weight: 500;
     }
 
     /* modal Css */

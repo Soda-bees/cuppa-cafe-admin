@@ -181,7 +181,7 @@ export default function Rewards() {
   };
   return (
     <div className={style.container}>
-       <div className={style.menuTwo}>
+      <div className={style.menuTwo}>
         <div className={style.searchWrapper}>
           <div className={style.search}>
             <img className={style.searchIcon} src={images.searchIcon} />
@@ -233,7 +233,7 @@ export default function Rewards() {
         </div>
         <div className={style.row}>
           {currentProducts.map((item, index) => (
-            <div key={index} className={style.rewardCard} onClick={()=> navigate("/rewardsDetails")}>
+            <div key={index} className={style.rewardCard} onClick={() => navigate("/rewardsDetails")}>
               <div className={style.rewardHeadingWrapper}>
                 <div className={style.rewardCardHeading}>Buy 5 Get 1 Free</div>
                 <div className={style.reawadPara}>Order 5 Coffees & Get 1 Free</div>
@@ -266,7 +266,10 @@ export default function Rewards() {
           </div>
           <div className={style.dropDownWrappper}>
             <div className={style.dropDownleft}>
-              <div className={style.dropDownHeading}>How many stamps to collect reward?</div>
+              <div className={style.headingWrapper}>
+                <div className={style.dropDownHeading}>How many stamps to collect reward?</div>
+              </div>
+
               <div className={style.dropDownOpen}>
                 <div className={style.dropDownSelect} onClick={() => setSelectImg(!selectImg)} >
                   <div className={style.dropDownPara}>Enter number of stamps</div>
@@ -286,7 +289,9 @@ export default function Rewards() {
               </div>
             </div>
             <div className={style.dropDownRight}>
-              <div className={style.dropDownHeading}>What reward would you like to offer?</div>
+              <div className={style.headingWrapper}>
+                <div className={style.dropDownHeading}>What reward would you like to offer?</div>
+              </div>
               <div className={style.dropDownOpen}>
                 <div className={style.dropDownSelect} onClick={() => setSelectImgTwo(!selectImgTwo)} >
                   <div className={style.dropDownPara}>Choose reward</div>
@@ -330,13 +335,15 @@ export default function Rewards() {
             </div>
           </div>
           <div className={style.logoutBtnWrapper}>
-            <div className={style.logoutBtn} onClick={()=> {setModalComplete(!modalComplete)
-               setOpenNextModal(!openNextModal)
-               setIsOfferModalVisible(!isOfferModalVisible) }} >
-            Create
+            <div className={style.logoutBtn} onClick={() => {
+              setModalComplete(!modalComplete)
+              setOpenNextModal(!openNextModal)
+              setIsOfferModalVisible(!isOfferModalVisible)
+            }} >
+              Create
             </div>
             <div className={style.cancelBtn}>
-            Edit
+              Edit
             </div>
           </div>
         </div>
@@ -346,18 +353,21 @@ export default function Rewards() {
         onRequestClose={() => setModalComplete(false)}
         className={style.completeModal}
       >
-        <img onClick={()=> setModalComplete(!modalComplete)} className={style.crossTwo} src={images.cross} />
+        <img onClick={() => setModalComplete(!modalComplete)} className={style.crossTwo} src={images.cross} />
         <div className={style.completeContainer}>
-         <div className={style.completeHeading}> 
-         Congratulations!
-         </div>
-         <div className={style.completeImgWrapper}> 
-         <img className={style.completeImg} src={images.completeImg}/>
-         </div>
-         <div className={style.completePara}>New Reward Created Successfully!</div>
-         <div className={style.completebtnWrapper}>
+          <div className={style.completeHeading}>
+            Congratulations!
+          </div>
+          <div className={style.completeImgWrapper}>
+            <img className={style.completeImg} src={images.completeImg} />
+          </div>
+          <div className={style.completeParaWrapper}>
+            <div className={style.completePara}>New Reward Created Successfully!</div>
+          </div>
+
+          <div className={style.completebtnWrapper}>
             <div className={style.completebtn}>
-            Rewards
+              Rewards
               <div className={style.arrow}>
                 <img className={style.arrowImg} src={images.singInArrow} />
               </div>
