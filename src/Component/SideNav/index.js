@@ -10,8 +10,8 @@ export default function SideNav() {
   const navigate = useNavigate();
 
   return (
-    <div className={style.sideBar}>
-      <div className={style.menubar}>
+    <div className={`${style.sideBar}`}>
+      <div className={`${style.menubar}  `}>
         <div className={style.logo}>
           <img className={style.LogoImg} src={images.menulogo} />
           <img className={style.mobLogo} src={images.mobLogo} />

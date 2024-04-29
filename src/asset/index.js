@@ -72,10 +72,14 @@ import growthArrow from './grothArrow.png'
 import notSelectedBtn from './notSelectedBtn.png'
 import selectBtn from './selectedBtn.png'
 import mobLogo from './mobLogo.png'
+import fullcappuccino from './fullcappuccino.png'
+import profMarkPic from './profMarkPic.png'
 
 
 
 const Images = {
+    fullcappuccino,
+    profMarkPic,
     arrowRight,
     bgBoxLeft,
     singInArrow,

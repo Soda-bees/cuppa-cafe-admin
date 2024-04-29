@@ -1,256 +1,338 @@
-import React, { useState } from 'react'
-import style from './style.module.css'
-import images from '../../asset';
-import StarRatings from 'react-star-ratings';
+import React, { useState } from "react";
+import style from "./style.module.css";
+import images from "../../asset";
+import StarRatings from "react-star-ratings";
 import ProgressBar from "@ramonak/react-progress-bar";
-import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-
-
+import {
+  ResponsiveContainer,
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+} from "recharts";
 
 export default function Dashboard() {
   const [search, setSearch] = useState("");
   const [dropDown, setDropDown] = useState(null);
-  const [todayOrder, setTodayOrder] = useState('1000');
-  const [cancelledOrder, setCancelOrder] = useState('5');
-  const [menu, setMenu] = useState('6');
-  const [totalCustomer, setTotalCustomer] = useState('2,486');
-  const [totalProfit, setTotalProfit] = useState('$15,239.58');
-  const [growth, setGrowth] = useState('$192.20');
-  const [orderDate, setOrderData] = useState('Oct 24 , 2024');
-  const [quantity, setQuantity] = useState('1');
-  const [coffeePrice, setCoffeePrice] = useState('$3.45');
-  const [totalAveragesRating, setTotalAveragesRating] = useState('4.8');
-
-
+  const [todayOrder, setTodayOrder] = useState("1000");
+  const [cancelledOrder, setCancelOrder] = useState("5");
+  const [menu, setMenu] = useState("6");
+  const [totalCustomer, setTotalCustomer] = useState("2,486");
+  const [totalProfit, setTotalProfit] = useState("$15,239.58");
+  const [growth, setGrowth] = useState("$192.20");
+  const [orderDate, setOrderData] = useState("10/24 , 2024");
+  const [quantity, setQuantity] = useState("1");
+  const [coffeePrice, setCoffeePrice] = useState("$3.45");
+  const [totalAveragesRating, setTotalAveragesRating] = useState("4.8");
 
   const [card, setCard] = useState([
     {
-      images: images.cappuccino,
+      images: images.fullcappuccino,
       name: "cappuccino",
     },
     {
-      images: images.cappuccino,
+      images: images.fullcappuccino,
       name: "cappuccino",
     },
     {
-      images: images.cappuccino,
+      images: images.fullcappuccino,
       name: "cappuccino",
     },
     {
-      images: images.cappuccino,
+      images: images.fullcappuccino,
       name: "cappuccino",
     },
   ]);
 
   const [commitCard, setCommitCard] = useState([
     {
-      image: images.ratingImg
+      image: images.profMarkPic,
     },
     {
-      image: images.ratingImg
+      image: images.profMarkPic,
     },
     {
-      image: images.ratingImg
+      image: images.profMarkPic,
     },
     {
-      image: images.ratingImg
+      image: images.profMarkPic,
     },
     {
-      image: images.ratingImg
+      image: images.profMarkPic,
     },
     {
-      image: images.ratingImg
+      image: images.profMarkPic,
     },
-
-  ])
+  ]);
 
   const toggleDropDown = (index) => {
     setDropDown((prevIndex) => (prevIndex === index ? null : index));
   };
 
-  const [reply, setReply] = useState(null)
+  const [reply, setReply] = useState(null);
   const togglereply = (index) => {
     setReply((prevIndex) => (prevIndex === index ? null : index));
   };
 
   const data = [
-    { name: 'Mon', pv: 2400, amt: 2400 },
-    { name: 'Tue', pv: 1398, amt: 2210 },
-    { name: 'Wed', pv: 9800, amt: 2290 },
-    { name: 'Thu', pv: 7800, amt: 2290 },
-    { name: 'Fri', pv: 8800, amt: 2290 },
-    { name: 'Sat', pv: 4800, amt: 2290 },
-    { name: 'Sun', pv: 6800, amt: 2290 },
+    { name: "Mon", pv: 2400, amt: 2400 },
+    { name: "Tue", pv: 1398, amt: 2210 },
+    { name: "Wed", pv: 9800, amt: 2290 },
+    { name: "Thu", pv: 7800, amt: 2290 },
+    { name: "Fri", pv: 8800, amt: 2290 },
+    { name: "Sat", pv: 4800, amt: 2290 },
+    { name: "Sun", pv: 6800, amt: 2290 },
   ];
 
-
-
   return (
-    <div className={style.container}>
+    <div className={`${style.container} biggerlaptop:pl-[18%] pl-[20%]`}>
       <div className={style.menuTwo}>
-        <div className={style.searchWrapper}>
-          <div className={style.search}>
-            <img className={style.searchIcon} src={images.searchIcon} />
+        <div
+          className={`${style.searchWrapper}  flex items-center justify-between`}
+        >
+          <div className=" w-full flex items-center  md:h-12 h-10  border rounded-xl border-borderColor pl-4 gap-2">
+            <img className="cursor-pointer h-5 w-5" src={images.searchIcon} />
             <input
-              className={style.searchInput}
+              className={`${style.searchInput} sm:text-md text-sm  w-full flex items-center bg-bgColor`}
               type="text"
               placeholder="Search"
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
-          <div className={style.noticationWrapper}>
-            <div className={style.noticationBtn}>
+          <div className={`${style.noticationWrapper}  lg:w-40 sm:w-40 w-40`}>
+            <div
+              className={`${style.noticationBtn}  cursor-pointer active:opacity-50 md:h-12 h-10`}
+            >
               <img
-                className={style.notificationIcon}
+                className={`${style.notificationIcon} h-4 w-4`}
                 src={images.notificationIcon}
               />
-              <div className={style.noticationText}>
+              <div className={`${style.noticationText}  text-sm `}>
                 Notifications
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
-
-      <div className={style.menu}>
-        <div className={style.dashBoardWrapper}>
-          <div className={style.dashBoardLeft}>
-            <div className={style.cardWrapper}>
+      <div className={`${style.menu} `}>
+        <div
+          className={`${style.dashBoardWrapper} w-[96%]  flex   justify-between`}
+        >
+          <div className={`${style.dashBoardLeft} w-[90%]`}>
+            <div className={`${style.cardWrapper} w-full flex`}>
               <div className={style.dashBoardCard}>
                 <div className={style.cardInfo}>
-                  <div><img className={style.Icon} src={images.coffeeIcon} /></div>
-                  <div className={style.quantity}>{todayOrder}</div>
+                  <div>
+                    <img
+                      className={`${style.Icon}biggerlaptop:w-10 biggerlaptop:h-10 h-8 w-8`}
+                      src={images.coffeeIcon}
+                    />
+                  </div>
+                  <div
+                    className={`${style.quantity} biggerlaptop:text-2xl md:text-xl font-semibold sm:text-lg text-lg `}
+                  >
+                    {todayOrder}
+                  </div>
                 </div>
-                <div className={style.orderHeading}>
-                  Orders Today
-                </div>
+                <div className={style.orderHeading}>Orders Today</div>
               </div>
               <div className={style.dashBoardCard}>
                 <div className={style.cardInfo}>
-                  <div><img className={style.IconTwo} src={images.coffeeCrossIcon} /></div>
-                  <div className={style.quantity}>{cancelledOrder}</div>
+                  <div>
+                    <img
+                      className={`${style.IconTwo} biggerlaptop:w-14 biggerlaptop:h-10 w-12 h-8`}
+                      src={images.coffeeCrossIcon}
+                    />
+                  </div>
+                  <div
+                    className={`${style.quantity} biggerlaptop:text-2xl md:text-xl font-semibold sm:text-lg text-lg `}
+                  >
+                    {cancelledOrder}
+                  </div>
                 </div>
-                <div className={style.orderHeading}>
-                  Cancelled Orders
-                </div>
+                <div className={style.orderHeading}>Cancelled Orders</div>
               </div>
               <div className={style.dashBoardCard}>
                 <div className={style.cardInfo}>
-                  <div><img className={style.Icon} src={images.menuGreenIcon} /></div>
-                  <div className={style.quantity}>{menu}</div>
+                  <div>
+                    <img
+                      className={`${style.Icon} biggerlaptop:w-10 biggerlaptop:h-10 h-8 w-8`}
+                      src={images.menuGreenIcon}
+                    />
+                  </div>
+                  <div
+                    className={`${style.quantity} biggerlaptop:text-2xl md:text-xl font-semibold sm:text-sm text-lg `}
+                    ofMarkPic
+                  >
+                    {menu}
+                  </div>
                 </div>
-                <div className={style.orderHeading}>
-                  Total Menus
-                </div>
+                <div className={style.orderHeading}>Total Menus</div>
               </div>
               <div className={style.dashBoardCard}>
                 <div className={style.cardInfo}>
-                  <div><img className={style.Icon} src={images.customerIcon} /></div>
-                  <div className={style.quantity}>{totalCustomer}</div>
+                  <div>
+                    <img
+                      className={`${style.Icon} biggerlaptop:w-10 biggerlaptop:h-10 h-8 w-8`}
+                      src={images.customerIcon}
+                    />
+                  </div>
+                  <div
+                    className={`${style.quantity} biggerlaptop:text-2xl md:text-xl font-semibold sm:text-sm text-lg `}
+                    ofMarkPic
+                  >
+                    {totalCustomer}
+                  </div>
                 </div>
-                <div className={style.orderHeading}>
-                  Total Customer
-                </div>
+                <div className={style.orderHeading}>Total Customer</div>
               </div>
             </div>
             <div className={style.graphWrapper}>
               <div className={style.graphHeadingWrapper}>
-                <div className={style.graphHeading}>
+                <div className={`${style.graphHeading} md:text-2xl text-md `}>
                   Business Summary
                 </div>
                 <div className={style.graphImgWrapper}>
-                  <img className={style.graphSettingIcon} src={images.graphSetting} />
+                  <img
+                    className={style.graphSettingIcon}
+                    src={images.graphSetting}
+                  />
                 </div>
               </div>
-              <div className={style.graph}>
+              <div
+                className={`${style.graph} border border-borderColor rounded-xl`}
+              >
                 <div className={style.saleWrapper}>
-                  <div className={style.saleHeading}>Sales</div>
-                  <div className={style.growthWrapper}>
+                  <div
+                    className={`${style.saleHeading} md:text-xl  text-md font-bold`}
+                  >
+                    Sales
+                  </div>
+                  <div className={`${style.growthWrapper}  flex justify-end`}>
                     <div className={style.totalPrice}>{totalProfit}</div>
-                    <div className={style.grothPrice}>+{growth} <img className={style.growthArrow} src={images.growthArrow} /></div>
+                    <div className={style.grothPrice}>
+                      +{growth}{" "}
+                      <img
+                        className={style.growthArrow}
+                        src={images.growthArrow}
+                      />
+                    </div>
                   </div>
                 </div>
-                <ResponsiveContainer width="100%" height={400}>
+                <ResponsiveContainer width="100%" height={240}>
                   <LineChart data={data}>
                     <Tooltip />
                     <XAxis dataKey="name" />
                     <YAxis />
                     <CartesianGrid stroke="#eee" />
-                    <Line type="monotone"
+                    <Line
+                      type="monotone"
                       dataKey="pv"
                       stroke="#4CAD00"
-                      strokeWidth={5} />
+                      strokeWidth={5}
+                    />
                   </LineChart>
                 </ResponsiveContainer>
               </div>
             </div>
-            <div className={style.heading}>
+            <div className={`${style.heading} md:text-2xl text-md `}>
               Recent Orders
             </div>
-            <div className={style.recentOrderWrapper}>
+            <div
+              className={`${style.recentOrderWrapper} text-white font-semibold md:text-lg text-xs`}
+            >
               <div className={style.itemHeadingList}>
                 <div className={style.listWrapper}>
-                  <div className={style.itemHeading}>Item</div>
+                  <div className={`${style.itemHeading} pl-4`}>Item</div>
                 </div>
-                <div className={style.HeadingList}>
-                  <div className={style.itemHeading}>Date & Time</div>
+                <div
+                  className={`${style.HeadingList}  flex items-center gap-2`}
+                >
+                  <div className={style.itemHeading}>Date&Time</div>
                   <div className={style.itemHeading}>Qty.</div>
                   <div className={style.itemHeading}>Price</div>
-                  <div className={style.itemHeading}>Status</div>
+                  <div className={`${style.itemHeading} `}>Status</div>
                 </div>
               </div>
             </div>
-
             {card.map((item, index) => (
               <div className={style.OrderWrapper}>
                 <div className={style.itemHeadingList}>
-                  <div className={style.listWrapper}>
-                    <div className={style.itemName}>
-                      <img className={style.itemImg} src={item.images} />
+                  <div className={`${style.listWrapper} m-2`}>
+                    <div
+                      className={`${style.itemName} flex items-center gap-2 md:text-lg  text-xs font-semibold`}
+                    >
+                      <img
+                        className={`${style.itemImg} rounded-2xl h-20 w-20 `}
+                        src={item.images}
+                      />
                       {item.name}
                     </div>
                   </div>
-                  <div className={style.listItemWrapper}>
+                  <div
+                    className={`${style.listItemWrapper} md:text-lg text-xs  flex items-start  `}
+                  >
                     <div className={style.listItem}>{orderDate}</div>
                     <div className={style.listItemTwo}>{quantity}</div>
                     <div className={style.listItemThree}>{coffeePrice}</div>
-                    <div onClick={() => toggleDropDown(index)} className={style.listItemFour} >Pending
-                      <img className={style.blackArrow} src={dropDown === index ? images.blackArrowUp : images.blackArrowDown} />
-                      {dropDown === index &&
-                        (<div className={style.dropDown}>
+                    <div
+                      onClick={() => toggleDropDown(index)}
+                      className={style.listItemFour}
+                    >
+                      pending
+                      <img
+                        className={style.blackArrow}
+                        src={
+                          dropDown === index
+                            ? images.blackArrowUp
+                            : images.blackArrowDown
+                        }
+                      />
+                      {dropDown === index && (
+                        <div className={style.dropDown}>
                           <div className={style.dropDownOption}>Ready</div>
                           <div className={style.dropDownOption}>Picked</div>
                           <div className={style.dropDownOption}>Cancelled</div>
                         </div>
-                        )}
+                      )}
                     </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <div className={style.dashBoardRight}>
-            <div className={style.ratingHeading}>
+          <div className={`${style.dashBoardRight}  biggerlaptop:w-[38%] `}>
+            <div
+              className={`${style.ratingHeading} md:text-2xl text-md font-bold`}
+            >
               Rating & Reviews
             </div>
-            <div className={style.ratingwrapper}>
+            <div
+              className={`${style.ratingwrapper}  border border-borderColor`}
+            >
               <div className={style.ratingReviewCard}>
-                <div className={style.headingRating}>Rating</div>
+                <div className={`${style.headingRating} font-semibold text-md`}>
+                  Rating
+                </div>
                 <div className={style.ratingReviewCardWrapper}>
-                  <div className={style.ratingLeft}>
-                    <div className={style.ratingAverage}>{totalAveragesRating}</div>
-                    <div className={style.ratingStar}>
+                  <div className={`${style.ratingLeft} gap-2 h-20 mt-6`}>
+                    <div className={style.ratingAverage}>
+                      {totalAveragesRating}
+                    </div>
+                    <div className={`${style.ratingStar} `}>
                       <StarRatings
                         rating={3}
-                        starDimension="25px"
+                        starDimension="20px"
                         starSpacing="1px"
                         starRatedColor="#FCC767"
-
                       />
                     </div>
-                    <div className={style.ratingTotalNumber}>All ratings (1000+)</div>
+                    <div className={style.ratingTotalNumber}>
+                      All ratings (1000+)
+                    </div>
                   </div>
                   <div className={style.ratingRight}>
                     <div className={style.ProgressBarWrapper}>
@@ -263,10 +345,11 @@ export default function Dashboard() {
                           completed={60}
                           maxCompleted={100}
                           bgColor="#FCC767"
-                          height="5px"
-                          width='100%'
+                          height="3px"
+                          width="100%"
                           isLabelVisible={false}
-                        /></div>
+                        />
+                      </div>
                       <div className={style.totalAverage}>60%</div>
                     </div>
                     <div className={style.ProgressBarWrapper}>
@@ -279,10 +362,11 @@ export default function Dashboard() {
                           completed={50}
                           maxCompleted={100}
                           bgColor="#FCC767"
-                          height="5px"
-                          width='100%'
+                          height="3px"
+                          width="100%"
                           isLabelVisible={false}
-                        /></div>
+                        />
+                      </div>
                       <div className={style.totalAverage}>50%</div>
                     </div>
                     <div className={style.ProgressBarWrapper}>
@@ -295,10 +379,11 @@ export default function Dashboard() {
                           completed={40}
                           maxCompleted={100}
                           bgColor="#FCC767"
-                          height="5px"
-                          width='100%'
+                          height="3px"
+                          width="100%"
                           isLabelVisible={false}
-                        /></div>
+                        />
+                      </div>
                       <div className={style.totalAverage}>40%</div>
                     </div>
                     <div className={style.ProgressBarWrapper}>
@@ -311,11 +396,12 @@ export default function Dashboard() {
                           completed={30}
                           maxCompleted={100}
                           bgColor="#FCC767"
-                          height="5px"
-                          width='100%'
+                          height="3px"
+                          width="100%"
                           isLabelVisible={false}
-                        /></div>
-                      <div className={style.totalAverage}>30%</div>
+                        />
+                      </div>
+                      <div classNam={style.totalAverage}>30%</div>
                     </div>
                     <div className={style.ProgressBarWrapper}>
                       <div className={style.starNumbar}>1</div>
@@ -327,13 +413,13 @@ export default function Dashboard() {
                           completed={20}
                           maxCompleted={100}
                           bgColor="#FCC767"
-                          height="5px"
-                          width='100%'
+                          height="3px"
+                          width="100%"
                           isLabelVisible={false}
-                        /></div>
+                        />
+                      </div>
                       <div className={style.totalAverage}>20%</div>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -343,33 +429,60 @@ export default function Dashboard() {
                 <div key={index} className={style.ratingCard}>
                   <div className={style.ratingCardInner}>
                     <div className={style.ratingCardInfoWrapper}>
-                      <div className={style.ratingImgWrapper}><img className={style.ratingImg} src={item.image} /></div>
+                      <img
+                        className={`${style.ratingImg} rounded-full h-12 w-12 `}
+                        src={item.image}
+                      />
                       <div className={style.RatingInfo}>
-                        <div className={style.customerName}>Mark</div>
-                        <div className={style.ratings}> <StarRatings
-                          rating={4}
-                          starDimension="20px"
-                          starSpacing="0.5px"
-                          starRatedColor="#FCC767"
-
-                        /> . Yesterday</div>
-                        <div className={style.commit}>The coffee was really good and milky</div>
+                        <div className={`${style.customerName} text-sm`}>
+                          Mark
+                        </div>
+                        <div
+                          className={`${style.ratings} text-sm flex items-center gap-1`}
+                        >
+                          <StarRatings
+                            rating={4}
+                            starDimension="12px"
+                            starSpacing="0.5px"
+                            starRatedColor="#FCC767"
+                          />
+                          <div className="">.</div>
+                          <div>Yesterday</div>
+                        </div>
+                        <div className={`${style.commit} text-sm`}>
+                          The coffee was really good and milky
+                        </div>
                       </div>
                     </div>
-                    <div className={style.replyBackWrapper}><img onClick={() => togglereply(index)} className={style.replyBack} src={images.replyback} /></div>
+                    <div className={style.replyBackWrapper}>
+                      <img
+                        onClick={() => togglereply(index)}
+                        className={style.replyBack}
+                        src={images.replyback}
+                      />
+                    </div>
                   </div>
-                  {reply === index &&
-                    <div className={style.inputWraaper}><input className={style.replyInput} /><img className={style.whitearrow} src={images.whiteLeftArrow} /></div>
-                  }
+                  {reply === index && (
+                    <div
+                      className={`${style.inputWraaper}
+                    bg-gradient-to-tr from-gradColorLeft to-gradColorRight rounded-xl flex items-center px-4 h-9 ml-6`}
+                    >
+                      <input
+                        className={`${style.replyInput} 
+                     focus:outline-none bg-transparent rounded-lg h-7 w-full  text-white text-sm`}
+                      />
+                      <img
+                        className={`${style.whitearrow} cursor-pointer h-5 w-5 `}
+                        src={images.whiteLeftArrow}
+                      />
+                    </div>
+                  )}
                 </div>
-
               ))}
-
-
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

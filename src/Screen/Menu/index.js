@@ -297,51 +297,53 @@ export default function Menu() {
   };
 
   return (
-    <div className={style.container}>
-      <div className={style.menuTwo}>
-        <div className={style.searchWrapper}>
-          <div className={style.search}>
-            <img className={style.searchIcon} src={images.searchIcon} />
+    <div className={`${style.container} biggerlaptop:pl-[18%] pl-[20%]`}>
+       <div className={style.menuTwo}>
+        <div
+          className={`${style.searchWrapper}  flex items-center justify-between`}
+        >
+          <div className=" w-full flex items-center  md:h-12 h-10  border rounded-xl border-borderColor pl-4 gap-2">
+            <img className="cursor-pointer h-5 w-5" src={images.searchIcon} />
             <input
-              className={style.searchInput}
+              className={`${style.searchInput} sm:text-md text-sm  w-full flex items-center bg-bgColor`}
               type="text"
               placeholder="Search"
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
-          <div className={style.noticationWrapper}>
-            <div className={style.noticationBtn}>
+          <div className={`${style.noticationWrapper}  lg:w-40 sm:w-40 w-40`}>
+            <div
+              className={`${style.noticationBtn}  cursor-pointer active:opacity-50 md:h-12 h-10`}
+            >
               <img
-                className={style.notificationIcon}
+                className={`${style.notificationIcon} h-4 w-4`}
                 src={images.notificationIcon}
               />
-              <div className={style.noticationText}>
+              <div className={`${style.noticationText}  text-sm `}>
                 Notifications
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
-      <div className={style.menu}>
+      <div className={`${style.menu} pr-2 md:pr-16`}>
         <div className={style.headingWrappper}>
-          <div className={style.heading}>
-            <img className={style.headingIcon} src={images.categoriesIcon} />
+          <div className={`${style.heading} md:text-2xl text-md`}>
+            <img className={`${style.headingIcon} w-5 md:w-8`} src={images.categoriesIcon} />
             Categories
           </div>
           <div
-            className={style.btn}
+            className={`${style.btn}  text-sm md:text-xl`}
             onClick={() => setIsModalVisible(!isModalVisible)}
           >
-            <img className={style.plusIcon} src={images.plusIcon} />
+            <img className={`${style.plusIcon} w-3 md:w-4`} src={images.plusIcon} />
             Add Categories
           </div>
         </div>
-        <div className={style.categoryRow}>
+        <div className={`${style.categoryRow} flex-wrap grid-flow-col`}>
           {cardData.map((Item, index) => (
-            <div key={index} className={style.categoriesCard}>
-              <img className={style.categoriesCardImg} src={Item.image} />
+            <div key={index} className={`${style.categoriesCard}`}>
+              <img className={`${style.categoriesCardImg} w-full`} src={Item.image} />
               <div className={style.cardCover}>
                 <div
                   onClick={() => handleDropdownToggle(index)}
@@ -354,7 +356,7 @@ export default function Menu() {
                         className={style.edit}
                       >
                         <img className={style.editIcon} src={images.editIcon} />
-                        <div >Edit</div>
+                        <div>Edit</div>
                       </div>
                       <div className={style.line}></div>
                       <div className={style.remove}>
@@ -381,18 +383,22 @@ export default function Menu() {
         </div>
 
         <div className={style.headingWrappper}>
-          <div className={style.heading}>
-            <img className={style.headingIcon} src={images.coffeeItemIcon} />
+          <div className={`${style.heading}  md:text-2xl text-md`}>
+            <img className={`${style.headingIcon} w-5 md:w-8`} src={images.coffeeItemIcon} />
             Coffees Items
           </div>
-          <div className={style.btn} onClick={() => navigate("/AddItem")}>
-            <img className={style.plusIcon} src={images.plusIcon} />
+          <div  className={`${style.btn}  text-sm md:text-xl`} onClick={() => navigate("/AddItem")}>
+            <img className={`${style.plusIcon} w-3 md:w-4`} src={images.plusIcon} />
             Add Items
           </div>
         </div>
         <div className={style.row}>
           {currentProducts.map((item, index) => (
-            <div key={index} className={style.itemCard} onClick={() => navigate("/itemdetails" , {state: {item}})}>
+            <div
+              key={index}
+              className={style.itemCard}
+              onClick={() => navigate("/itemdetails", { state: { item } })}
+            >
               <img className={style.itemCardImg} src={item.images} />
               <div>
                 <div className={style.itemName}>cappuccino</div>
