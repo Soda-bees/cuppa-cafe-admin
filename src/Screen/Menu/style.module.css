@@ -70,13 +70,13 @@
 }
 
 .btn {
-  padding: 10px;
+  /* padding: 10px; */
   background-image: linear-gradient(to right, #287c76, #60b0aa);
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  /* gap: 10px; */
   /* font-size: 22px; */
   color: #fff;
   cursor: pointer;
@@ -116,7 +116,7 @@
 }
 
 .dotMenu img {
-  height: 30px;
+  /* heights: 30px; */
   margin-right: 10px;
 }
 
@@ -126,24 +126,24 @@
 }
 
 .categoriesName {
-  background-color: #fff;
+  /* background-color: #fff;
   margin-left: 10px;
   margin-bottom: 10px;
   border-radius: 30px;
   font-size: 18px;
-  font-weight: 600;
   padding: 5px;
-  text-align: center;
+  text-align: center; */
+  font-weight: 600;
 }
 
 .dropdown {
-  width: 50%;
+  /* width: 50%; */
   background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
 
 .editIcon {
@@ -178,7 +178,7 @@
 
 .categoryRow {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
 .row {
@@ -203,7 +203,7 @@
 }
 
 .itemName {
-  font-size: 24px;
+  /* font-size: 24px; */
   margin: 0 10px;
   font-weight: 400;
 }
@@ -547,13 +547,15 @@
   }
 
   .categoriesCardImg {
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
   }
 
   .cardCover {
     width: 150px;
     height: 150px;
+    top: -10%;
+    right: -60%;
   }
 
   .itemCard {

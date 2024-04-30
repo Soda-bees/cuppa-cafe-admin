@@ -297,8 +297,8 @@ export default function Menu() {
   };
 
   return (
-    <div className={`${style.container} biggerlaptop:pl-[18%] pl-[20%]`}>
-       <div className={style.menuTwo}>
+    <div className={`${style.container} biggerlaptop:pl-[18%] pl-[20%] pr-8 `}>
+      <div className={`${style.menuTwo}`}>
         <div
           className={`${style.searchWrapper}  flex items-center justify-between`}
         >
@@ -326,56 +326,93 @@ export default function Menu() {
           </div>
         </div>
       </div>
-      <div className={`${style.menu} pr-2 md:pr-16`}>
+      <div className={`${style.menu} sm:pr-10  md:pr-16`}>
         <div className={style.headingWrappper}>
           <div className={`${style.heading} md:text-2xl text-md`}>
-            <img className={`${style.headingIcon} w-5 md:w-8`} src={images.categoriesIcon} />
+            <img
+              className={`${style.headingIcon} w-5 md:w-8`}
+              src={images.categoriesIcon}
+            />
             Categories
           </div>
           <div
-            className={`${style.btn}  text-sm md:text-xl`}
+            className={`${style.btn} w-10 md:w-52 h-8 md:h-12 gap-1  text-xs md:text-xl`}
             onClick={() => setIsModalVisible(!isModalVisible)}
           >
-            <img className={`${style.plusIcon} w-3 md:w-4`} src={images.plusIcon} />
+            <img
+              className={`${style.plusIcon} w-3 md:w-4`}
+              src={images.plusIcon}
+            />
+            <div className="md:flex hidden">
             Add Categories
+            </div>
           </div>
         </div>
-        <div className={`${style.categoryRow} flex-wrap grid-flow-col`}>
+        <div className={`${style.categoryRow} flex-wrap items-center justify-center w-full   pb-10 md:pb-0  pr-2`}>
           {cardData.map((Item, index) => (
-            <div key={index} className={`${style.categoriesCard}`}>
-              <img className={`${style.categoriesCardImg} w-full`} src={Item.image} />
-              <div className={style.cardCover}>
+            <div key={index} className={`${style.categoriesCard}  `}>
+              <img
+                className={`${style.categoriesCardImg} `}
+                src={Item.image}
+              />
+              <div className={`${style.cardCover} `}>
                 <div
                   onClick={() => handleDropdownToggle(index)}
-                  className={style.dotMenu}
+                  className={`${style.dotMenu} w-20 md:w-full`}
                 >
                   {dropDown === index ? (
-                    <div className={style.dropdown}>
-                      <div
-                        onClick={() => setIsEditModalVisible(true)}
-                        className={style.edit}
-                      >
-                        <img className={style.editIcon} src={images.editIcon} />
-                        <div>Edit</div>
+                    // <div className={style.dropdown}>
+                    //   <div
+                    //     onClick={() => setIsEditModalVisible(true)}
+                    //     className={`${style.edit}  w-full flex `}
+                    //   >
+                    //     <img className={`${style.editIcon}  `} src={images.editIcon} />
+                    //     <div className="w-full">Edit</div>
+                    //   </div>
+                    //   <div className={style.line}></div>
+                    //   <div className={style.remove}>
+                    //     <img
+                    //       className={style.removeIcon}
+                    //       src={images.removeIcon}
+                    //     />
+                    //     Remove
+                    //   </div>
+                    // </div>
+                    <div className="bg-bgColor md:w-24 w-10 rounded-lg pl-1 flex flex-col ">
+                      <div className="border-b w-full flex items-center active:opacity-50 px-2 pt-2 pb-1 gap-2 ">
+                        <div className="h-4 w-4">
+                          <img
+                            src={images.editIcon}
+                            className=""
+                          />
+                        </div>
+                        <div className="text-sm hidden  md:flex">Edit</div>
                       </div>
-                      <div className={style.line}></div>
-                      <div className={style.remove}>
-                        <img
-                          className={style.removeIcon}
-                          src={images.removeIcon}
-                        />
-                        Remove
+                      <div className="w-full flex items-center  active:opacity-50 px-2 py-2 gap-2 ">
+                        <div className="h-4 w-4 ">
+                          <img
+                            src={images.removeIcon}
+                            className=""
+                          />
+                        </div>
+                        <div className=" text-sm hidden  md:flex">Remove</div>
                       </div>
                     </div>
                   ) : (
-                    <img
-                      className={style.itemsCenter}
-                      src={images.dotMenuIcon}
-                    />
+                    <div className="absolute  left-[60%] md:left-[90%]">
+                      <img
+                        className={`${style.itemsCenter} md:h-8 h-4 `}
+                        src={images.dotMenuIcon}
+                      />
+                    </div>
                   )}
                 </div>
-                <div className={style.itemsCenter}>
-                  <div className={style.categoriesName}>{Item.name}</div>
+                <div className={`${style.itemsCenter}  w-24 mb-2`}>
+                  <div
+                    className={`${style.categoriesName} bg-white border px-2 ml-4 my-2 flex justify-center h-8 items-center rounded-2xl text-sm md:text-lg`}
+                  >
+                    {Item.name}
+                  </div>
                 </div>
               </div>
             </div>
@@ -384,15 +421,26 @@ export default function Menu() {
 
         <div className={style.headingWrappper}>
           <div className={`${style.heading}  md:text-2xl text-md`}>
-            <img className={`${style.headingIcon} w-5 md:w-8`} src={images.coffeeItemIcon} />
+            <img
+              className={`${style.headingIcon} w-5 md:w-8`}
+              src={images.coffeeItemIcon}
+            />
             Coffees Items
           </div>
-          <div  className={`${style.btn}  text-sm md:text-xl`} onClick={() => navigate("/AddItem")}>
-            <img className={`${style.plusIcon} w-3 md:w-4`} src={images.plusIcon} />
+          <div
+            className={`${style.btn}  w-10 md:w-36 h-8 md:h-12 gap-1  text-xs md:text-xl`}
+            onClick={() => navigate("/AddItem")}
+          >
+            <img
+              className={`${style.plusIcon} w-3 md:w-4`}
+              src={images.plusIcon}
+            />
+            <div className="md:flex hidden">
             Add Items
+            </div>
           </div>
         </div>
-        <div className={style.row}>
+        <div className={`${style.row}`}>
           {currentProducts.map((item, index) => (
             <div
               key={index}
@@ -401,7 +449,7 @@ export default function Menu() {
             >
               <img className={style.itemCardImg} src={item.images} />
               <div>
-                <div className={style.itemName}>cappuccino</div>
+                <div className={`${style.itemName} text-sm lg:text-2xl`}>cappuccino</div>
                 <div className={style.price}>
                   $3.35
                   <img className={style.blackDots} src={images.blackDots} />
