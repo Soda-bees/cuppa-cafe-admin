@@ -74,10 +74,12 @@ import selectBtn from './selectedBtn.png'
 import mobLogo from './mobLogo.png'
 import fullcappuccino from './fullcappuccino.png'
 import profMarkPic from './profMarkPic.png'
+import cappuccinoNotrounded from './cappuccinoNotrounded.png'
 
 
 
 const Images = {
+    cappuccinoNotrounded,
     fullcappuccino,
     profMarkPic,
     arrowRight,

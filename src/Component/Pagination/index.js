@@ -36,8 +36,8 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         pageNumbers.push(
           <li
             key={i}
-            className={`${style.paginationNumbers} ${
-              currentPage === i ? style.selectedPage : style.notSelectedPage
+            className={`${style.paginationNumbers} inline-block   cursor-pointer w-6 h-6 text-center rounded text-sm ${
+              currentPage === i ? `${style.selectedPage} rounded-full bg-textPrice text-white ` : style.notSelectedPage
             }`}>
             {i}
           </li>
@@ -51,10 +51,10 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         pageNumbers.push(
           <li
             key={i}
-            className={`inline-block bg-paginationcolor cursor-pointer p-2 w-11 text-center rounded text-md${
+            className={`inline-block   cursor-pointer w-6 h-6 text-center rounded text-sm ${
               currentPage === i
-                ? " text-white border border-lineBlue"
-                : " border"
+                ? " rounded-full bg-textPrice text-white"
+                : " "
             }`}
             onClick={() => onPageChange(i)}
           >
@@ -67,8 +67,8 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   };
 
   return (
-    <div className={style.paginationContainer}>
-      <ul className={style.subPaginationContianer}>
+    <div className={`${style.paginationContainer}  `}>
+      <ul className={`${style.subPaginationContianer}  flex items-center justify-between w-60  `}>
         <li
           className={style.arrows}
           onClick={() => {
@@ -77,7 +77,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
             }
           }}
         >
-          <img   src={images.leftArrow} className={style.arrows} alt="Previous" />
+          <img src={images.leftArrow} className={style.arrows} alt="Previous" />
         </li>
 
         <div className={style.paginationNumbers}>

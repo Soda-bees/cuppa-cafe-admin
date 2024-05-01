@@ -11,6 +11,7 @@ module.exports = {
         starBorder: "#A26A3F",
         gradColorLeft: "#5b9a96",
         gradColorRight: "#82beba",
+        textPrice: "#287C76",
       },      
       screens: {
         'laptop': '1026px',

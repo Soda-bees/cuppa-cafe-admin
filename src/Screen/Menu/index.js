@@ -297,7 +297,7 @@ export default function Menu() {
   };
 
   return (
-    <div className={`${style.container} biggerlaptop:pl-[18%] pl-[20%] pr-8 `}>
+    <div className={`${style.container} biggerlaptop:pl-[18%] pl-[20%]  `}>
       <div className={`${style.menuTwo}`}>
         <div
           className={`${style.searchWrapper}  flex items-center justify-between`}
@@ -343,18 +343,15 @@ export default function Menu() {
               className={`${style.plusIcon} w-3 md:w-4`}
               src={images.plusIcon}
             />
-            <div className="md:flex hidden">
-            Add Categories
-            </div>
+            <div className="md:flex hidden">Add Categories</div>
           </div>
         </div>
-        <div className={`${style.categoryRow} flex-wrap items-center justify-center w-full   pb-10 md:pb-0  pr-2`}>
+        <div
+          className={`${style.categoryRow} flex-wrap items-center justify-center w-full   pb-10 md:pb-0  pr-2`}
+        >
           {cardData.map((Item, index) => (
             <div key={index} className={`${style.categoriesCard}  `}>
-              <img
-                className={`${style.categoriesCardImg} `}
-                src={Item.image}
-              />
+              <img className={`${style.categoriesCardImg} `} src={Item.image} />
               <div className={`${style.cardCover} `}>
                 <div
                   onClick={() => handleDropdownToggle(index)}
@@ -381,19 +378,13 @@ export default function Menu() {
                     <div className="bg-bgColor md:w-24 w-10 rounded-lg pl-1 flex flex-col ">
                       <div className="border-b w-full flex items-center active:opacity-50 px-2 pt-2 pb-1 gap-2 ">
                         <div className="h-4 w-4">
-                          <img
-                            src={images.editIcon}
-                            className=""
-                          />
+                          <img src={images.editIcon} className="" />
                         </div>
                         <div className="text-sm hidden  md:flex">Edit</div>
                       </div>
                       <div className="w-full flex items-center  active:opacity-50 px-2 py-2 gap-2 ">
                         <div className="h-4 w-4 ">
-                          <img
-                            src={images.removeIcon}
-                            className=""
-                          />
+                          <img src={images.removeIcon} className="" />
                         </div>
                         <div className=" text-sm hidden  md:flex">Remove</div>
                       </div>
@@ -435,16 +426,14 @@ export default function Menu() {
               className={`${style.plusIcon} w-3 md:w-4`}
               src={images.plusIcon}
             />
-            <div className="md:flex hidden">
-            Add Items
-            </div>
+            <div className="md:flex hidden">Add Items</div>
           </div>
         </div>
-        <div className={`${style.row}`}>
+        {/* <div className={`${style.row} bg-green-500`}>
           {currentProducts.map((item, index) => (
             <div
               key={index}
-              className={style.itemCard}
+              className={`${style.itemCard} bg-red-500 `}
               onClick={() => navigate("/itemdetails", { state: { item } })}
             >
               <img className={style.itemCardImg} src={item.images} />
@@ -453,6 +442,28 @@ export default function Menu() {
                 <div className={style.price}>
                   $3.35
                   <img className={style.blackDots} src={images.blackDots} />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div> */}
+        <div className=" pt-10  w-full flex flex-wrap gap-2 sm:gap-10 items-center justify-center ">
+          {currentProducts.map(() => (
+            <div className="flex flex-col border items-center  rounded-xl border-borderColor ">
+              <img
+                src={images.cappuccinoNotrounded}
+                className="rounded-2xl h-24 w-24 sm:h-32 sm:w-32 md:h-36 md:w-52 pt-2 px-2"
+              />
+              <div className="px-4 pb-3 pt-2 w-full">
+                <div className="font-semibold text-sm md:text-xl">Cappuccino</div>
+                <div className="flex w-full justify-between items-center ">
+                  <div className="font-semibold  text-xs md:text-xl text-textPrice">
+                    $3.45
+                  </div>
+                  <img
+                    src={images.blackDots}
+                    className=" h-3 md:h-6 cursor-pointer active:opacity-50 "
+                  />
                 </div>
               </div>
             </div>
