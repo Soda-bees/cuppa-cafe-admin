@@ -14,22 +14,32 @@ export default function RewardDetail() {
 
   return (
     <div className={style.container}>
-      <div className={style.searchWrapper}>
-        <div className={style.searh}>
-          <img className={style.searchIcon} src={images.searchIcon} />
-          <input
-            className={style.searchInput}
-            type="text"
-            placeholder="Search"
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </div>
-        <div className={style.noticationBtn}>
-          <img
-            className={style.notificationIcon}
-            src={images.notificationIcon}
-          />
-          Notifications
+            <div className={`${style.menuTwo}`}>
+        <div
+          className={`${style.searchWrapper}  flex items-center justify-between`}
+        >
+          <div className=" w-full flex items-center  md:h-12 h-10  border rounded-xl border-borderColor pl-4 gap-2">
+            <img className="cursor-pointer h-5 w-5" src={images.searchIcon} />
+            <input
+              className={`${style.searchInput} sm:text-md text-sm  w-full flex items-center bg-bgColor`}
+              type="text"
+              placeholder="Search"
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </div>
+          <div className={`${style.noticationWrapper}  lg:w-40   sm:w-40 w-40`}>
+            <div
+              className={`${style.noticationBtn}  cursor-pointer active:opacity-50 md:h-12 h-10`}
+            >
+              <img
+                className={`${style.notificationIcon} h-4 w-4`}
+                src={images.notificationIcon}
+              />
+              <div className={`${style.noticationText}  text-sm `}>
+                Notifications
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className={style.menu}>
@@ -60,8 +70,8 @@ export default function RewardDetail() {
             </div>
             <div className={style.orderDetailWrapper} >
               <div><input className={style.orderInput} onChange={(e)=> setOrderQuantuty(e.target.value)} placeholder='No. of Orders' /></div>
-              <div className={style.dropdownWrapper}>
-                <div className={style.dropdown} onClick={()=> setDropDown(!dropDown)}>
+              <div className={style.dropdownWrapper} onClick={()=> setDropDown(!dropDown)}>
+                <div className={style.dropdown} >
                   {dropDownOption}
                   <img className={style.blackArrow} src={dropDown ? images.blackArrowUp :images.blackArrowDown}/>
                 </div>

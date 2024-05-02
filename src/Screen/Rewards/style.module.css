@@ -12,54 +12,39 @@
 
 .searchWrapper {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    gap: 10px;
     position: relative;
-    width: 100%;
-
 }
 
 .search {
-    width: 60%;
+    width: 100%;
 }
 
 .searchInput {
-    width: 142%;
-    height: 40px;
+    /* height: 50px; */
     border-radius: 10px;
-    font-size: 18px;
+    /* font-size: 18px; */
     outline: none;
-    border: 1px solid #EBEBEB;
-    padding-left: 50px;
-
-}
-
-.searchIcon {
-    width: 20px;
-    position: absolute;
-    top: 10px;
-    left: 15px;
+    /* border: 1px solid #EBEBEB; */
+    /* padding-left: 50px; */
 }
 
 .noticationWrapper {
-    width: 30%;
-    display: flex;
-    justify-content: end;
+    /* width: 12%; */
 }
 
 .noticationBtn {
     display: flex;
     align-items: center;
     gap: 10px;
-    border: 2px solid #EBEBEB;
+    border: 2px solid #ebebeb;
     border-radius: 10px;
     font-weight: 600;
     padding: 10px;
-    width: 30%;
 }
 
 .notificationIcon {
-    width: 20px;
+    /* width: 20px; */
 }
 
 .menu {
@@ -178,7 +163,6 @@
     top: 30%;
     left: 30%;
     width: 40%;
-    height: 40vh;
     background-color: #FFF;
     border-radius: 10px;
 
@@ -306,7 +290,6 @@
     top: 40%;
     left: 37%;
     width: 25%;
-    height: 25vh;
     background-color: #FFF;
     border-radius: 10px;
     position: relative;
@@ -454,47 +437,98 @@
     .rewardCardHeading {
         font-size: 25px;
     }
-    
+
     .reawadPara {
         font-size: 16px;
     }
+
     .rewardImg {
         width: 70px;
     }
+
     .btn {
         font-size: 20px;
     }
 }
-@media screen and (min-width: 1024px) and (max-width: 1344px){
+
+@media screen and (min-width: 1025px) and (max-width: 1344px) {
+    .container {
+        padding-left: 19%;
+        overflow: auto;
+        height: 100vh;
+
+    }
+
     .rewardCardHeading {
         font-size: 22px;
     }
-    
+
     .reawadPara {
-        font-size: 13px;
+        font-size: 12px;
     }
+
     .rewardImg {
         width: 60px;
     }
+
     .btn {
         font-size: 18px;
     }
+
     .rewardImgWrapper {
         margin: 10px;
     }
+
     .rewardHeadingWrapper {
         gap: 5px;
-        padding-left: 5px;
+        padding-left: 10px;
     }
+
     .greenBtn {
         font-size: 18px;
     }
-    
+
     .word {
         font-size: 18px;
     }
+
+    /* modal Css */
+
+    .modalReward {
+        top: 30%;
+        left: 27%;
+        width: 60%;
+        height: 44vh;
+    }
+
+    .dropDownPara {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    /* reviewModal */
+
+    .reviewModal {
+        height: 29vh;
+        top: 40%;
+        left: 35%;
+        width: 44%;
+    }
+    /* completeModal */
+    .completeModal {
+        top: 35%;
+        left: 44%;
+        width: 20%;
+        height: 32vh;
+
+    }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding-left: 20%;
+
+    }
 
     .searchWrapper {
         justify-content: space-between;
@@ -507,16 +541,14 @@
 
     .searchInput {
         width: 105%;
-
     }
 
     .noticationWrapper {
-        width: 25%;
-
+        /* width: 25%; */
     }
 
     .noticationBtn {
-        width: 80%;
+        /* width: 80%; */
         justify-content: center;
         margin-left: 15px;
     }
@@ -556,6 +588,7 @@
     .word {
         font-size: 18px;
     }
+
     .rewardImgWrapper {
         margin: 15px;
     }
@@ -563,16 +596,10 @@
     /* modal Css  */
 
     .modalReward {
-        outline: none;
-        display: flex;
-        justify-content: center;
-        position: absolute;
         top: 30%;
-        left: 15%;
-        width: 70%;
-        height: 55vh;
-        background-color: #FFF;
-        border-radius: 10px;
+        left: 25%;
+        width: 60%;
+        height: 43vh;
 
     }
 
@@ -585,20 +612,46 @@
         font-weight: 500;
     }
 
+    .dropDownIcon {
+        width: 15px;
+    }
+
+    .dropDownSelect {
+        padding: 10px 5px;
+
+
+    }
+
     .modalBtn {
         font-size: 20px;
     }
 
     .dropDownPara {
+        font-size: 13px;
+    }
+
+    .dropDownHeading {
+        font-size: 12px;
+    }
+
+    .dropDownOpen {
+        margin-top: 10px;
+
+    }
+
+    .dropDownOption {
+        margin: 10px 5px;
         font-size: 18px;
+
     }
 
     /* reviewModal */
     .reviewModal {
-        left: 30%;
+        left: 35%;
         width: 40%;
-        height: 30vh;
+        height: 23vh;
     }
+
 
     .reviewHeading {
         font-size: 18px;
@@ -630,7 +683,7 @@
     /* completeModal  */
     .completeModal {
         width: 22%;
-        height: 33vh;
+        height: 27vh;
     }
 
 
@@ -674,12 +727,7 @@
 
 
 
-@media screen and (min-width:600px) and  (max-width: 767px) {
-
-    .searchWrapper {
-        justify-content: space-between;
-        gap: 0;
-    }
+@media screen and (min-width:501px) and (max-width: 767px) {
 
     .search {
         width: 60%;
@@ -687,12 +735,10 @@
 
     .searchInput {
         width: 120%;
-
     }
 
     .noticationWrapper {
-        width: 25%;
-
+        /* width: 25%; */
     }
 
     .noticationText {
@@ -700,7 +746,7 @@
     }
 
     .noticationBtn {
-        width: 30%;
+        /* width: 30%; */
         justify-content: center;
         margin-left: 50px;
     }
@@ -710,15 +756,15 @@
     }
 
     .rewardCardHeading {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .rewardImg {
-        width: 60px;
+        width: 50px;
     }
 
     .reawadPara {
-        font-size: 16px;
+        font-size: 9px;
     }
 
 
@@ -739,6 +785,7 @@
     .word {
         font-size: 16px;
     }
+
     .rewardImgWrapper {
         margin: 10px;
     }
@@ -746,17 +793,19 @@
     .row {
         gap: 5px;
     }
+
     .rewardHeadingWrapper {
         gap: 5px;
         padding-left: 10px;
     }
+
     /* modal Css  */
 
     .modalReward {
-        top: 5%;
+        top: 15%;
         left: 20%;
         width: 70%;
-        height: 93vh;
+        height: 80vh;
 
     }
 
@@ -790,10 +839,10 @@
 
     /* reviewModal  */
     .reviewModal {
-        top: 25%;
-        left: 30%;
+        top: 40%;
+        left: 27%;
         width: 55%;
-        height: 30vh;
+        height: 25vh;
     }
 
 
@@ -828,11 +877,11 @@
     /* completeModal */
 
     .completeModal {
-        width: 25%;
-        height: 32vh;
+        width: 35%;
+        height: 26vh;
+        top: 30%;
+        left: 35%;
     }
-
-
 
     .completeHeading {
         font-size: 16px;
@@ -871,20 +920,191 @@
     }
 }
 
-@media screen and   (max-width: 599px) {
+@media screen and (max-width: 500px) {
+    .container {
+        padding-left: 20%;
+    }
+
+    .search {
+        width: 60%;
+    }
+
+    .searchInput {
+        width: 120%;
+    }
+
+    .noticationText {
+        display: none;
+    }
+
+    .noticationBtn {
+        justify-content: center;
+        margin-left: 50px;
+    }
+
     .rewardCard {
         width: 100%;
     }
 
     .rewardCardHeading {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .rewardImg {
-        width: 60px;
+        width: 50px;
     }
 
     .reawadPara {
+        font-size: 10px;
+    }
+
+    .rewardHeading {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+
+    .btnWrapper {
+        align-items: center;
+    }
+
+    .greenBtn {
+        height: 30px;
+        width: 50px;
+        font-size: 16px;
+    }
+
+    .word {
+        font-size: 16px;
+        height: 30px;
+        width: 50px;
+    }
+
+
+    /* modal Css  */
+
+    .modalReward {
+        top: 10%;
+        left: 20%;
+        width: 70%;
+        height: 85vh;
+
+    }
+
+    .dropDownWrappper {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    .dropDownleft {
+        width: 95%;
+
+    }
+
+    .dropDownRight {
+        width: 95%;
+    }
+    .dropDownPara {
+        font-size: 14px;
+    }
+    .cross {
+        width: 30px;
+    }
+
+    .modalHeading {
+        font-size: 20px;
+    }
+
+    .modalBtn {
+        font-size: 18px;
+    }
+
+    /* reviewModal  */
+    .reviewModal {
+        top: 40%;
+        left: 26%;
+        width: 60%;
+        height: 23vh;
+    }
+
+
+    .reviewHeading {
+        font-size: 20px;
+        margin: 20px;
+    }
+
+    .orderInfoWrapper {
+        margin: 20px;
+    }
+
+    .orderHeading {
+        font-size: 16px;
+    }
+
+
+    .logoutBtnWrapper {
+        gap: 10px;
+    }
+
+    .logoutBtn {
+        padding: 5px 35px;
+        font-size: 16px;
+    }
+
+    .cancelBtn {
+        padding: 5px 35px;
+        font-size: 16px;
+    }
+
+    /* completeModal */
+
+    .completeModal {
+        width: 43%;
+        height: 24vh;
+        top: 30%;
+        left: 30%;
+    }
+
+    .completeHeading {
+        font-size: 16px;
+        margin-top: 10px;
+
+    }
+
+    .completebtn {
+        font-size: 16px;
+        height: 30px;
+
+    }
+
+    .arrow {
+        width: 20px;
+        height: 20px;
+
+    }
+
+    .arrowImg {
+        width: 10px;
+    }
+
+    .completeImg {
+        width: 75px;
+    }
+
+    .completeParaWrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .completePara {
+        width: 85%;
+        text-align: center;
+    }
+    .dropDownHeading{
         font-size: 14px;
     }
 }

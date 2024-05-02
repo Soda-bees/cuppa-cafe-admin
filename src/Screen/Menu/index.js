@@ -473,7 +473,7 @@ export default function Menu() {
       <Modal
         isOpen={isModalVisible}
         onRequestClose={() => setIsModalVisible(false)}
-        className={style.modal}
+        className={`${style.modal}    `}
       >
         <div className={style.modalContainer}>
           <div className={style.modalHeadingWrapper}>

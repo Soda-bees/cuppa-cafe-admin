@@ -2,10 +2,53 @@
     /* display: flex; */
     /* background-color: red; */
     /* width: 70%; */
-    margin-left: 18%;
+    padding-left: 18%;
     padding-top: 30px;
     padding-bottom: 30px;
+    background-color: #f6f6f6f6;
+    overflow: auto;
+    height: 100vh;
+}
 
+.menuTwo {
+    width: 96%;
+}
+
+.searchWrapper {
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.search {
+    width: 100%;
+}
+
+.searchInput {
+    /* height: 50px; */
+    border-radius: 10px;
+    /* font-size: 18px; */
+    outline: none;
+    /* border: 1px solid #EBEBEB; */
+    /* padding-left: 50px; */
+}
+
+.noticationWrapper {
+    /* width: 12%; */
+}
+
+.noticationBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #ebebeb;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.notificationIcon {
+    /* width: 20px; */
 }
 
 .menu {
@@ -14,44 +57,6 @@
     border-radius: 10px;
 }
 
-.searchWrapper {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.searchIcon {
-    width: 20px;
-    position: absolute;
-    top: 10px;
-    left: 15px;
-}
-
-.searchInput {
-    width: 1297px;
-    height: 40px;
-    border-radius: 10px;
-    font-size: 18px;
-    outline: none;
-    border: 1px solid #EBEBEB;
-    padding-left: 50px;
-
-}
-
-.noticationBtn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border: 2px solid #EBEBEB;
-    border-radius: 10px;
-    font-weight: 600;
-    padding: 10px;
-}
-
-.notificationIcon {
-    width: 20px;
-}
 
 .btn {
     padding: 10px;
@@ -70,9 +75,10 @@
 .btnWrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.rewardDetailWrapper{
+.rewardDetailWrapper {
     margin-top: 40px;
     margin-left: 20px;
 }
@@ -82,27 +88,28 @@
     font-weight: 500;
 }
 
-.rewardsName{
+.rewardsName {
     color: #8C8C8C;
     margin-bottom: 10px;
     font-size: 20px;
 }
-.orderDetailWrapper{
+
+.orderDetailWrapper {
     display: flex;
     justify-content: space-between;
     width: 30%;
 }
 
-.rewardsNameInfo{
+.rewardsNameInfo {
     font-size: 25px;
     font-weight: 500;
 }
 
-.rewardNameWrapper{
+.rewardNameWrapper {
     margin-bottom: 20px;
 }
 
-.orderInput{
+.orderInput {
     outline: none;
     border: 2px solid #8C8C8C;
     border-radius: 10px;
@@ -110,17 +117,18 @@
     width: 80%;
     padding-left: 10px;
 }
-.dropdownWrapper{
+
+.dropdownWrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #f3f3f3;
-    border-radius: 10px;
+    background-color: #fff;
+    border-radius: 5px;
     align-items: start;
-    z-index: 2;
+    position: relative;
 }
 
-.dropdown{
+.dropdown {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -128,30 +136,145 @@
     margin: 0 10px;
     font-size: 20px;
     color: #8C8C8C;
-    
+
+
 }
-.blackArrow{
+
+.blackArrow {
     width: 15px;
 }
 
-.dropDownOption{
+.dropDownSelect {
+    position: absolute;
+    background-color: #fff;
+    top: 40px;
+}
+
+.dropDownOption {
     font-size: 20px;
     padding: 5px 0;
     padding-left: 10px;
+    width: 220px;
+    color: #8C8C8C;
 }
 
-.rewardtermWrapper{
+.rewardtermWrapper {
     display: flex;
     justify-content: space-between;
     width: 60%;
     margin-top: 40px;
- 
+
 }
-.termWrapper{
+
+.termWrapper {
     width: 45%;
 }
 
-.termPara{
+.termPara {
     font-size: 20px;
     font-weight: 500;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .container {
+        padding-left: 20%;
+
+    }
+    .orderDetailWrapper {
+        justify-content: space-around;
+        width: 50%;
+    }
+    .rewardtermWrapper {
+        width: 80%;
+    
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding-left: 22%;
+
+    }
+    .orderDetailWrapper {
+        justify-content: space-around;
+        width: 75%;
+    }
+    .rewardtermWrapper {
+        width: 100%;
+    
+    }
+}
+
+
+
+
+@media screen and (max-width: 768px){
+    .container {
+        padding-left: 20%;
+    }
+
+    .search {
+        width: 60%;
+    }
+
+    .searchInput {
+        width: 120%;
+    }
+
+    .noticationWrapper {
+        /* width: 25%; */
+    }
+
+    .noticationText {
+        display: none;
+    }
+
+    .noticationBtn {
+        /* width: 30%; */
+        justify-content: center;
+        margin-left: 50px;
+    }
+    .rewardHeading {
+        font-size: 16px;
+    }
+
+    .rewardsName {
+        font-size: 16px;
+    }
+
+    .rewardsNameInfo {
+        font-size: 20px;
+    }
+
+    .orderDetailWrapper {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .dropdownWrapper {
+        width: 80%;
+    }
+
+
+    .dropdown{
+        width: 90%;
+        height: 40px;
+    }
+    .dropDownSelect {
+        top: 35px;
+        width: 100%;
+    }
+    .rewardtermWrapper {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    
+    }
+    .termWrapper {
+        width: 100%;
+    }
+    .btn {
+        font-size: 16px;
+    }
+
 }
