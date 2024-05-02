@@ -1,623 +1,599 @@
 .container {
-    /* display: flex; */
-    /* background-color: red; */
-    /* width: 70%; */
-    margin-left: 18%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-
+  /* padding-left: 18%; */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #f6f6f6f6;
 }
 
 .menuTwo {
-    width: 96%;
+  width: 96%;
 }
 
 .searchWrapper {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    position: relative;
-    width: 100%;
-
+  display: flex;
+  gap: 10px;
+  position: relative;
 }
 
 .search {
-    width: 70%;
-}
-
-.searchIcon {
-    width: 20px;
-    position: absolute;
-    top: 10px;
-    left: 15px;
+  width: 100%;
 }
 
 .searchInput {
-    height: 40px;
-    border-radius: 10px;
-    font-size: 18px;
-    outline: none;
-    border: 1px solid #EBEBEB;
-    padding-left: 50px;
-
+  /* height: 50px; */
+  border-radius: 10px;
+  /* font-size: 18px; */
+  outline: none;
+  /* border: 1px solid #EBEBEB; */
+  /* padding-left: 50px; */
 }
 
 .noticationWrapper {
-    width: 30%;
+  /* width: 12%; */
 }
 
 .noticationBtn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border: 2px solid #EBEBEB;
-    border-radius: 10px;
-    font-weight: 600;
-    padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #ebebeb;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 10px;
 }
 
 .notificationIcon {
-    width: 20px;
+  /* width: 20px; */
 }
 
-
-
 .menu {
-    width: 96%;
-    margin: 30px 0px;
-    border-radius: 10px;
+  /* width: 96%; */
+  margin: 30px 0px;
+  border-radius: 10px;
 }
 
 .dashBoardWrapper {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .dashBoardLeft {
-    width: 65%;
+  /* width: 65%; */
 }
 
 .cardWrapper {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .dashBoardCard {
-    width: 23%;
-    border: 1px solid #EBEBEB;
-    border-radius: 10px;
+  width: 23%;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
 }
 
 .cardInfo {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  align-items: center;
 }
 
 .Icon {
-    width: 40px;
+  /* width: 40px; */
 }
 
 .IconTwo {
-    width: 60px;
+  /* width: 50px; */
 }
 
 .orderHeading {
-    display: flex;
-    justify-content: end;
-    margin: 10px;
-    font-size: 20px;
+  display: flex;
+  justify-content: end;
+  margin: 10px;
+  /* font-size: 17px; */
 }
 
 .quantity {
-    font-size: 33px;
-    font-weight: 500;
+  /* font-size: 33px; */
+  /* font-weight: 500; */
 }
 
 .graphHeadingWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    margin-right: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 30px;
 }
 
 .graphHeading {
-    font-size: 22px;
-    font-weight: 500;
+  /* font-size: 22px; */
+  /* font-weight: 500; */
 }
 
 .graphSettingIcon {
-    width: 20px;
+  width: 20px;
 }
 
 .graph {
-    border: 1px solid #8C8C8C;
-    border-radius: 10px;
-    margin: 10px 0;
+  /* border: 1px solid #8C8C8C; */
+  /* border-radius: 10px; */
+  margin: 10px 0;
 }
 
 .saleWrapper {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
 }
 
 .saleHeading {
-    font-size: 30px;
-    font-weight: 600;
+  /* font-size: 30px; */
+  /* font-weight: 600; */
 }
 
 .growthWrapper {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .totalPrice {
-    font-size: 30px;
-    font-weight: 700;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .grothPrice {
-    color: #4CAD00;
-    font-size: 22px;
-    font-weight: 500;
+  color: #4cad00;
+  font-size: 22px;
+  font-weight: 500;
 }
 
 .growthArrow {
-    width: 30px;
-    margin-left: 5px;
+  width: 30px;
+  margin-left: 5px;
 }
 
 .heading {
-    font-size: 22px;
-    font-weight: 500;
+  /* font-size: 22px; */
+  /* font-weight: 500; */
 }
 
 .recentOrderWrapper {
-    background-image: linear-gradient(to right, #287C76, #60B0AA);
-    border-radius: 10px;
-    width: 99%;
-    margin-top: 10px;
+  background-image: linear-gradient(to right, #287c76, #60b0aa);
+  border-radius: 10px;
+  width: 99%;
+  margin-top: 10px;
 }
 
 .itemHeadingList {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
 }
 
 .listWrapper {
-    margin: 20px;
+  /* margin: 20px; */
 }
 
 .HeadingList {
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-    margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 46%;
+  margin: 20px;
 }
 
 .itemHeading {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
+  /* color: #fff; */
+  /* font-size: 18px; */
+  /* font-weight: 500; */
 }
 
 .OrderWrapper {
-    border-radius: 10px;
-    width: 99%;
-    margin-top: 10px;
-    border: 1px solid #EBEBEB;
+  border-radius: 10px;
+  width: 99%;
+  /* margin-top: 10px; */
+  border: 1px solid #ebebeb;
 }
 
 .itemName {
-    display: flex;
+  /* display: flex;
     align-items: center;
     gap: 10px;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 20px; */
 }
 
 .itemImg {
-    width: 90px;
+  /* width: 90px; */
 }
 
 .listItem {
-    display: flex;
-    justify-content: end;
-    margin-left: 10px;
-    font-weight: 500;
+  display: flex;
+  justify-content: end;
+  margin-left: 10px;
+  font-weight: 500;
 }
 
 .listItemTwo {
-    display: flex;
-    justify-content: end;
-    width: 50px;
-    font-weight: 500;
+  display: flex;
+  justify-content: end;
+  width: 50px;
+  font-weight: 500;
 }
 
 .listItemThree {
-    display: flex;
-    justify-content: end;
-    width: 70px;
-    color: #60B0AA;
-    font-weight: 500;
+  display: flex;
+  justify-content: end;
+  width: 70px;
+  color: #60b0aa;
+  font-weight: 500;
 }
 
 .listItemFour {
-    width: 90px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-    position: relative;
-    font-weight: 500;
+  /* width: 90px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  position: relative;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .blackArrow {
-    width: 20px;
+  width: 10px;
+  margin-left: 6px;
 }
 
 .listItemWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 47%;
-    margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 47%;
+  /* margin: 20px; */
 }
 
 .dropDown {
-    position: absolute;
-    top: 25px;
-    border: 1px solid #EBEBEB;
-    border-radius: 5px;
-    width: 90px;
-    background-color: #fff;
+  position: absolute;
+  top: 25px;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  width: 90px;
+  background-color: #fff;
+  z-index: 99999;
 }
 
 .dropDownOption {
-    margin: 5px;
+  margin: 5px;
 }
 
 .dashBoardRight {
-    width: 35%;
+  /* width: 35%; */
 }
 
 .ratingwrapper {
-    border: 1px solid #8C8C8C;
-    border-radius: 10px;
-    margin-bottom: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .ratingReviewCard {
-    margin: 20px;
+  margin: 20px;
 }
 
 .ratingLeft {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* gap: 10px; */
 }
 
 .headingRating {
-    font-size: 25px;
-    font-weight: 500;
+  /* font-size: 25px;
+    font-weight: 500; */
 }
 
 .ratingReviewCardWrapper {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .ratingAverage {
-    font-size: 25px;
-    font-weight: 500;
+  font-size: 25px;
+  font-weight: 500;
 }
 
-
 .ratingTotalNumber {
-    font-size: 20px;
-    color: #8C8C8C;
+  font-size: 16px;
+  color: #8c8c8c;
 }
 
 .ratingRight {
-    width: 50%;
-
+  width: 50%;
 }
 
 .ProgressBarWrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
 }
 
 .ProgressBar {
-    width: 90%;
+  width: 90%;
 }
 
 .starImg {
-    width: 22px;
+  width: 22px;
 }
 
 .starNumbar {
-    color: #8C8C8C;
-    font-size: 22px;
+  color: #8c8c8c;
+  font-size: 14px;
 }
 
 .totalAverage {
-    color: #8C8C8C;
-    font-size: 22px;
+  color: #8c8c8c;
+  font-size: 14px;
 }
 
 .ratingHeading {
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 10px;
+  /* font-size: 18px */
+  /* font-weight: 500; */
+  margin-bottom: 10px;
 }
 
 .ratingCard {
-    background-color: #F2F2F2;
-    border-radius: 10px;
-    width: 100%;
-    margin-bottom: 10px;
+  background-color: #f4f4f4;
+  /* border-radius: 10px; */
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .ratingCardInner {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 .ratingCardInfoWrapper {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .RatingInfo {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 .ratingImg {
-    width: 80px;
+  /* width: 80px; */
+  /* cursor: pointer; */
 }
 
 .ratings {
-    color: #8C8C8C;
+  color: #8c8c8c;
 }
 
 .replyBack {
-    width: 30px;
+  width: 30px;
+  cursor: pointer;
 }
 
 .customerName {
-    font-size: 20px;
-    font-weight: 500;
+  /* font-size: 20px; */
+  /* font-weight: 500; */
 }
 
 .inputWraaper {
-    position: relative;
+  /* position: relative; */
 }
 
 .replyInput {
-    border: none;
-    outline: none;
-    margin: 10px;
-    margin-left: 10px;
-    width: 92%;
-    font-size: 25px;
-    border-radius: 10px;
-    padding: 10px 0;
-    padding-left: 10px;
-    background-image: linear-gradient(to right, #287C76, #60B0AA);
-    color: #fff;
+  /* border: none; */
+  /* outline: none; */
+  /* margin: 10px; */
+  /* margin-left: 10px; */
+  /* width: 100%; */
+  /* font-size: 25px; */
+  /* border-radius: 10px; */
+  /* padding: 10px 0; */
+  /* padding-left: 10px; */
+  /* background-image: linear-gradient(to right, #287C76, #60B0AA); */
+  /* color: #fff; */
 }
 
 .whitearrow {
-    width: 30px;
-    position: absolute;
-    top: 20px;
-    right: 30px;
+  /* width: 30px;  */
+  /* position: absolute; */
+  /* top: 20px; */
+  /* right: 30px; */
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .container {
-        margin-left: 20%;
-    }
+  .container {
+    padding-left: 20%;
+  }
 
-    .searchWrapper {
-        justify-content: space-between;
-        gap: 0;
-    }
+  .searchWrapper {
+    justify-content: space-between;
+    gap: 0;
+  }
 
-    .search {
-        width: 60%;
-    }
+  .search {
+    width: 60%;
+  }
 
-    .searchInput {
-        width: 105%;
+  .searchInput {
+    width: 105%;
+  }
 
-    }
-
-    .noticationWrapper {
+  /* .noticationWrapper {
         width: 25%;
 
-    }
+    } */
 
-    .noticationBtn {
-        width: 80%;
-        justify-content: center;
-        margin-left: 15px;
-    }
+  .noticationBtn {
+    /* width: 80%; */
+    justify-content: center;
+    margin-left: 15px;
+  }
 
-    .dashBoardWrapper {
-        flex-direction: column;
-    }
+  .dashBoardWrapper {
+    flex-direction: column;
+  }
 
-    .dashBoardLeft {
-        width: 100%;
-    }
+  .dashBoardLeft {
+    width: 100%;
+  }
 
-    .Icon {
-        width: 30px;
-    }
+  .Icon {
+    /* width: 30px; */
+  }
 
-    .IconTwo {
-        width: 50px;
-    }
+  .IconTwo {
+    /* width: 50px; */
+  }
 
-    .dashBoardRight {
-        width: 100%;
-    }
+  .dashBoardRight {
+    width: 100%;
+  }
 
-    .quantity {
+  /* .quantity {
         font-size: 25px;
-    }
+    } */
 
-    .orderHeading {
-        margin: 5px;
-        font-size: 18px;
-    }
+  .orderHeading {
+    margin: 5px;
+    font-size: 18px;
+  }
 
-    .itemImg {
-        width: 70px;
-    }
+  .itemImg {
+    width: 70px;
+  }
 
-    .listItemWrapper {
-        justify-content: space-around;
-        width: 50%;
-        margin: 0px;
-    }
+  .listItemWrapper {
+    justify-content: space-around;
+    width: 50%;
+    margin: 0px;
+  }
 
-    .ratingRight {
-        width: 40%;
+  .ratingRight {
+    width: 40%;
+  }
 
-    }
-
-    .replyInput {
-        width: 95%
-    }
+  .replyInput {
+    width: 95%;
+  }
 }
 
-
 @media screen and (max-width: 767px) {
-    .searchWrapper {
-        justify-content: space-between;
-        gap: 0;
-    }
+  .searchWrapper {
+    justify-content: space-between;
+    gap: 0;
+  }
 
-    .search {
-        width: 60%;
-    }
+  .search {
+    width: 60%;
+  }
 
-    .searchInput {
-        width: 120%;
+  .searchInput {
+    width: 120%;
+  }
 
-    }
+  .noticationWrapper {
+    /* width: 25%; */
+  }
 
-    .noticationWrapper {
-        width: 25%;
+  .noticationText {
+    display: none;
+  }
 
-    }
+  .noticationBtn {
+    /* width: 30%; */
+    justify-content: center;
+    margin-left: 50px;
+  }
 
-    .noticationText {
-        display: none;
-    }
+  .dashBoardWrapper {
+    flex-direction: column;
+  }
 
-    .noticationBtn {
-        width: 30%;
-        justify-content: center;
-        margin-left: 50px;
-    }
+  .dashBoardLeft {
+    width: 100%;
+  }
 
-    .dashBoardWrapper {
-        flex-direction: column;
-    }
+  .cardWrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+  }
 
-    .dashBoardLeft {
-        width: 100%;
-    }
+  .dashBoardCard {
+    width: 48%;
+  }
 
-    .cardWrapper {
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-        gap: 10px;
+  .graphHeadingWrapper {
+    width: 100%;
+    margin-right: 50px;
+  }
 
-    }
+  .recentOrderWrapper {
+    width: 100%;
+  }
 
-    .dashBoardCard {
-        width: 48%;
-    }
+  .itemHeadingList {
+    margin: 0;
+  }
 
-    .graphHeadingWrapper {
-        width: 100%;
-        margin-right: 50px;
-    }
+  .HeadingList {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin: 20px;
+  }
 
-    .recentOrderWrapper {
-        width: 100%;
-    }
+  .listItemWrapper {
+    width: 60%;
+    margin: 0px;
+    /* align-items: center; */
+  }
 
-    .itemHeadingList {
-        margin: 0;
-    }
+  .itemImg {
+    width: 50px;
+  }
 
-    .HeadingList {
-        display: flex;
-        justify-content: space-around;
-        width: 60%;
-        margin: 20px;
-    }
+  .itemName {
+    /* font-size: 16px; */
+  }
 
-    .listItemWrapper {
-        width: 60%;
-        margin: 0px;
-        align-items: center;
-    }
+  .itemImg {
+    display: none;
+  }
 
-    .itemImg {
-        width: 50px;
-    }
+  .dashBoardRight {
+    width: 100%;
+  }
 
-    .itemName {
+  .saleWrapper {
+    flex-direction: column;
+  }
 
-        font-size: 16px;
-    }
+  .totalPrice {
+    font-size: 16px;
+    font-weight: 700;
+  }
 
-    .itemImg {
-        display: none;
-    }
+  .grothPrice {
+    font-size: 15px;
+  }
 
-    .dashBoardRight {
-        width: 100%;
-    }
-
-    .saleWrapper {
-        flex-direction: column;
-    }
-
-    .totalPrice {
-        font-size: 25px;
-        font-weight: 700;
-    }
-
-    .grothPrice {
-        font-size: 20px;
-    }
-
-
-    .quantity {
+  /* .quantity {
         font-size: 22px;
-    }
-
+    } */
 }

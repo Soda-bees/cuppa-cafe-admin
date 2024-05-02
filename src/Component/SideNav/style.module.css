@@ -6,6 +6,8 @@
   margin-left: 30px;
   position: fixed;
   height: 90vh;
+  /* background-color: #F6F6F6F6; */
+
 }
 
 .logo {
@@ -17,13 +19,13 @@
 }
 
 .LogoImg {
-  width: 200px;
+  width: 120px;
   object-fit: contain;
 }
 
 .menuImg {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
 }
 
 .menuList {
@@ -35,14 +37,14 @@
 }
 
 .word {
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 600;
   margin-right: 10px;
 }
 
 .greenWord {
   color: #60b0aa;
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 600;
 }
 
@@ -123,7 +125,7 @@
   }
 
   .menubar {
-    width: 10%;
+    width: 13%;
   }
 
   .menuList {

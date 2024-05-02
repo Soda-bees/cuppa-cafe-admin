@@ -1,10 +1,8 @@
 .container {
-  /* display: flex; */
-  /* background-color: red; */
-  /* width: 70%; */
-  margin-left: 18%;
+  /* padding-left: 18%; */
   padding-top: 30px;
   padding-bottom: 30px;
+  background-color: #f6f6f6f6;
 }
 
 .menuTwo {
@@ -13,59 +11,43 @@
 
 .searchWrapper {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  gap: 10px;
   position: relative;
-  width: 100%;
-
 }
 
 .search {
-  width: 60%;
+  width: 100%;
 }
 
 .searchInput {
-  width: 142%;
-  height: 40px;
+  /* height: 50px; */
   border-radius: 10px;
-  font-size: 18px;
+  /* font-size: 18px; */
   outline: none;
-  border: 1px solid #EBEBEB;
-  padding-left: 50px;
-
-}
-
-.searchIcon {
-  width: 20px;
-  position: absolute;
-  top: 10px;
-  left: 15px;
+  /* border: 1px solid #EBEBEB; */
+  /* padding-left: 50px; */
 }
 
 .noticationWrapper {
-  width: 30%;
-  display: flex;
-  justify-content: end;
+  /* width: 12%; */
 }
 
 .noticationBtn {
   display: flex;
   align-items: center;
   gap: 10px;
-  border: 2px solid #EBEBEB;
+  border: 2px solid #ebebeb;
   border-radius: 10px;
   font-weight: 600;
   padding: 10px;
-  width: 30%;
 }
 
 .notificationIcon {
-  width: 20px;
+  /* width: 20px; */
 }
 
-
 .menu {
-  width: 96%;
+  /* width: 96%; */
   margin: 30px 0px;
   border-radius: 10px;
 }
@@ -80,28 +62,28 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 24px;
+  /* font-size: 24px; */
 }
 
 .headingIcon {
-  width: 30px;
+  /* width: 30px; */
 }
 
 .btn {
-  padding: 10px;
+  /* padding: 10px; */
   background-image: linear-gradient(to right, #287c76, #60b0aa);
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  font-size: 22px;
+  /* gap: 10px; */
+  /* font-size: 22px; */
   color: #fff;
   cursor: pointer;
 }
 
 .plusIcon {
-  width: 15px;
+  /* width: 15px; */
 }
 
 .categoriesCard {
@@ -126,7 +108,7 @@
 }
 
 .dotMenu {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: end;
   margin: 10px 0;
@@ -134,7 +116,7 @@
 }
 
 .dotMenu img {
-  height: 30px;
+  /* heights: 30px; */
   margin-right: 10px;
 }
 
@@ -144,24 +126,24 @@
 }
 
 .categoriesName {
-  background-color: #fff;
+  /* background-color: #fff;
   margin-left: 10px;
   margin-bottom: 10px;
   border-radius: 30px;
   font-size: 18px;
-  font-weight: 600;
   padding: 5px;
-  text-align: center;
+  text-align: center; */
+  font-weight: 600;
 }
 
 .dropdown {
-  width: 50%;
+  /* width: 50%; */
   background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
 
 .editIcon {
@@ -196,7 +178,7 @@
 
 .categoryRow {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
 .row {
@@ -221,7 +203,7 @@
 }
 
 .itemName {
-  font-size: 24px;
+  /* font-size: 24px; */
   margin: 0 10px;
   font-weight: 400;
 }
@@ -240,7 +222,6 @@
 .blackDots {
   height: 30px;
 }
-
 
 /* menu Modal */
 
@@ -393,7 +374,6 @@
   align-items: center;
   justify-content: start;
   cursor: pointer;
-
 }
 
 .whiteBtn {
@@ -412,7 +392,6 @@
   border-radius: 100%;
 }
 
-
 .cross {
   width: 50px;
   cursor: pointer;
@@ -423,13 +402,9 @@
   font: 500;
 }
 
-
-
-
-
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .container {
-    margin-left: 20%;
+    padding-left: 20%;
   }
 
   .searchWrapper {
@@ -443,16 +418,14 @@
 
   .searchInput {
     width: 105%;
-
   }
 
   .noticationWrapper {
-    width: 25%;
-
+    /* width: 25%; */
   }
 
   .noticationBtn {
-    width: 80%;
+    /* width: 80%; */
     justify-content: center;
     margin-left: 15px;
   }
@@ -474,7 +447,6 @@
     margin-top: 10px;
     width: 100%;
     gap: 10px;
-    
   }
   .itemCard {
     width: 22%;
@@ -486,8 +458,8 @@
     margin: 10px 6px;
   }
 
-   /* modal Css  */
-   .modal {
+  /* modal Css  */
+  .modal {
     width: 65%;
     height: 80vh;
     left: 15%;
@@ -507,7 +479,6 @@
 
   .cross {
     width: 40px;
-
   }
 
   .InputImg {
@@ -536,10 +507,7 @@
   .ovalBtnWrapper {
     width: 75%;
   }
-
 }
-
-
 
 @media screen and (max-width: 767px) {
   .searchWrapper {
@@ -553,12 +521,10 @@
 
   .searchInput {
     width: 120%;
-
   }
 
   .noticationWrapper {
-    width: 25%;
-
+    /* width: 25%; */
   }
 
   .noticationText {
@@ -566,7 +532,7 @@
   }
 
   .noticationBtn {
-    width: 30%;
+    /* width: 30%; */
     justify-content: center;
     margin-left: 50px;
   }
@@ -581,13 +547,15 @@
   }
 
   .categoriesCardImg {
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
   }
 
   .cardCover {
     width: 150px;
     height: 150px;
+    top: -10%;
+    right: -60%;
   }
 
   .itemCard {
@@ -626,7 +594,6 @@
 
   .cross {
     width: 40px;
-
   }
 
   .InputImg {
@@ -655,7 +622,4 @@
   .ovalBtnWrapper {
     width: 75%;
   }
-
-
-
 }
