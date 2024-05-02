@@ -1,8 +1,6 @@
 .container {
-    /* display: flex; */
-    /* background-color: red; */
-    /* width: 70%; */
-    margin-left: 18%;
+    background-color: #f6f6f6f6;
+    padding-left: 18%;
     padding-top: 30px;
     padding-bottom: 30px;
 
@@ -73,11 +71,10 @@
 .btn {
     padding: 10px;
     background-image: linear-gradient(to right, #287C76, #60B0AA);
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     font-size: 22px;
     color: #fff;
     cursor: pointer;
@@ -116,7 +113,7 @@
     cursor: pointer;
     background-image: linear-gradient(to right, #57a19c, #b6dbd9);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
 }
@@ -125,7 +122,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 20px;
+    padding-left: 15px;
 }
 
 .rewardCardHeading {
@@ -147,24 +144,27 @@
 
 .greenBtn {
     background-image: linear-gradient(to right, #287c76, #60b0aa);
-    height: 50px;
-    width: 100px;
+    height: 40px;
+    width: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     font-weight: 400;
     font-size: 20px;
-    border-radius: 10px;
-    margin-right: 10px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .word {
     font-size: 19px;
     font-weight: 600;
-    margin-right: 10px;
     cursor: pointer;
+    height: 40px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -242,7 +242,7 @@
 }
 
 .dropDownHeading {
-    margin: 0 10px ;
+    margin: 0 10px;
     margin-top: 5px;
 }
 
@@ -449,10 +449,52 @@
 
 
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .container {
-        margin-left: 20%;
+
+@media screen and (min-width: 1345px) and (max-width: 1645px) {
+    .rewardCardHeading {
+        font-size: 25px;
     }
+    
+    .reawadPara {
+        font-size: 16px;
+    }
+    .rewardImg {
+        width: 70px;
+    }
+    .btn {
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1344px){
+    .rewardCardHeading {
+        font-size: 22px;
+    }
+    
+    .reawadPara {
+        font-size: 13px;
+    }
+    .rewardImg {
+        width: 60px;
+    }
+    .btn {
+        font-size: 18px;
+    }
+    .rewardImgWrapper {
+        margin: 10px;
+    }
+    .rewardHeadingWrapper {
+        gap: 5px;
+        padding-left: 5px;
+    }
+    .greenBtn {
+        font-size: 18px;
+    }
+    
+    .word {
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 
     .searchWrapper {
         justify-content: space-between;
@@ -484,16 +526,16 @@
     }
 
     .rewardCardHeading {
-        font-size: 25px;
+        font-size: 22px;
     }
 
     .rewardImg {
-        width: 70px;
+        width: 55px;
     }
 
 
     .reawadPara {
-        font-size: 16px;
+        font-size: 14px;
     }
 
 
@@ -513,6 +555,9 @@
 
     .word {
         font-size: 18px;
+    }
+    .rewardImgWrapper {
+        margin: 15px;
     }
 
     /* modal Css  */
@@ -547,6 +592,7 @@
     .dropDownPara {
         font-size: 18px;
     }
+
     /* reviewModal */
     .reviewModal {
         left: 30%;
@@ -558,23 +604,24 @@
         font-size: 18px;
         margin: 20px;
     }
-    
+
     .orderInfoWrapper {
         margin: 20px;
     }
-    
+
     .orderHeading {
         font-size: 16px;
     }
-    
+
     .orderQuantity {
         font-size: 16px;
     }
+
     .logoutBtn {
         padding: 5px 45px;
         font-size: 18px;
     }
-    
+
     .cancelBtn {
         padding: 5px 45px;
         font-size: 18px;
@@ -590,28 +637,29 @@
     .completeHeading {
         font-size: 18px;
         margin-top: 10px;
-    
+
     }
-    
+
     .completebtn {
         font-size: 18px;
         height: 35px;
-    
+
     }
-    
+
     .arrow {
         width: 25px;
         height: 25px;
-    
+
     }
-    
+
     .arrowImg {
         width: 10px;
     }
-    
+
     .completeImg {
         width: 100px;
     }
+
     .completeParaWrapper {
         display: flex;
         justify-content: center;
@@ -626,11 +674,7 @@
 
 
 
-@media screen and (max-width: 767px) {
-    .container {
-        margin-left: 15%;
-
-    }
+@media screen and (min-width:600px) and  (max-width: 767px) {
 
     .searchWrapper {
         justify-content: space-between;
@@ -662,11 +706,11 @@
     }
 
     .rewardCard {
-        width: 80%;
+        width: 48%;
     }
 
     .rewardCardHeading {
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .rewardImg {
@@ -695,8 +739,17 @@
     .word {
         font-size: 16px;
     }
+    .rewardImgWrapper {
+        margin: 10px;
+    }
 
-
+    .row {
+        gap: 5px;
+    }
+    .rewardHeadingWrapper {
+        gap: 5px;
+        padding-left: 10px;
+    }
     /* modal Css  */
 
     .modalReward {
@@ -815,5 +868,23 @@
     .completePara {
         width: 85%;
         text-align: center;
+    }
+}
+
+@media screen and   (max-width: 599px) {
+    .rewardCard {
+        width: 100%;
+    }
+
+    .rewardCardHeading {
+        font-size: 18px;
+    }
+
+    .rewardImg {
+        width: 60px;
+    }
+
+    .reawadPara {
+        font-size: 14px;
     }
 }
