@@ -209,24 +209,21 @@ export default function OfferDetails() {
                             {filterTodo.map((index, todo) => (
                                 <div key={index} className={style.inputWrapper}>
                                     <input
-                                    value='Name'
                                         type="text"
                                         onChange={(e) =>
                                             handleFilterTodoChange(index, "name", e.target.value)
                                         }
-                                        // value={todo.name}
+                                        value={todo.name}
                                         className={style.textInput}
                                     />
                                     <input
-                                    value='Price'
                                         type="text"
                                         onChange={(e) =>
                                             handleFilterTodoChange(index, "price", e.target.value)
                                         }
-                                        // value={todo.price}
+                                        value={todo.price}
                                         className={style.textInput}
                                     />
-
                                 </div>
                             ))}
                         </div>

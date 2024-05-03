@@ -1,17 +1,8 @@
 .container {
-    /* display: flex; */
-    /* background-color: red; */
-    /* width: 70%; */
-    margin-left: 18%;
+    padding-left: 18%;
     padding-top: 30px;
     padding-bottom: 30px;
-}
-
-
-.menu {
-    width: 97%;
-    margin: 30px 0px;
-    border-radius: 10px;
+    background-color: #f6f6f6f6;
 }
 
 .menuTwo {
@@ -20,56 +11,41 @@
 
 .searchWrapper {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    gap: 10px;
     position: relative;
-    width: 100%;
-
+    margin-bottom: 10px;
 }
 
 .search {
-    width: 60%;
+    width: 100%;
 }
 
 .searchInput {
-    width: 142%;
-    height: 40px;
+    /* height: 50px; */
     border-radius: 10px;
-    font-size: 18px;
+    /* font-size: 18px; */
     outline: none;
-    border: 1px solid #EBEBEB;
-    padding-left: 50px;
-
-}
-
-.searchIcon {
-    width: 20px;
-    position: absolute;
-    top: 10px;
-    left: 15px;
+    /* border: 1px solid #EBEBEB; */
+    /* padding-left: 50px; */
 }
 
 .noticationWrapper {
-    width: 30%;
-    display: flex;
-    justify-content: end;
+    /* width: 12%; */
 }
 
 .noticationBtn {
     display: flex;
     align-items: center;
     gap: 10px;
-    border: 2px solid #EBEBEB;
+    border: 2px solid #ebebeb;
     border-radius: 10px;
     font-weight: 600;
     padding: 10px;
-    width: 30%;
 }
 
 .notificationIcon {
-    width: 20px;
+    /* width: 20px; */
 }
-
 
 .btn {
     padding: 10px;
@@ -125,35 +101,9 @@
 }
 
 .eventDate {
-    font-size: 20px;
+    font-size: 18px;
+    color: #8C8C8C;
 }
-
-.OfferInfo {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    margin: 0 20px;
-    margin-bottom: 10px;
-}
-
-.blackDots {
-    height: 30px;
-}
-
-.dotMenu {
-    display: flex;
-    justify-content: end;
-    margin: 10px 0;
-    margin-bottom: 0;
-    position: relative;
-}
-
-.editIcon {
-    width: 25px;
-    object-fit: contain;
-}
-
-
 
 /* Modal */
 
@@ -285,10 +235,14 @@
 }
 
 .word {
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 500;
-    margin-right: 10px;
     cursor: pointer;
+    height: 50px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .greenBtn {
@@ -302,7 +256,6 @@
     font-weight: 500;
     font-size: 20px;
     border-radius: 10px;
-    margin-right: 10px;
     cursor: pointer;
 
 }
@@ -312,7 +265,6 @@
     background: none;
     outline: none;
     border: none;
-    height: 40px;
     padding-left: 10px;
     font-size: 22px;
     resize: none;
@@ -502,7 +454,7 @@ input::-webkit-inner-spin-button {
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .container {
-        margin-left: 20%;
+        padding-left: 20%;
     }
 
     .searchWrapper {
@@ -516,16 +468,14 @@ input::-webkit-inner-spin-button {
 
     .searchInput {
         width: 105%;
-
     }
 
     .noticationWrapper {
-        width: 25%;
-
+        /* width: 25%; */
     }
 
     .noticationBtn {
-        width: 80%;
+        /* width: 80%; */
         justify-content: center;
         margin-left: 15px;
     }
@@ -537,27 +487,42 @@ input::-webkit-inner-spin-button {
     .eventCard {
         width: 48%;
     }
+
     .offerCardImg {
         margin: 5px;
     }
+
     .btn {
-        font-size: 20px;
+        padding: 8px;
+        font-size: 16px;
     }
+
     .word {
-        font-size: 18px;
+        height: 40px;
+        width: 120px;
+        font-size: 14px;
     }
-    
+
     .greenBtn {
         height: 40px;
-        width: 160px;
+        width: 120px;
+        font-size: 14px;
+    }
+
+    .eventName {
         font-size: 18px;
-    
+    }
+
+    .eventDate {
+        font-size: 16px;
     }
 }
 
 
 
 @media screen and (max-width: 767px) {
+    
+
     .searchWrapper {
         justify-content: space-between;
         gap: 0;
@@ -569,12 +534,10 @@ input::-webkit-inner-spin-button {
 
     .searchInput {
         width: 120%;
-
     }
 
     .noticationWrapper {
-        width: 25%;
-
+        /* width: 25%; */
     }
 
     .noticationText {
@@ -582,37 +545,134 @@ input::-webkit-inner-spin-button {
     }
 
     .noticationBtn {
-        width: 30%;
+        /* width: 30%; */
         justify-content: center;
         margin-left: 50px;
     }
 
     .row {
         gap: 5px;
-        justify-content: center;
     }
 
     .eventCard {
-        width: 70%;
+        width: 48%;
     }
 
     .word {
-        font-size: 17px;
+        height: 37px;
+        width: 110px;
+        font-size: 12px;
     }
 
     .greenBtn {
-        height: 50px;
-        width: 150px;
-        font-size: 18px;
+        height: 37px;
+        width: 110px;
+        font-size: 12px;
         margin-right: 5px;
 
     }
 
     .btn {
-        font-size: 18px;
+        font-size: 12px;
     }
 
     .offerCardImg {
         margin: 5px;
+    }
+
+    .eventName {
+        font-size: 12px;
+    }
+
+    .eventDate {
+        font-size: 12px;
+    }
+
+    .cardHeading {
+        margin: 10px;
+    }
+
+    /* Modal */
+    .modalEvent {
+        width: 75%;
+        height: 85vh;
+        left: 15%;
+        top: 5%;
+    }
+    .modalHeadingWrapper {
+        margin: 10px;
+    }
+
+    .cross {
+        width: 25px;
+    }
+
+    .modalHeading {
+        font-size: 18px;
+
+    }
+
+    .uploadImage {
+        width: 80%;
+        height: 130px
+    }
+
+    .uploadImgtext {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .uploadImg {
+        width: 20px;
+    }
+
+    .AddEvent {
+        margin-top: 10px;
+    }
+
+    .eventInfoWrapper {
+        gap: 10px;
+        margin-bottom: 5px;
+        flex-direction: column;
+    }
+
+    .eventInputHeading {
+        background-color: #F3F3F3;
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 5px;
+    }
+
+    .eventInputHeading3 {
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 5px;
+    }
+
+    .eventInputHeading2 {
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 5px;
+
+    }
+
+    .inputHeading {
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+    .userIput {
+        width: 98%;
+        background: none;
+        outline: none;
+        border: none;
+        padding-left: 5px;
+        font-size: 16px;
+        resize: none;
+        cursor: pointer;
+    }
+    .clockImg {
+        width: 20px;
+        height: 20px;
     }
 }

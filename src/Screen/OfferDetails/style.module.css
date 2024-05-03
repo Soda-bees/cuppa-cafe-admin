@@ -2,11 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f6f6f6f6;
+    height: 100vh;
+    overflow: auto;
 }
 
 .headingWrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 90%;
     margin: 50px;
 }
@@ -162,7 +166,8 @@
     padding-bottom: 12px;
     gap: 8px;
 }
-.textInput{
+
+.textInput {
     outline: none;
     width: 110px;
     border: 2px solid #0000001b;
@@ -215,7 +220,6 @@
     background: none;
     outline: none;
     width: 95%;
-    height: 40px;
     font-size: 20px;
     padding-left: 10px;
 }
@@ -261,7 +265,7 @@
 
 .dropDownTwo {
     position: absolute;
-    top:42px;
+    top: 42px;
     background-color: #F3F3F3;
     width: 287px;
     border-radius: 5px;
@@ -274,7 +278,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
     padding: 0 10px;
 }
 
@@ -294,8 +297,6 @@
     background: none;
     outline: none;
     border: none;
-    height: 40px;
-    padding-left: 10px;
     font-size: 22px;
 
 }
@@ -315,7 +316,157 @@
     resize: none;
 }
 
-.inputWrapper{
-    display:  flex;
+.inputWrapper {
+    display: flex;
     gap: 8px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .heading {
+        font-size: 20px;
+    }
+
+    .backBtn {
+        height: 25px;
+        width: 25px;
+    }
+
+    .backArrow {
+        height: 15px;
+    }
+
+    .btn {
+        padding: 3px 10px;
+        font-size: 15px;
+    }
+
+
+    .offerDetailsCard {
+        width: 95%;
+    }
+
+    .offerCard {
+        width: 60%;
+        height: 60px;
+    }
+
+    .inputHeading {
+        margin-bottom: 0px;
+    }
+
+    .editInput {
+        font-size: 16px;
+    }
+
+    .datePicker {
+        font-size: 16px;
+
+    }
+
+    .offerInfoWrapper {
+        flex-direction: column;
+    }
+
+    .infoWrapper {
+        width: 100%;
+
+    }
+
+    .userInput {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .registrationDropDown {
+        padding: 0 10px;
+    }
+
+    .registrationHeading {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .offersIcon {
+        width: 30px;
+        margin-right: 10px;
+    }
+    .offerCardHeading {
+        font-size: 18px;
+    }
+    .ovalBtn {
+        width: 45px;
+        height: 25px;
+    }
+    
+    .notSelectedBtn {
+        width: 45px;
+        height: 25px;
+       
+    
+    }
+    
+    .whiteBtn {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .notSelectedgreen {
+        width: 20px;
+        height: 20px;
+        
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .heading {
+        font-size: 25px;
+    }
+
+    .backBtn {
+        height: 30px;
+        width: 30px;
+    }
+
+    .backArrow {
+        height: 20px;
+    }
+
+    .btn {
+        padding: 7px 10px;
+        font-size: 16px;
+    }
+
+    .offerDetailsCard {
+        width: 80%;
+    }
+
+    .offerCard {
+        width: 50%;
+        height: 50px;
+    }
+    .inputHeading {
+        margin-bottom: 0px;
+    }
+    .ovalBtn {
+        width: 55px;
+        height: 30px;
+       
+    }
+    
+    .notSelectedBtn {
+        width: 55px;
+        height: 30px;
+    }
+    
+    .whiteBtn {
+        width: 23px;
+        height: 23px;
+    }
+    
+    .notSelectedgreen {
+        width: 23px;
+        height: 23px;
+    }
+    
 }

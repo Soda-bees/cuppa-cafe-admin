@@ -231,30 +231,32 @@ export default function Offer() {
 
   return (
     <div className={style.container}>
-    <div className={style.menuTwo}>
-        <div className={style.searchWrapper}>
-          <div className={style.search}>
-            <img className={style.searchIcon} src={images.searchIcon} />
+       <div className={`${style.menuTwo}`}>
+        <div
+          className={`${style.searchWrapper}  flex items-center justify-between`}
+        >
+          <div className=" w-full flex items-center  md:h-12 h-10  border rounded-xl border-borderColor pl-4 gap-2">
+            <img className="cursor-pointer h-5 w-5" src={images.searchIcon} />
             <input
-              className={style.searchInput}
+              className={`${style.searchInput} sm:text-md text-sm  w-full flex items-center bg-bgColor`}
               type="text"
               placeholder="Search"
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
-          <div className={style.noticationWrapper}>
-            <div className={style.noticationBtn}>
+          <div className={`${style.noticationWrapper}  lg:w-40 sm:w-40 w-40`}>
+            <div
+              className={`${style.noticationBtn}  cursor-pointer active:opacity-50 md:h-12 h-10`}
+            >
               <img
-                className={style.notificationIcon}
+                className={`${style.notificationIcon} h-4 w-4`}
                 src={images.notificationIcon}
               />
-              <div className={style.noticationText}>
+              <div className={`${style.noticationText}  text-sm `}>
                 Notifications
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
       <div className={style.menu}>
@@ -287,7 +289,7 @@ export default function Offer() {
               <img className={style.offerCardImg} src={item.images} />
               <div className={style.cardHeading}>
                 <div className={style.itenName}>Free Coffee Just For You</div>
-                <div>08/17/2023</div>
+                <div >08/17/2023</div>
               </div>
               <div className={style.OfferInfo}>
                 <ul>
@@ -400,10 +402,10 @@ export default function Offer() {
                 <div className={style.description}>
                   <div className={style.inputHeading}>Description</div>
                   <textarea
-                    rows="20"
-                    cols="50"
+                    rows="10"
+                    cols="20"
                     onChange={(e) => setOfferDescription(e.target.value)}
-                    className={style.userInput}
+                    className={style.userInputTwo}
                   ></textarea>
                 </div>
                 <div className={style.promo}>
