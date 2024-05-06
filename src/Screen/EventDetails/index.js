@@ -81,7 +81,7 @@ export default function EventDetails() {
                 </div>
                 <div className={style.eventDeatailRight}>
                     <div className={style.btnWrapper}>
-                        <div className={style.btn}>
+                        <div className={style.tag}>
                             Upcoming
                         </div>
                     </div>
@@ -89,7 +89,7 @@ export default function EventDetails() {
                         <div className={style.infoWrapper}>
                             <div className={style.textField}>
                                 <div className={style.inputHeading}>Event Name</div>
-                                <input className={style.userIput} value='ABC Event Name' />
+                                <input className={style.userIput} />
                             </div>
                             <div className={style.textField}>
                                 <div className={style.inputHeading}>Date</div>
@@ -115,7 +115,7 @@ export default function EventDetails() {
                                     />
                                 </div>
                             </div>
-                            <div className={style.textField2}>
+                            <div className={style.textField3}>
                                 <div className={style.inputHeading}>Event Type</div>
                                 {eventTypeDD ? (
                                     <div className={style.dropDown}>
@@ -155,7 +155,7 @@ export default function EventDetails() {
                             </div>
                         </div>
                         <div className={style.infoWrapper}>
-                            <div className={style.textField}>
+                            <div className={style.textField2}>
                                 <div className={style.inputHeading}>Registration</div>
                                 {eventDropDown ? (
                                     <div className={style.dropDown}>
@@ -196,7 +196,7 @@ export default function EventDetails() {
                             </div>
                             <div className={style.textField}>
                                 <div className={style.inputHeading}>Description</div>
-                                <input className={style.userIput} value='Lowkey Book Read' onChange={(e) => setDescription(e.target.value)} />
+                                <input className={style.userIput}onChange={(e) => setDescription(e.target.value)} />
                             </div>
                         </div>
                     </div>
@@ -208,7 +208,7 @@ export default function EventDetails() {
                 className={style.modalTime}
             >
                 <>
-                    <div>
+                    <div className={style.modalContainer}>
                         <div>
                             <div className={style.inputTitle}>Opening Time</div>
                             <div class={style.timeRow}>

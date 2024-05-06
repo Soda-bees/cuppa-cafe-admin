@@ -334,10 +334,6 @@ export default function Events() {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
-
-let num = [23,4,67,7,9 , 75 ,8]
-console.log(num.sort());
-
   return (
     <div className={style.container}>
       <div className={`${style.menuTwo}`}>
@@ -489,7 +485,7 @@ console.log(num.sort());
                     className={style.timeWrapper}
                     onClick={() => setTimeModal(true)}
                   >
-                    <div className={style.userIput}>
+                    <div className={style.timefield}>
                       {startTimeHour}:{startTimeMinutes} {amStart} - {" "}
                       {closingTimeHour} : {closingTimeMinutes} {amClose}{" "}
                     </div>
@@ -536,7 +532,7 @@ console.log(num.sort());
                 </div>
               </div>
               <div className={style.eventInfoWrapper}>
-                <div className={style.eventInputHeading}>
+                <div className={style.eventInputHeading4}>
                   <div className={style.inputHeading}>Registration</div>
                   {eventDropDown ? (
                     <div className={style.dropDown}>

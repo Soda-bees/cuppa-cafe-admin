@@ -64,7 +64,9 @@ export default function Setting() {
               className={style.notificationIcon}
               src={images.notificationIcon}
             />
-            Notifications
+            <div className={style.notificationHeading}>
+              Notifications
+            </div>
           </div>
         </div>
 
@@ -181,7 +183,7 @@ export default function Setting() {
                 </div>
                   :
                   <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName}
-                    <img src={images.downArrow} /></div>}
+                    <img className={style.downArrowIcon}  src={images.downArrow} /></div>}
               </div>
             </div>
           </div></>) :
@@ -262,7 +264,7 @@ export default function Setting() {
                     </div>
                       :
                       <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName}
-                        <img src={images.downArrow} /></div>}
+                        <img src={images.downArrow} className={style.downArrowIcon}  /></div>}
                   </div>
                 </div>
               </div></>) :

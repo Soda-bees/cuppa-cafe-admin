@@ -17,6 +17,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -73,23 +74,24 @@
 .location {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     color: #8C8C8C;
 }
 
 .locationIcon {
     width: 20px;
-    margin-right: 10px;
 }
 
 .rating {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     color: #8C8C8C;
+    width: 40px;
 }
 
 .starRating {
     width: 20px;
-    margin-right: 10px;
 }
 
 .settingWrapper {
@@ -197,7 +199,6 @@
     margin-left: 10px;
     margin-right: 10px;
     width: 43%;
-    height: 70px;
 }
 
 .inputHeadingTwo {
@@ -210,8 +211,7 @@
     border: none;
     background: none;
     outline: none;
-    width: 96%;
-    height: 40px;
+    width: 98%;
     font-size: 20px;
     padding-left: 10px;
 }
@@ -228,7 +228,6 @@
     margin-left: 10px;
     border-radius: 10px;
     width: 43%;
-    height: 70px;
 
 }
 
@@ -533,6 +532,8 @@
     margin-bottom: 10px;
 }
 
+
+
 .countryName {
     border-bottom: 1px solid #00000027;
     height: 30px;
@@ -559,33 +560,81 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 10px;
-    padding-top: 4px;
     font-weight: 500;
 }
 
 @media screen and (max-width: 767px) {
+
+    .searchWrapper {
+        margin-bottom: 10px;
+    }
+
+    .noticationBtn {
+        padding: 7px;
+    }
+
+    .notificationHeading {
+        display: none;
+    }
+
+    .notificationIcon {
+        width: 16px;
+    }
+
+    .settingHeading {
+        font-size: 20px;
+    }
+
     .coverImg {
         width: 100%;
     }
 
     .headingWrapper {
         width: 100%;
-        margin: 20px 0;
+        margin: 5px 0px
+    }
+
+    .cafeName {
+        font-size: 14px;
+    }
+
+    .location {
+        font-size: 14px;
+    }
+
+    .locationIcon {
+        width: 20px;
+        margin-right: 10px;
+    }
+
+    .infoWrapper {
+        width: 165px;
+        gap: 5px;
+    }
+
+    .rating {
+        font-size: 14px;
+    }
+
+    .starRating {
+        width: 15px;
     }
 
     .settingWrapper {
         width: 100%;
+        gap: 5px;
     }
 
     .settingOption {
-        margin: 20px;
+        margin: 10px;
     }
 
     .optionName {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .optionIcon {
+        display: none;
         width: 15px;
         margin-right: 10px;
     }
@@ -593,27 +642,78 @@
     .optionIconTwo {
         width: 10px;
         margin-right: 15px;
+        display: none;
     }
 
     .arrow {
         width: 8px;
+        display: none;
     }
 
     .inputHeadingTwo {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .editIcon {
         width: 20px;
+        display: none;
     }
 
     .editHeading {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .btn {
-        padding: 5px 10px;
-        font-size: 18px;
+        padding: 0px 7px;
+        font-size: 16px;
+    }
+
+    .editInput {
+        font-size: 14px;
+    }
+
+    .custom_phone_input>input {
+        outline: none;
+        border: none;
+        background: none;
+        font-size: 14px;
+        z-index: 1;
+    }
+
+    .contactInfoWrapper {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        margin-bottom: 10px;
+
+    }
+
+    .conutrySelect {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+    .downArrowIcon {
+        width: 15px;
+    }
+
+    .uploadImage {
+        height: 80px
+    }
+
+    .icon {
+        width: 30px;
+    }
+
+    .uploadImgtext {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .uploadImg {
+        width: 15px;
+        margin-right: 10px;
     }
 
     .notificationBtnWrapper {
@@ -622,7 +722,33 @@
     }
 
     .modalOfferCard {
-        width: 80%
+        width: 80%;
+    }
+
+    .offerCardHeading {
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .ovalBtn {
+        width: 45px;
+        height: 20px;
+    }
+    
+    .notSelectedBtn {
+        width: 45px;
+        height: 20px;
+    
+    }
+    
+    .whiteBtn {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .notSelectedgreen {
+        width: 15px;
+        height: 15px;
+
     }
 
     .eventInputHeading {
@@ -686,14 +812,21 @@
     .contactInfoWrapper {
         flex-direction: column;
     }
-    .editinputWrapper{
-        width: 95%;
+
+    .editinputWrapper {
+        width: 90%;
     }
-    .contactWrapper{
-        width: 95%;
+
+    .contactWrapper {
+        width: 90%;
     }
-    .locationWrapper{
-        width: 95%;
+
+    .locationWrapper {
+        width: 90%;
+    }
+
+    .editprofile {
+        margin: 10px;
     }
 }
 
@@ -780,9 +913,11 @@
         width: 100%;
         margin-left: 20px;
     }
+
     .container {
         margin-left: 20%;
     }
+
     .modalContainer {
         width: 70%;
     }
@@ -800,5 +935,5 @@
     .logoutPara {
         text-align: center;
     }
-    
+
 }
