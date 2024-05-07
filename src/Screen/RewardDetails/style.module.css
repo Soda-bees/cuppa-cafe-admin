@@ -180,34 +180,39 @@
         padding-left: 20%;
 
     }
+
     .orderDetailWrapper {
         justify-content: space-around;
         width: 50%;
     }
+
     .rewardtermWrapper {
         width: 80%;
-    
+
     }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .container {
         padding-left: 22%;
 
     }
+
     .orderDetailWrapper {
         justify-content: space-around;
         width: 75%;
     }
+
     .rewardtermWrapper {
         width: 100%;
-    
+
     }
 }
 
 
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .container {
         padding-left: 20%;
     }
@@ -233,16 +238,17 @@
         justify-content: center;
         margin-left: 50px;
     }
+
     .rewardHeading {
         font-size: 16px;
     }
 
     .rewardsName {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .rewardsNameInfo {
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .orderDetailWrapper {
@@ -256,25 +262,45 @@
     }
 
 
-    .dropdown{
+    .dropdown {
         width: 90%;
-        height: 40px;
+        height: 30px;
+        font-size: 16px;
     }
+
     .dropDownSelect {
-        top: 35px;
+        top: 30px;
         width: 100%;
+        font-size: 16px;
     }
+
     .rewardtermWrapper {
         flex-direction: column;
         width: 100%;
         gap: 10px;
-    
+
     }
+
     .termWrapper {
         width: 100%;
     }
+
     .btn {
+        padding: 7px;
+        font-size: 12px;
+    }
+
+    .orderInput {
         font-size: 16px;
     }
 
+    .blackArrow {
+        width: 10px;
+    }
+    .dropDownOption {
+        font-size: 16px;
+    }
+    .termPara {
+        font-size: 14px;
+    }
 }

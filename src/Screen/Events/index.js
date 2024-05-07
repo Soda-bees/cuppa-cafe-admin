@@ -394,8 +394,8 @@ export default function Events() {
                   <div className={style.eventName}>Name of Events</div>
                   <div className={style.eventDate}>27 Jan 2023 </div>
                 </div>
-                <div>
-                <div className={style.btn}>Upcoming</div>
+                <div className={style.cardBtnWrapper}>
+                  <div className={style.cardBtn}>Upcoming</div>
                 </div>
               </div>
             </div>
@@ -635,9 +635,11 @@ export default function Events() {
                   </div>
                 </div>
               </div>
-              <div class={style.timeTextRow}>
-                <div>Hour</div>
-                <div>Minute</div>
+              <div class={style.timeTextWrapper}>
+                <div class={style.timeTextRow}>
+                  <div>Hour</div>
+                  <div>Minute</div>
+                </div>
               </div>
             </div>
 
@@ -684,9 +686,11 @@ export default function Events() {
                   </div>
                 </div>
               </div>
-              <div class={style.timeTextRow}>
-                <div>Hour</div>
-                <div>Minute</div>
+              <div class={style.timeTextWrapper}>
+                <div class={style.timeTextRow}>
+                  <div>Hour</div>
+                  <div>Minute</div>
+                </div>
               </div>
             </div>
           </div>

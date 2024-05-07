@@ -52,8 +52,17 @@
     background-image: linear-gradient(to right, #287C76, #60B0AA);
     border-radius: 10px;
     font-size: 22px;
-    color: #fff;
     margin-right: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cardBtn {
+    padding: 10px;
+    background-image: linear-gradient(to right, #287C76, #60B0AA);
+    border-radius: 10px;
+    font-size: 22px;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -86,7 +95,7 @@
 .cardHeading {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin: 0px 10px;
 }
 
 .offerCardImg {
@@ -109,12 +118,12 @@
 
 .modalEvent {
     width: 50%;
-    height: 75vh;
     position: absolute;
     left: 25%;
     top: 13%;
     background-color: #fff;
     outline: none;
+    border-radius: 10px;
 }
 
 .modalHeadingWrapper {
@@ -247,17 +256,14 @@
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
-    height: 50px;
-    width: 170px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
 }
 
 .greenBtn {
     background-image: linear-gradient(to right, #287C76, #60B0AA);
-    height: 50px;
-    width: 170px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -266,6 +272,7 @@
     font-size: 20px;
     border-radius: 10px;
     cursor: pointer;
+    padding: 10px;
 
 }
 
@@ -278,6 +285,12 @@
     font-size: 22px;
     resize: none;
     cursor: pointer;
+}
+
+.cardBtnWrapper {
+    display: flex;
+    justify-content: end;
+    align-items: start;
 }
 
 .timefield {
@@ -451,12 +464,9 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-.calenderImg {
-    object-fit: contain;
-}
 
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .container {
         padding-left: 20%;
     }
@@ -489,7 +499,7 @@ input::-webkit-inner-spin-button {
     }
 
     .eventCard {
-        width: 48%;
+        width: 32%;
     }
 
     .offerCardImg {
@@ -502,14 +512,10 @@ input::-webkit-inner-spin-button {
     }
 
     .word {
-        height: 40px;
-        width: 120px;
         font-size: 14px;
     }
 
     .greenBtn {
-        height: 40px;
-        width: 120px;
         font-size: 14px;
     }
 
@@ -521,11 +527,14 @@ input::-webkit-inner-spin-button {
         font-size: 16px;
     }
 
+    .cardBtn {
+        font-size: 18px;
+    }
+
     /* Modal */
 
     .modalEvent {
         width: 75%;
-        height: 78vh;
         position: absolute;
         left: 15%;
         top: 13%;
@@ -635,13 +644,207 @@ input::-webkit-inner-spin-button {
     }
 }
 
-
-
-@media screen and (max-width: 767px) {
-    /* .container {
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .container {
         padding-left: 20%;
     }
-     */
+
+    .searchWrapper {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .search {
+        width: 60%;
+    }
+
+    .searchInput {
+        width: 120%;
+    }
+
+    .noticationWrapper {
+        /* width: 25%; */
+    }
+
+    .noticationText {
+        display: none;
+    }
+
+    .noticationBtn {
+        /* width: 30%; */
+        justify-content: center;
+        margin-left: 50px;
+    }
+
+    .row {
+        gap: 5px;
+    }
+
+    .eventCard {
+        width: 48%;
+    }
+
+    .btn {
+        padding: 7px;
+        font-size: 16px;
+        margin-right: 5px;
+    }
+
+    .cardBtn {
+        padding: 7px;
+        font-size: 14px;
+    }
+
+    .word {
+        font-size: 14px;
+        padding: 7px;
+    }
+
+    .greenBtn {
+        font-size: 14px;
+        padding: 7px;
+
+    }
+
+    .eventName {
+        font-size: 14px;
+    }
+
+    .eventDate {
+        font-size: 14px;
+    }
+
+    .offerCardImg {
+        margin: 5px;
+    }
+
+    .cross {
+        width: 30px;
+        cursor: pointer;
+    }
+
+    /* Modal */
+
+    .modalEvent {
+        width: 75%;
+        left: 15%;
+        top: 13%;
+        background-color: #fff;
+        outline: none;
+    }
+
+    .modalHeadingWrapper {
+        margin: 10px;
+    }
+
+    .modalHeading {
+        font-size: 22px;
+        font-weight: 600
+    }
+
+    .cross {
+        width: 30px;
+    }
+
+    .uploadImage {
+        width: 100%;
+        height: 120px;
+    }
+
+    .uploadImgtext {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .uploadImg {
+        width: 15px;
+    }
+
+    .userIput {
+        font-size: 14px;
+    }
+
+    .timefield {
+        font-size: 14px;
+    }
+
+    .AddEvent {
+        margin-top: 10px;
+    }
+
+    .eventInputHeading {
+        padding-bottom: 0px;
+
+    }
+
+    .eventInfoWrapper {
+        gap: 10px;
+        margin-bottom: 0px;
+    }
+
+    .inputHeading {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .datePicker {
+        font-size: 14px;
+    }
+
+    .clockImg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .registrationDropDown {
+        margin-top: 0px;
+
+    }
+
+    .eventInputHeading2 {
+        height: 50px;
+
+    }
+
+    .eventInputHeading4 {
+        height: 50px;
+    }
+
+    .registrationHeading {
+        font-size: 14px;
+
+    }
+
+    .dropDown {
+        width: 49%;
+    }
+
+    .calenderImg {
+        width: 20px;
+    }
+
+    .dropDownIcon {
+        width: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding-left: 20%;
+    }
+
 
     .searchWrapper {
         justify-content: space-between;
@@ -679,21 +882,25 @@ input::-webkit-inner-spin-button {
     }
 
     .word {
-        height: 37px;
-        width: 110px;
-        font-size: 12px;
+        font-size: 10px;
+        padding: 5px 9px;
     }
 
     .greenBtn {
-        height: 37px;
-        width: 110px;
-        font-size: 12px;
-        margin-right: 5px;
+        font-size: 10px;
+        padding: 5px 9px;
 
     }
 
     .btn {
-        font-size: 12px;
+        font-size: 10px;
+        padding: 5px;
+        margin-right: 5px;
+    }
+
+    .cardBtn {
+        font-size: 10px;
+        padding: 5px;
     }
 
     .offerCardImg {
@@ -709,13 +916,13 @@ input::-webkit-inner-spin-button {
     }
 
     .cardHeading {
-        margin: 10px;
+        gap: 10px;
+        margin: 0px;
     }
 
     /* Modal */
     .modalEvent {
         width: 75%;
-        height: 92vh;
         left: 15%;
         top: 5%;
     }
@@ -725,11 +932,11 @@ input::-webkit-inner-spin-button {
     }
 
     .cross {
-        width: 25px;
+        width: 20px;
     }
 
     .modalHeading {
-        font-size: 18px;
+        font-size: 16px;
 
     }
 
@@ -769,6 +976,7 @@ input::-webkit-inner-spin-button {
         margin-bottom: 0;
         padding-bottom: 5px;
     }
+
     .eventInputHeading4 {
         width: 100%;
         margin-bottom: 0;
@@ -791,14 +999,7 @@ input::-webkit-inner-spin-button {
     }
 
     .userIput {
-        width: 98%;
-        background: none;
-        outline: none;
-        border: none;
-        padding-left: 5px;
-        font-size: 16px;
-        resize: none;
-        cursor: pointer;
+        font-size: 12px;
     }
 
     .clockImg {
@@ -809,7 +1010,7 @@ input::-webkit-inner-spin-button {
 
     .registrationHeading {
         width: 100%;
-        font-size: 14px;
+        font-size: 12px;
         padding-left: 5px;
     }
 
@@ -820,7 +1021,7 @@ input::-webkit-inner-spin-button {
 
     .datePicker {
         padding-left: 5px;
-        font-size: 16px;
+        font-size: 12px;
 
     }
 
@@ -847,8 +1048,9 @@ input::-webkit-inner-spin-button {
     .icon {
         width: 30px;
     }
+
     .timefield {
-        font-size: 16px;
+        font-size: 12px;
         margin-left: 5px;
     }
 
@@ -857,8 +1059,36 @@ input::-webkit-inner-spin-button {
         width: 100%;
 
     }
+
     .registrationDropDown {
         margin-top: 0px;
-    
+    }
+
+    /* modalTime */
+    .modalTime {
+        width: 50%;
+        left: 25%;
+        top: 25%;
+    }
+
+    .timeInput {
+        height: 30px;
+        width: 50px;
+        font-size: 14px;
+    }
+
+    .clickable {
+        font-size: 14px;
+
+    }
+
+    .clickableTwo {
+        font-size: 14px;
+
+    }
+
+    .timeTextRow {
+        margin: 0px 67px;
+        width: 50%;
     }
 }

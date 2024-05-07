@@ -2,7 +2,7 @@
     /* display: flex; */
     /* background-color: red; */
     /* width: 70%; */
-    margin-left: 18%;
+    padding-left: 18%;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -239,15 +239,6 @@
     background-color: #F3F3F3;
     border-radius: 10px;
     z-index: 2;
-}
-
-
-.inputHeading {
-    margin-top: 10px;
-    margin-left: 20px;
-    color: #8C8C8C;
-    /* font-size: 14px; */
-
 }
 
 .userInput {
@@ -563,10 +554,14 @@
     font-weight: 500;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+    .container {
+        padding-left: 20%;
+    }
 
     .searchWrapper {
         margin-bottom: 10px;
+        width: 97%;
     }
 
     .noticationBtn {
@@ -586,11 +581,11 @@
     }
 
     .coverImg {
-        width: 100%;
+        width: 97%;
     }
 
     .headingWrapper {
-        width: 100%;
+        width: 97%;
         margin: 5px 0px
     }
 
@@ -650,8 +645,21 @@
         display: none;
     }
 
+    .registrationHeading {
+        font-size: 10px;
+    }
+
+    .inputHeading {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
     .inputHeadingTwo {
-        font-size: 14px;
+        font-size: 12px;
+    }
+
+    .dropDownIcon {
+        width: 12px;
     }
 
     .editIcon {
@@ -670,6 +678,11 @@
 
     .editInput {
         font-size: 14px;
+    }
+
+    .registrationDropDown {
+        margin-top: 2px;
+
     }
 
     .custom_phone_input>input {
@@ -707,8 +720,7 @@
 
     .uploadImgtext {
         font-size: 14px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin: 5px 0;
     }
 
     .uploadImg {
@@ -719,32 +731,36 @@
     .notificationBtnWrapper {
         flex-direction: column;
         align-items: center;
+        gap: 5px;
+        margin-bottom: 5px;
     }
 
     .modalOfferCard {
-        width: 80%;
+        width: 90%;
+        height: 40px;
     }
 
     .offerCardHeading {
         font-size: 10px;
         font-weight: 400;
     }
+
     .ovalBtn {
         width: 45px;
         height: 20px;
     }
-    
+
     .notSelectedBtn {
         width: 45px;
         height: 20px;
-    
+
     }
-    
+
     .whiteBtn {
         width: 15px;
         height: 15px;
     }
-    
+
     .notSelectedgreen {
         width: 15px;
         height: 15px;
@@ -753,10 +769,16 @@
 
     .eventInputHeading {
         width: 90%;
+        height: 50px;
+        margin-bottom: 0px;
     }
 
     .left {
         width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
     }
 
@@ -766,11 +788,19 @@
 
     .right {
         width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
     }
 
     .InputWrapper {
         width: 100%;
-        margin-left: 20px;
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .editIcon {
@@ -828,9 +858,18 @@
     .editprofile {
         margin: 10px;
     }
+    .modalOfferCardBtn {
+        width: 90%;
+        height: 40px;
+    }
+    .passwordHeading {
+        font-size:12px;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .coverImg {
         width: 100%;
     }
@@ -886,6 +925,7 @@
     .notificationBtnWrapper {
         flex-direction: column;
         align-items: center;
+
     }
 
     .modalOfferCard {
@@ -911,7 +951,7 @@
 
     .InputWrapper {
         width: 100%;
-        margin-left: 20px;
+        margin-left: 0px;
     }
 
     .container {

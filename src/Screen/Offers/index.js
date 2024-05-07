@@ -288,8 +288,8 @@ export default function Offer() {
             >
               <img className={style.offerCardImg} src={item.images} />
               <div className={style.cardHeading}>
-                <div className={style.itenName}>Free Coffee Just For You</div>
-                <div >08/17/2023</div>
+                <div className={style.itemName}>Free Coffee Just For You</div>
+                <div className={style.OfferCardDate } >08/17/2023</div>
               </div>
               <div className={style.OfferInfo}>
                 <ul>
