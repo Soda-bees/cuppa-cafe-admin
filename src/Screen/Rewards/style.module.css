@@ -437,7 +437,7 @@
 
 
 
-@media screen and (min-width: 1345px) and (max-width: 1645px) {
+/* @media screen and (min-width: 1345px) and (max-width: 1645px) {
     .rewardCardHeading {
         font-size: 25px;
     }
@@ -496,7 +496,7 @@
         font-size: 18px;
     }
 
-    /* modal Css */
+    modal Css
 
     .modalReward {
         top: 30%;
@@ -510,7 +510,7 @@
         font-weight: 500;
     }
 
-    /* reviewModal */
+    reviewModal
 
     .reviewModal {
         height: 29vh;
@@ -519,7 +519,7 @@
         width: 44%;
     }
 
-    /* completeModal */
+    completeModal
     .completeModal {
         top: 35%;
         left: 44%;
@@ -527,9 +527,9 @@
         height: 32vh;
 
     }
-}
+} */
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .container {
         padding-left: 20%;
 
@@ -653,7 +653,7 @@
     .reviewModal {
         left: 35%;
         width: 40%;
-        height: 23vh;
+        height: 35vh;
     }
 
 
@@ -693,7 +693,7 @@
     /* completeModal  */
     .completeModal {
         width: 22%;
-        height: 27vh;
+        height: 40vh;
     }
 
 
@@ -737,7 +737,7 @@
 
 
 
-@media screen and (min-width:501px) and (max-width: 767px) {
+@media screen and (min-width:501px) and (max-width: 768px) {
 
     .search {
         width: 60%;
@@ -852,7 +852,7 @@
         top: 40%;
         left: 27%;
         width: 55%;
-        height: 25vh;
+        height: 35vh;
     }
 
 
@@ -888,7 +888,7 @@
 
     .completeModal {
         width: 35%;
-        height: 26vh;
+        height: 35vh;
         top: 30%;
         left: 35%;
     }
@@ -1052,7 +1052,7 @@
         top: 30%;
         left: 26%;
         width: 60%;
-        height: 25vh;
+        height: 28vh;
     }
 
 
@@ -1091,7 +1091,7 @@
 
     .completeModal {
         width: 43%;
-        height: 24vh;
+        height: 30vh;
         top: 35%;
         left: 35%;
     }

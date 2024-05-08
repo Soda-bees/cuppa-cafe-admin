@@ -87,7 +87,7 @@ export default function AddItem() {
   return (
     <div className={style.container}>
       <div className={style.headingWrapper}>
-        <div className={style.backBtn} onClick={()=>{
+        <div className={style.backBtn} onClick={() => {
           navigate('/menu')
         }}>
           <img className={style.backArrow} src={images.backArrow} />
@@ -144,47 +144,55 @@ export default function AddItem() {
               </div>
             </div>
           </div>
-          <div className={style.headingWrapperTwo}>
+          <div className={style.abc}>
+            <div className={style.headingWrapperTwo}>
+              <div className={style.infoheading}>Size</div>
+              <div className={style.infoheading}>Price</div>
+              <div className={style.infoheading}>Serves</div>
+            </div>
+
+          </div>
+          {/* <div className={style.headingWrapperTwo}>
             <div className={style.infoheading}>Size</div>
             <div className={style.infoheading}>Price</div>
             <div className={style.infoheading}>Serves</div>
-          </div>
+          </div> */}
 
           {todos.map((todo, index) => (
             <div className={style.row} key={index}>
               <div onClick={() => deleteTodo(index)} className={style.circle}>
                 <div className={style.greenLine}></div>
               </div>
-              <div>
-                <input
-                  className={style.textInputThree}
-                  type="text"
-                  onChange={(e) =>
-                    handleTodoChange(index, "size", e.target.value)
-                  }
-                  value={todo.size}
-                />
-              </div>
-              <div>
-                <input
-                  className={style.textInputThree}
-                  type="text"
-                  onChange={(e) =>
-                    handleTodoChange(index, "price", e.target.value)
-                  }
-                  value={todo.price}
-                />
-              </div>
-              <div>
-                <input
-                  className={style.textInputThree}
-                  type="text"
-                  onChange={(e) =>
-                    handleTodoChange(index, "serves", e.target.value)
-                  }
-                  value={todo.serves}
-                />
-              </div>
+
+              <input
+                className={style.textInputThree}
+                type="text"
+                onChange={(e) =>
+                  handleTodoChange(index, "size", e.target.value)
+                }
+                value={todo.size}
+              />
+
+
+              <input
+                className={style.textInputThree}
+                type="text"
+                onChange={(e) =>
+                  handleTodoChange(index, "price", e.target.value)
+                }
+                value={todo.price}
+              />
+
+
+              <input
+                className={style.textInputThree}
+                type="text"
+                onChange={(e) =>
+                  handleTodoChange(index, "serves", e.target.value)
+                }
+                value={todo.serves}
+              />
+
             </div>
           ))}
           <div className={style.btnWrapper}>
@@ -199,8 +207,8 @@ export default function AddItem() {
             Add Specifications
             <img className={style.rightArrow} src={images.rightArrow} />
           </div>
-          
-       
+
+
           <div className={style.filteritem}>
             <div className={style.filter}>
               <div className={style.filterName}>Filter Name</div>
@@ -208,11 +216,13 @@ export default function AddItem() {
             </div>
             <div>
               <div className={style.filterOption}>Filter Options</div>
-
-              <div className={style.headingWrapperThree}>
-                <div className={style.infoheadingTwo}>Name</div>
-                <div className={style.infoheadingTwo}>Extra Charges</div>
+              <div className={style.abc}>
+                <div className={style.headingWrapperThree}>
+                  <div className={style.infoheadingTwo}>Name</div>
+                  <div className={style.infoheadingTwo}>Extra Charges</div>
+                </div>
               </div>
+
 
               {filterTodo.map((index, todo) => (
                 <div className={style.row} key={index}>
@@ -222,26 +232,26 @@ export default function AddItem() {
                   >
                     <div className={style.greenLine}></div>
                   </div>
-                  <div>
-                    <input
-                      className={style.textInputFour}
-                      type="text"
-                      onChange={(e) =>
-                        handleFilterTodoChange(index, "name", e.target.value)
-                      }
-                      value={todo.name}
-                    />
-                  </div>
-                  <div>
-                    <input
-                      className={style.textInputFour}
-                      type="text"
-                      onChange={(e) =>
-                        handleFilterTodoChange(index, "price", e.target.value)
-                      }
-                      value={todo.price}
-                    />
-                  </div>
+
+                  <input
+                    className={style.textInputFour}
+                    type="text"
+                    onChange={(e) =>
+                      handleFilterTodoChange(index, "name", e.target.value)
+                    }
+                    value={todo.name}
+                  />
+
+
+                  <input
+                    className={style.textInputFour}
+                    type="text"
+                    onChange={(e) =>
+                      handleFilterTodoChange(index, "price", e.target.value)
+                    }
+                    value={todo.price}
+                  />
+
                 </div>
               ))}
             </div>
@@ -254,20 +264,20 @@ export default function AddItem() {
             <div className={style.required}>
               Make it required
               {selectBtn ? (
-                      <div
-                        className={style.ovalBtn}
-                        onClick={() => setSelectBtn(!selectBtn)}
-                      >
-                        <div className={style.whiteBtn}></div>
-                      </div>
-                    ) : (
-                      <div
-                        className={style.notSelectedBtn}
-                        onClick={() => setSelectBtn(!selectBtn)}
-                      >
-                        <div className={style.notSelectedgreen}></div>
-                      </div>
-                    )}
+                <div
+                  className={style.ovalBtn}
+                  onClick={() => setSelectBtn(!selectBtn)}
+                >
+                  <div className={style.whiteBtn}></div>
+                </div>
+              ) : (
+                <div
+                  className={style.notSelectedBtn}
+                  onClick={() => setSelectBtn(!selectBtn)}
+                >
+                  <div className={style.notSelectedgreen}></div>
+                </div>
+              )}
             </div>
             <div className={style.actionWrapper}>
               <div className={style.actionHeading}>Action</div>

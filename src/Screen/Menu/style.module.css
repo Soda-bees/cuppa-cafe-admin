@@ -227,12 +227,13 @@
 
 .modal {
   width: 50%;
-  height: 70vh;
+  /* height: 70vh; */
   position: absolute;
   left: 25%;
   top: 13%;
   background-color: #fff;
   outline: none;
+  padding-bottom: 10px;
 }
 
 .modalHeadingWrapper {
@@ -402,7 +403,7 @@
   font: 500;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .container {
     padding-left: 20%;
   }
@@ -461,7 +462,7 @@
   /* modal Css  */
   .modal {
     width: 65%;
-    height: 80vh;
+    /* height: 80vh; */
     left: 15%;
   }
 
@@ -509,7 +510,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .searchWrapper {
     justify-content: space-between;
     gap: 0;
@@ -576,7 +577,7 @@
   /* modal Css  */
   .modal {
     width: 85%;
-    height: 80vh;
+    /* height: 80vh; */
     left: 10%;
   }
 
