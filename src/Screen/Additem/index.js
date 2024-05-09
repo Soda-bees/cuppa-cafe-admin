@@ -83,6 +83,9 @@ export default function AddItem() {
     const file = e.target.files[0];
     setSelectedImage(file);
   };
+
+  const [filterName, setFilterName] = useState("")
+
   const [selectBtn, setSelectBtn] = useState(false);
   return (
     <div className={style.container}>
@@ -144,7 +147,7 @@ export default function AddItem() {
               </div>
             </div>
           </div>
-          <div className={style.abc}>
+          <div className={style.rowHeadingWrapper}>
             <div className={style.headingWrapperTwo}>
               <div className={style.infoheading}>Size</div>
               <div className={style.infoheading}>Price</div>
@@ -152,11 +155,6 @@ export default function AddItem() {
             </div>
 
           </div>
-          {/* <div className={style.headingWrapperTwo}>
-            <div className={style.infoheading}>Size</div>
-            <div className={style.infoheading}>Price</div>
-            <div className={style.infoheading}>Serves</div>
-          </div> */}
 
           {todos.map((todo, index) => (
             <div className={style.row} key={index}>
@@ -212,18 +210,22 @@ export default function AddItem() {
           <div className={style.filteritem}>
             <div className={style.filter}>
               <div className={style.filterName}>Filter Name</div>
-              <div>Milk</div>
+              <div>
+              <input
+                className={style.input}
+                type="text"
+                onChange={(e) => setFilterName(e.target.value)}
+              />
+              </div>
             </div>
             <div>
               <div className={style.filterOption}>Filter Options</div>
-              <div className={style.abc}>
+              <div className={style.rowHeadingWrapper}>
                 <div className={style.headingWrapperThree}>
                   <div className={style.infoheadingTwo}>Name</div>
                   <div className={style.infoheadingTwo}>Extra Charges</div>
                 </div>
               </div>
-
-
               {filterTodo.map((index, todo) => (
                 <div className={style.row} key={index}>
                   <div

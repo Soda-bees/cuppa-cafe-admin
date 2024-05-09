@@ -449,7 +449,7 @@ export default function Menu() {
         </div> */}
         <div className=" pt-10  w-full flex flex-wrap gap-2 sm:gap-10 items-center justify-center ">
           {currentProducts.map(() => (
-            <div className="flex flex-col border items-center  rounded-xl border-borderColor ">
+            <div  onClick={() => navigate("/itemdetails")} className="flex flex-col border items-center  rounded-xl border-borderColor ">
               <img
                 src={images.cappuccinoNotrounded}
                 className="rounded-2xl h-24 w-24 sm:h-32 sm:w-32 md:h-36 md:w-52 pt-2 px-2"

@@ -30,7 +30,6 @@
     font-weight: 600;
     padding: 10px;
     cursor: pointer;
-
 }
 
 .notificationIcon {
@@ -171,7 +170,7 @@
 
 .InputFeild {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
 }
 
@@ -179,8 +178,6 @@
     background-color: #fff;
     border-radius: 10px;
     margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
     width: 43%;
 
 }
@@ -196,8 +193,6 @@
     background-color: #fff;
     border-radius: 10px;
     margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
     width: 43%;
 }
 
@@ -218,14 +213,13 @@
 
 .contactInfoWrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 10px 0;
 
 }
 
 .locationWrapper {
     background-color: #fff;
-    margin-left: 10px;
     border-radius: 10px;
     width: 43%;
 
@@ -383,7 +377,7 @@
 
 .eventInputHeading {
     background-color: #FFF;
-    width: 45%;
+    width: 40%;
     border-radius: 10px;
     margin-bottom: 10px;
     position: relative;
@@ -400,7 +394,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
     cursor: pointer;
     padding-bottom: 10px;
 
@@ -438,7 +431,7 @@
 }
 
 .modalOfferCardBtn {
-    width: 80%;
+    width: 95%;
     height: 60px;
     background-color: #FFF;
     border-radius: 10px;
@@ -536,7 +529,7 @@
 }
 
 .country {
-    margin-top: 30px;
+    margin-top: 15px;
     height: 125px;
     overflow-y: scroll;
     border-radius: 5px;
@@ -556,7 +549,7 @@
 
 @media screen and (max-width: 768px) {
     .container {
-        padding-left: 20%;
+        padding-left: 18%;
     }
 
     .searchWrapper {
@@ -565,7 +558,7 @@
     }
 
     .noticationBtn {
-        padding: 7px;
+        padding: 5px;
     }
 
     .notificationHeading {
@@ -683,6 +676,7 @@
     .registrationDropDown {
         margin-top: 2px;
 
+
     }
 
     .custom_phone_input>input {
@@ -694,10 +688,10 @@
     }
 
     .contactInfoWrapper {
-        display: flex;
-        justify-content: center;
         margin: 0;
         margin-bottom: 10px;
+        flex-direction: column;
+        align-items: center;
 
     }
 
@@ -837,11 +831,9 @@
 
     .InputFeild {
         flex-direction: column;
+        align-items: center;
     }
 
-    .contactInfoWrapper {
-        flex-direction: column;
-    }
 
     .editinputWrapper {
         width: 90%;
@@ -853,34 +845,69 @@
 
     .locationWrapper {
         width: 90%;
+        height: 50px;
     }
 
     .editprofile {
         margin: 10px;
     }
+
     .modalOfferCardBtn {
         width: 90%;
         height: 40px;
     }
+
     .passwordHeading {
-        font-size:12px;
-        margin-left: 10px;
-        margin-bottom: 5px;
+        font-size: 12px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    .countryName {
+        font-size: 14px;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .searchWrapper {
+        margin-bottom: 10px;
+        width: 95%;
+    }
+
+    .settingHeading {
+        font-size: 22px;
+    }
+
+    .noticationBtn {
+        padding: 7px;
+        font-size: 14px;
+    }
+
+    .notificationIcon {
+        width: 15px;
+    }
+
     .coverImg {
-        width: 100%;
+        width: 95%;
+    }
+
+    .cafeName {
+        font-size: 20px;
+        font-weight: 700;
     }
 
     .headingWrapper {
         width: 100%;
-        margin: 20px 0;
+        margin: 10px 0
+    }
+
+    .editprofile {
+        margin: 10px;
     }
 
     .settingWrapper {
         width: 100%;
+        gap: 10px;
     }
 
     .settingOption {
@@ -906,7 +933,13 @@
     }
 
     .inputHeadingTwo {
-        font-size: 16px;
+        font-size: 14px;
+    }
+
+
+    .locationWrapper {
+        height: 55px;
+        
     }
 
     .editIcon {
@@ -925,7 +958,8 @@
     .notificationBtnWrapper {
         flex-direction: column;
         align-items: center;
-
+        gap: 10px;
+        margin-bottom: 10px;
     }
 
     .modalOfferCard {
@@ -933,7 +967,9 @@
     }
 
     .eventInputHeading {
-        width: 90%;
+        width: 80%;
+        margin-bottom: 0;
+        height: 65px;
     }
 
     .left {
@@ -976,4 +1012,29 @@
         text-align: center;
     }
 
+    .contactInfoWrapper {
+        align-items: start;
+        margin: 10px 0;
+
+    }
+    .downArrowIcon {
+        width: 20px;
+    }
+
+    .registrationHeading {
+        font-size: 16px;
+    }
+    .offerCardHeading {
+        font-size: 16px;
+    }
+    .passwordInfo {
+        width: 80%;
+        margin-left: 20px;
+    }
+    .passwordHeading {
+        font-size: 20px;
+    }
+    .modalOfferCardBtn {
+        width: 80%;
+    }
 }
