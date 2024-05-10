@@ -15,6 +15,7 @@
     border: 1px solid #EBEBEB;
     border-radius: 10px;
 }
+
 .boxLelt {
     width: 50%;
     background-image: url(../../asset/bgImg.png);
@@ -40,7 +41,7 @@
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
-}   
+}
 
 .adminBtnGreen {
     background-image: linear-gradient(to right, #287C76, #60B0AA);
@@ -137,25 +138,23 @@
 }
 
 .userInput {
-    margin-left: 20px;
     outline: none;
     border: none;
     background: none;
-    width: 95%;
-    height: 35px;
+    width: 100%;
     font-size: 17px;
     z-index: 1;
 }
 
 
 .userInputTwo {
-    margin-left: 20px;
     outline: none;
     border: none;
     background: none;
-    width: 90%;
+    width: 100%;
     font-size: 17px;
     padding-top: 7px;
+    padding-left: 5px;
 }
 
 .conutrySelect {
@@ -166,8 +165,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 20px;
-    padding-top: 4px;
+    margin: 0px 5px;
+    /* padding-top: 4px; */
     font-weight: 500;
 }
 
@@ -225,18 +224,36 @@
 .arrowImg {
     width: 20px;
 }
-.btnheading{
+
+.btnheading {
     margin-left: 10px;
 }
+
 .adminWrapper {
     display: flex;
     gap: 10px;
     width: 70%;
 }
 
+.adminBtnWhite {
+    padding: 10px;
+    font-size: 12px;
+
+
+}
+
+.adminBtnGreen {
+    padding: 10px;
+    font-size: 12px;
+}
+
+.selectBtn {
+    width: 15px;
+}
+
 .inputHeading {
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
     color: #8C8C8C;
 }
 
@@ -256,7 +273,8 @@
     overflow-y: scroll;
     border-radius: 5px;
 }
-.custom_phone_input{
+
+.custom_phone_input {
     width: 90%;
     height: 35px;
     margin-left: 20px;
@@ -264,7 +282,7 @@
 }
 
 
-.custom_phone_input > input{
+.custom_phone_input>input {
     outline: none;
     border: none;
     background: none;
@@ -275,13 +293,16 @@
 .textFieldTwo {
     margin-top: 10px;
     width: 70%;
-    height: 70px;
-    gap: 20px;
+    height: 65px;
     background-color: #F3F3F3;
     border-radius: 10px;
     z-index: 3;
+    /* padding-bottom: 10px; */
 }
-
+.downArrow{
+    width: 20px;
+    margin-right: 10px;
+}
 
 
 .inputWrapper {
@@ -301,40 +322,50 @@
     margin-bottom: 10px;
 }
 
-@media screen and (max-width : 767px) {
+@media screen and (max-width : 768px) {
     .container {
-        height: 212vh;
+        height: 0vh;
         align-items: start;
     }
 
     .logInBox {
         width: 100%;
         flex-direction: column;
+        border: none;
     }
 
     .boxLelt {
         width: 100%;
         height: 100vh;
     }
+
     .backWrapper {
         margin-top: 80px;
         margin-left: 30px;
         width: 90%;
     }
+
     .backBTn {
 
-        height: 40px;
-        width: 40px;
+        height: 25px;
+        width: 25px;
     }
-    
+
     .backArrow {
-        height: 20px;
-    
+        height: 15px;
+
     }
+
+    .backBtnWrapper {
+        display: flex;
+        justify-content: center;
+    }
+
     .adminBtnWrapper {
         justify-content: center;
         flex-direction: column;
-        margin: 40px 20px;
+        margin: 20px;
+        width: 70%;
     }
 
     .adminBtnWhite {
@@ -409,7 +440,7 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .container {
         align-items: start;
         height: 0;
@@ -418,9 +449,11 @@
     .logInBox {
         width: 100%;
     }
+
     .adminBtnWrapper {
         margin: 20px 20px;
     }
+
     .adminBtnWhite {
         font-size: 16px;
         padding: 5px 10px;
@@ -463,25 +496,24 @@
         margin-left: 20px;
         width: 90%;
     }
+
     .backBTn {
         height: 35px;
         width: 35px;
 
     }
-    
+
     .backArrow {
         height: 15px;
-    
+
     }
+
     .adminWrapper {
         flex-direction: column;
     }
+
     .inputWrapper {
         width: 100%;
     }
-    
+
 }
-
-
-
-

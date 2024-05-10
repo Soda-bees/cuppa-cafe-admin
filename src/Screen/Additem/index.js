@@ -85,8 +85,9 @@ export default function AddItem() {
   };
 
   const [filterName, setFilterName] = useState("")
-
   const [selectBtn, setSelectBtn] = useState(false);
+  const [addSpecifications, setAddSpecifications] = useState(false);
+
   return (
     <div className={style.container}>
       <div className={style.headingWrapper}>
@@ -203,7 +204,7 @@ export default function AddItem() {
         <div className={style.addItemRight}>
           <div className={style.specHeading}>
             Add Specifications
-            <img className={style.rightArrow} src={images.rightArrow} />
+            <img className={style.rightArrow} src={images.rightArrow}  />
           </div>
 
 

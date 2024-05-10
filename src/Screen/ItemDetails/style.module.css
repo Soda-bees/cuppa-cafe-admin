@@ -71,7 +71,7 @@
 }
 
 .addItemLeft {
-    width: 45%;
+    width: 50%;
 }
 
 .addItemDetails {
@@ -137,7 +137,7 @@
 .headingWrapperTwo {
     display: flex;
     justify-content: space-between;
-    width: 72%;
+    width: 64%;
     margin-top: 30px;
     margin-right: 145px;
 }
@@ -162,7 +162,7 @@
 }
 
 .addItemRight {
-    width: 30%;
+    width: 25%;
 }
 
 .specHeading {

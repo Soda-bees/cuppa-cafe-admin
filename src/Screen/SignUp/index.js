@@ -41,9 +41,11 @@ export default function SignUp() {
                                 <img className={style.backArrow} src={images.backArrow} />
                             </div>
                         </div>
+                        <div className={style.backBtnWrapper}>
                         <div className={style.adminBtnWrapper}>
                             <div onClick={() => setIsSelected('admin')} className={isSelected === 'admin' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'admin' ? images.selectBtn : images.notSelectedBtn} />Admin Panel</div>
                             <div onClick={() => setIsSelected('cafe')} className={isSelected === 'cafe' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'cafe' ? images.selectBtn : images.notSelectedBtn} />Cafe  Owner</div>
+                        </div>
                         </div>
                     </div>
 
@@ -52,7 +54,7 @@ export default function SignUp() {
                     </div>
                     <div className={style.headingWrapper}>
                         <div className={style.logoHeading}>
-                            Welcome to the Admin Panel for{" "}
+                            Welcome to the Admin Panel for
                             <span className={style.bold}>Cuppa!</span>
                         </div>
                     </div>
@@ -83,7 +85,7 @@ export default function SignUp() {
                         </div>
                             :
                             <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName}
-                                <img src={images.downArrow} /></div>}
+                                <img className={style.downArrow} src={images.downArrow} /></div>}
                     </div>
                     <div className={style.textField}>
                         <div className={style.inputHeading}>Email</div>

@@ -39,7 +39,7 @@ export default function AdminLogIn() {
 
         </div>
         <div className={style.boxRight}>
-          <div className={style.logInHeading}>Admin Log In</div>
+          <div className={style.logInHeading}>Log In</div>
           <div className={style.logInPara}>
             Offering coffee shop owners a platform to enhance their sales with
             Cuppa.
