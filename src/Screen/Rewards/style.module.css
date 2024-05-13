@@ -111,13 +111,13 @@
 }
 
 .rewardCardHeading {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 500;
 }
 
-.reawadPara {
-    font-size: 18px;
-}
+/* .reawadPara {
+    font-size: px;
+} */
 
 .rewardImgWrapper {
     margin: 20px;
@@ -159,18 +159,23 @@
     outline: none;
     display: flex;
     justify-content: center;
-    position: absolute;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff1f;
+    /* position: absolute;
     top: 30%;
-    left: 30%;
-    width: 40%;
-    background-color: #FFF;
-    border-radius: 10px;
-
+    left: 30%; */
 }
 
 .modalContainer {
-    width: 100%;
-    margin: 20px;
+    /* width: 100%;
+    margin: 20px; */
+    width: 40%;
+    height: 45vh;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+
 }
 
 .modalHeadingWrapper {
@@ -181,7 +186,7 @@
 }
 
 .cross {
-    width: 40px;
+    width: 35px;
     cursor: pointer;
 }
 
@@ -197,7 +202,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 18px;
     color: #fff;
     cursor: pointer;
 }
@@ -284,18 +289,29 @@
 
 .reviewModal {
     outline: none;
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #ffffff1f;
+    /* position: absolute;
     top: 40%;
-    left: 37%;
+    left: 37%; */
+    /* width: 25%; */
+    /* background-color: #FFF;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid #0000003d; */
+}
+
+.ReiewContainer {
     width: 25%;
+    height: 30vh;
     background-color: #FFF;
     border-radius: 10px;
     position: relative;
     border: 1px solid #0000003d;
-}
-
-.ReiewContainer {
-    width: 100%;
+ 
 }
 
 .reviewHeading {
@@ -362,15 +378,20 @@
 
 .completeModal {
     outline: none;
-    position: absolute;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff1f;
+    /* position: absolute;
     top: 40%;
     left: 40%;
-    width: 15%;
-    height: 30vh;
+    width: 15%; */
+    /* height: 30vh;
     background-color: #FFF;
     border-radius: 10px;
     position: relative;
-    border: 1px solid #0000003d;
+    border: 1px solid #0000003d; */
 }
 
 .completeContainer {
@@ -379,6 +400,12 @@
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    width: 15%;
+    height: 35vh;
+    background-color: #FFF;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid #0000003d;
 }
 
 .completebtnWrapper {
@@ -405,7 +432,7 @@
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
-    width: 80%;
+    width: 90%;
     height: 50px;
     padding: 0 10px;
 

@@ -423,7 +423,7 @@ export default function Events() {
 
             <div
               onClick={() => setIsEventModalVisible(false)}
-              className={style.btn}
+              className={style.modalBtn}
             >
               Add
             </div>
@@ -520,7 +520,7 @@ export default function Events() {
                       onClick={() => setEventTypeDD(!eventTypeDD)}
                       className={style.registrationDropDown}
                     >
-                      <div className={style.registrationHeading}>
+                      <div className={style.registrationHeadingTwo}>
                         {eventType}
                       </div>
                       <img
@@ -560,7 +560,7 @@ export default function Events() {
                       onClick={() => seteventDropDown(!eventDropDown)}
                       className={style.registrationDropDown}
                     >
-                      <div className={style.registrationHeading}>
+                      <div className={style.registrationHeadingTwo}>
                         {registration}
                       </div>
                       <img
@@ -587,7 +587,7 @@ export default function Events() {
         onRequestClose={() => setTimeModal(false)}
         className={style.modalTime}
       >
-        <>
+        <div >
           <div>
             <div>
               <div className={style.inputTitle}>Opening Time</div>
@@ -694,7 +694,7 @@ export default function Events() {
               </div>
             </div>
           </div>
-        </>
+        </div>
       </Modal>
 
       <Pagination

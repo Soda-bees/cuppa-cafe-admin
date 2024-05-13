@@ -27,10 +27,10 @@
 .adminBtnWrapper {
     display: flex;
     gap: 10px;
-    margin: 50px 50px;
+    justify-content: center;
 }
 
-.adminBtnWhite {
+/* .adminBtnWhite {
     border: 2px solid #287C76;
     color: #287C76;
     display: flex;
@@ -41,17 +41,17 @@
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
-}
+} */
 
 .adminBtnGreen {
     background-image: linear-gradient(to right, #287C76, #60B0AA);
     color: #fff;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
-    padding: 10px 50px;
+    padding: 10px 60px;
     border-radius: 10px;
-    font-size: 20px;
     font-weight: 500;
     cursor: pointer;
 }
@@ -89,7 +89,7 @@
 
 
 .backWrapper {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 20px;
     width: 100%;
 }
@@ -99,14 +99,14 @@
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(to right, #287C76, #60B0AA);
-    height: 45px;
-    width: 45px;
+    height: 35px;
+    width: 35px;
     border-radius: 100%;
     cursor: pointer;
 }
 
 .backArrow {
-    height: 25px;
+    height: 15px;
 
 }
 
@@ -129,8 +129,6 @@
 .textField {
     margin-top: 10px;
     width: 70%;
-    height: 80px;
-    gap: 25px;
     background-color: #F3F3F3;
     border-radius: 10px;
     z-index: 2;
@@ -142,7 +140,8 @@
     border: none;
     background: none;
     width: 100%;
-    font-size: 17px;
+    padding: 10px;
+    padding-left: 10px;
     z-index: 1;
 }
 
@@ -153,19 +152,18 @@
     background: none;
     width: 100%;
     font-size: 17px;
-    padding-top: 7px;
-    padding-left: 5px;
+    padding: 10px 0;
+    padding-left: 10px;
 }
 
-.conutrySelect {
+.countrySelect {
     outline: none;
     border: none;
     background: none;
-    font-size: 17px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 5px;
+    padding: 10px;
     /* padding-top: 4px; */
     font-weight: 500;
 }
@@ -185,8 +183,7 @@
 }
 
 .terms {
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 500;
     margin-left: 10px;
 
 }
@@ -235,43 +232,33 @@
     width: 70%;
 }
 
-.adminBtnWhite {
-    padding: 10px;
-    font-size: 12px;
 
-
-}
-
-.adminBtnGreen {
-    padding: 10px;
-    font-size: 12px;
-}
 
 .selectBtn {
     width: 15px;
 }
 
 .inputHeading {
-    margin-top: 5px;
-    margin-left: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
     color: #8C8C8C;
 }
 
 .countryName {
     border-bottom: 1px solid #00000027;
-    height: 30px;
     background-color: #F3F3F3;
-    font-size: 16px;
     border-radius: 2px;
-    padding-bottom: 7px;
-    padding-left: 20px;
+    padding: 10px;
+    
 }
 
 .country {
-    margin-top: 30px;
-    height: 300px;
+    width: 100%;
+    height: 250px;
     overflow-y: scroll;
     border-radius: 5px;
+    position: absolute;
+    top: 70px;
 }
 
 .custom_phone_input {
@@ -293,11 +280,10 @@
 .textFieldTwo {
     margin-top: 10px;
     width: 70%;
-    height: 65px;
     background-color: #F3F3F3;
     border-radius: 10px;
     z-index: 3;
-    /* padding-bottom: 10px; */
+    position: relative;
 }
 .downArrow{
     width: 20px;
@@ -308,7 +294,6 @@
 .inputWrapper {
     margin-top: 10px;
     width: 60%;
-    height: 70px;
     gap: 25px;
     background-color: #F3F3F3;
     border-radius: 10px;

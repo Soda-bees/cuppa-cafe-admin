@@ -27,11 +27,11 @@ export default function SetUpOutlet() {
     const [closingTime, setClosingTime] = useState('AM');
     const [focusedInput, setFocusedInput] = useState(null);
     const [closingTimeFinal, setClosingTimeFinal] = useState('AM');
-    const [startTimeFinal, setStartTimeFinal] = useState('AM');    
+    const [startTimeFinal, setStartTimeFinal] = useState('AM');
     const [amStart, setAmStart] = useState("AM")
     const [amClose, setAmClose] = useState("PM")
-    
-    
+
+
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
@@ -39,7 +39,7 @@ export default function SetUpOutlet() {
     const handleImageChange = (e) => {
         const file = e.target.files[0];
         setSelectedImage(file);
-    };    
+    };
 
     const handleInputChange = (text, setter, maxValue) => {
         if (text === '' || (Number(text) >= 0 && Number(text) <= maxValue)) {
@@ -68,20 +68,33 @@ export default function SetUpOutlet() {
         setAmClose(amPm)
     }
 
-     const handleSignin = () => {
+    const handleSignin = () => {
         const token = "authToken";
         dispatch(setAuthToken(token));
         navigate("/");
     };
 
-    
+
 
     return (
 
         <div className={style.container}>
             <div className={style.logInBox}>
-            <div className={style.boxLelt}>
-                    <div>
+                <div className={style.boxLelt}>
+                    <div >
+                        <div className={style.backWrapper}
+                            onClick={() => navigate('/signup')}>
+                            <div className={style.backBtn}>
+                                <img className={style.backArrow} src={images.backArrow} />
+                            </div>
+                        </div>
+                        <div className={style.adminBtnWrapper}>
+                            {/* <div onClick={() => setIsSelected('admin')} className={isSelected === 'admin' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'admin' ? images.selectBtn : images.notSelectedBtn} />Admin Panel</div>
+                            <div onClick={() => setIsSelected('cafe')} className={isSelected === 'cafe' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'cafe' ? images.selectBtn : images.notSelectedBtn} />Cafe  Owner</div> */}
+                            <div className={style.adminBtnGreen}> Cafe  Owner</div>
+                        </div>
+                    </div>
+                    {/* <div>
                         <div className={style.backWrapper}
                             onClick={() => navigate('/signup')}>
                             <div className={style.backBtn}>
@@ -92,7 +105,7 @@ export default function SetUpOutlet() {
                             <div onClick={() => setIsSelected('admin')} className={isSelected === 'admin' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'admin' ? images.selectBtn : images.notSelectedBtn} />Admin Panel</div>
                             <div onClick={() => setIsSelected('cafe')} className={isSelected === 'cafe' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'cafe' ? images.selectBtn : images.notSelectedBtn} />Cafe  Owner</div>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className={style.logoWrapper}>
                         <img className={style.logo} src={images.logo} />
@@ -141,22 +154,22 @@ export default function SetUpOutlet() {
                     </div>
                     <div className={style.textFeildTwo}>
                         <div className={style.inputHaeding}>Location</div>
-                        <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName}
+                        <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.countrySelect} >{countryName}
                             <img src={images.downArrow} />
                         </div>
-                            {selectedCountry && (
-                                <div className={style.country}>
-                                    {country.map((country, index) => (
-                                        <div key={index} onClick={() => {
-                                            setcountryName(country.name)
-                                            setSelectedCountry(!selectedCountry)
-                                        }} className={style.countryName}>{country.name}</div>
-                                    ))}
-                                </div>
-                            )}
+                        {selectedCountry && (
+                            <div className={style.country}>
+                                {country.map((country, index) => (
+                                    <div key={index} onClick={() => {
+                                        setcountryName(country.name)
+                                        setSelectedCountry(!selectedCountry)
+                                    }} className={style.countryName}>{country.name}</div>
+                                ))}
+                            </div>
+                        )}
                     </div>
                     <div className={style.btnWrapper}
-                    onClick={handleSignin}>
+                        onClick={handleSignin}>
                         <div className={style.btn}>
                             Get Started
                             <div className={style.arrow}>

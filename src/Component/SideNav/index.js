@@ -61,8 +61,8 @@ export default function SideNav() {
           </div>
         </div>
         <div onClick={() => navigate("/rewards")} className={style.menuList}>
-          <img className={style.menuImg} src={activePath === "/rewards" ? images.rewardGreen : images.rewardsIcon} />
-          <div  className={activePath === "/rewards" ? style.greenWord : style.word}>Rewards</div>
+          <img className={style.menuImg} src={activePath === "/rewards" || activePath ===  "/rewardsDetails" ? images.rewardGreen : images.rewardsIcon} />
+          <div  className={activePath === "/rewards" ||  activePath === "/rewardsDetails" ? style.greenWord : style.word}>Rewards</div>
         </div>
         <div onClick={() => navigate("/setting")} className={style.menuList}>
           <img

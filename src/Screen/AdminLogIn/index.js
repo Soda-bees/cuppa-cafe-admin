@@ -24,8 +24,7 @@ export default function AdminLogIn() {
       <div className={style.logInBox}>
         <div className={style.boxLelt}>
           <div className={style.adminBtnWrapper}>
-            <div onClick={() => setIsSelected('admin')} className={isSelected === 'admin' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'admin' ? images.selectBtn : images.notSelectedBtn} />Admin Panel</div>
-            <div onClick={() => setIsSelected('cafe')} className={isSelected === 'cafe' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'cafe' ? images.selectBtn : images.notSelectedBtn} />Cafe  Owner</div>
+            <div  className={ style.adminBtnGreen}>Cafe  Owner</div>
           </div>
           <div className={style.logoWrapper}>
             <img className={style.logo} src={images.logo} />

@@ -65,9 +65,9 @@
 }
 
 .infoWrapper {
-    width: 200px;
+    width: 175px;
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 .location {
@@ -94,7 +94,7 @@
 }
 
 .settingWrapper {
-    width: 80%;
+    width: 83%;
     display: flex;
     gap: 20px;
 }
@@ -171,6 +171,7 @@
 .InputFeild {
     display: flex;
     justify-content: space-evenly;
+    align-items: start;
     width: 100%;
 }
 
@@ -196,24 +197,21 @@
     width: 43%;
 }
 
-.inputHeadingTwo {
-    font-size: 20px;
-    color: #8C8C8C;
-    margin-left: 10px;
-}
 
 .editInput {
     border: none;
     background: none;
     outline: none;
-    width: 98%;
-    font-size: 20px;
-    padding-left: 10px;
+    width: 100%;
+    padding: 10px;
+    padding-top: 0;
+    resize: none;
 }
 
 .contactInfoWrapper {
     display: flex;
     justify-content: space-evenly;
+    align-items: start;
     margin: 10px 0;
 
 }
@@ -222,7 +220,7 @@
     background-color: #fff;
     border-radius: 10px;
     width: 43%;
-
+    position: relative
 }
 
 
@@ -250,9 +248,9 @@
 
 
 .custom_phone_input {
-    width: 90%;
+    width: 100%;
     height: 35px;
-    margin-left: 20px;
+    padding: 10px;
 
 }
 
@@ -261,7 +259,6 @@
     outline: none;
     border: none;
     background: none;
-    font-size: 17px;
     z-index: 1;
 }
 
@@ -379,13 +376,12 @@
     background-color: #FFF;
     width: 40%;
     border-radius: 10px;
-    margin-bottom: 10px;
     position: relative;
-    height: 75px;
+    height: 60px;
 }
 
 .inputHeading {
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 10px;
     color: #8C8C8C
 }
@@ -395,29 +391,28 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    padding-bottom: 10px;
+    padding: 10px 10px;
+    padding-top: 0;
+    padding-left: 0;
 
 }
 
 .dropDownIcon {
     width: 20px;
-    margin-right: 10px;
 }
 
 .dropDownTwo {
     position: absolute;
-    top: 30px;
+    top: 50px;
     background-color: #FFF;
     width: 100%;
     border-radius: 5px;
-    margin-bottom: 30px;
 }
 
 
 .registrationHeading {
-    font-size: 20px;
-    font-weight: 400;
-    padding-left: 10px;
+    padding: 5px 10px;
+    font-weight: 500;
 }
 
 .securityWrapper {
@@ -520,31 +515,48 @@
 
 .countryName {
     border-bottom: 1px solid #00000027;
-    height: 30px;
+    /* height: 30px; */
     background-color: #fff;
     font-size: 16px;
     border-radius: 2px;
-    padding-bottom: 7px;
-    padding-left: 10px;
+    /* padding-bottom: 7px; */
+    /* padding-left: 10px; */
+    padding: 10px;
 }
 
 .country {
-    margin-top: 15px;
-    height: 125px;
+    width: 100%;
+    height:125px;
     overflow-y: scroll;
     border-radius: 5px;
+    position: absolute;
+    top:55px
+}
+.countryTwo {
+    width: 100%;
+    height:75px;
+    overflow-y: scroll;
+    border-radius: 5px;
+    position: absolute;
+    top:55px
 }
 
-.conutrySelect {
+.countrySelect {
     outline: none;
     border: none;
     background: none;
-    font-size: 17px;
+    /* font-size: 17px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 10px;
+    /* margin: 0 10px; */
     font-weight: 500;
+    padding: 10px;
+    padding-top: 0;
+}
+
+.downArrow {
+    width: 15px;
 }
 
 @media screen and (max-width: 768px) {

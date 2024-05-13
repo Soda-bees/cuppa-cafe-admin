@@ -17,6 +17,7 @@ export default function Setting() {
   const [value, setValue] = useState("");
   const [panel, setPanel] = useState('profile')
   const [selectedCountry, setSelectedCountry] = useState(false)
+  const [selectedCountryTwo, setSelectedCountryTwo] = useState(false)
   const [countryName, setcountryName] = useState("Select Country")
   const country = Country.getAllCountries()
   const [outletNmae, setOutletNmae] = useState('')
@@ -145,7 +146,7 @@ export default function Setting() {
             </div>
             <div className={style.InputFeild}>
               <div className={style.editinputWrapper}>
-                <div className={style.inputHeadingTwo}>Admin Name</div>
+                <div className={style.inputHeading}>Admin Name</div>
                 <input
                   onChange={(e) => setAdminName(e.target.value)}
                   className={style.editInput}
@@ -153,7 +154,7 @@ export default function Setting() {
                 />
               </div>
               <div className={style.editinputWrapper}>
-                <div className={style.inputHeadingTwo}>Email</div>
+                <div className={style.inputHeading}>Email</div>
                 <input
                   onChange={(e) => setEmail(e.target.value)}
                   className={style.editInput}
@@ -163,7 +164,7 @@ export default function Setting() {
             </div>
             <div className={style.contactInfoWrapper}>
               <div className={style.contactWrapper}>
-                <div className={style.inputHeadingTwo}>Contact Number</div>
+                <div className={style.inputHeading}>Contact Number</div>
                 <PhoneInput
                   value={value}
                   defaultCountry="US"
@@ -172,18 +173,20 @@ export default function Setting() {
                 />
               </div>
               <div className={style.locationWrapper}>
-                <div className={style.inputHeadingTwo}>location</div>
-                {selectedCountry ? <div className={style.country}>
-                  {country.map((country, index) => (
-                    <div key={index} onClick={() => {
-                      setcountryName(country.name)
-                      setSelectedCountry(!selectedCountry)
-                    }} className={style.countryName}>{country.name}</div>
-                  ))}
+                <div className={style.inputHeading}>Location</div>
+                <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.countrySelect} >{countryName}
+                  <img className={style.downArrow} src={images.downArrow} />
                 </div>
-                  :
-                  <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName}
-                    <img className={style.downArrowIcon}  src={images.downArrow} /></div>}
+                {selectedCountry && (
+                  <div className={style.country}>
+                    {country.map((country, index) => (
+                      <div key={index} onClick={() => {
+                        setcountryName(country.name)
+                        setSelectedCountry(!selectedCountry)
+                      }} className={style.countryName}>{country.name}</div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div></>) :
@@ -226,7 +229,7 @@ export default function Setting() {
                 </div>
                 <div className={style.InputFeild}>
                   <div className={style.editinputWrapper}>
-                    <div className={style.inputHeadingTwo}>Outlet Name</div>
+                    <div className={style.inputHeading}>Outlet Name</div>
                     <input
                       onChange={(e) => setOutletNmae(e.target.value)}
                       className={style.editInput}
@@ -234,17 +237,21 @@ export default function Setting() {
                     />
                   </div>
                   <div className={style.editinputWrapper}>
-                    <div className={style.inputHeadingTwo}>Description</div>
-                    <input
+                    <div className={style.inputHeading}>Description</div>
+
+                    <textarea className={style.editInput}>
+
+                    </textarea >
+                    {/* <input
                       onChange={(e) => setDescription(e.target.value)}
                       className={style.editInput}
                       type="text"
-                    />
+                    /> */}
                   </div>
                 </div>
                 <div className={style.contactInfoWrapper}>
                   <div className={style.contactWrapper}>
-                    <div className={style.inputHeadingTwo}>Contact Number</div>
+                    <div className={style.inputHeading}>Contact Number</div>
                     <PhoneInput
                       value={value}
                       defaultCountry="US"
@@ -253,18 +260,20 @@ export default function Setting() {
                     />
                   </div>
                   <div className={style.locationWrapper}>
-                    <div className={style.inputHeadingTwo}>location</div>
-                    {selectedCountry ? <div className={style.country}>
-                      {country.map((country, index) => (
-                        <div key={index} onClick={() => {
-                          setcountryName(country.name)
-                          setSelectedCountry(!selectedCountry)
-                        }} className={style.countryName}>{country.name}</div>
-                      ))}
+                    <div className={style.inputHeading}>Location</div>
+                    <div onClick={() => setSelectedCountryTwo(!selectedCountryTwo)} className={style.countrySelect} >{countryName}
+                      <img className={style.downArrow} src={images.downArrow} />
                     </div>
-                      :
-                      <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName}
-                        <img src={images.downArrow} className={style.downArrowIcon}  /></div>}
+                    {selectedCountryTwo && (
+                      <div className={style.countryTwo}>
+                        {country.map((country, index) => (
+                          <div key={index} onClick={() => {
+                            setcountryName(country.name)
+                            setSelectedCountryTwo(!selectedCountryTwo)
+                          }} className={style.countryName}>{country.name}</div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div></>) :
@@ -472,90 +481,25 @@ export default function Setting() {
                       <div className={style.btn}>Save</div>
                     </div>
                   </div>
-                  <div className={style.securityWrapper}>
-                    <div className={style.left}>
-                      <div className={style.modalOfferCardBtn}>
-                        <div className={style.offerCardHeading}>
-                          Face ID
-                        </div>
-                        {faceId ? (
-                          <div
-                            className={style.ovalBtn}
-                            onClick={() => setFaceId(!faceId)}
-                          >
-                            <div className={style.whiteBtn}></div>
-                          </div>
-                        ) : (
-                          <div
-                            className={style.notSelectedBtn}
-                            onClick={() => setFaceId(!faceId)}
-                          >
-                            <div className={style.notSelectedgreen}></div>
-                          </div>
-                        )}
-                      </div>
-                      <div className={style.modalOfferCardBtn}>
-                        <div className={style.offerCardHeading}>
-                          Touch ID
-                        </div>
-                        {touchId ? (
-                          <div
-                            className={style.ovalBtn}
-                            onClick={() => setTouchId(!touchId)}
-                          >
-                            <div className={style.whiteBtn}></div>
-                          </div>
-                        ) : (
-                          <div
-                            className={style.notSelectedBtn}
-                            onClick={() => setTouchId(!touchId)}
-                          >
-                            <div className={style.notSelectedgreen}></div>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                    <div className={style.right}>
-                      <div className={style.modalOfferCardBtn}>
-                        <div className={style.offerCardHeading}>
-                          Remember login details
-                        </div>
-                        {remember ? (
-                          <div
-                            className={style.ovalBtn}
-                            onClick={() => setRemember(!remember)}
-                          >
-                            <div className={style.whiteBtn}></div>
-                          </div>
-                        ) : (
-                          <div
-                            className={style.notSelectedBtn}
-                            onClick={() => setRemember(!remember)}
-                          >
-                            <div className={style.notSelectedgreen}></div>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </div>
+
                   <div className={style.passwordHeading}>Create Your New Password</div>
                   <div className={style.InputWrapper}>
                     <div className={style.passwordInfo}>
-                      <div className={style.inputHeadingTwo}>Enter Current Password</div>
+                      <div className={style.inputHeading}>Enter Current Password</div>
                       <input
                         className={style.editInput}
                         type="text"
                       />
                     </div>
                     <div className={style.passwordInfo}>
-                      <div className={style.inputHeadingTwo}>Enter New Password</div>
+                      <div className={style.inputHeading}>Enter New Password</div>
                       <input
                         className={style.editInput}
                         type="text"
                       />
                     </div>
                     <div className={style.passwordInfo}>
-                      <div className={style.inputHeadingTwo}>Enter Password Again</div>
+                      <div className={style.inputHeading}>Enter Password Again</div>
                       <input
                         className={style.editInput}
                         type="text"
@@ -584,7 +528,7 @@ export default function Setting() {
                             Cancel
                           </div>
                           <div className={style.logoutBtn} onClick={handleLogout}>
-                            logout
+                            Logout
                           </div>
                         </div>
 

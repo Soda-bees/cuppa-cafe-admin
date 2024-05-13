@@ -34,18 +34,17 @@ export default function SignUp() {
         <div className={style.container}>
             <div className={style.logInBox}>
                 <div className={style.boxLelt}>
-                    <div>
+                    <div >
                         <div className={style.backWrapper}
                             onClick={() => navigate('/login')}>
                             <div className={style.backBTn}>
                                 <img className={style.backArrow} src={images.backArrow} />
                             </div>
                         </div>
-                        <div className={style.backBtnWrapper}>
                         <div className={style.adminBtnWrapper}>
-                            <div onClick={() => setIsSelected('admin')} className={isSelected === 'admin' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'admin' ? images.selectBtn : images.notSelectedBtn} />Admin Panel</div>
-                            <div onClick={() => setIsSelected('cafe')} className={isSelected === 'cafe' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'cafe' ? images.selectBtn : images.notSelectedBtn} />Cafe  Owner</div>
-                        </div>
+                            {/* <div onClick={() => setIsSelected('admin')} className={isSelected === 'admin' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'admin' ? images.selectBtn : images.notSelectedBtn} />Admin Panel</div>
+                            <div onClick={() => setIsSelected('cafe')} className={isSelected === 'cafe' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'cafe' ? images.selectBtn : images.notSelectedBtn} />Cafe  Owner</div> */}
+                            <div className={style.adminBtnGreen}> Cafe  Owner</div>
                         </div>
                     </div>
 
@@ -75,7 +74,7 @@ export default function SignUp() {
 
                     <div className={style.textFieldTwo}>
                         <div className={style.inputHeading}>Location</div>
-                        {selectedCountry ? <div className={style.country}>
+                        {/* {selectedCountry ? <div className={style.country}>
                             {country.map((country, index) => (
                                 <div key={index} onClick={() => {
                                     setcountryName(country.name)
@@ -84,8 +83,21 @@ export default function SignUp() {
                             ))}
                         </div>
                             :
-                            <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName}
-                                <img className={style.downArrow} src={images.downArrow} /></div>}
+                            <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.countrySelect}>{countryName}
+                                <img className={style.downArrow} src={images.downArrow} /></div>} */}
+                        <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.countrySelect} >{countryName}
+                            <img src={images.downArrow} />
+                        </div>
+                        {selectedCountry && (
+                            <div className={style.country}>
+                                {country.map((country, index) => (
+                                    <div key={index} onClick={() => {
+                                        setcountryName(country.name)
+                                        setSelectedCountry(!selectedCountry)
+                                    }} className={style.countryName}>{country.name}</div>
+                                ))}
+                            </div>
+                        )}
                     </div>
                     <div className={style.textField}>
                         <div className={style.inputHeading}>Email</div>

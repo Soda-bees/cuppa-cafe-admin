@@ -113,9 +113,9 @@
     outline: none;
     border: 2px solid #8C8C8C;
     border-radius: 10px;
-    font-size: 25px;
+    font-size: 20px;
+    padding: 5px 10px;
     width: 80%;
-    padding-left: 10px;
 }
 
 .dropdownWrapper {
@@ -155,7 +155,7 @@
     padding: 5px 0;
     padding-left: 10px;
     width: 220px;
-    color: #8C8C8C;
+    cursor: pointer;
 }
 
 .rewardtermWrapper {

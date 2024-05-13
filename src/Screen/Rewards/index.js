@@ -160,10 +160,12 @@ export default function Rewards() {
 
   const navigate = useNavigate();
 
-  const [selectImg, setSelectImg] = useState(false)
-  const [selectImgTwo, setSelectImgTwo] = useState(false)
+  const [openDropDown, setOpenDropDown] = useState(false)
+  const [openDropDownTwo, setOpenDropDownTwo] = useState(false)
   const [openNextModal, setOpenNextModal] = useState(false)
   const [modalComplete, setModalComplete] = useState(false)
+  const [enterNumber, setEnterNumber] = useState("Enter number of stamps")
+  const [selectName, setSelectName] = useState("Choose reward")
 
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -255,7 +257,7 @@ export default function Rewards() {
         <div className={style.modalContainer}>
           <div className={style.modalHeadingWrapper}>
             <div>
-              <img className={style.cross} src={images.cross} />
+              <img className={style.cross} src={images.cross}  onClick={()=> setIsOfferModalVisible(false)}/>
             </div>
             <div className={style.modalHeading}>
               Create A Reward
@@ -273,18 +275,18 @@ export default function Rewards() {
               </div>
 
               <div className={style.dropDownOpen}>
-                <div className={style.dropDownSelect} onClick={() => setSelectImg(!selectImg)} >
-                  <div className={style.dropDownPara}>Enter number of stamps</div>
+                <div className={style.dropDownSelect} onClick={() => setOpenDropDown(!openDropDown)} >
+                  <div className={style.dropDownPara}>{enterNumber}</div>
                   <div >
-                    <img className={style.dropDownIcon} src={selectImg ? images.arrowUp : images.downArrow} />
+                    <img className={style.dropDownIcon} src={openDropDown ? images.arrowUp : images.downArrow} />
                   </div>
                 </div>
-                {selectImg &&
+                {openDropDown &&
                   <div className={style.dropDown}>
-                    <div className={style.dropDownOption}>5</div>
-                    <div className={style.dropDownOption}>10</div>
-                    <div className={style.dropDownOption}>15</div>
-                    <div className={style.dropDownOption}>20</div>
+                    <div className={style.dropDownOption} onClick={()=>{ setEnterNumber("5"); setOpenDropDown(!openDropDown)}}  >5</div>
+                    <div className={style.dropDownOption} onClick={()=>{ setEnterNumber("10"); setOpenDropDown(!openDropDown)}}>10</div>
+                    <div className={style.dropDownOption} onClick={()=> { setEnterNumber("15"); setOpenDropDown(!openDropDown)}}>15</div>
+                    <div className={style.dropDownOption} onClick={()=>{ setEnterNumber("20"); setOpenDropDown(!openDropDown)}}>20</div>
                   </div>
                 }
 
@@ -295,18 +297,18 @@ export default function Rewards() {
                 <div className={style.dropDownHeading}>What reward would you like to offer?</div>
               </div>
               <div className={style.dropDownOpen}>
-                <div className={style.dropDownSelect} onClick={() => setSelectImgTwo(!selectImgTwo)} >
-                  <div className={style.dropDownPara}>Choose reward</div>
+                <div className={style.dropDownSelect} onClick={() => setOpenDropDownTwo(!openDropDownTwo)} >
+                  <div className={style.dropDownPara}>{selectName}</div>
                   <div >
-                    <img className={style.dropDownIcon} src={selectImgTwo ? images.arrowUp : images.downArrow} />
+                    <img className={style.dropDownIcon} src={openDropDownTwo ? images.arrowUp : images.downArrow} />
                   </div>
                 </div>
-                {selectImgTwo &&
+                {openDropDownTwo &&
                   <div className={style.dropDown}>
-                    <div className={style.dropDownOption}>Tea / Coffee</div>
-                    <div className={style.dropDownOption}>Latte</div>
-                    <div className={style.dropDownOption}>Donut / Muffin</div>
-                    <div className={style.dropDownOption}>Bagel</div>
+                    <div className={style.dropDownOption} onClick={()=>{ setSelectName("Tea / Coffee"); setOpenDropDownTwo(!openDropDownTwo)}}>Tea / Coffee</div>
+                    <div className={style.dropDownOption}  onClick={()=>{ setSelectName("Latte"); setOpenDropDownTwo(!openDropDownTwo)}} >Latte</div>
+                    <div className={style.dropDownOption}  onClick={()=>{ setSelectName("Donut / Muffin"); setOpenDropDownTwo(!openDropDownTwo)}} >Donut / Muffin</div>
+                    <div className={style.dropDownOption}  onClick={()=>{ setSelectName("Bagel"); setOpenDropDownTwo(!openDropDownTwo)}} >Bagel</div>
                   </div>
                 }
 
@@ -321,19 +323,21 @@ export default function Rewards() {
         onRequestClose={() => setOpenNextModal(false)}
         className={style.reviewModal}
       >
-        <img className={style.crossTwo} src={images.cross} />
         <div className={style.ReiewContainer}>
+        <img onClick={()=> {setIsOfferModalVisible(false);
+          setOpenNextModal(false)
+        }} className={style.crossTwo} src={images.cross} />
           <div className={style.reviewHeading}>
             Review
           </div>
           <div className={style.orderInfoWrapper}>
             <div className={style.orderInfo} >
               <div className={style.orderHeading}>Number of stamps to collect</div>
-              <div className={style.orderQuantity}>20</div>
+              <div className={style.orderQuantity}>{enterNumber}</div>
             </div>
             <div className={style.orderInfo}>
               <div className={style.orderHeading} >Reward</div>
-              <div className={style.orderQuantity}>1 Latte</div>
+              <div className={style.orderQuantity}>{selectName}</div>
             </div>
           </div>
           <div className={style.logoutBtnWrapper}>
@@ -344,7 +348,7 @@ export default function Rewards() {
             }} >
               Create
             </div>
-            <div className={style.cancelBtn}>
+            <div className={style.cancelBtn} >
               Edit
             </div>
           </div>
@@ -355,8 +359,8 @@ export default function Rewards() {
         onRequestClose={() => setModalComplete(false)}
         className={style.completeModal}
       >
-        <img onClick={() => setModalComplete(!modalComplete)} className={style.crossTwo} src={images.cross} />
         <div className={style.completeContainer}>
+        <img onClick={() => setModalComplete(!modalComplete)} className={style.crossTwo} src={images.cross} />
           <div className={style.completeHeading}>
             Congratulations!
           </div>

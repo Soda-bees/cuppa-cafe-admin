@@ -1,6 +1,7 @@
 .paginationContainer {
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 .subPaginationContianer {
   /* display: flex;
@@ -12,7 +13,6 @@
 .paginationNumbers {
   display: flex;
   justify-content: space-evenly;
-
   align-items: center;
   /* border: ; */
   /* margin: 10px; */
