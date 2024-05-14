@@ -23,54 +23,99 @@ export default function Dashboard() {
   const [totalCustomer, setTotalCustomer] = useState("2,486");
   const [totalProfit, setTotalProfit] = useState("$15,239.58");
   const [growth, setGrowth] = useState("$192.20");
-  const [orderDate, setOrderData] = useState("10/24 , 2024");
-  const [quantity, setQuantity] = useState("1");
-  const [coffeePrice, setCoffeePrice] = useState("$3.45");
+  // const [orderDate, setOrderData] = useState("10/24 , 2024");
+  // const [quantity, setQuantity] = useState("1");
+  // const [coffeePrice, setCoffeePrice] = useState("$3.45");
   const [totalAveragesRating, setTotalAveragesRating] = useState("4.8");
+  const [totalRatings, setTotalRatings] = useState("1000")
 
   const [card, setCard] = useState([
     {
       images: images.fullcappuccino,
-      name: "cappuccino",
+      name: "Cappuccino",
+      orderDate: "Oct 24 , 2024",
+      quantity:"1",
+      price:"$3.45"
     },
     {
       images: images.fullcappuccino,
-      name: "cappuccino",
+      name: "Cappuccino",
+      orderDate: "Oct 24 , 2024",
+      quantity:"1",
+      price:"$3.45"
     },
     {
       images: images.fullcappuccino,
-      name: "cappuccino",
+      name: "Cappuccino",
+      orderDate: "Oct 24 , 2024",
+      quantity:"1",
+      price:"$3.45"
     },
     {
       images: images.fullcappuccino,
-      name: "cappuccino",
+      name: "Cappuccino",
+      orderDate: "Oct 24 , 2024",
+      quantity:"1",
+      price:"$3.45"
     },
   ]);
 
   const [commitCard, setCommitCard] = useState([
     {
       image: images.profMarkPic,
+      name:"Mark",
+      date: "Yesterday",
+      rating: 4,
+      review: "The coffee was really good and milky",
     },
     {
       image: images.profMarkPic,
+      name:"Mark",
+      date: "Yesterday",
+      rating: 5,
+      review: "The coffee was really good and milky",
     },
     {
       image: images.profMarkPic,
+      name:"Mark",
+      date: "Yesterday",
+      rating: 4.5,
+      review: "The coffee was really good and milky",
     },
     {
       image: images.profMarkPic,
+      name:"Mark",
+      date: "Yesterday",
+      rating: 4,
+      review: "The coffee was really good and milky",
     },
     {
       image: images.profMarkPic,
+      name:"Mark",
+      date: "Yesterday",
+      rating: 5,
+      review: "The coffee was really good and milky",
     },
     {
       image: images.profMarkPic,
+      name:"Mark",
+      date: "Yesterday",
+      rating: 4.5,
+      review: "The coffee was really good and milky",
     },
   ]);
 
   const toggleDropDown = (index) => {
     setDropDown((prevIndex) => (prevIndex === index ? null : index));
   };
+
+  const updateOrderStatus = (index, orderStatus) => {
+    const updatedCard = [...card];
+    updatedCard[index].orderStatus = orderStatus;
+    setCard(updatedCard);
+  };
+  
+  
 
   const [reply, setReply] = useState(null);
   const togglereply = (index) => {
@@ -85,6 +130,14 @@ export default function Dashboard() {
     { name: "Fri", pv: 8800, amt: 2290 },
     { name: "Sat", pv: 4800, amt: 2290 },
     { name: "Sun", pv: 6800, amt: 2290 },
+  ];
+
+  const progressBarData = [
+    { star:5, completed: 64, maxCompleted: 100 },
+    { star:4, completed: 24, maxCompleted: 100 },
+    { star:3, completed: 10, maxCompleted: 100 },
+    { star:2, completed: 2, maxCompleted: 100 },
+    { star:1, completed: 0, maxCompleted: 100 }
   ];
 
   return (
@@ -275,14 +328,14 @@ export default function Dashboard() {
                   <div
                     className={`${style.listItemWrapper} md:text-lg text-xs  flex items-start  `}
                   >
-                    <div className={style.listItem}>{orderDate}</div>
-                    <div className={style.listItemTwo}>{quantity}</div>
-                    <div className={style.listItemThree}>{coffeePrice}</div>
+                    <div className={style.listItem}>{item.orderDate}</div>
+                    <div className={style.listItemTwo}>{item.quantity}</div>
+                    <div className={style.listItemThree}>{item.price}</div>
                     <div
                       onClick={() => toggleDropDown(index)}
                       className={style.listItemFour}
                     >
-                      pending
+                      {item.orderStatus ? item.orderStatus : "pending"}
                       <img
                         className={style.blackArrow}
                         src={
@@ -293,11 +346,35 @@ export default function Dashboard() {
                       />
                       {dropDown === index && (
                         <div className={style.dropDown}>
+                          <div className={style.dropDownOption}
+                          onClick={() => {
+                            updateOrderStatus(index, "Ready")
+                          }}>
+                            Ready
+                          </div>
+
+                          <div className={style.dropDownOption}
+                          onClick={() => {
+                            updateOrderStatus(index, "Picked")
+                          }}>
+                            Picked
+                          </div>
+
+                          <div className={style.dropDownOption}
+                          onClick={() => {
+                            updateOrderStatus(index, "Cancelled")
+                          }}>
+                            Cancelled
+                          </div>
+                        </div>
+                      )}
+                      {/* {dropDown === index && (
+                        <div className={style.dropDown}>
                           <div className={style.dropDownOption}>Ready</div>
                           <div className={style.dropDownOption}>Picked</div>
                           <div className={style.dropDownOption}>Cancelled</div>
                         </div>
-                      )}
+                      )} */}
                     </div>
                   </div>
                 </div>
@@ -324,18 +401,39 @@ export default function Dashboard() {
                     </div>
                     <div className={`${style.ratingStar} `}>
                       <StarRatings
-                        rating={3}
+                        rating={4.8}
                         starDimension="20px"
                         starSpacing="1px"
                         starRatedColor="#FCC767"
                       />
                     </div>
                     <div className={style.ratingTotalNumber}>
-                      All ratings (1000+)
+                      All ratings ({totalRatings})
                     </div>
                   </div>
                   <div className={style.ratingRight}>
-                    <div className={style.ProgressBarWrapper}>
+                    {progressBarData.map((progress, index) => (
+                      <div className={style.ProgressBarWrapper} key={index}>
+                      <div className={style.starNumbar}>{progress.star}</div>
+                      <div>
+                        <img className={style.starImg} src={images.star} />
+                      </div>
+                      <div className={style.ProgressBar}>
+                        <ProgressBar
+                          completed={progress.completed}
+                          maxCompleted={progress.maxCompleted}
+                          bgColor="#FCC767"
+                          height="3px"
+                          width="100%"
+                          isLabelVisible={false}
+                        />
+                      </div>
+                      <div className={style.totalAverage}>{Math.floor((progress.completed / progress.maxCompleted) * 100)}%</div>
+                    </div>
+                    ))
+
+                    }
+                    {/* <div className={style.ProgressBarWrapper}>
                       <div className={style.starNumbar}>5</div>
                       <div>
                         <img className={style.starImg} src={images.star} />
@@ -420,6 +518,7 @@ export default function Dashboard() {
                       </div>
                       <div className={style.totalAverage}>20%</div>
                     </div>
+                     */}
                   </div>
                 </div>
               </div>
@@ -435,22 +534,22 @@ export default function Dashboard() {
                       />
                       <div className={style.RatingInfo}>
                         <div className={`${style.customerName} text-sm`}>
-                          Mark
+                          {item.name}
                         </div>
                         <div
                           className={`${style.ratings} text-sm flex items-center gap-1`}
                         >
                           <StarRatings
-                            rating={4}
+                            rating={item.rating}
                             starDimension="12px"
                             starSpacing="0.5px"
                             starRatedColor="#FCC767"
                           />
                           <div className="">.</div>
-                          <div>Yesterday</div>
+                          <div>{item.date}</div>
                         </div>
                         <div className={`${style.commit} text-sm`}>
-                          The coffee was really good and milky
+                          {item.review}
                         </div>
                       </div>
                     </div>

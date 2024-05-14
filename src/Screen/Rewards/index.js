@@ -1,10 +1,9 @@
-import { React, useState } from 'react'
-import style from './style.module.css'
-import images from '../../asset'
+import { React, useState } from "react";
+import style from "./style.module.css";
+import images from "../../asset";
 import Modal from "react-modal";
 import Pagination from "../../Component/Pagination";
 import { useNavigate } from "react-router-dom";
-
 
 export default function Rewards() {
   const [search, setSearch] = useState("");
@@ -12,147 +11,486 @@ export default function Rewards() {
   const [rewardCard, setRewardCard] = useState([
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
     {
       images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+  ]);
+
+  const [allRewardCard, setAllRewardCard] = useState([
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
+    },
+    {
+      images: images.rewardCardImg,
+      title: "Buy 5 Get 1 Free",
+      description: "Order 5 Coffees & Get 1 Free",
     },
   ]);
 
@@ -160,11 +498,10 @@ export default function Rewards() {
 
   const navigate = useNavigate();
 
-  const [selectImg, setSelectImg] = useState(false)
-  const [selectImgTwo, setSelectImgTwo] = useState(false)
-  const [openNextModal, setOpenNextModal] = useState(false)
-  const [modalComplete, setModalComplete] = useState(false)
-
+  const [selectImg, setSelectImg] = useState(false);
+  const [selectImgTwo, setSelectImgTwo] = useState(false);
+  const [openNextModal, setOpenNextModal] = useState(false);
+  const [modalComplete, setModalComplete] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -181,7 +518,7 @@ export default function Rewards() {
   };
   return (
     <div className={style.container}>
-          <div className={`${style.menuTwo}`}>
+      <div className={`${style.menuTwo}`}>
         <div
           className={`${style.searchWrapper}  flex items-center justify-between`}
         >
@@ -211,9 +548,7 @@ export default function Rewards() {
       </div>
       <div className={style.menu}>
         <div className={style.btnWrapper}>
-          <div className={style.rewardHeading}>
-            Rewards Overview
-          </div>
+          <div className={style.rewardHeading}>Rewards Overview</div>
           <div
             onClick={() => setIsOfferModalVisible(!isOfferModalVisible)}
             className={style.btn}
@@ -222,23 +557,54 @@ export default function Rewards() {
           </div>
         </div>
         <div className={style.offerHeadingWrapper}>
-          <div onClick={() => setBtn(!btn)}>
-            <div className={btn ? style.word : style.greenBtn}>
-              Active
-            </div>
+          <div onClick={() => setBtn(false)}>
+            <div className={btn ? style.word : style.greenBtn}>Active</div>
           </div>
-          <div onClick={() => setBtn(!btn)}>
-            <div className={btn ? style.greenBtn : style.word}>
-              All
-            </div>
+          <div onClick={() => setBtn(true)}>
+            <div className={btn ? style.greenBtn : style.word}>All</div>
           </div>
         </div>
         <div className={style.row}>
+          {btn
+            ? allRewardCard.map((item, index) => (
+                <div
+                  key={index}
+                  className={style.rewardCard}
+                  onClick={() => navigate("/rewardsDetails")}
+                >
+                  <div className={style.rewardHeadingWrapper}>
+                    <div className={style.rewardCardHeading}>{item.title}</div>
+                    <div className={style.reawadPara}>{item.description}</div>
+                  </div>
+                  <div className={style.rewardImgWrapper}>
+                    <img className={style.rewardImg} src={item.images} />
+                  </div>
+                </div>
+              ))
+            : currentProducts.map((item, index) => (
+                <div
+                  key={index}
+                  className={style.rewardCard}
+                  onClick={() => navigate("/rewardsDetails")}
+                >
+                  <div className={style.rewardHeadingWrapper}>
+                    <div className={style.rewardCardHeading}>{item.title}</div>
+                    <div className={style.reawadPara}>{item.description}</div>
+                  </div>
+                  <div className={style.rewardImgWrapper}>
+                    <img className={style.rewardImg} src={item.images} />
+                  </div>
+                </div>
+              ))}
           {currentProducts.map((item, index) => (
-            <div key={index} className={style.rewardCard} onClick={() => navigate("/rewardsDetails")}>
+            <div
+              key={index}
+              className={style.rewardCard}
+              onClick={() => navigate("/rewardsDetails")}
+            >
               <div className={style.rewardHeadingWrapper}>
-                <div className={style.rewardCardHeading}>Buy 5 Get 1 Free</div>
-                <div className={style.reawadPara}>Order 5 Coffees & Get 1 Free</div>
+                <div className={style.rewardCardHeading}>{item.title}</div>
+                <div className={style.reawadPara}>{item.description}</div>
               </div>
               <div className={style.rewardImgWrapper}>
                 <img className={style.rewardImg} src={item.images} />
@@ -257,61 +623,75 @@ export default function Rewards() {
             <div>
               <img className={style.cross} src={images.cross} />
             </div>
-            <div className={style.modalHeading}>
-              Create A Reward
-            </div>
+            <div className={style.modalHeading}>Create A Reward</div>
             <div
               className={style.modalBtn}
               onClick={() => setOpenNextModal(!openNextModal)}
-            >Next
+            >
+              Next
             </div>
           </div>
           <div className={style.dropDownWrappper}>
             <div className={style.dropDownleft}>
               <div className={style.headingWrapper}>
-                <div className={style.dropDownHeading}>How many stamps to collect reward?</div>
+                <div className={style.dropDownHeading}>
+                  How many stamps to collect reward?
+                </div>
               </div>
 
               <div className={style.dropDownOpen}>
-                <div className={style.dropDownSelect} onClick={() => setSelectImg(!selectImg)} >
-                  <div className={style.dropDownPara}>Enter number of stamps</div>
-                  <div >
-                    <img className={style.dropDownIcon} src={selectImg ? images.arrowUp : images.downArrow} />
+                <div
+                  className={style.dropDownSelect}
+                  onClick={() => setSelectImg(!selectImg)}
+                >
+                  <div className={style.dropDownPara}>
+                    Enter number of stamps
+                  </div>
+                  <div>
+                    <img
+                      className={style.dropDownIcon}
+                      src={selectImg ? images.arrowUp : images.downArrow}
+                    />
                   </div>
                 </div>
-                {selectImg &&
+                {selectImg && (
                   <div className={style.dropDown}>
                     <div className={style.dropDownOption}>5</div>
                     <div className={style.dropDownOption}>10</div>
                     <div className={style.dropDownOption}>15</div>
                     <div className={style.dropDownOption}>20</div>
                   </div>
-                }
-
+                )}
               </div>
             </div>
             <div className={style.dropDownRight}>
               <div className={style.headingWrapper}>
-                <div className={style.dropDownHeading}>What reward would you like to offer?</div>
+                <div className={style.dropDownHeading}>
+                  What reward would you like to offer?
+                </div>
               </div>
               <div className={style.dropDownOpen}>
-                <div className={style.dropDownSelect} onClick={() => setSelectImgTwo(!selectImgTwo)} >
+                <div
+                  className={style.dropDownSelect}
+                  onClick={() => setSelectImgTwo(!selectImgTwo)}
+                >
                   <div className={style.dropDownPara}>Choose reward</div>
-                  <div >
-                    <img className={style.dropDownIcon} src={selectImgTwo ? images.arrowUp : images.downArrow} />
+                  <div>
+                    <img
+                      className={style.dropDownIcon}
+                      src={selectImgTwo ? images.arrowUp : images.downArrow}
+                    />
                   </div>
                 </div>
-                {selectImgTwo &&
+                {selectImgTwo && (
                   <div className={style.dropDown}>
                     <div className={style.dropDownOption}>Tea / Coffee</div>
                     <div className={style.dropDownOption}>Latte</div>
                     <div className={style.dropDownOption}>Donut / Muffin</div>
                     <div className={style.dropDownOption}>Bagel</div>
                   </div>
-                }
-
+                )}
               </div>
-
             </div>
           </div>
         </div>
@@ -323,30 +703,31 @@ export default function Rewards() {
       >
         <img className={style.crossTwo} src={images.cross} />
         <div className={style.ReiewContainer}>
-          <div className={style.reviewHeading}>
-            Review
-          </div>
+          <div className={style.reviewHeading}>Review</div>
           <div className={style.orderInfoWrapper}>
-            <div className={style.orderInfo} >
-              <div className={style.orderHeading}>Number of stamps to collect</div>
+            <div className={style.orderInfo}>
+              <div className={style.orderHeading}>
+                Number of stamps to collect
+              </div>
               <div className={style.orderQuantity}>20</div>
             </div>
             <div className={style.orderInfo}>
-              <div className={style.orderHeading} >Reward</div>
+              <div className={style.orderHeading}>Reward</div>
               <div className={style.orderQuantity}>1 Latte</div>
             </div>
           </div>
           <div className={style.logoutBtnWrapper}>
-            <div className={style.logoutBtn} onClick={() => {
-              setModalComplete(!modalComplete)
-              setOpenNextModal(!openNextModal)
-              setIsOfferModalVisible(!isOfferModalVisible)
-            }} >
+            <div
+              className={style.logoutBtn}
+              onClick={() => {
+                setModalComplete(!modalComplete);
+                setOpenNextModal(!openNextModal);
+                setIsOfferModalVisible(!isOfferModalVisible);
+              }}
+            >
               Create
             </div>
-            <div className={style.cancelBtn}>
-              Edit
-            </div>
+            <div className={style.cancelBtn}>Edit</div>
           </div>
         </div>
       </Modal>
@@ -355,16 +736,20 @@ export default function Rewards() {
         onRequestClose={() => setModalComplete(false)}
         className={style.completeModal}
       >
-        <img onClick={() => setModalComplete(!modalComplete)} className={style.crossTwo} src={images.cross} />
+        <img
+          onClick={() => setModalComplete(!modalComplete)}
+          className={style.crossTwo}
+          src={images.cross}
+        />
         <div className={style.completeContainer}>
-          <div className={style.completeHeading}>
-            Congratulations!
-          </div>
+          <div className={style.completeHeading}>Congratulations!</div>
           <div className={style.completeImgWrapper}>
             <img className={style.completeImg} src={images.completeImg} />
           </div>
           <div className={style.completeParaWrapper}>
-            <div className={style.completePara}>New Reward Created Successfully!</div>
+            <div className={style.completePara}>
+              New Reward Created Successfully!
+            </div>
           </div>
 
           <div className={style.completebtnWrapper}>
@@ -378,13 +763,11 @@ export default function Rewards() {
         </div>
       </Modal>
 
-
-
       <Pagination
         currentPage={currentPage}
         totalPages={Math.ceil(rewardCard.length / productsPerPage)}
         onPageChange={handlePageChange}
       />
     </div>
-  )
+  );
 }

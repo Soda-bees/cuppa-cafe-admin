@@ -32,7 +32,7 @@ export default function AdminLogIn() {
           </div>
           <div className={style.headingWrapper}>
             <div className={style.logoHeading}>
-              Welcome to the Admin Panel for{" "}
+              Welcome to the Admin Panel for{" "} 
               <span className={style.bold}>Cuppa!</span>
             </div>
           </div>

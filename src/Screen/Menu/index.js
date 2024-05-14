@@ -62,223 +62,369 @@ export default function Menu() {
 
   const [itemCard, setItemCard] = useState([
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.cappuccino,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
     {
-      images: images.coffeeImg,
+      images: images.cappuccinoNotrounded,
+      name:"Cappuccino",
+      price:"$3.45"
     },
   ]);
 
@@ -448,17 +594,18 @@ export default function Menu() {
           ))}
         </div> */}
         <div className=" pt-10  w-full flex flex-wrap gap-2 sm:gap-10 items-center justify-center ">
-          {currentProducts.map(() => (
+          {currentProducts.map((item, index) => (
             <div  onClick={() => navigate("/itemdetails")} className="flex flex-col border items-center  rounded-xl border-borderColor ">
               <img
-                src={images.cappuccinoNotrounded}
+              src={item.images}
+                // src={images.cappuccinoNotrounded}
                 className="rounded-2xl h-24 w-24 sm:h-32 sm:w-32 md:h-36 md:w-52 pt-2 px-2"
               />
               <div className="px-4 pb-3 pt-2 w-full">
-                <div className="font-semibold text-sm md:text-xl">Cappuccino</div>
+                <div className="font-semibold text-sm md:text-xl">{item.name}</div>
                 <div className="flex w-full justify-between items-center ">
                   <div className="font-semibold  text-xs md:text-xl text-textPrice">
-                    $3.45
+                    {item.price}
                   </div>
                   <img
                     src={images.blackDots}

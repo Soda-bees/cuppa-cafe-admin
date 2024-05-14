@@ -225,6 +225,10 @@
     color: #60B0AA;
     cursor: pointer;
     padding-left: 5px;
+    font-weight: 600;
+}
+.linebreak {
+    display: none;
 }
 
 @media screen and (max-width : 768px) {
@@ -272,7 +276,7 @@
     }
 
     .headingWrapper {
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
 
     .logoHeading {
@@ -357,6 +361,9 @@
 
     .arrowImg {
         width: 10px;
+    }
+    .linebreak {
+        display: block;
     }
 }
 
