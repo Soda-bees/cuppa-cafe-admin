@@ -227,16 +227,19 @@
 /* menu Modal */
 
 .modal {
-  width: 50%;
-  /* height: 70vh; */
-  position: absolute;
-  left: 25%;
-  top: 13%;
-  background-color: #fff;
+  height: 100vh;
+  background-color: #8c8c8c36;
   outline: none;
-  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.modalContainer{
+  width: 50%;
+  background-color: #fff;
+  padding-bottom: 30px;
+  border-radius: 10px;
+}
 .modalHeadingWrapper {
   display: flex;
   justify-content: space-between;
@@ -395,7 +398,7 @@
 }
 
 .cross {
-  width: 50px;
+  width: 40px;
   cursor: pointer;
 }
 

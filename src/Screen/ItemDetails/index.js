@@ -79,11 +79,11 @@ export default function ItemDetails() {
                     />
                 </div>
                 <div className={style.heading}>
-                    Item Details
+                    Item Detail
                 </div>
 
                 <div className={style.btn}>
-                    Edit Items
+                    Edit Item
                 </div>
             </div>
             <div className={style.itemDetailsWrapper}>

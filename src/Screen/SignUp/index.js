@@ -53,8 +53,8 @@ export default function SignUp() {
                     </div>
                     <div className={style.headingWrapper}>
                         <div className={style.logoHeading}>
-                            Welcome to the Admin Panel for
-                            <span className={style.bold}>Cuppa!</span>
+                            Welcome to the Admin Panel for 
+                            <span className={style.bold}> Cuppa!</span>
                         </div>
                     </div>
 

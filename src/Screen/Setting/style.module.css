@@ -204,7 +204,6 @@
     outline: none;
     width: 100%;
     padding: 10px;
-    padding-top: 0;
     resize: none;
 }
 
@@ -233,7 +232,7 @@
     z-index: 2;
 }
 
-.userInput {
+/* .userInput {
     margin-left: 20px;
     outline: none;
     border: none;
@@ -244,12 +243,12 @@
     z-index: 1;
     outline: none;
 
-}
+} */
 
 
 .custom_phone_input {
     width: 100%;
-    height: 35px;
+    height: 40px;
     padding: 10px;
 
 }
@@ -552,7 +551,7 @@
     /* margin: 0 10px; */
     font-weight: 500;
     padding: 10px;
-    padding-top: 0;
+    padding-top: 4px;
 }
 
 .downArrow {

@@ -3,6 +3,9 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-image: url(../../asset/bgSingIn.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 ::-webkit-scrollbar {
@@ -14,6 +17,7 @@
     display: flex;
     border: 1px solid #EBEBEB;
     border-radius: 10px;
+    background-color: #F6F6F6;
 }
 
 .boxLelt {
@@ -117,6 +121,7 @@
     align-items: center;
     justify-content: center;
     width: 50%;
+
 }
 
 .logInHeading {

@@ -402,7 +402,7 @@ export default function Offer() {
                 <div className={style.description}>
                   <div className={style.inputHeading}>Description</div>
                   <textarea
-                    rows="10"
+                    rows="3"
                     cols="20"
                     onChange={(e) => setOfferDescription(e.target.value)}
                     className={style.userInputTwo}
@@ -436,7 +436,7 @@ export default function Offer() {
                       onClick={() => seteventDropDown(!eventDropDown)}
                       className={style.registrationDropDown}
                     >
-                      <div className={style.registrationHeading}>
+                      <div className={style.registrationHeadingTwo}>
                         {registration}
                       </div>
                       <img

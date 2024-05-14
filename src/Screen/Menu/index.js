@@ -36,7 +36,7 @@ export default function Menu() {
   const [cardData, setCardData] = useState([
     {
       image: images.coffeeImg,
-      name: "Coffees",
+      name: "Coffee",
     },
     {
       image: images.cookiesImg,
@@ -380,7 +380,7 @@ export default function Menu() {
                         <div className="h-4 w-4">
                           <img src={images.editIcon} className="" />
                         </div>
-                        <div className="text-sm hidden  md:flex">Edit</div>
+                        <div className="text-sm hidden  md:flex" onClick={()=> setIsEditModalVisible(true)}>Edit</div>
                       </div>
                       <div className="w-full flex items-center  active:opacity-50 px-2 py-2 gap-2 ">
                         <div className="h-4 w-4 ">
@@ -426,7 +426,7 @@ export default function Menu() {
               className={`${style.plusIcon} w-3 md:w-4`}
               src={images.plusIcon}
             />
-            <div className="md:flex hidden">Add Items</div>
+            <div className="md:flex hidden">Add Item</div>
           </div>
         </div>
         {/* <div className={`${style.row} bg-green-500`}>
@@ -627,6 +627,8 @@ export default function Menu() {
           </div>
         </div>
       </Modal>
+      
+      
       <Pagination
         currentPage={currentPage}
         totalPages={Math.ceil(itemCard.length / productsPerPage)}

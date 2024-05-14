@@ -3,6 +3,7 @@
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #f6f6f6f6;
+
 }
 
 .menuTwo {
@@ -80,11 +81,11 @@
 }
 
 .Icon {
-  /* width: 40px; */
+  width: 35px;
 }
 
 .IconTwo {
-  /* width: 50px; */
+  width: 50px;
 }
 
 .orderHeading {
@@ -163,7 +164,7 @@
 .recentOrderWrapper {
   background-image: linear-gradient(to right, #287c76, #60b0aa);
   border-radius: 10px;
-  width: 99%;
+  width: 100%;
   margin-top: 10px;
 }
 
@@ -171,7 +172,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 20px;
 }
 
 .listWrapper {
@@ -181,7 +181,7 @@
 .HeadingList {
   display: flex;
   justify-content: space-between;
-  width: 46%;
+  width: 47%;
   margin: 20px;
 }
 
@@ -193,9 +193,10 @@
 
 .OrderWrapper {
   border-radius: 10px;
-  width: 99%;
+  width: 100%;
   /* margin-top: 10px; */
   border: 1px solid #ebebeb;
+  margin: 10px 0;
 }
 
 .itemName {
@@ -213,7 +214,6 @@
 .listItem {
   display: flex;
   justify-content: end;
-  margin-left: 10px;
   font-weight: 500;
 }
 
@@ -252,7 +252,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 47%;
+  width: 49%;
   /* margin: 20px; */
 }
 

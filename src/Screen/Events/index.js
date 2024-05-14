@@ -605,9 +605,10 @@ export default function Events() {
                 <div class={style.columnEqual}>:</div>
                 <input
                   value={startTimeMinutes}
-                  onChange={(e) =>
-                    handleInputChange(e.target.value, setStartTimeMinutes, 60)
-                  }
+                  onChange={(e) =>{
+                    const value = e.target.value.replace(/^0+/, ''); 
+                    handleInputChange(value, setStartTimeMinutes, 60)
+                  }}
                   type="number"
                   class={style.timeInput}
                   onFocus={() => handleFocus("startMinutes")}
@@ -660,9 +661,10 @@ export default function Events() {
 
                 <input
                   value={closingTimeMinutes}
-                  onChange={(e) =>
-                    handleInputChange(e.target.value, setClosingTimeMinutes, 60)
-                  }
+                  onChange={(e) =>{
+                    const value = e.target.value.replace(/^0+/, ''); 
+                    handleInputChange(value, setClosingTimeMinutes, 60 )
+                  }}
                   type="number"
                   class={style.timeInput}
                   onFocus={() => handleFocus("closingMinutes")}

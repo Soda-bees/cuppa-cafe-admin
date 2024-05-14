@@ -87,6 +87,8 @@ export default function Dashboard() {
     { name: "Sun", pv: 6800, amt: 2290 },
   ];
 
+  const [orderReady, setOrderReady] = useState("Padding")
+
   return (
     <div className={`${style.container} biggerlaptop:pl-[18%] pl-[20%]`}>
       <div className={style.menuTwo}>
@@ -127,7 +129,7 @@ export default function Dashboard() {
                 <div className={style.cardInfo}>
                   <div>
                     <img
-                      className={`${style.Icon}biggerlaptop:w-10 biggerlaptop:h-10 h-8 w-8`}
+                      className={style.Icon}
                       src={images.coffeeIcon}
                     />
                   </div>
@@ -143,7 +145,7 @@ export default function Dashboard() {
                 <div className={style.cardInfo}>
                   <div>
                     <img
-                      className={`${style.IconTwo} biggerlaptop:w-14 biggerlaptop:h-10 w-12 h-8`}
+                      className={style.IconTwo}
                       src={images.coffeeCrossIcon}
                     />
                   </div>
@@ -159,7 +161,7 @@ export default function Dashboard() {
                 <div className={style.cardInfo}>
                   <div>
                     <img
-                      className={`${style.Icon} biggerlaptop:w-10 biggerlaptop:h-10 h-8 w-8`}
+                      className={style.Icon}
                       src={images.menuGreenIcon}
                     />
                   </div>
@@ -176,7 +178,7 @@ export default function Dashboard() {
                 <div className={style.cardInfo}>
                   <div>
                     <img
-                      className={`${style.Icon} biggerlaptop:w-10 biggerlaptop:h-10 h-8 w-8`}
+                      className={style.Icon}
                       src={images.customerIcon}
                     />
                   </div>
@@ -251,7 +253,7 @@ export default function Dashboard() {
                 <div
                   className={`${style.HeadingList}  flex items-center gap-2`}
                 >
-                  <div className={style.itemHeading}>Date&Time</div>
+                  <div className={style.itemHeading}>Date & Time</div>
                   <div className={style.itemHeading}>Qty.</div>
                   <div className={style.itemHeading}>Price</div>
                   <div className={`${style.itemHeading} `}>Status</div>
@@ -282,7 +284,7 @@ export default function Dashboard() {
                       onClick={() => toggleDropDown(index)}
                       className={style.listItemFour}
                     >
-                      pending
+                      {orderReady}
                       <img
                         className={style.blackArrow}
                         src={
@@ -293,9 +295,10 @@ export default function Dashboard() {
                       />
                       {dropDown === index && (
                         <div className={style.dropDown}>
-                          <div className={style.dropDownOption}>Ready</div>
-                          <div className={style.dropDownOption}>Picked</div>
-                          <div className={style.dropDownOption}>Cancelled</div>
+                          <div className={style.dropDownOption} onClick={()=> setOrderReady("Pending")} >Pending</div>
+                          <div className={style.dropDownOption} onClick={()=> setOrderReady("Ready")} >Ready</div>
+                          <div className={style.dropDownOption} onClick={()=> setOrderReady("Picked")} >Picked</div>
+                          <div className={style.dropDownOption} onClick={()=> setOrderReady("Cancelled")} >Cancelled</div>
                         </div>
                       )}
                     </div>

@@ -76,12 +76,13 @@ export default function OfferDetails() {
                     <img className={style.backArrow} src={images.backArrow} />
                 </div>
                 <div className={style.heading}>
-                    Offer Details
+                    Offer Detail
                 </div>
                 <div className={style.btn}>
                     Edit Offer
                 </div>
             </div>
+            <div className={style.cardWrapper}>
             <div className={style.offerDetailsCard}>
                 <div className={style.offerCard}>
                     <div className={style.offerCardHeading}>
@@ -125,16 +126,15 @@ export default function OfferDetails() {
                         {/* <img className={style.uploadImgIcon} src={images.uploadImgIcon} />
                                             <input className={style.inputImg} id="img" type='file' accept="image/png,image/jpeg" /> */}
                     </label>
-                    <div className={style.uploadImgtext}>
+                    {/* <div className={style.uploadImgtext}>
                         <img className={style.uploadImg} src={images.uploadImg} />
                         Upload Images
-                    </div>
+                    </div> */}
                 </div>
                 <div class={style.textFieldWrapper}>
                     <div className={style.textfield}>
                         <div className={style.inputHeading}>Offer Title</div>
                         <input
-                            value='Offer Title'
                             onChange={(e) => setOfferTitle(e.target.value)}
                             className={style.editInput}
                             type="text"
@@ -157,8 +157,7 @@ export default function OfferDetails() {
                         <div className={style.description}>
                             <div className={style.inputHeading}>Description</div>
                             <textarea
-                                value='Description'
-                                rows="20"
+                                rows="2"
                                 cols="50"
                                 onChange={(e) => setOfferDescription(e.target.value)}
                                 className={style.userInput}
@@ -192,11 +191,11 @@ export default function OfferDetails() {
                                     onClick={() => seteventDropDown(!eventDropDown)}
                                     className={style.registrationDropDown}
                                 >
-                                    <div className={style.registrationHeading}>
+                                    <div className={style.registrationHeadingTwo}>
                                         {registration}
                                     </div>
                                     <img
-                                        className={style.dropDownIcon}
+                                        className={style.dropDownIcon} 
                                         src={images.downArrow}
                                     />
                                 </div>
@@ -229,6 +228,7 @@ export default function OfferDetails() {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     )
