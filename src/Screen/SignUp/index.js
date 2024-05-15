@@ -34,7 +34,7 @@ export default function SignUp() {
         <div className={style.container}>
             <div className={style.logInBox}>
                 <div className={style.boxLelt}>
-                    <div >
+                    <div className={style.backBtnWrapper}>
                         <div className={style.backWrapper}
                             onClick={() => navigate('/login')}>
                             <div className={style.backBTn}>
@@ -42,8 +42,6 @@ export default function SignUp() {
                             </div>
                         </div>
                         <div className={style.adminBtnWrapper}>
-                            {/* <div onClick={() => setIsSelected('admin')} className={isSelected === 'admin' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'admin' ? images.selectBtn : images.notSelectedBtn} />Admin Panel</div>
-                            <div onClick={() => setIsSelected('cafe')} className={isSelected === 'cafe' ? style.adminBtnGreen : style.adminBtnWhite}><img className={style.selectBtn} src={isSelected === 'cafe' ? images.selectBtn : images.notSelectedBtn} />Cafe  Owner</div> */}
                             <div className={style.adminBtnGreen}> Cafe  Owner</div>
                         </div>
                     </div>
@@ -53,11 +51,13 @@ export default function SignUp() {
                     </div>
                     <div className={style.headingWrapper}>
                         <div className={style.logoHeading}>
-                            Welcome to the Admin Panel for 
+                            Welcome to the Admin Panel for
                             <span className={style.bold}> Cuppa!</span>
                         </div>
                     </div>
-
+                    <div className={style.mobileLogoWrapper}>
+                        <img className={style.mobileLogo} src={images.mobileLogo} />
+                    </div>
                 </div>
                 <div className={style.boxRight}>
                     <div className={style.logInHeading}>Sign Up</div>
@@ -86,7 +86,7 @@ export default function SignUp() {
                             <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.countrySelect}>{countryName}
                                 <img className={style.downArrow} src={images.downArrow} /></div>} */}
                         <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.countrySelect} >{countryName}
-                            <img src={images.downArrow} />
+                            <img className={style.downArrow} src={selectedCountry ? images.arrowUp : images.downArrow} />
                         </div>
                         {selectedCountry && (
                             <div className={style.country}>

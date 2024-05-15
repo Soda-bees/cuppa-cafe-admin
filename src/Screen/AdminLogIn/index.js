@@ -23,6 +23,9 @@ export default function AdminLogIn() {
     <div className={style.container}>
       <div className={style.logInBox}>
         <div className={style.boxLelt}>
+          <div className={style.mobileLogoWrapper}>
+            <img className={style.mobileLogo} src={images.mobileLogo}/>
+          </div>
           <div className={style.adminBtnWrapper}>
             <div  className={ style.adminBtnGreen}>Cafe  Owner</div>
           </div>
@@ -38,7 +41,7 @@ export default function AdminLogIn() {
 
         </div>
         <div className={style.boxRight}>
-          <div className={style.logInHeading}>Log In</div>
+          <div className={style.logInHeading}>Admin Log In</div>
           <div className={style.logInPara}>
             Offering coffee shop owners a platform to enhance their sales with
             Cuppa.

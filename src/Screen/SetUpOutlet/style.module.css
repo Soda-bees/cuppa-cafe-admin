@@ -111,6 +111,10 @@
 
 }
 
+.mobileLogoWrapper {
+    display: none;
+}
+
 .boxRight {
     display: flex;
     flex-direction: column;
@@ -187,11 +191,9 @@
     background: none;
     width: 100%;
     padding: 10px;
-    /* font-size: 20px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 
@@ -407,4 +409,112 @@ input::-webkit-inner-spin-button {
 
 .dropDown {
     height: 2px;
+}
+
+
+@media screen and (max-width : 768px) {
+    .container {
+        height: auto;
+        align-items: start;
+        background: none;
+        background-color: #F6F6F6;
+        overflow: auto;
+    }
+
+    .logInBox {
+        width: 100%;
+        flex-direction: column;
+        border: none;
+    }
+
+
+    .boxLelt {
+        width: 100%;
+        height: 12vh;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: none;
+    }
+
+    .mobileLogoWrapper {
+        display: block;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .mobileLogo {
+        width: 30%;
+    }
+
+
+    .backBtnWrapper {
+        display: none;
+    }
+
+    .logoWrapper {
+        display: none;
+    }
+
+    .headingWrapper {
+        display: none;
+    }
+
+    .boxRight {
+        width: 100%;
+        height: 80vh;
+        justify-content: start;
+    }
+    .logInHeading {
+        margin-top: 5px;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .inputHaeding {
+       font-size: 12px;
+    }
+    .userInput {
+        font-size: 12px; 
+    }
+    .clock {
+        width: 15px;
+        object-fit: contain;
+    }
+    .country {
+        top: 60px;
+    }
+    
+    .countryName {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    
+    
+    .countrySelect {
+        font-size: 12px;
+    }
+    .downArrow{
+        width: 15px;
+    }
+    .btn {
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    .arrow {
+        width: 20px;
+        height: 20px;
+    
+    }
+    
+    .arrowImg {
+        width: 10px;
+    }
+    .uploadImage {
+        height: 130px;
+    }
+    .uploadImgtext {
+        font-size: 12px;
+    }
 }

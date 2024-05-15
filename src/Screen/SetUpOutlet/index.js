@@ -176,7 +176,7 @@ export default function SetUpOutlet() {
         <div className={style.container}>
             <div className={style.logInBox}>
                 <div className={style.boxLelt}>
-                    <div >
+                    <div  className={style.backBtnWrapper}>
                         <div className={style.backWrapper}
                             onClick={() => navigate('/signup')}>
                             <div className={style.backBtn}>
@@ -211,7 +211,9 @@ export default function SetUpOutlet() {
                             <span className={style.bold}>Cuppa!</span>
                         </div>
                     </div>
-
+                    <div className={style.mobileLogoWrapper}>
+                        <img className={style.mobileLogo} src={images.mobileLogo} />
+                    </div>
                 </div>
                 <div className={style.boxRight}>
                     <div className={style.logInHeading}>Set-Up Outlet</div>
@@ -250,7 +252,7 @@ export default function SetUpOutlet() {
                     <div className={style.textFeildTwo}>
                         <div className={style.inputHaeding}>Location</div>
                         <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.countrySelect} >{countryName}
-                            <img src={images.downArrow} />
+                            <img className={style.downArrow} src={ selectedCountry ? images.arrowUp : images.downArrow} />
                         </div>
                         {selectedCountry && (
                             <div className={style.country}>

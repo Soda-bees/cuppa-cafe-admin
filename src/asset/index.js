@@ -75,6 +75,7 @@ import mobLogo from './mobLogo.png'
 import fullcappuccino from './fullcappuccino.png'
 import profMarkPic from './profMarkPic.png'
 import cappuccinoNotrounded from './cappuccinoNotrounded.png'
+import mobileLogo from './mobileLogo.png'
 
 
 
@@ -157,6 +158,7 @@ const Images = {
     selectBtn,
     notSelectedBtn,
     mobLogo,
+    mobileLogo,
 }
 
 export default Images

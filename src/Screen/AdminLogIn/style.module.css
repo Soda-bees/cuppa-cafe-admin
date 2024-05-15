@@ -76,6 +76,10 @@
     color: #555555;
 }
 
+.mobileLogoWrapper {
+    display: none;
+}
+
 .boxRight {
     display: flex;
     flex-direction: column;
@@ -220,7 +224,10 @@
 @media screen and (max-width : 768px) {
     .container {
         align-items: start;
-        height: 0vh;
+        background: none;
+        height: auto;
+        overflow: auto;
+        background-color: #F6F6F6;
     }
 
     .logInBox {
@@ -231,47 +238,40 @@
 
     .boxLelt {
         width: 100%;
-        height: 70vh;
+        height: 12vh;
+        flex-direction: row;
         align-items: center;
+        justify-content: center;
+        background: none;
+    }
+
+    .mobileLogoWrapper {
+        display: block;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .mobileLogo {
+        width: 30%;
     }
 
     .adminBtnWrapper {
-        justify-content: center;
-        flex-direction: column;
-        margin: 10px;
-        width: 70%;
-    }
-
-    .selectBtn {
-        width: 15px;
-    }
-
-    .adminBtnWhite {
-        padding: 10px;
-        font-size: 12px;
-
-    }
-
-    .adminBtnGreen {
-        padding: 10px;
-        font-size: 12px;
+        display: none;
     }
 
     .logo {
-        width: 50%;
+        display: none;
     }
 
     .headingWrapper {
-        margin-bottom: 20px;
-    }
-
-    .logoHeading {
-        width: 80%;
-        font-size: 14px;
+        display: none;
     }
 
     .boxRight {
         width: 100%;
+        height: 80vh;
+        justify-content: start;
     }
 
     .logInHeading {
@@ -290,15 +290,14 @@
     }
 
     .otherAccount {
-        width: 80%;
-        flex-direction: column;
         gap: 10px;
         margin: 10px;
-        font-size: 12px;
+        font-size: 10px;
+        font-weight: 500;
     }
 
     .line {
-        width: 90%;
+        width: 35%;
     }
 
     .userInput {
@@ -374,11 +373,13 @@
         padding: 5px;
 
     }
+
     .selectBtn {
         width: 15px;
     }
+
     .logo {
-        width:65%
+        width: 65%
     }
 
     .logoHeading {
@@ -404,39 +405,44 @@
 
     .userInput {
         font-size: 16px;
-    
+
     }
+
     .btn {
         font-size: 15px;
         height: 50px;
         padding: 0 15px;
-    
+
     }
-    
+
     .arrow {
         width: 30px;
         height: 30px;
-    
+
     }
-    
+
     .arrowImg {
         width: 15px;
     }
+
     .forgotBtn {
         font-size: 16px;
         margin-top: 5px;
         cursor: pointer;
     }
+
     .otherAccount {
         width: 75%;
         font-size: 16px;
         margin: 10px 0;
     }
+
     .otherSignIn {
         font-size: 16px;
         margin-top: 10px;
         gap: 10px;
     }
+
     .line {
         width: 30%;
     }
@@ -444,6 +450,7 @@
     .googleLogo {
         width: 20px;
     }
+
     .lastPara {
         font-size: 16px;
         margin-top: 10px;
@@ -452,13 +459,13 @@
 
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1440px){
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
 
     .logo {
         width: 75%;
     }
 
-    .adminBtnWrapper{
+    .adminBtnWrapper {
         gap: 10px;
         margin: 0;
         margin-top: 65px;
@@ -468,58 +475,67 @@
     .logoHeading {
         font-size: 18px;
     }
+
     .adminBtnWhite {
         padding: 7px;
         border-radius: 10px;
         font-size: 18px;
     }
+
     .logInPara {
         margin-top: 10px;
         font-size: 18px;
     }
-    
+
     .inputHeading {
         font-size: 14px;
         margin-top: 5px;
-    
+
     }
+
     .textFeild {
         margin-top: 10px;
     }
+
     .btn {
         font-size: 18px;
         height: 55px;
         padding: 0 15px;
-    
+
     }
-    
+
     .arrow {
         width: 35px;
         height: 35px;
-    
+
     }
-    
+
     .arrowImg {
         width: 17px;
     }
-    .forgotBtn{
+
+    .forgotBtn {
         margin-top: 5px;
         font-size: 18px;
     }
+
     .otherAccount {
         font-size: 18px;
         margin: 15px 0;
     }
+
     .line {
         height: 1px;
         background-color: #000;
         width: 32%;
     }
+
     .otherSignIn {
         padding: 10px;
         font-size: 18px;
         margin-top: 10px;
     }
+
     .lastPara {
         font-size: 20px;
         margin-top: 20px;

@@ -28,6 +28,10 @@
     justify-content: space-between;
 }
 
+.mobileLogoWrapper {
+    display: none;
+}
+
 .adminBtnWrapper {
     display: flex;
     gap: 10px;
@@ -156,7 +160,6 @@
     border: none;
     background: none;
     width: 100%;
-    font-size: 17px;
     padding: 10px 0;
     padding-left: 10px;
 }
@@ -202,7 +205,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    padding: 10px;
     background-image: linear-gradient(to right, #287C76, #60B0AA);
     color: #fff;
     border-radius: 5px;
@@ -254,7 +257,6 @@
     background-color: #F3F3F3;
     border-radius: 2px;
     padding: 10px;
-    
 }
 
 .country {
@@ -290,7 +292,8 @@
     z-index: 3;
     position: relative;
 }
-.downArrow{
+
+.downArrow {
     width: 20px;
     margin-right: 10px;
 }
@@ -314,8 +317,10 @@
 
 @media screen and (max-width : 768px) {
     .container {
-        height: 0vh;
+        height: auto;
         align-items: start;
+        background: none;
+        background-color: #F6F6F6;
     }
 
     .logInBox {
@@ -324,65 +329,66 @@
         border: none;
     }
 
+
     .boxLelt {
         width: 100%;
-        height: 100vh;
+        height: 7vh;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: none;
     }
 
-    .backWrapper {
-        margin-top: 80px;
-        margin-left: 30px;
-        width: 90%;
-    }
-
-    .backBTn {
-
-        height: 25px;
-        width: 25px;
-    }
-
-    .backArrow {
-        height: 15px;
-
-    }
-
-    .backBtnWrapper {
+    .mobileLogoWrapper {
+        display: block;
         display: flex;
         justify-content: center;
+
     }
 
-    .adminBtnWrapper {
-        justify-content: center;
-        flex-direction: column;
-        margin: 20px;
-        width: 70%;
+    .mobileLogo {
+        width: 30%;
     }
 
-    .adminBtnWhite {
-        justify-content: center;
-        padding: 10px 0px;
+
+    .backBtnWrapper {
+        display: none;
     }
 
-    .adminBtnGreen {
-        justify-content: center;
-        padding: 10px 0px;
-        cursor: pointer;
-    }
-
-    .logo {
-        width: 300px;
+    .logoWrapper {
+        display: none;
     }
 
     .headingWrapper {
-        margin-bottom: 20px;
+        display: none;
     }
 
-    .logoHeading {
-        width: 80%;
-    }
 
     .boxRight {
         width: 100%;
+        height: 85vh;
+        justify-content: start;
+    }
+
+    .logInHeading {
+        margin-top: 10px;
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+
+    .adminWrapper {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .inputWrapper {
+        width: 70%;
+        gap: 10px;
+    }
+
+    .userInputTwo {
+        font-size: 12px;
     }
 
     .logInPara {
@@ -405,12 +411,23 @@
     }
 
     .userInput {
-        width: 95%;
-        margin-left: 5px;
+        font-size: 12px;
+    }
+
+    .terms {
+        font-size: 12px;
+
+    }
+
+    .termpara {
+        font-size: 12px;
+        font-weight: normal;
     }
 
     .inputHeading {
-        margin-left: 5px;
+        font-size: 12px;
+        margin-top: 0;
+        padding-top: 10px;
     }
 
     .otherSignIn {
@@ -427,6 +444,48 @@
 
     .lastPara {
         text-align: center;
+    }
+
+    .btn {
+        font-size: 12px;
+        height: 40px;
+    }
+
+    .arrow {
+        width: 20px;
+        height: 20px;
+
+    }
+
+    .arrowImg {
+        width: 10px;
+    }
+
+    .countrySelect {
+        font-size: 12px;
+    }
+
+    .downArrow {
+        width: 15px;
+    }
+
+    .country {
+        height: 180px;
+        top: 60px;
+    }
+
+    .custom_phone_input>input {
+        font-size: 12px;
+    }
+    .countryName {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .checkBox {
+        margin-top: 10px;
+    }
+    .btnWrapper {
+        margin-top: 10px;
     }
 }
 

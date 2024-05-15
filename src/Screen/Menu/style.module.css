@@ -56,6 +56,7 @@
 .headingWrappper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
@@ -243,6 +244,7 @@
 .modalHeadingWrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 30px;
 }
 
@@ -298,6 +300,7 @@
 .uploadImgtext {
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 20px;
   margin-top: 10px;
 }
@@ -337,7 +340,6 @@
   outline: none;
   background: none;
   border: none;
-  height: 50px;
   width: 100%;
   font-size: 24px;
 }
@@ -404,7 +406,7 @@
 
 .activeHeading {
   font-size: 22px;
-  font: 500;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -475,11 +477,11 @@
   }
 
   .modalHeading {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .modalBtn {
-    padding: 0px 10px;
+    padding: 5px;
   }
 
   .cross {
@@ -544,6 +546,7 @@
 
   .headingWrappper {
     margin-right: 10px;
+    width: 95%;
   }
 
   .categoryRow {
@@ -580,51 +583,93 @@
 
   /* modal Css  */
   .modal {
-    width: 85%;
-    /* height: 80vh; */
     left: 10%;
   }
-
+  .modalContainer{
+    width: 90%;
+  }
   .modalHeadingWrapper {
-    margin: 20px;
+    margin: 15px;
   }
 
   .modalHeading {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .modalBtn {
-    padding: 0px 10px;
+    padding: 5px;
+    font-size: 14px;
   }
 
   .cross {
-    width: 40px;
+    width: 23px;
   }
 
   .InputImg {
     width: 80%;
+    margin-top: 0;
   }
 
   .uploadImage {
     width: 100%;
-    height: 150px;
+    height: 100px;
   }
 
   .icon {
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
   }
 
   .seletedImg {
     width: 100%;
-    height: 150px;
+    height: 100px;
   }
 
   .addCategory {
-    width: 75%;
+    width: 80%;
   }
 
   .ovalBtnWrapper {
-    width: 75%;
+    width: 80%;
+    height: 50px;
+    margin-top: 10px;
+  }
+  .uploadImgtext {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  .uploadImg {
+    width: 15px;
+    margin-right: 5px;
+  }
+  .addCategoryHeading {
+    font-size: 12px;
+  }
+  .input {
+    width: 100%;
+    font-size: 12px;
+  }
+  .activeHeading {
+    font-size: 12px;
+  }
+  .ovalBtn {
+    width: 45px;
+    height: 25px;
+  }
+  
+  .notSelectedBtn {
+    width: 45px;
+    height: 25px;
+   
+  }
+  
+  .whiteBtn {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .notSelectedgreen {
+    width: 15px;
+    height: 15px;
   }
 }

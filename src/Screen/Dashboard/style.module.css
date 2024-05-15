@@ -1,8 +1,9 @@
 .container {
   /* padding-left: 18%; */
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 100px;
   background-color: #f6f6f6f6;
+  overflow: auto;
 
 }
 
@@ -182,7 +183,7 @@
   display: flex;
   justify-content: space-between;
   width: 47%;
-  margin: 20px;
+  margin: 20px 30px;
 }
 
 .itemHeading {
@@ -233,16 +234,17 @@
 }
 
 .listItemFour {
-  /* width: 90px; */
+  width: 100px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
   position: relative;
   font-weight: 500;
   cursor: pointer;
+  font-size: medium;
 }
-
+.status{
+  width: 65%;
+}
 .blackArrow {
   width: 10px;
   margin-left: 6px;
@@ -252,7 +254,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 49%;
+  width: 50%;
   /* margin: 20px; */
 }
 
@@ -414,7 +416,7 @@
   /* right: 30px; */
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .container {
     padding-left: 20%;
   }
@@ -491,7 +493,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .searchWrapper {
     justify-content: space-between;
     gap: 0;
@@ -555,7 +557,7 @@
     display: flex;
     justify-content: space-around;
     width: 60%;
-    margin: 20px;
+    margin: 20px ;
   }
 
   .listItemWrapper {

@@ -32,18 +32,22 @@ export default function Dashboard() {
     {
       images: images.fullcappuccino,
       name: "cappuccino",
+      status: "Pending"
     },
     {
       images: images.fullcappuccino,
       name: "cappuccino",
+      status: "Pending"
     },
     {
       images: images.fullcappuccino,
       name: "cappuccino",
+      status: "Pending"
     },
     {
       images: images.fullcappuccino,
       name: "cappuccino",
+      status: "Pending"
     },
   ]);
 
@@ -72,6 +76,15 @@ export default function Dashboard() {
     setDropDown((prevIndex) => (prevIndex === index ? null : index));
   };
 
+  const setOrderReady = (index, newStatus) => {
+    setCard(prevCard =>
+      prevCard.map((item, i) =>
+        i === index ? { ...item, status: newStatus } : item
+      )
+    );
+    setDropDown(null); // Close the dropdown after selecting an option
+  };
+
   const [reply, setReply] = useState(null);
   const togglereply = (index) => {
     setReply((prevIndex) => (prevIndex === index ? null : index));
@@ -87,7 +100,6 @@ export default function Dashboard() {
     { name: "Sun", pv: 6800, amt: 2290 },
   ];
 
-  const [orderReady, setOrderReady] = useState("Padding")
 
   return (
     <div className={`${style.container} biggerlaptop:pl-[18%] pl-[20%]`}>
@@ -281,10 +293,13 @@ export default function Dashboard() {
                     <div className={style.listItemTwo}>{quantity}</div>
                     <div className={style.listItemThree}>{coffeePrice}</div>
                     <div
-                      onClick={() => toggleDropDown(index)}
+                      onClick={() => setDropDown(dropDown === index ? null : index)}
                       className={style.listItemFour}
                     >
-                      {orderReady}
+                      <div className={style.status}>
+                        {item.status}
+                      </div>
+                      <div>
                       <img
                         className={style.blackArrow}
                         src={
@@ -293,12 +308,14 @@ export default function Dashboard() {
                             : images.blackArrowDown
                         }
                       />
+                      </div>
+                     
                       {dropDown === index && (
                         <div className={style.dropDown}>
-                          <div className={style.dropDownOption} onClick={()=> setOrderReady("Pending")} >Pending</div>
-                          <div className={style.dropDownOption} onClick={()=> setOrderReady("Ready")} >Ready</div>
-                          <div className={style.dropDownOption} onClick={()=> setOrderReady("Picked")} >Picked</div>
-                          <div className={style.dropDownOption} onClick={()=> setOrderReady("Cancelled")} >Cancelled</div>
+                          <div className={style.dropDownOption} onClick={() => setOrderReady(index, "Pending")} >Pending</div>
+                          <div className={style.dropDownOption} onClick={() => setOrderReady(index, "Ready")} >Ready</div>
+                          <div className={style.dropDownOption} onClick={() => setOrderReady(index, "Picked")} >Picked</div>
+                          <div className={style.dropDownOption} onClick={() => setOrderReady(index, "Cancelled")} >Cancelled</div>
                         </div>
                       )}
                     </div>
