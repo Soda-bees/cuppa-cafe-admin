@@ -24,10 +24,17 @@ export default function Menu() {
   const [search, setSearch] = useState("");
 
   const [selectedImage, setSelectedImage] = useState(null);
+  const [editselectedImage, setEditSelectedImage] = useState(null);
+
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     setSelectedImage(file);
+  };
+
+  const handleEditImageChange = (e) => {
+    const file = e.target.files[0];
+    setEditSelectedImage(file);
   };
 
   const [selectBtn, setSelectBtn] = useState(false);
@@ -647,11 +654,11 @@ export default function Menu() {
               <label for="img" className={style.uploadImage}>
                 <img
                   src={
-                    selectedImage
-                      ? URL.createObjectURL(selectedImage)
+                    editselectedImage
+                      ? URL.createObjectURL(editselectedImage)
                       : images.uploadImgIcon
                   }
-                  className={selectedImage ? style.seletedImg : style.icon}
+                  className={editselectedImage ? style.seletedImg : style.icon}
                   alt="Upload Image"
                 />
                 <input
@@ -659,7 +666,7 @@ export default function Menu() {
                   className={style.inputImg}
                   type="file"
                   accept="image/png,image/jpeg"
-                  onChange={handleImageChange}
+                  onChange={handleEditImageChange}
                 />
                 {/* <img className={style.uploadImgIcon} src={images.uploadImgIcon} />
                     <input className={style.inputImg} id="img" type='file' accept="image/png,image/jpeg" /> */}
@@ -735,14 +742,24 @@ export default function Menu() {
             <div className={style.InputImg}>
               <label for="img" className={style.uploadImage}>
                 <img
+                  src={
+                    selectedImage
+                      ? URL.createObjectURL(selectedImage)
+                      : images.uploadImgIcon
+                  }
+                  className={selectedImage ? style.seletedImg : style.icon}
+                  alt="Upload Image"
+                />
+                {/* <img
                   className={style.uploadImgIcon}
                   src={images.uploadImgIcon}
-                />
+                /> */}
                 <input
                   className={style.inputImg}
                   id="img"
                   type="file"
                   accept="image/png,image/jpeg"
+                  onChange={handleImageChange}
                 />
               </label>
               <div className={style.uploadImgtext}>
