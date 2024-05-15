@@ -9,6 +9,7 @@ export default function Menu() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const handleDropdownToggle = (index) => {
     setDropDown(dropDown === index ? null : index);
+    setIsEditModalVisible(dropDown === index)
   };
 
   const navigate = useNavigate();
@@ -526,7 +527,7 @@ export default function Menu() {
                         <div className="h-4 w-4">
                           <img src={images.editIcon} className="" />
                         </div>
-                        <div className="text-sm hidden  md:flex">Edit</div>
+                        <div className="text-sm hidden  md:flex" onClick={()=> setIsEditModalVisible(true)}>Edit</div>
                       </div>
                       <div className="w-full flex items-center  active:opacity-50 px-2 py-2 gap-2 ">
                         <div className="h-4 w-4 ">
@@ -635,7 +636,11 @@ export default function Menu() {
             </div>
             <div className={style.modalHeading}>Add Category</div>
 
-            <div className={style.modalBtn}>Save</div>
+            <div className={style.modalBtn} 
+            onClick={() => {
+              setIsModalVisible(false);
+            }}
+            >Save</div>
           </div>
           <div className={style.imageUploadWrapper}>
             <div className={style.InputImg}>

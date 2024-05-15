@@ -788,10 +788,12 @@ export default function Offer() {
       descriptionThree: "Terms and Conditions Apply",
     },
   ]);
+  
   const [dropDown, setDropDown] = useState(false);
   const handleDropdownToggle = (index) => {
     setDropDown(dropDown === index ? false : index);
   };
+
   const [isOfferModalVisible, setIsOfferModalVisible] = useState(false);
 
   const navigate = useNavigate();
@@ -850,6 +852,10 @@ export default function Offer() {
     indexOfLastProduct
   );
 
+  const pastProducts = pastOfferCard.slice(
+    indexOfFirstProduct,
+    indexOfLastProduct
+  )
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
@@ -907,7 +913,7 @@ export default function Offer() {
         </div>
         <div className={style.row}>
           {btn ? (
-             pastOfferCard.map((item, index) => (
+             pastProducts.map((item, index) => (
               <div
                 key={index}
                 className={style.itemCard}
@@ -959,56 +965,57 @@ export default function Offer() {
             ))
             )
             : (
-              currentProducts.map((item, index) => (
-                <div
-                  key={index}
-                  className={style.itemCard}
-                  onClick={() => navigate("/createoffer")}
-                  //  onClick={() => navigate('/createoffer', { state: { item } })}
-                >
-                  <img className={style.offerCardImg} src={item.images} />
-                  <div className={style.cardHeading}>
-                    <div className={style.itemName}>{item.title}</div>
-                    <div className={style.OfferCardDate}>{item.date}</div>
-                  </div>
-                  <div className={style.OfferInfo}>
-                    <ul>
-                      <li>{item.descriptionOne}</li>
-                      <li>{item.descriptionTwo}</li>
-                      <li>{item.descriptionThree}</li>
-                    </ul>
-                    <div
-                      onClick={() => handleDropdownToggle(index)}
-                      className={style.dotMenu}
-                    >
-                      {dropDown === index ? (
-                        <div className={style.dropdown}>
-                          <div className={style.edit}>
-                            <img
-                              className={style.editIcon}
-                              src={images.editIcon}
-                            />
-                            Edit
-                          </div>
-                          <div className={style.line}></div>
-                          <div className={style.remove}>
-                            <img
-                              className={style.removeIcon}
-                              src={images.removeIcon}
-                            />
-                            Remove
-                          </div>
-                        </div>
-                      ) : (
-                        <img
-                          className={style.blackDots}
-                          src={images.blackDots}
-                        />
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))
+                currentProducts.map((item, index) => (
+                 <div
+                   key={index}
+                   className={style.itemCard}
+                   onClick={() => navigate("/createoffer")}
+                   //  onClick={() => navigate('/createoffer', { state: { item } })}
+                 >
+                   <img className={style.offerCardImg} src={item.images} />
+                   <div className={style.cardHeading}>
+                     <div className={style.itemName}>{item.title}</div>
+                     <div className={style.OfferCardDate}>{item.date}</div>
+                   </div>
+                   <div className={style.OfferInfo}>
+                     <ul>
+                       <li>{item.descriptionOne}</li>
+                       <li>{item.descriptionTwo}</li>
+                       <li>{item.descriptionThree}</li>
+                     </ul>
+                     <div
+                       onClick={() => handleDropdownToggle(index)}
+                       className={style.dotMenu}
+                     >
+                       {dropDown === index ? (
+                         <div className={style.dropdown}>
+                           <div className={style.edit}>
+                             <img
+                               className={style.editIcon}
+                               src={images.editIcon}
+                             />
+                             Edit
+                           </div>
+                           <div className={style.line}></div>
+                           <div className={style.remove}>
+                             <img
+                               className={style.removeIcon}
+                               src={images.removeIcon}
+                             />
+                             Remove
+                           </div>
+                         </div>
+                       ) : (
+                         <img
+                           className={style.blackDots}
+                           src={images.blackDots}
+                         />
+                       )}
+                     </div>
+                   </div>
+                 </div>
+               )
+              )
             )}
          
         </div>

@@ -494,6 +494,20 @@ export default function Rewards() {
     },
   ]);
 
+  const [numberOfStamps, setNumberOfStamps] = useState([
+    { number: 1 },
+    { number: 2 },
+    { number: 3 },
+    { number: 4 },
+    { number: 5 },
+  ]);
+
+  const [chooseReward, setChooseReward] = useState([
+    { type: "Tea/Coffee" },
+    { type: "Latte" },
+    { type: "Donut/Muffin" },
+    { type: "Bagel" },
+  ]);
   const [isOfferModalVisible, setIsOfferModalVisible] = useState(false);
 
   const navigate = useNavigate();
@@ -502,9 +516,10 @@ export default function Rewards() {
   const [selectImgTwo, setSelectImgTwo] = useState(false);
   const [openNextModal, setOpenNextModal] = useState(false);
   const [modalComplete, setModalComplete] = useState(false);
+  const [selectedNumberOfStamps, setSelectedNumberOfStamps] = useState(null);
+  const [selectedRewardType, setSelectedRewardType] = useState(null);
 
   const [currentPage, setCurrentPage] = useState(1);
-
   const productsPerPage = 15;
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -516,6 +531,17 @@ export default function Rewards() {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+
+  const handleSelectNumberOfStamps = (number) => {
+    setSelectedNumberOfStamps(number);
+  };
+
+  const handleSelectRewardType = (type) => {
+    setSelectedRewardType(type);
+  };
+
+  
+
   return (
     <div className={style.container}>
       <div className={`${style.menuTwo}`}>
@@ -621,7 +647,11 @@ export default function Rewards() {
         <div className={style.modalContainer}>
           <div className={style.modalHeadingWrapper}>
             <div>
-              <img className={style.cross} src={images.cross} />
+              <img
+                className={style.cross}
+                src={images.cross}
+                onClick={() => setIsOfferModalVisible(false)}
+              />
             </div>
             <div className={style.modalHeading}>Create A Reward</div>
             <div
@@ -654,12 +684,22 @@ export default function Rewards() {
                     />
                   </div>
                 </div>
+
                 {selectImg && (
                   <div className={style.dropDown}>
-                    <div className={style.dropDownOption}>5</div>
+                    {numberOfStamps.map((item, index) => (
+                      <div
+                        key={index}
+                        className={style.dropDownOption}
+                        onClick={() => handleSelectNumberOfStamps(item.number)}
+                      >
+                        {item.number}
+                      </div>
+                    ))}
+                    {/* <div className={style.dropDownOption}>5</div>
                     <div className={style.dropDownOption}>10</div>
                     <div className={style.dropDownOption}>15</div>
-                    <div className={style.dropDownOption}>20</div>
+                    <div className={style.dropDownOption}>20</div> */}
                   </div>
                 )}
               </div>
@@ -685,10 +725,17 @@ export default function Rewards() {
                 </div>
                 {selectImgTwo && (
                   <div className={style.dropDown}>
-                    <div className={style.dropDownOption}>Tea / Coffee</div>
-                    <div className={style.dropDownOption}>Latte</div>
+                    {chooseReward.map((item, index) => (
+                      <div key={index} 
+                      className={style.dropDownOption}
+                      onClick={() => handleSelectRewardType(item.type)}
+                      >
+                        {item.type}
+                      </div>
+                    ))}
+                    {/* <div className={style.dropDownOption}>Latte</div>
                     <div className={style.dropDownOption}>Donut / Muffin</div>
-                    <div className={style.dropDownOption}>Bagel</div>
+                    <div className={style.dropDownOption}>Bagel</div> */}
                   </div>
                 )}
               </div>
@@ -701,7 +748,11 @@ export default function Rewards() {
         onRequestClose={() => setOpenNextModal(false)}
         className={style.reviewModal}
       >
-        <img className={style.crossTwo} src={images.cross} />
+        <img
+          className={style.crossTwo}
+          src={images.cross}
+          onClick={() => setOpenNextModal(false)}
+        />
         <div className={style.ReiewContainer}>
           <div className={style.reviewHeading}>Review</div>
           <div className={style.orderInfoWrapper}>
@@ -709,11 +760,11 @@ export default function Rewards() {
               <div className={style.orderHeading}>
                 Number of stamps to collect
               </div>
-              <div className={style.orderQuantity}>20</div>
+              <div className={style.orderQuantity}>{selectedNumberOfStamps}</div>
             </div>
             <div className={style.orderInfo}>
               <div className={style.orderHeading}>Reward</div>
-              <div className={style.orderQuantity}>1 Latte</div>
+              <div className={style.orderQuantity}>1 {selectedRewardType}</div>
             </div>
           </div>
           <div className={style.logoutBtnWrapper}>
@@ -727,7 +778,9 @@ export default function Rewards() {
             >
               Create
             </div>
-            <div className={style.cancelBtn}>Edit</div>
+            <div className={style.cancelBtn}
+            onClick={() => setOpenNextModal(false)}
+            >Edit</div>
           </div>
         </div>
       </Modal>
@@ -753,7 +806,10 @@ export default function Rewards() {
           </div>
 
           <div className={style.completebtnWrapper}>
-            <div className={style.completebtn}>
+            <div
+              className={style.completebtn}
+              onClick={() => setModalComplete(!modalComplete)}
+            >
               Rewards
               <div className={style.arrow}>
                 <img className={style.arrowImg} src={images.singInArrow} />
