@@ -142,7 +142,7 @@
 }
 
 .btn {
-    padding: 5px 20px;
+    padding: 5px ;
     background-image: linear-gradient(to right, #287C76, #60B0AA);
     border-radius: 10px;
     font-size: 22px;
@@ -193,7 +193,6 @@
 .contactWrapper {
     background-color: #fff;
     border-radius: 10px;
-    margin-bottom: 10px;
     width: 43%;
 }
 
@@ -203,7 +202,7 @@
     background: none;
     outline: none;
     width: 100%;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
     resize: none;
 }
 
@@ -249,7 +248,7 @@
 .custom_phone_input {
     width: 100%;
     height: 40px;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
 
 }
 
@@ -676,7 +675,6 @@
     }
 
     .btn {
-        padding: 0px 7px;
         font-size: 16px;
     }
 
@@ -852,11 +850,11 @@
 
     .contactWrapper {
         width: 90%;
+        margin-bottom: 10px;
     }
 
     .locationWrapper {
         width: 90%;
-        height: 50px;
     }
 
     .editprofile {
@@ -876,6 +874,9 @@
 
     .countryName {
         font-size: 14px;
+    }
+    .country {
+        top: 50px;
     }
 }
 
@@ -949,7 +950,7 @@
 
 
     .locationWrapper {
-        height: 55px;
+        height: 65px;
         
     }
 
@@ -962,8 +963,7 @@
     }
 
     .btn {
-        padding: 5px 10px;
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .notificationBtnWrapper {

@@ -292,7 +292,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     background-color: #ffffff1f;
     /* position: absolute;
     top: 40%;
@@ -306,12 +306,12 @@
 
 .ReiewContainer {
     width: 25%;
-    height: 30vh;
     background-color: #FFF;
     border-radius: 10px;
     position: relative;
     border: 1px solid #0000003d;
- 
+    padding-bottom: 10px;
+
 }
 
 .reviewHeading {
@@ -401,11 +401,11 @@
     align-items: center;
     gap: 5px;
     width: 15%;
-    height: 35vh;
     background-color: #FFF;
     border-radius: 10px;
     position: relative;
     border: 1px solid #0000003d;
+    padding-bottom: 10px;
 }
 
 .completebtnWrapper {
@@ -627,21 +627,17 @@
 
     /* modal Css  */
 
-    .modalReward {
-        top: 30%;
-        left: 25%;
+    .modalContainer {
         width: 60%;
-        height: 43vh;
-
+        height: 40vh;
     }
 
     .cross {
-        width: 30px;
+        width: 25px;
     }
 
     .modalHeading {
         font-size: 22px;
-        font-weight: 500;
     }
 
     .dropDownIcon {
@@ -659,7 +655,7 @@
     }
 
     .dropDownPara {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .dropDownHeading {
@@ -673,16 +669,13 @@
 
     .dropDownOption {
         margin: 10px 5px;
-        font-size: 18px;
+        font-size: 16px;
     }
 
     /* reviewModal */
-    .reviewModal {
-        left: 35%;
+    .ReiewContainer {
         width: 40%;
-        height: 35vh;
     }
-
 
     .reviewHeading {
         font-size: 18px;
@@ -718,11 +711,9 @@
     }
 
     /* completeModal  */
-    .completeModal {
-        width: 22%;
-        height: 40vh;
+    .completeContainer {
+        width: 25%;
     }
-
 
     .completeHeading {
         font-size: 18px;
@@ -837,29 +828,26 @@
     }
 
     /* modal Css  */
-
-    .modalReward {
-        top: 15%;
-        left: 20%;
+    .modalContainer {
         width: 70%;
-        height: 80vh;
-
+        height: 50vh;
     }
 
     .dropDownWrappper {
-        flex-direction: column;
-        align-items: center;
         gap: 10px;
 
     }
 
-    .dropDownleft {
-        width: 95%;
-
+    .dropDownPara {
+        font-size: 14px;
     }
 
-    .dropDownRight {
-        width: 95%;
+    .dropDownOption {
+        font-size: 14px;
+    }
+
+    .dropDownIcon {
+        width: 15px;
     }
 
     .cross {
@@ -875,11 +863,9 @@
     }
 
     /* reviewModal  */
-    .reviewModal {
-        top: 40%;
-        left: 27%;
-        width: 55%;
-        height: 35vh;
+    .ReiewContainer {
+        width: 40%;
+
     }
 
 
@@ -913,11 +899,8 @@
 
     /* completeModal */
 
-    .completeModal {
-        width: 35%;
-        height: 35vh;
-        top: 30%;
-        left: 35%;
+    .completeContainer {
+        width: 25%;
     }
 
     .completeHeading {
@@ -1022,11 +1005,13 @@
 
     /* modal Css  */
 
-    .modalReward {
-        top: 15%;
-        left: 20%;
+
+    .modalContainer {
         width: 70%;
-        height: 70vh;
+        height: 68vh;
+        background-color: #FFF;
+        border-radius: 10px;
+        padding: 20px;
 
     }
 
@@ -1070,18 +1055,24 @@
     .modalBtn {
         font-size: 12px;
     }
+
     .dropDownIcon {
         width: 15px;
         object-fit: contain;
     }
-    /* reviewModal  */
-    .reviewModal {
-        top: 30%;
-        left: 26%;
-        width: 60%;
-        height: 28vh;
-    }
 
+    /* reviewModal  */
+
+    .ReiewContainer {
+        width: 70%;
+        /* height: 30vh; */
+        background-color: #FFF;
+        border-radius: 10px;
+        position: relative;
+        border: 1px solid #0000003d;
+
+
+    }
 
     .reviewHeading {
         font-size: 14px;
@@ -1095,10 +1086,11 @@
     .orderHeading {
         font-size: 12px;
     }
+
     .orderQuantity {
         font-size: 12px;
     }
-   
+
 
     .logoutBtnWrapper {
         gap: 10px;
@@ -1116,11 +1108,21 @@
 
     /* completeModal */
 
-    .completeModal {
-        width: 43%;
+    /* .completeModal 
         height: 30vh;
         top: 35%;
         left: 35%;
+    } */
+    .completeContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        width: 35%;
+        background-color: #FFF;
+        border-radius: 10px;
+        position: relative;
+        border: 1px solid #0000003d;
     }
 
     .completeHeading {

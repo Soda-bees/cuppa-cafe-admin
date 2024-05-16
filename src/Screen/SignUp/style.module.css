@@ -149,8 +149,7 @@
     border: none;
     background: none;
     width: 100%;
-    padding: 10px;
-    padding-left: 10px;
+    padding: 0 10px 10px 10px ;
     z-index: 1;
 }
 
@@ -160,8 +159,7 @@
     border: none;
     background: none;
     width: 100%;
-    padding: 10px 0;
-    padding-left: 10px;
+    padding: 0 10px 10px 10px;
 }
 
 .countrySelect {
@@ -171,7 +169,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
     /* padding-top: 4px; */
     font-weight: 500;
 }
@@ -212,7 +210,6 @@
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
-    height: 70px;
 }
 
 .arrow {
@@ -471,9 +468,12 @@
 
     .country {
         height: 180px;
-        top: 60px;
+        top: 50px;
     }
-
+    .custom_phone_input {
+        margin-left: 10px;
+    
+    }
     .custom_phone_input>input {
         font-size: 12px;
     }
@@ -490,13 +490,10 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    .container {
-        align-items: start;
-        height: 0;
-    }
+    
 
     .logInBox {
-        width: 100%;
+        width: 90%;
     }
 
     .adminBtnWrapper {
@@ -563,6 +560,18 @@
 
     .inputWrapper {
         width: 100%;
+    }
+    .btn {
+      font-size: 16px;
+    }
+    .arrow {
+
+        width: 30px;
+        height: 30px;
+    }
+    
+    .arrowImg {
+        width: 15px;
     }
 
 }

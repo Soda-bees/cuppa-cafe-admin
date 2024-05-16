@@ -60,7 +60,7 @@
 .btn {
     padding: 10px;
     background-image: linear-gradient(to right, #287C76, #60B0AA);
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -368,7 +368,7 @@
     justify-content: center;
     color: #fff;
     font-weight: 400;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -671,6 +671,7 @@
     }
 
     /* modal CSS */
+   
     .modalContainer {
         background-color: #fff;
         width: 90%;
@@ -906,10 +907,13 @@
 
     /* modal Css */
     .modalOffer {
-        width: 80%;
-        height: 100vh;
+        width: 100%;
     }
-
+    .modalContainer {
+        background-color: #fff;
+        width: 70%;
+        border-radius: 10px;
+    }
     .modalHeadingWrapper {
         margin: 15px;
     }
@@ -924,7 +928,7 @@
     }
 
     .cross {
-        width: 40px;
+        width: 30px;
     }
 
     .addOffer {
@@ -963,6 +967,7 @@
 
     .modalOfferCard {
         margin: 10px 0;
+        width: 60%;
     }
 
     .datePicker {

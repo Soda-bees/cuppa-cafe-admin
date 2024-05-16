@@ -44,12 +44,14 @@
     color: #fff;
     margin-right: 30px;
 }
-.cardWrapper{
+
+.cardWrapper {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .offerDetailsCard {
     width: 50%;
     border: 2px solid #00000010;
@@ -144,7 +146,6 @@
 .description {
     background-color: #F3F3F3;
     border-radius: 10px;
-    padding-top: 1px;
     margin-bottom: 10px;
 }
 
@@ -247,6 +248,10 @@
     cursor: pointer;
 }
 
+.icon {
+    width: 50px;
+}
+
 .uploadImgtext {
     display: flex;
     align-items: center;
@@ -274,16 +279,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:  10px;
+    align-items: center;
+    padding: 10px;
 }
 
-.dropDownIcon{
+.dropDownIcon {
     width: 20px;
 }
+
 .registrationHeading {
     font-size: 18px;
     padding: 10px;
 }
+
 .registrationHeadingTwo {
     font-size: 18px;
 }
@@ -325,9 +333,14 @@
 
 
 @media screen and (max-width: 768px) {
-    .headingWrapper {
-        margin: 30px 15px;
+    .container {
+        height: 100vh;
     }
+    
+    .headingWrapper {
+        margin: 15px 0px;
+    }
+
     .heading {
         font-size: 20px;
     }
@@ -335,37 +348,43 @@
     .backBtn {
         height: 25px;
         width: 25px;
+        margin-left: 10px;
+
     }
 
     .backArrow {
-        height: 15px;
+        height: 12px;
     }
 
     .btn {
-        padding: 3px 10px;
-        font-size: 15px;
+        padding: 5px;
+        font-size: 12px;
+        margin-right: 10px;
     }
 
 
     .offerDetailsCard {
         width: 95%;
+        gap: 10px;
     }
 
     .offerCard {
-        width: 60%;
+        width: 90%;
         height: 60px;
     }
 
     .inputHeading {
-        margin-bottom: 0px;
+        font-size: 12px;
+        padding-top: 10px;
+        margin-top: 0;
     }
 
     .editInput {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .datePicker {
-        font-size: 16px;
+        font-size: 12px;
 
     }
 
@@ -379,8 +398,7 @@
     }
 
     .userInput {
-        height: 40px;
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .registrationDropDown {
@@ -393,33 +411,104 @@
     }
 
     .offersIcon {
-        width: 30px;
+        width: 20px;
         margin-right: 10px;
     }
+
     .offerCardHeading {
-        font-size: 18px;
+        font-size: 12px;
     }
+
     .ovalBtn {
         width: 45px;
         height: 25px;
     }
-    
+
     .notSelectedBtn {
         width: 45px;
         height: 25px;
-       
-    
+
+
     }
-    
+
     .whiteBtn {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
     }
-    
+
     .notSelectedgreen {
-        width: 20px;
-        height: 20px;
-        
+        width: 15px;
+        height: 15px;
+
+    }
+
+    .InputImg {
+        margin-top: 0px;
+        width: 90%;
+    }
+
+    .uploadImage {
+        width: 100%;
+        height: 100px;
+    }
+
+    .textFieldWrapper {
+        width: 90%;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .textfield {
+        background-color: #F3F3F3;
+        width: 100%;
+    }
+
+    .calenderImg {
+        width: 15px;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .offerInfoWrapper {
+        width: 90%;
+        gap: 10px;
+    }
+
+    .promo {
+        height: 55px;
+    }
+
+    .registrationHeading {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .registrationHeadingTwo {
+        font-size: 12px;
+    }
+
+    .dropDownTwo {
+        top: 30px;
+    }
+
+    .dropDownIcon {
+        width: 10px;
+    }
+
+    .textInput {
+        font-size: 12px;
+        padding: 3px;
+    }
+
+    .discount {
+        height: 100px;
+        overflow-y: scroll;
+        gap: 5px;
+    }
+    .icon {
+        width: 30px;
     }
 }
 
@@ -427,6 +516,7 @@
     .headingWrapper {
         margin: 30px 25px;
     }
+
     .heading {
         font-size: 25px;
     }
@@ -447,34 +537,37 @@
 
     .offerDetailsCard {
         width: 80%;
+
     }
 
     .offerCard {
         width: 50%;
         height: 50px;
     }
+
     .inputHeading {
         margin-bottom: 0px;
     }
+
     .ovalBtn {
         width: 55px;
         height: 30px;
-       
+
     }
-    
+
     .notSelectedBtn {
         width: 55px;
         height: 30px;
     }
-    
+
     .whiteBtn {
         width: 23px;
         height: 23px;
     }
-    
+
     .notSelectedgreen {
         width: 23px;
         height: 23px;
     }
-    
+
 }

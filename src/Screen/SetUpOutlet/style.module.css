@@ -169,7 +169,6 @@
 }
 
 .icon {
-    height: 50px;
     width: 50px;
 }
 
@@ -190,7 +189,7 @@
     border: none;
     background: none;
     width: 100%;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -277,7 +276,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 0px 10px 10px 10px;
     font-weight: 500;
 }
 
@@ -320,16 +319,19 @@
     margin-top: 5px;
 }
 
+.timeTextWrapper{
+    display: flex;
+    justify-content: center;
+}
 .timeTextRow {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin: 0px 100px;
+    justify-content: space-between;
     margin-bottom: 10px;
-    width: 45%;
+    width: 50%;
     color: #8C8C8C;
+    margin-right: 20px;
 }
-
 .datePicker {
     width: 98%;
     background: none;
@@ -482,7 +484,7 @@ input::-webkit-inner-spin-button {
         object-fit: contain;
     }
     .country {
-        top: 60px;
+        top: 50px;
     }
     
     .countryName {
@@ -517,4 +519,39 @@ input::-webkit-inner-spin-button {
     .uploadImgtext {
         font-size: 12px;
     }
+    .icon {
+        width: 30px;
+    }
+    /* modalTime */
+    .modalTime {
+        width: 60%;
+        left: 20%;
+        top: 35%;
+    }
+
+    .timeInput {
+        height: 30px;
+        width: 50px;
+        font-size: 12px;
+    }
+
+    
+    .clickable {
+        font-size: 12px;
+
+    }
+
+    .clickableTwo {
+        font-size: 12px;
+
+    }
+    .inputTitle {
+       font-size: 12px;
+       width: 50%;
+    }
+    .timeTextRow {
+       font-size: 12px;
+       margin-right: 30px;
+    }
 }
+

@@ -1,5 +1,3 @@
-
-
 .headingWrapper {
     display: flex;
     justify-content: space-between;
@@ -27,7 +25,7 @@
 }
 
 .btn {
-    padding: 10px ;
+    padding: 10px;
     background-image: linear-gradient(to right, #287C76, #60B0AA);
     border-radius: 10px;
     display: flex;
@@ -134,15 +132,14 @@
 
 .dropDownIcon {
     width: 20px;
-    margin-right: 10px;
-
 }
 
 .registrationHeading {
     font-size: 18px;
     font-weight: 400;
-    padding: 5px;
+    padding: 10px;
 }
+
 .registrationHeadingTwo {
     font-size: 18px;
     font-weight: 400;
@@ -212,11 +209,15 @@
     margin-top: 5px;
 }
 
+.timeTextWrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .timeTextRow {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 0px 100px;
     margin-bottom: 10px;
     width: 45%;
     color: #8C8C8C;
@@ -373,6 +374,7 @@ input::-webkit-inner-spin-button {
         outline: none;
         padding: 20px 0;
     }
+
     .timeTextRow {
         width: 45%;
     }
@@ -388,52 +390,63 @@ input::-webkit-inner-spin-button {
         align-items: center;
         gap: 10px;
     }
+
     .headingWrapper {
         margin: 30px;
     }
-    
+
     .heading {
         font-size: 25px;
         font-weight: 600
     }
-    
+
     .backBtn {
         height: 30px;
         width: 30px;
     }
-    
+
     .backArrow {
         height: 15px;
     }
+
     .btn {
         font-size: 14px;
     }
+
     .EvnetDetailImg {
         width: 300px;
     }
+
     .tag {
         font-size: 14px;
     }
+
     .eventDeatailRight {
         width: 80%;
         margin-top: 15px;
     }
+
     .inputHeading {
         font-size: 14px;
         margin-top: 5px;
     }
+
     .textField {
         margin-bottom: 0px;
     }
+
     .userIput {
         font-size: 14px;
     }
+
     .registrationDropDown {
         margin-top: 0;
     }
+
     .datePicker {
         font-size: 16px;
     }
+
     .textField2 {
         background-color: #F3F3F3;
         width: 50%;
@@ -442,9 +455,11 @@ input::-webkit-inner-spin-button {
         position: relative;
         height: 57px;
     }
+
     .registrationHeading {
         font-size: 16px;
     }
+
     .textField3 {
         background-color: #F3F3F3;
         width: 50%;
@@ -487,7 +502,7 @@ input::-webkit-inner-spin-button {
     }
 
     .EvnetDetailImg {
-        width: 250px;
+        width: 40%;
     }
 
     .eventDeatailRight {
@@ -522,23 +537,20 @@ input::-webkit-inner-spin-button {
         border-radius: 5px;
         margin-bottom: 0px;
         position: relative;
-        padding-bottom: 5px;
     }
 
     .textField2 {
         width: 90%;
         margin-bottom: 0px;
         padding-bottom: 5px;
-        height: 50px;
-        z-index: 1;
+        height: 60px;
     }
 
     .textField3 {
         width: 90%;
         margin-bottom: 0px;
         padding-bottom: 5px;
-        height: 50px;
-        z-index: 2;
+        height: 60px;
     }
 
     .userIput {
@@ -560,18 +572,60 @@ input::-webkit-inner-spin-button {
 
     .registrationHeading {
         font-size: 12px;
+        padding: 5px 10px;
     }
 
+    .registrationHeadingTwo {
+        font-size: 12px;
+    }
 
     .dropDownIcon {
-        width: 10px;
-    }
-
-    .registrationDropDown {
-        margin-top: 0;
+        width: 15px;
     }
 
     .dropDown {
         top: 30px;
     }
+
+    .eventDeatailLeft {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* modalTime */
+    /* modalTime */
+    .modalTime {
+        width: 60%;
+        left: 20%;
+        top: 30%;
+    }
+
+    .timeInput {
+        height: 30px;
+        width: 50px;
+        font-size: 12px;
+    }
+
+
+    .clickable {
+        font-size: 12px;
+
+    }
+
+    .clickableTwo {
+        font-size: 12px;
+
+    }
+
+    .inputTitle {
+        font-size: 12px;
+        width: 50%;
+    }
+
+    .timeTextRow {
+        font-size: 12px;
+        margin-right: 30px;
+    }
+
 }

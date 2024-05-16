@@ -74,7 +74,7 @@
 .btn {
   /* padding: 10px; */
   background-image: linear-gradient(to right, #287c76, #60b0aa);
-  border-radius: 10px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -465,13 +465,19 @@
     margin: 10px 6px;
   }
 
+  .activeHeading {
+    font-size: 20px;
+  }
+  .input {
+    font-size: 20px;
+  }
   /* modal Css  */
   .modal {
-    width: 65%;
-    /* height: 80vh; */
-    left: 15%;
+    width: 100%;
   }
-
+  .modalContainer{
+    width: 70%;
+  }
   .modalHeadingWrapper {
     margin: 20px;
   }

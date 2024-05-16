@@ -50,7 +50,7 @@
 .btn {
     padding: 10px;
     background-image: linear-gradient(to right, #287C76, #60B0AA);
-    border-radius: 10px;
+    border-radius: 5px;
     color: #fff;
     font-size: 18px;
     cursor: pointer;
@@ -62,7 +62,7 @@
 .cardBtn {
     padding: 5px;
     background-image: linear-gradient(to right, #287C76, #60B0AA);
-    border-radius: 10px;
+    border-radius: 5px;
     color: #fff;
     cursor: pointer;
 }
@@ -145,7 +145,7 @@
 .modalBtn {
     padding: 10px;
     background-image: linear-gradient(to right, #287C76, #60B0AA);
-    border-radius: 10px;
+    border-radius: 7px;
     font-size: 18px;
     color: #fff;
     cursor: pointer;
@@ -221,8 +221,6 @@
     background-color: #F3F3F3;
     width: 50%;
     border-radius: 10px;
-    margin-bottom: 10px;
-    padding-bottom: 8px;
     height: 70px;
 }
 
@@ -276,7 +274,7 @@
     justify-content: center;
     color: #fff;
     font-weight: 500;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     padding: 10px;
 
@@ -405,15 +403,18 @@
     justify-content: center;
     margin-top: 5px;
 }
-
+.timeTextWrapper{
+    display: flex;
+    justify-content: center;
+}
 .timeTextRow {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin: 0px 100px;
+    justify-content: space-between;
     margin-bottom: 10px;
-    width: 45%;
+    width: 50%;
     color: #8C8C8C;
+    margin-right: 20px;
 }
 
 
@@ -508,10 +509,6 @@ input::-webkit-inner-spin-button {
         width: 32%;
     }
 
-    .offerCardImg {
-        margin: 5px;
-    }
-
     .btn {
         padding: 7px;
         font-size: 18px;
@@ -540,25 +537,23 @@ input::-webkit-inner-spin-button {
     /* Modal */
 
     .modalEvent {
-        width: 75%;
-        position: absolute;
-        left: 15%;
-        top: 13%;
-        background-color: #fff;
-        outline: none;
+        width: 100%;
     }
-
+    .modalContainer{
+        width: 70%;
+        padding-bottom: 10px;
+    }
     .modalHeadingWrapper {
-        margin: 10px;
+        margin: 15px;
     }
 
     .modalHeading {
-        font-size: 22px;
+        font-size: 24px;
         font-weight: 600
     }
 
     .cross {
-        width: 30px;
+        width: 35px;
     }
 
     .uploadImage {
@@ -576,7 +571,7 @@ input::-webkit-inner-spin-button {
     }
 
     .userIput {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .timefield {
@@ -588,13 +583,12 @@ input::-webkit-inner-spin-button {
     }
 
     .eventInputHeading {
-        padding-bottom: 0px;
-
+        width: 50%;
     }
 
     .eventInfoWrapper {
         gap: 10px;
-        margin-bottom: 0px;
+        margin-bottom: 5px;
     }
 
     .inputHeading {
@@ -616,12 +610,12 @@ input::-webkit-inner-spin-button {
     }
 
     .eventInputHeading2 {
-        height: 55px;
+        height: 60px;
 
     }
 
     .eventInputHeading4 {
-        height: 55px;
+        height: 65px;
     }
 
     .registrationHeading {
@@ -720,9 +714,6 @@ input::-webkit-inner-spin-button {
         font-size: 14px;
     }
 
-    .offerCardImg {
-        margin: 5px;
-    }
 
     .cross {
         width: 30px;
@@ -732,33 +723,35 @@ input::-webkit-inner-spin-button {
     /* Modal */
 
     .modalEvent {
-        width: 75%;
-        left: 15%;
-        top: 13%;
-        background-color: #fff;
-        outline: none;
+        width: 100%;
+       
     }
-
+    .modalContainer{
+        width: 60%;
+        padding-bottom: 10px;
+    }
     .modalHeadingWrapper {
         margin: 10px;
     }
 
     .modalHeading {
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 600
     }
 
     .cross {
-        width: 30px;
+        width: 25px;
     }
-
+    .modalBtn {
+        font-size: 14px;
+    }
     .uploadImage {
         width: 100%;
         height: 120px;
     }
 
     .uploadImgtext {
-        font-size: 14px;
+        font-size: 12px;
         margin-top: 10px;
     }
 
@@ -779,13 +772,15 @@ input::-webkit-inner-spin-button {
     }
 
     .eventInputHeading {
-        padding-bottom: 0px;
+       width: 75%;
 
     }
 
     .eventInfoWrapper {
-        gap: 10px;
-        margin-bottom: 0px;
+        gap: 5px;
+        margin-bottom: 5px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .inputHeading {
@@ -818,11 +813,15 @@ input::-webkit-inner-spin-button {
 
     .registrationHeading {
         font-size: 14px;
+        padding: 5px 10px;
 
+    }
+    .registrationHeadingTwo {
+        font-size: 14px;
     }
 
     .dropDown {
-        width: 49%;
+        width: 75%;
     }
 
     .calenderImg {
@@ -831,6 +830,29 @@ input::-webkit-inner-spin-button {
 
     .dropDownIcon {
         width: 15px;
+    }
+    .eventInputHeading4 {
+        width: 75%;
+        height: 55px;
+    }
+    
+    .eventInputHeading3 {
+        width: 75%;
+    }
+    
+    .eventInputHeading2 {
+        width: 75%;
+        height: 55px;
+    
+    }
+    .modalTime {
+        width: 50%;
+        left: 25%;
+        top: 30%;
+    }
+    .timeTextRow {
+        width: 45%;
+        margin-right: 40px;
     }
 }
 
@@ -849,6 +871,7 @@ input::-webkit-inner-spin-button {
 @media screen and (max-width: 480px) {
     .container {
         padding-left: 20%;
+        
     }
 
 
@@ -889,12 +912,12 @@ input::-webkit-inner-spin-button {
 
     .word {
         font-size: 10px;
-        padding: 5px 9px;
+        padding: 5px ;
     }
 
     .greenBtn {
         font-size: 10px;
-        padding: 5px 9px;
+        padding: 5px ;
 
     }
 
@@ -909,9 +932,6 @@ input::-webkit-inner-spin-button {
         padding: 5px;
     }
 
-    .offerCardImg {
-        margin: 5px;
-    }
 
     .eventName {
         font-size: 12px;
@@ -928,11 +948,12 @@ input::-webkit-inner-spin-button {
 
     /* Modal */
     .modalEvent {
-        width: 75%;
-        left: 15%;
-        top: 5%;
+        width: 100%;
     }
-
+    .modalContainer{
+        width: 90%;
+        padding-bottom: 10px;
+    }
     .modalHeadingWrapper {
         margin: 10px;
     }
@@ -946,14 +967,22 @@ input::-webkit-inner-spin-button {
 
     }
 
+    .modalBtn {
+        padding: 5px;
+        font-size: 12px;
+    }
+    .InputImg {
+        width: 90%;
+        margin-top: 0px;
+    }
     .uploadImage {
         width: 100%;
         height: 100px
     }
 
     .uploadImgtext {
-        font-size: 14px;
-        margin-top: 10px;
+        font-size: 12px;
+        margin-top: 5px;
     }
 
     .uploadImg {
@@ -974,13 +1003,11 @@ input::-webkit-inner-spin-button {
         background-color: #F3F3F3;
         width: 100%;
         margin-bottom: 0;
-        padding-bottom: 5px;
     }
 
     .eventInputHeading3 {
         width: 100%;
         margin-bottom: 0;
-        padding-bottom: 5px;
     }
 
     .eventInputHeading4 {
@@ -999,9 +1026,7 @@ input::-webkit-inner-spin-button {
     }
 
     .inputHeading {
-        margin-top: 5px;
-        margin-left: 5px;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .userIput {
@@ -1009,32 +1034,28 @@ input::-webkit-inner-spin-button {
     }
 
     .clockImg {
-        width: 20px;
-        height: 20px;
-        margin-right: 10px;
+        width: 15px;
+        height: 15px;
     }
 
     .registrationHeading {
-        width: 100%;
         font-size: 12px;
-        padding-left: 5px;
+        padding: 5px 10px;
     }
-
+    .registrationHeadingTwo{
+        font-size: 12px;
+    }
     .dropDownIcon {
-        width: 15px;
-        margin-right: 15px;
+        width: 10px;
     }
 
     .datePicker {
-        padding-left: 5px;
         font-size: 12px;
 
     }
 
     .calenderImg {
-        padding-right: 3px;
-        width: 24px;
-        margin-right: 5px;
+        width: 15px;
 
     }
 
@@ -1045,19 +1066,12 @@ input::-webkit-inner-spin-button {
         margin: 0;
     }
 
-    .clockImg {
-        width: 20px;
-        height: 20px;
-        margin-right: 10px;
-    }
-
     .icon {
         width: 30px;
     }
 
     .timefield {
         font-size: 12px;
-        margin-left: 5px;
     }
 
     .dropDown {
@@ -1072,29 +1086,33 @@ input::-webkit-inner-spin-button {
 
     /* modalTime */
     .modalTime {
-        width: 50%;
-        left: 25%;
-        top: 25%;
+        width: 60%;
+        left: 20%;
+        top: 35%;
     }
 
     .timeInput {
         height: 30px;
         width: 50px;
-        font-size: 14px;
+        font-size: 12px;
     }
 
+    
     .clickable {
-        font-size: 14px;
+        font-size: 12px;
 
     }
 
     .clickableTwo {
-        font-size: 14px;
+        font-size: 12px;
 
     }
-
+    .inputTitle {
+       font-size: 12px;
+       width: 50%;
+    }
     .timeTextRow {
-        margin: 0px 67px;
-        width: 50%;
+       font-size: 12px;
+       margin-right: 30px;
     }
 }

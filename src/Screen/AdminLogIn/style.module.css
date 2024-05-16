@@ -39,7 +39,7 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
-    padding: 10px 60px;
+    padding: 10px ;
     border-radius: 10px;
     font-weight: 500;
     cursor: pointer;
@@ -106,7 +106,6 @@
     width: 70%;
     background-color: #F3F3F3;
     border-radius: 10px;
-    padding: 5px;
 }
 
 .inputHeading {
@@ -121,9 +120,7 @@
     background: none;
     width: 100%;
     font-size: 20px;
-    border-radius: 10px;
-    padding-left: 10px;
-
+   padding: 0 10px 10px 10px;
 }
 
 .btnWrapper {
@@ -143,6 +140,7 @@
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
+
     width: 100%;
     height: 60px;
     padding: 0 20px;
@@ -347,6 +345,9 @@
     .arrowImg {
         width: 10px;
     }
+    .textFeild {
+        margin-top: 10px;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -359,7 +360,7 @@
         display: flex;
         gap: 10px;
         margin: 0px 30px;
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
     .adminBtnWhite {
@@ -468,7 +469,7 @@
     .adminBtnWrapper {
         gap: 10px;
         margin: 0;
-        margin-top: 65px;
+        margin-top: 35px;
         margin-left: 30px;
     }
 
