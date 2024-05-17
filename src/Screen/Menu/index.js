@@ -352,7 +352,7 @@ export default function Menu() {
           {cardData.map((Item, index) => (
             <div key={index} className={`${style.categoriesCard}  `}>
               <img className={`${style.categoriesCardImg} `} src={Item.image} />
-              <div className={`${style.cardCover} `}>
+              <div className={`${style.cardCover}`}>
                 <div
                   onClick={() => handleDropdownToggle(index)}
                   className={`${style.dotMenu} w-20 md:w-full`}

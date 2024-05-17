@@ -124,18 +124,18 @@
     border: none;
     background: none;
     font-size: 24px;
-    width: 98%;
-    padding-left: 10px;
+    width: 100%;
+    padding: 0 10px 10px 10px;
 }
 
 .textInputTwo {
     outline: none;
     border: none;
     font-size: 24px;
-    width: 98%;
+    width: 100%;
     background: none;
     resize: none;
-    padding-left: 10px;
+    padding: 0 10px 10px 10px;
 }
 
 
@@ -150,8 +150,8 @@
     align-items: center;
     justify-content: center;
     background-color: #F3F3F3;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 100%;
     margin-bottom: 10px;
     cursor: pointer;
@@ -160,7 +160,7 @@
 .row {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 10px;
 }
 
 
@@ -169,7 +169,7 @@
     justify-content: space-between;
     width: 72%;
     margin-top: 30px;
-    margin-right: 100px;
+    margin-right: 80px;
 }
 
 
@@ -184,11 +184,11 @@
     border: none;
     background-color: #fff;
     border: 1px solid #00000041;
-    padding: 10px 0;
-    padding-left: 10px;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 10px;
+    width:30%;
+    padding: 5px;
 }
 
 .btnWrapper {
@@ -287,12 +287,11 @@
     border: none;
     background-color: #fff;
     border: 1px solid #00000041;
-    padding: 10px 0;
-    padding-left: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 18px;
     width: 45%;
+    padding: 5px;
 }
 
 .btnWrapperTwo {
@@ -476,8 +475,9 @@
         display: flex;
         justify-content: space-between;
         width: 60%;
-        margin-left: 70px;
-        margin-top: 15px;
+        /* margin-left: 70px; */
+        margin-top: 5px;
+        margin-right: 0;
     }
 
     .infoheading {
@@ -499,7 +499,7 @@
     }
 
     .uploadImg {
-        width: 20px;
+        width: 15px;
     }
 
     .uploadImgtext {
@@ -532,19 +532,21 @@
     }
 
     .textInputThree {
-        width: 100px;
+        width: 25%;
         padding: 5px 0;
         padding-left: 5px;
         font-size: 12px;
+        margin-bottom: 5px;
     }
 
     .circle {
         width: 25px;
         height: 25px;
+        margin-bottom: 5px;
     }
 
     .btnTwo {
-        padding: 10px;
+        padding: 5px;
         font-size: 12px;
         margin-top: 0px;
         margin-left: 25px;
@@ -573,7 +575,7 @@
         width: 20px;
     }
 
-    .input{
+    .input {
         font-size: 12px;
     }
 
@@ -588,8 +590,9 @@
     .headingWrapperThree {
         display: flex;
         justify-content: space-between;
-        width: 62%;
+        width: 70%;
         margin-top: 10px;
+        margin-left: 10px;
     }
 
     .infoheading {
@@ -660,12 +663,22 @@
         padding: 0px;
         height: 80px;
     }
+
+    .infoheadingTwo {
+        font-size: 12px;
+    }
+
+    .filterName {
+        font-size: 12px;
+
+    }
+
 }
 
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .headingWrapper {
-        margin: 30px 20px;
+        margin: 20px;
     }
 
     .heading {
@@ -673,16 +686,16 @@
     }
 
     .backBtn {
-        height: 35px;
-        width: 35px;
+        height: 30px;
+        width: 30px;
     }
 
     .backArrow {
-        height: 25px;
+        height: 20px;
     }
 
     .btn {
-        padding: 10px;
+        padding: 5px;
         font-size: 16px;
     }
 
@@ -703,16 +716,16 @@
     }
 
     .icon {
-        height: 40px;
-        width: 40px;
+        height: 35px;
+        width: 35px;
     }
 
     .uploadImgtext {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .uploadImg {
-        width: 20px;
+        width: 15px;
     }
 
     .InputImg {
@@ -730,7 +743,6 @@
 
     .textInput {
         font-size: 16px;
-        width: 98%;
     }
 
     .textInputTwo {
@@ -765,18 +777,18 @@
     }
 
     .btnTwo {
-        padding: 10px;
-        ;
-        font-size: 16px;
+        padding: 5px;
+        font-size: 14px;
         margin-top: 10px;
+        gap: 5px;
     }
 
     .plusIcon {
-        width: 12px;
+        width: 10px;
     }
 
     .specHeading {
-        font-size: 16px;
+        font-size: 14px;
         padding: 10px;
     }
 
@@ -790,9 +802,6 @@
         font-size: 16px;
     }
 
-    .filterName {
-        color: #8C8C8C
-    }
 
     .filterOption {
         font-size: 16px;
@@ -823,9 +832,12 @@
     }
 
     .btnThree {
-        font-size: 16px;
+        font-size: 14px;
         margin-top: 0;
+        padding: 5px;
+        gap: 5px;
     }
+
 
     .required {
         margin: 5px 0;
@@ -881,7 +893,8 @@
         height: 80px;
         justify-content: space-evenly;
     }
-    .input{
+
+    .input {
         font-size: 14px;
     }
 }
@@ -970,8 +983,9 @@
     }
 
     .headingWrapperTwo {
-        width: 80%;
-        margin-top: 15px;
+        width: 70%;
+        margin-top: 30px;
+        margin-right: 20px;
     }
 
     .circle {
@@ -981,7 +995,7 @@
 
     .btnTwo {
         padding: 7px;
-        font-size: 18px;
+        font-size: 16px;
         margin-top: 10px;
     }
 
@@ -1020,7 +1034,7 @@
 
     .btnThree {
         padding: 7px;
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .addItemRight {
@@ -1072,10 +1086,13 @@
     }
 
     .actionHeading {
-        font-size: 18px;
-    }
-    
-    .input{
         font-size: 16px;
+    }
+
+    .input {
+        font-size: 16px;
+    }
+    .plusIcon {
+        width: 12px;
     }
 }

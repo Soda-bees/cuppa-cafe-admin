@@ -254,7 +254,7 @@
 
 
 .dropDownPara {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -459,30 +459,15 @@
 
 .completePara {
     font-weight: 500;
+    text-align: center;
 }
 
 
 
 
-/* @media screen and (min-width: 1345px) and (max-width: 1645px) {
-    .rewardCardHeading {
-        font-size: 25px;
-    }
 
-    .reawadPara {
-        font-size: 16px;
-    }
 
-    .rewardImg {
-        width: 70px;
-    }
-
-    .btn {
-        font-size: 20px;
-    }
-}
-
-@media screen and (min-width: 1025px) and (max-width: 1344px) {
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
     .container {
         padding-left: 19%;
         overflow: auto;
@@ -523,38 +508,35 @@
         font-size: 18px;
     }
 
-    modal Css
-
-    .modalReward {
-        top: 30%;
-        left: 27%;
-        width: 60%;
-        height: 44vh;
+    /* modal Css */
+    .modalContainer {
+        width: 50%;
+        height: 45vh;
+        background-color: #FFF;
+        border-radius: 10px;
+        padding: 20px;
+    
     }
 
-    .dropDownPara {
-        font-size: 18px;
-        font-weight: 500;
+    /* reviewModal */
+    .ReiewContainer {
+        width: 40%;
+        background-color: #FFF;
+        border-radius: 10px;
+        position: relative;
+        border: 1px solid #0000003d;
+        padding-bottom: 10px;
+    
     }
+    
+  
 
-    reviewModal
-
-    .reviewModal {
-        height: 29vh;
-        top: 40%;
-        left: 35%;
-        width: 44%;
-    }
-
-    completeModal
-    .completeModal {
-        top: 35%;
-        left: 44%;
+    /* completeModal */
+    .completeContainer {
         width: 20%;
-        height: 32vh;
-
+      
     }
-} */
+} 
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .container {

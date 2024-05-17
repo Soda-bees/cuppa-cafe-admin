@@ -643,7 +643,6 @@
         align-items: center;
     }
 
-    .offerCardImg {}
 
     .greenBtn {
         font-size: 12px;
@@ -898,8 +897,9 @@
         align-items: center;
     }
 
-    .offerCardImg {}
-
+    .OfferInfo ul li {
+        font-size: 14px;
+    }
     .btn {
         font-size: 20px;
         font-weight: 500;

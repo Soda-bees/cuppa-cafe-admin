@@ -242,9 +242,11 @@
   cursor: pointer;
   font-size: medium;
 }
-.status{
+
+.status {
   width: 65%;
 }
+
 .blackArrow {
   width: 10px;
   margin-left: 6px;
@@ -507,9 +509,9 @@
     width: 120%;
   }
 
-  .noticationWrapper {
-    /* width: 25%; */
-  }
+  /* .noticationWrapper {
+    width: 25%;
+  } */
 
   .noticationText {
     display: none;
@@ -556,12 +558,12 @@
   .HeadingList {
     display: flex;
     justify-content: space-around;
-    width: 60%;
-    margin: 20px ;
+    width: 70%;
+    margin:10px;
   }
 
   .listItemWrapper {
-    width: 60%;
+    width: 70%;
     margin: 0px;
     /* align-items: center; */
   }
@@ -570,9 +572,9 @@
     width: 50px;
   }
 
-  .itemName {
-    /* font-size: 16px; */
-  }
+  /* .itemName {
+    font-size: 16px;
+  } */
 
   .itemImg {
     display: none;
@@ -598,4 +600,32 @@
   /* .quantity {
         font-size: 22px;
     } */
+
+    .listItemFour {
+      width: 60px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: medium;
+    }
+    
+    .status {
+      width: 65%;
+      font-size: 12px;
+    }
+    .listItemThree {
+      width: 45px;
+  }
+  .listItemTwo {
+    width: 20px;
+  }
+  .dropDownOption {
+    font-size: 12px;
+  }
+  .dropDown {
+    top: 16px;
+  }
+
 }

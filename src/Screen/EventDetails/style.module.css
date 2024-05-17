@@ -324,13 +324,13 @@ input::-webkit-inner-spin-button {
     .textField2 {
         margin-bottom: 0px;
         padding-bottom: 0px;
-        height: 55px;
+        height: 70px;
     }
 
     .textField3 {
         margin-bottom: 0px;
         padding-bottom: 0px;
-        height: 55px;
+        height: 70px;
     }
 
     .inputHeading {
@@ -357,6 +357,9 @@ input::-webkit-inner-spin-button {
     }
 
     .userIput {
+        font-size: 16px;
+    }
+    .registrationHeadingTwo {
         font-size: 16px;
     }
 
@@ -453,7 +456,7 @@ input::-webkit-inner-spin-button {
         border-radius: 5px;
         margin-bottom: 0;
         position: relative;
-        height: 57px;
+        height: 70px;
     }
 
     .registrationHeading {
@@ -466,8 +469,10 @@ input::-webkit-inner-spin-button {
         border-radius: 5px;
         margin-bottom: 0px;
         position: relative;
-        padding-bottom: 8px;
-        height: 57px;
+        height: 70px;
+    }
+    .registrationHeadingTwo{
+        font-size: 16px;
     }
 }
 
@@ -592,8 +597,6 @@ input::-webkit-inner-spin-button {
         justify-content: center;
         align-items: center;
     }
-
-    /* modalTime */
     /* modalTime */
     .modalTime {
         width: 60%;

@@ -69,7 +69,7 @@ export default function RewardDetail() {
               Reward
             </div>
             <div className={style.orderDetailWrapper} >
-              <div><input className={style.orderInput} onChange={(e)=> setOrderQuantuty(e.target.value)} placeholder='No. of Orders' /></div>
+              <input className={style.orderInput} onChange={(e)=> setOrderQuantuty(e.target.value)} placeholder='No. of Orders' />
               <div className={style.dropdownWrapper} onClick={()=> setDropDown(!dropDown)}>
                 <div className={style.dropdown} >
                   {dropDownOption}
