@@ -212,28 +212,30 @@
 
 .listItem {
   display: flex;
-  justify-content: end;
+  /* justify-content: end; */
   margin-left: 10px;
   font-weight: 500;
+  width: 80px;
+  justify-content: center;
 }
 
 .listItemTwo {
   display: flex;
-  justify-content: end;
-  width: 50px;
+  width: 70px;
   font-weight: 500;
+  justify-content: center;
 }
 
 .listItemThree {
   display: flex;
-  justify-content: end;
-  width: 70px;
+  width: 50px;
   color: #60b0aa;
   font-weight: 500;
+justify-content: center;
 }
 
 .listItemFour {
-  /* width: 90px; */
+  width: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;

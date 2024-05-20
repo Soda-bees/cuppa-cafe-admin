@@ -230,6 +230,9 @@
 .linebreak {
     display: none;
 }
+.errorMessage {
+    color: red;
+}
 
 @media screen and (max-width : 768px) {
     .container {
@@ -365,6 +368,10 @@
     .linebreak {
         display: block;
     }
+    .errorMessage {
+        color: red;
+       
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -466,6 +473,9 @@
         margin-top: 10px;
         margin-bottom: 20px;
     }
+    .errorMessage {
+        color: red;
+    }
 
 }
 
@@ -541,5 +551,8 @@
         font-size: 20px;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+    .errorMessage {
+        color: red;
     }
 }

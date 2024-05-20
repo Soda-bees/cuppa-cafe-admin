@@ -790,6 +790,7 @@ export default function Offer() {
   ]);
   
   const [dropDown, setDropDown] = useState(false);
+ 
   const handleDropdownToggle = (index) => {
     setDropDown(dropDown === index ? false : index);
   };
@@ -926,10 +927,10 @@ export default function Offer() {
                   <div className={style.OfferCardDate}>{item.date}</div>
                 </div>
                 <div className={style.OfferInfo}>
-                  <ul>
-                    <li>{item.descriptionOne}</li>
-                    <li>{item.descriptionTwo}</li>
-                    <li>{item.descriptionThree}</li>
+                  <ul className={style.ul}>
+                    <li className={style.bulletPoint}>{item.descriptionOne}</li>
+                    <li className={style.bulletPoint}>{item.descriptionTwo}</li>
+                    <li className={style.bulletPoint}>{item.descriptionThree}</li>
                   </ul>
                   <div
                     onClick={() => handleDropdownToggle(index)}
@@ -969,19 +970,19 @@ export default function Offer() {
                  <div
                    key={index}
                    className={style.itemCard}
-                   onClick={() => navigate("/createoffer")}
+                  //  onClick={() => navigate("/createoffer")}
                    //  onClick={() => navigate('/createoffer', { state: { item } })}
                  >
-                   <img className={style.offerCardImg} src={item.images} />
-                   <div className={style.cardHeading}>
+                   <img className={style.offerCardImg} src={item.images} onClick={() => navigate("/createoffer")}/>
+                   <div className={style.cardHeading} onClick={() => navigate("/createoffer")}>
                      <div className={style.itemName}>{item.title}</div>
                      <div className={style.OfferCardDate}>{item.date}</div>
                    </div>
-                   <div className={style.OfferInfo}>
-                     <ul>
-                       <li>{item.descriptionOne}</li>
-                       <li>{item.descriptionTwo}</li>
-                       <li>{item.descriptionThree}</li>
+                   <div className={style.OfferInfo} >
+                     <ul onClick={() => navigate("/createoffer")} className={style.ul}>
+                       <li className={style.bulletPoint}>{item.descriptionOne}</li>
+                       <li className={style.bulletPoint}>{item.descriptionTwo}</li>
+                       <li className={style.bulletPoint}>{item.descriptionThree}</li>
                      </ul>
                      <div
                        onClick={() => handleDropdownToggle(index)}

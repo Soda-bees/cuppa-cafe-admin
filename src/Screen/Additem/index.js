@@ -97,7 +97,10 @@ export default function AddItem() {
           <img className={style.backArrow} src={images.backArrow} />
         </div>
         <div className={style.heading}>Add Item</div>
-        <div className={style.btn}>Save</div>
+        <div className={style.btn} 
+        onClick={() => {
+          navigate('/menu')
+        }}>Save</div>
       </div>
       <div className={style.addItem}>
         <div className={style.addItemLeft}>

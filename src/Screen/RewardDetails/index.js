@@ -4,12 +4,26 @@ import images from "../../asset";
 import Modal from "react-modal";
 import Pagination from "../../Component/Pagination";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function RewardDetail() {
   const [search, setSearch] = useState("");
   const [dropDown, setDropDown] = useState(false);
   const [dropDownOption, setDropDownOption] = useState("Reward Item");
   const [orderQuanity, setOrderQuantuty] = useState("");
+
+  const handleCreateReward = async () => {
+    console.log(orderQuanity,dropDownOption)
+    try{
+      const response = await axios.post("http://192.168.100.30:8080/outlet/createOutletReward",{
+        numberOfOrders:orderQuanity,
+        rewardItem: dropDownOption
+      })
+      console.log("reward create successfully: ", response.data)
+    } catch (error) {
+      console.error("reward not created ", error)
+    }
+  }
 
   return (
     <div className={style.container}>
@@ -45,7 +59,7 @@ export default function RewardDetail() {
         <div className={style.btnWrapper}>
           <div className={style.rewardHeading}>Reward Details</div>
           <div
-          
+          onClick={handleCreateReward}
             className={style.btn}
           >
             Create Reward

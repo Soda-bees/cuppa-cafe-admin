@@ -9,7 +9,7 @@ import "react-time-picker/dist/TimePicker.css";
 import "react-clock/dist/Clock.css";
 import Pagination from "../../Component/Pagination";
 import { useNavigate } from "react-router-dom";
-
+import axios from "axios";
 export default function Events() {
   const [isSelected, setIsSelect] = useState(false);
   const [search, setSearch] = useState("");
@@ -675,6 +675,41 @@ export default function Events() {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+
+  const [createEventTime, setCreateEventTime] = useState ({
+    startTimeHour:0,
+    startTimeMinutes:0,
+    amStart: 'AM',
+    closingTimeHour:0,
+    closingTimeMinutes:0,
+    amClose:'AM'
+  })
+  
+  const handleCreateEventTime = (updatedTime) => {
+    setCreateEventTime(prevTime => ({...prevTime, ...updatedTime}))
+  }
+
+  const handleAdminCreateEvent = async () => {
+    try {
+      console.log(selectedImage,eventName,startDate,createEventTime,eventType,description);
+      const response = await axios.post("http://192.168.100.30:8080/outlet/createEvent", {
+        coverPhoto: selectedImage,
+        title:eventName,
+        date:startDate,
+        timing:createEventTime,
+        exclusive:eventType,
+        // registration,
+        description
+      })
+      console.log("Event created successfully: ",response.data)
+      setIsEventModalVisible(false)
+    } catch (error) {
+      console.error("Event not created: ", error)
+    }
+  }
+
+
+  
   return (
     <div className={style.container}>
       <div className={`${style.menuTwo}`}>
@@ -795,7 +830,11 @@ export default function Events() {
             <div className={style.modalHeading}>Add Event</div>
 
             <div
-              onClick={() => setIsEventModalVisible(false)}
+            onClick={()=> 
+              // handleAdminCreateEvent()
+              setIsEventModalVisible(false)
+            }
+              // onClick={() => setIsEventModalVisible(false)}
               className={style.btn}
             >
               Add
@@ -966,43 +1005,49 @@ export default function Events() {
               <div className={style.inputTitle}>Opening Time</div>
               <div class={style.timeRow}>
                 <input
-                  value={(startTimeHour)}
-                  onChange={(e) => {
-                    const value = e.target.value.replace(/^0+/, ''); // Remove leading zeros
-                    handleInputChange(value, setStartTimeHour, "hours");
-                  }}
+                  value={(createEventTime.startTimeHour)}
+                  onChange={(e) => handleCreateEventTime({startTimeHour: e.target.value})}
+                  // onChange={(e) => {
+                  //   const value = e.target.value.replace(/^0+/, ''); // Remove leading zeros
+                  //   handleInputChange(value, setStartTimeHour, "hours");
+                  // }}
                   type="number"
                   class={style.timeInput}
                   onFocus={() => handleFocus("startHour")}
                 />
                 <div class={style.columnEqual}>:</div>
                 <input
-                  value={startTimeMinutes}
-                  onChange={(e) =>
-                    handleInputChange(e.target.value, setStartTimeMinutes, 60)
-                  }
+                  value={createEventTime.startTimeMinutes}
+                  onChange={(e) => handleCreateEventTime({startTimeMinutes: e.target.value})}
+                  // onChange={(e) =>
+                  //   handleInputChange(e.target.value, setStartTimeMinutes, 60)
+                  // }
                   type="number"
                   class={style.timeInput}
                   onFocus={() => handleFocus("startMinutes")}
                 />
                 <div className={style.btnCol}>
                   <div
-                    className={
-                      amStart === "AM" ? style.clickable : style.clickableTwo
-                    }
-                    onClick={() => {
-                      toggleAmPmStart("AM");
-                    }}
+                  className={createEventTime.amStart === "AM" ? style.clickable : style.clickableTwo}
+                  onClick={() => handleCreateEventTime({amStart: "AM"})}
+                    // className={
+                    //   amStart === "AM" ? style.clickable : style.clickableTwo
+                    // }
+                    // onClick={() => {
+                    //   toggleAmPmStart("AM");
+                    // }}
                   >
                     AM
                   </div>
                   <div
-                    className={
-                      amStart === "PM" ? style.clickable : style.clickableTwo
-                    }
-                    onClick={() => {
-                      toggleAmPmStart("PM");
-                    }}
+                  className={createEventTime.amStart === "PM" ? style.clickable : style.clickableTwo}
+                  onClick={() => handleCreateEventTime({amStart: "PM"})}
+                    // className={
+                    //   amStart === "PM" ? style.clickable : style.clickableTwo
+                    // }
+                    // onClick={() => {
+                    //   toggleAmPmStart("PM");
+                    // }}
                   >
                     PM
                   </div>

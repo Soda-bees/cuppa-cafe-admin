@@ -7,9 +7,10 @@ import Pagination from "../../Component/Pagination";
 
 export default function Menu() {
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isRemoveModalVisible,setIsRemoveVisible] = useState(false)
   const handleDropdownToggle = (index) => {
     setDropDown(dropDown === index ? null : index);
-    setIsEditModalVisible(dropDown === index)
+    // setIsEditModalVisible(dropDown === index)
   };
 
   const navigate = useNavigate();
@@ -505,7 +506,7 @@ export default function Menu() {
         >
           {cardData.map((Item, index) => (
             <div key={index} className={`${style.categoriesCard}  `}>
-              <img className={`${style.categoriesCardImg} `} src={Item.image} />
+              <img className={`${style.categoriesCardImg} `} src={Item.image}/>
               <div className={`${style.cardCover} `}>
                 <div
                   onClick={() => handleDropdownToggle(index)}
@@ -530,17 +531,20 @@ export default function Menu() {
                     //   </div>
                     // </div>
                     <div className="bg-bgColor md:w-24 w-10 rounded-lg pl-1 flex flex-col ">
-                      <div className="border-b w-full flex items-center active:opacity-50 px-2 pt-2 pb-1 gap-2 ">
-                        <div className="h-4 w-4">
+                      <div className="border-b w-full flex items-center active:opacity-50 px-2 pt-2 pb-1 gap-2 " 
+                      onClick={()=> setIsEditModalVisible(true)}>
+                        <div className="h-4 w-4"
+                          >
                           <img src={images.editIcon} className="" />
                         </div>
-                        <div className="text-sm hidden  md:flex" onClick={()=> setIsEditModalVisible(true)}>Edit</div>
+                        <div className="text-sm hidden  md:flex" >Edit</div>
                       </div>
-                      <div className="w-full flex items-center  active:opacity-50 px-2 py-2 gap-2 ">
+                      <div className="w-full flex items-center  active:opacity-50 px-2 py-2 gap-2 " onClick={() =>setDropDown(null)}>
                         <div className="h-4 w-4 ">
                           <img src={images.removeIcon} className="" />
                         </div>
-                        <div className=" text-sm hidden  md:flex">Remove</div>
+                        <div className=" text-sm hidden  md:flex"
+                        >Remove</div>
                       </div>
                     </div>
                   ) : (
