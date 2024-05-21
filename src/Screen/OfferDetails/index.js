@@ -43,7 +43,6 @@ export default function OfferDetails() {
     ]);
 
     const addFilterTodo = () => {
-        // Create a new todo object and add it to the todos array
         const newFilterTodo = {
             name: "",
             price: "",

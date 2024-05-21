@@ -523,12 +523,12 @@ export default function Events() {
   const [eventName, setEventName] = useState("");
   const [startDate, setStartDate] = useState(new Date());
 
-  const [startTimeHour, setStartTimeHour] = useState('');
-  const [startTimeMinutes, setStartTimeMinutes] = useState('');
-  const [amStart, setAmStart] = useState('');
-  const [closingTimeHour, setClosingTimeHour] = useState('');
-  const [closingTimeMinutes, setClosingTimeMinutes] = useState('');
-  const [amClose, setAmClose] = useState('');
+  const [startTimeHour, setStartTimeHour] = useState('00');
+  const [startTimeMinutes, setStartTimeMinutes] = useState('00');
+  const [amStart, setAmStart] = useState('AM');
+  const [closingTimeHour, setClosingTimeHour] = useState('00');
+  const [closingTimeMinutes, setClosingTimeMinutes] = useState('00');
+  const [amClose, setAmClose] = useState('AM');
 
   // Function to convert time to 12-hour format
   function convertTo12HourFormat(time) {
@@ -549,20 +549,20 @@ export default function Events() {
     return `${twelveHour}:${formattedMinutes} ${period}`;
   }
 
-  useEffect(() => {
-    // Update state variables with current time in 12-hour format
-    const currentTime12Hour = convertTo12HourFormat(`${startDate.getHours()}:${startDate.getMinutes()}`);
-    const [hour, minutes, amPm] = currentTime12Hour.split(/:|\s/);
-    setStartTimeHour(hour);
-    setStartTimeMinutes(minutes);
-    setAmStart(amPm);
+  // useEffect(() => {
+  //   // Update state variables with current time in 12-hour format
+  //   const currentTime12Hour = convertTo12HourFormat(`${startDate.getHours()}:${startDate.getMinutes()}`);
+  //   const [hour, minutes, amPm] = currentTime12Hour.split(/:|\s/);
+  //   setStartTimeHour(hour);
+  //   setStartTimeMinutes(minutes);
+  //   setAmStart(amPm);
 
 
-    setClosingTimeHour(+hour + 1)
-    setClosingTimeMinutes(minutes)
-    setAmClose(amPm)
+  //   setClosingTimeHour(+hour + 1)
+  //   setClosingTimeMinutes(minutes)
+  //   setAmClose(amPm)
 
-  }, []);
+  // }, []);
 
 
   const [timeModal, setTimeModal] = useState(false);
@@ -1004,50 +1004,44 @@ export default function Events() {
             <div>
               <div className={style.inputTitle}>Opening Time</div>
               <div class={style.timeRow}>
+      
                 <input
-                  value={(createEventTime.startTimeHour)}
-                  onChange={(e) => handleCreateEventTime({startTimeHour: e.target.value})}
-                  // onChange={(e) => {
-                  //   const value = e.target.value.replace(/^0+/, ''); // Remove leading zeros
-                  //   handleInputChange(value, setStartTimeHour, "hours");
-                  // }}
+                value={startTimeHour}
+                onChange={(e) => handleInputChange(e.target.value,setStartTimeHour, 12)}  
+               
                   type="number"
                   class={style.timeInput}
                   onFocus={() => handleFocus("startHour")}
                 />
                 <div class={style.columnEqual}>:</div>
+                
                 <input
-                  value={createEventTime.startTimeMinutes}
-                  onChange={(e) => handleCreateEventTime({startTimeMinutes: e.target.value})}
-                  // onChange={(e) =>
-                  //   handleInputChange(e.target.value, setStartTimeMinutes, 60)
-                  // }
+                value={startTimeMinutes}
+                onChange={(e) => handleInputChange(e.target.value, setStartTimeMinutes, 60)
+                }
+                
                   type="number"
                   class={style.timeInput}
                   onFocus={() => handleFocus("startMinutes")}
                 />
                 <div className={style.btnCol}>
+              
                   <div
-                  className={createEventTime.amStart === "AM" ? style.clickable : style.clickableTwo}
-                  onClick={() => handleCreateEventTime({amStart: "AM"})}
-                    // className={
-                    //   amStart === "AM" ? style.clickable : style.clickableTwo
-                    // }
-                    // onClick={() => {
-                    //   toggleAmPmStart("AM");
-                    // }}
+                 className={ amStart === "AM" ? style.clickable : style.clickableTwo}
+                 onClick={() => {
+                  toggleAmPmStart("AM")
+                 }}
+                 
                   >
                     AM
                   </div>
+
                   <div
-                  className={createEventTime.amStart === "PM" ? style.clickable : style.clickableTwo}
-                  onClick={() => handleCreateEventTime({amStart: "PM"})}
-                    // className={
-                    //   amStart === "PM" ? style.clickable : style.clickableTwo
-                    // }
-                    // onClick={() => {
-                    //   toggleAmPmStart("PM");
-                    // }}
+                  className={amStart === "PM" ? style.clickable : style.clickableTwo}
+                  onClick={() => {
+                    toggleAmPmStart("PM")
+                  }}
+                  
                   >
                     PM
                   </div>
