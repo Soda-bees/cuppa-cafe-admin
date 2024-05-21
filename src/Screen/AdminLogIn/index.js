@@ -71,7 +71,7 @@ export default function AdminLogIn() {
             </div>
           </div>
 
-          <div className={style.forgotBtn}>Forgot Password?</div>
+          <div className={style.forgotBtn}onClick={() => navigate("/forgotpassword")}>Forgot Password?</div>
           <div className={style.otherAccount}>
             <div className={style.line}></div>
             Sign In with

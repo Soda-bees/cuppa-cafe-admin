@@ -76,6 +76,7 @@ import fullcappuccino from './fullcappuccino.png'
 import profMarkPic from './profMarkPic.png'
 import cappuccinoNotrounded from './cappuccinoNotrounded.png'
 import mobileLogo from './mobileLogo.png'
+import hidePassword from './hideIcon.png'
 
 
 
@@ -159,6 +160,7 @@ const Images = {
     notSelectedBtn,
     mobLogo,
     mobileLogo,
+    hidePassword,
 }
 
 export default Images

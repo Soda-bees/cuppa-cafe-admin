@@ -981,14 +981,10 @@
     }
 
     .greenBtn {
-        height: 40px;
-        width: 100px;
         font-size: 14px;
     }
 
     .word {
-        height: 40px;
-        width: 100px;
         font-size: 14px;
     }
 }

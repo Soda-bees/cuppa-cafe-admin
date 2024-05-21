@@ -16,6 +16,9 @@ import EventDetails from "../../Screen/EventDetails";
 import ItemDetails from "../../Screen/ItemDetails";
 import Rewards from "../../Screen/Rewards"
 import RewardDetail from "../../Screen/RewardDetails";
+import ForgotPassword from "../../Screen/ForgotPassword";
+import ResetPasswod from "../../Screen/Resetpassword";
+import VarificationCode from "../../Screen/VarificationCode";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +36,21 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp />,
+      },
+      {
+        path: "/forgotpassword",
+        element: <ForgotPassword/>,
+
+      },
+      {
+        path: "/resetpassword",
+        element: <ResetPasswod/>,
+
+      },
+      {
+        path: "/varificationcode",
+        element: <VarificationCode/>,
+
       },
       {
         path: "/login",

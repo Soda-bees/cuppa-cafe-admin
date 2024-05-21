@@ -13,7 +13,7 @@
 }
 
 .logInBox {
-    width: 70%;
+    width: 50%;
     display: flex;
     border: 1px solid #EBEBEB;
     border-radius: 10px;
@@ -74,7 +74,7 @@
 }
 
 .logo {
-    width: 450px;
+    width: 60%;
 }
 
 .headingWrapper {
@@ -84,10 +84,10 @@
 }
 
 .logoHeading {
-    font-size: 24px;
-    width: 52%;
+    font-size: 20px;
     text-align: center;
     color: #8C8C8C;
+    width:50% ;
 }
 
 .bold {
@@ -123,8 +123,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 50%;
+    height: 70vh;
 
 }
 
@@ -134,14 +135,22 @@
     font-weight: 600;
     margin-bottom: 20px;
 }
+.infoWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputWrapper{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
 .textField {
     margin-top: 10px;
-    width: 70%;
     background-color: #F3F3F3;
     border-radius: 10px;
-    z-index: 2;
-
+    width: 10%;
 }
 
 .userInput {
@@ -149,54 +158,9 @@
     border: none;
     background: none;
     width: 100%;
-    padding: 0 10px 10px 10px ;
+    padding: 10px;
+    font-size: 18px;
     z-index: 1;
-}
-
-
-.userInputTwo {
-    outline: none;
-    border: none;
-    background: none;
-    width: 100%;
-    padding: 0 10px 10px 10px;
-}
-
-.countrySelect {
-    outline: none;
-    border: none;
-    background: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px 10px 10px;
-    /* padding-top: 4px; */
-    font-weight: 500;
-}
-
-.checkBox {
-    display: flex;
-    align-items: start;
-    width: 70%;
-    margin-top: 30px;
-
-}
-
-.checkBoxBtn {
-    width: 15px;
-    margin-top: 5px;
-    cursor: pointer;
-}
-
-.terms {
-    font-weight: 500;
-    margin-left: 10px;
-
-}
-
-.termpara {
-    font-size: 14px;
-    font-weight: normal;
 }
 
 .btn {
@@ -220,27 +184,11 @@
     width: 40px;
     height: 40px;
     border-radius: 5px;
-    margin-right: 10px;
+    
 }
 
 .arrowImg {
     width: 20px;
-}
-
-.btnheading {
-    margin-left: 10px;
-}
-
-.adminWrapper {
-    display: flex;
-    gap: 10px;
-    width: 70%;
-}
-
-
-
-.selectBtn {
-    width: 15px;
 }
 
 .inputHeading {
@@ -249,67 +197,20 @@
     color: #8C8C8C;
 }
 
-.countryName {
-    border-bottom: 1px solid #00000027;
-    background-color: #F3F3F3;
-    border-radius: 2px;
-    padding: 10px;
-}
 
-.country {
-    width: 100%;
-    height: 250px;
-    overflow-y: scroll;
-    border-radius: 5px;
-    position: absolute;
-    top: 70px;
-}
-
-.custom_phone_input {
-    width: 90%;
-    height: 35px;
-    margin-left: 20px;
-
-}
-
-
-.custom_phone_input>input {
-    outline: none;
-    border: none;
-    background: none;
-    font-size: 17px;
-    z-index: 1;
-}
-
-.textFieldTwo {
-    margin-top: 10px;
-    width: 70%;
-    background-color: #F3F3F3;
-    border-radius: 10px;
-    z-index: 3;
-    position: relative;
-}
-
-.downArrow {
-    width: 20px;
-    margin-right: 10px;
-}
-
-
-.inputWrapper {
-    margin-top: 10px;
-    width: 60%;
-    gap: 25px;
-    background-color: #F3F3F3;
-    border-radius: 10px;
-    z-index: 2;
-
-}
 
 .btnWrapper {
     width: 70%;
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+}
+.paraWrapper{
+    width: 70%;
+}
+.varifyPara{
+    text-align: center;
+    margin-bottom: 20px;
+    width: 70%;
 }
 
 @media screen and (max-width : 768px) {
@@ -363,8 +264,7 @@
 
     .boxRight {
         width: 100%;
-        height: 85vh;
-        justify-content: start;
+        height: 90vh;
     }
 
     .logInHeading {
@@ -372,77 +272,14 @@
         font-size: 20px;
         margin-bottom: 0px;
     }
-
-    .adminWrapper {
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-
-    .inputWrapper {
-        width: 70%;
-        gap: 10px;
-    }
-
-    .userInputTwo {
-        font-size: 12px;
-    }
-
-    .logInPara {
-        width: 75%;
-    }
-
-    .forgotBtn {
-        font-size: 18px;
-    }
-
-    .otherAccount {
-        width: 80%;
-        flex-direction: column;
-        gap: 20px;
-        margin: 30px;
-    }
-
-    .line {
-        width: 90%;
-    }
-
     .userInput {
         font-size: 12px;
     }
-
-    .terms {
-        font-size: 12px;
-
-    }
-
-    .termpara {
-        font-size: 12px;
-        font-weight: normal;
-    }
-
     .inputHeading {
         font-size: 12px;
         margin-top: 0;
         padding-top: 10px;
     }
-
-    .otherSignIn {
-        width: 70%;
-        text-align: center;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .googleLogo {
-        margin-right: 0px;
-
-    }
-
-    .lastPara {
-        text-align: center;
-    }
-
     .btn {
         font-size: 12px;
         height: 40px;
@@ -457,43 +294,16 @@
     .arrowImg {
         width: 10px;
     }
-
-    .countrySelect {
-        font-size: 12px;
-    }
-
-    .downArrow {
-        width: 15px;
-    }
-
-    .country {
-        height: 180px;
-        top: 50px;
-    }
-    .custom_phone_input {
-        margin-left: 10px;
-    
-    }
-    .custom_phone_input>input {
-        font-size: 12px;
-    }
-    .countryName {
-        padding: 5px 10px;
-        font-size: 12px;
-    }
-    .checkBox {
-        margin-top: 10px;
-    }
     .btnWrapper {
         margin-top: 10px;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    
+
 
     .logInBox {
-        width: 90%;
+        width: 70%;
     }
 
     .adminBtnWrapper {
@@ -512,7 +322,7 @@
     }
 
     .logo {
-        width: 350px;
+      width: 50%;
     }
 
     .logoHeading {
@@ -522,20 +332,6 @@
     .logInPara {
         width: 70%;
     }
-
-    .otherAccount {
-        width: 75%;
-    }
-
-    .line {
-        width: 30%;
-    }
-/* 
-    .googleLogo {
-        width: 30px;
-        margin-left: 10px;
-        margin-right: 15px;
-    } */
 
     .backWrapper {
         margin-top: 50px;
@@ -561,15 +357,17 @@
     .inputWrapper {
         width: 100%;
     }
+
     .btn {
-      font-size: 16px;
+        font-size: 14px;
     }
+
     .arrow {
 
         width: 30px;
         height: 30px;
     }
-    
+
     .arrowImg {
         width: 15px;
     }
