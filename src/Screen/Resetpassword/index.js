@@ -2,12 +2,20 @@ import React, { useState } from 'react'
 import style from './style.module.css'
 import images from '../../asset/index'
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux"
+import { useDispatch } from "react-redux";
+import { setAuthToken } from "../../store/authTokenSlice";
 
 export default function ResetPasswod() {
     const [ResetPasswod, setResetPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const handleSignin = () => {
+        const token = "authToken";
+        dispatch(setAuthToken(token));
+        navigate("/");
+      };
+    
     return (
         <div className={style.container}>
             <div className={style.logInBox}>
@@ -53,7 +61,7 @@ export default function ResetPasswod() {
                         </div>
                     </div>
                     <div className={style.btnWrapper}>
-                        <div  className={style.btn}>
+                        <div  onClick={handleSignin} className={style.btn}>
                             <div className={style.btnheading}>
                                Save
                             </div>

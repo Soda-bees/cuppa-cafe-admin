@@ -14,25 +14,25 @@
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(to right, #287C76, #60B0AA);
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
     cursor: pointer;
 }
 
 .backArrow {
-    height: 25px;
+    height: 20px;
 }
 
 .btn {
     padding: 10px;
     background-image: linear-gradient(to right, #287C76, #60B0AA);
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    font-size: 22px;
+    font-size: 18px;
     color: #fff;
     cursor: pointer;
 }
@@ -48,7 +48,7 @@
 
 .uploadImage {
     width: 100%;
-    height: 250px;
+    height: 225px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +64,7 @@
 
 .seletedImg {
     width: 100%;
-    height: 250px;
+    height: 225px;
 }
 
 .inputImg {
@@ -84,12 +84,13 @@
 
 .addItemDetails {
     display: flex;
+    gap: 10px;
 }
 
 .uploadImgtext {
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 10px;
 }
 
@@ -99,18 +100,17 @@
 }
 
 .textFeild {
-    width: 60%;
+    width: 69%;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-    margin-left: 30px;
+    gap: 10px;
 
 }
 
 .inputWrapper {
     background-color: #F3F3F3;
     border-radius: 10px;
-    margin-bottom: 10px;
 }
 
 .inputHeading {
@@ -123,7 +123,7 @@
     outline: none;
     border: none;
     background: none;
-    font-size: 24px;
+    font-size: 20px;
     width: 100%;
     padding: 0 10px 10px 10px;
 }
@@ -131,7 +131,7 @@
 .textInputTwo {
     outline: none;
     border: none;
-    font-size: 24px;
+    font-size: 20px;
     width: 100%;
     background: none;
     resize: none;
@@ -167,16 +167,15 @@
 .headingWrapperTwo {
     display: flex;
     justify-content: space-between;
-    width: 72%;
+    width: 75%;
     margin-top: 30px;
-    margin-right: 80px;
 }
 
 
 .infoheading {
-    font-size: 26px;
-    font-weight: 500;
+    font-size: 24px;
     margin-bottom: 10px;
+    font-weight: 500;
 }
 
 .textInputThree {
@@ -187,7 +186,7 @@
     margin-bottom: 10px;
     font-size: 18px;
     border-radius: 10px;
-    width:30%;
+    width: 31%;
     padding: 5px;
 }
 
@@ -199,12 +198,12 @@
 .btnTwo {
     padding: 10px;
     background-image: linear-gradient(to right, #287C76, #60B0AA);
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    font-size: 22px;
+    gap: 5px;
+    font-size: 18px;
     color: #fff;
     margin-top: 20px;
     cursor: pointer;
@@ -272,14 +271,15 @@
 .headingWrapperThree {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 80%;
     margin-top: 20px;
+    margin-left: 20px;
 }
 
 .infoheadingTwo {
     font-size: 20px;
-    font-weight: 500;
     margin-bottom: 10px;
+    font-weight: 500;
 }
 
 .textInputFour {
@@ -302,12 +302,12 @@
 .btnThree {
     padding: 10px;
     background-image: linear-gradient(to right, #287C76, #60B0AA);
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    font-size: 22px;
+    gap: 5px;
+    font-size: 18px;
     color: #fff;
     margin-top: 10px;
 }
@@ -323,25 +323,27 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 15px;
+    height: 100px;
 }
 
 .chooseOne {
     border: 2px solid #60B0AA;
     background-color: #B5D1CF;
-    padding: 15px;
-    width: 40%;
+    padding: 10px;
+    width: 47%;
     border-radius: 10px;
     cursor: pointer;
+    text-align: center;
 }
 
 .chooseMany {
     border: 2px solid #00000030;
     background-color: #fff;
-    padding: 15px;
-    width: 40%;
+    padding: 10px;
+    width: 47%;
     border-radius: 10px;
     cursor: pointer;
+    text-align: center;
 }
 
 .btnWrapperFour {
@@ -363,7 +365,7 @@
     align-items: center;
     padding: 15px;
     border-radius: 10px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 
@@ -430,22 +432,21 @@
     }
 
     .backBtn {
-        height: 30px;
-        width: 30px;
+        height: 20px;
+        width: 20px;
     }
 
     .backArrow {
-        height: 15px;
+        height: 10px;
     }
 
     .btn {
-        padding: 10px;
+        padding: 5px;
         font-size: 12px;
     }
 
     .addItem {
         flex-direction: column;
-        gap: 10px;
     }
 
     .addItemLeft {
@@ -526,6 +527,8 @@
         font-size: 12px;
     }
 
+
+
     .row {
         justify-content: center;
         gap: 10px;
@@ -557,7 +560,7 @@
     }
 
     .btnWrapper {
-        justify-content: start;
+        margin-top: 10px;
     }
 
     .addItemRight {
@@ -590,9 +593,10 @@
     .headingWrapperThree {
         display: flex;
         justify-content: space-between;
-        width: 70%;
+        width: 65%;
         margin-top: 10px;
         margin-left: 10px;
+        margin-right: 30px;
     }
 
     .infoheading {
@@ -648,19 +652,18 @@
     }
 
     .chooseOne {
-        padding: 10px;
+        padding: 7px;
         font-size: 12px;
         text-align: center;
     }
 
     .chooseMany {
-        padding: 10px;
+        padding: 7px;
         font-size: 12px;
         text-align: center;
     }
 
     .chooseWrapper {
-        padding: 0px;
         height: 80px;
     }
 
@@ -686,12 +689,12 @@
     }
 
     .backBtn {
-        height: 30px;
-        width: 30px;
+        height: 25px;
+        width: 25px;
     }
 
     .backArrow {
-        height: 20px;
+        height: 15px;
     }
 
     .btn {
@@ -700,11 +703,12 @@
     }
 
     .addItem {
-        gap: 10px;
+        flex-direction: column;
+        gap: 0;
     }
 
     .addItemLeft {
-        width: 60%;
+        width: 100%;
     }
 
     .uploadImage {
@@ -729,40 +733,44 @@
     }
 
     .InputImg {
-        width: 35%;
+        width: 30%;
     }
 
     .textFeild {
-        margin-left: 15px;
+        width: 60%;
     }
 
     .inputHeading {
         margin-top: 5px;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .textInput {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .textInputTwo {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .infoheading {
         font-size: 16px;
-        font-weight: 500;
     }
 
     .textInputThree {
         width: 30%;
         padding: 5px 0;
-        font-size: 16px;
+        font-size: 14px;
         padding-left: 5px;
+    }
+
+    .addItemDetails {
+        justify-content: center;
     }
 
     .row {
         gap: 5px;
+        justify-content: center;
     }
 
     .headingWrapperTwo {
@@ -772,8 +780,8 @@
     }
 
     .circle {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
     }
 
     .btnTwo {
@@ -814,21 +822,25 @@
     .headingWrapperThree {
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        width: 65%;
         margin-top: 10px;
-        margin-left: 30px;
+        margin-left: 00px;
     }
 
     .addItemRight {
-        width: 35%;
+        width: 100%;
         margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
     }
 
     .textInputFour {
-        padding: 0;
+        padding: 5px 0;
         padding-left: 5px;
-        width: 60%;
-        font-size: 16px;
+        width: 45%;
+        font-size: 14px;
     }
 
     .btnThree {
@@ -841,7 +853,7 @@
 
     .required {
         margin: 5px 0;
-        padding: 10px;
+        padding: 15px;
         border-radius: 10px;
         font-size: 16px;
     }
@@ -876,27 +888,30 @@
 
     .chooseOne {
         padding: 5px;
-        font-size: 12px;
+        font-size: 14px;
         text-align: center;
         width: 46%;
     }
 
     .chooseMany {
         padding: 5px;
-        font-size: 12px;
+        font-size: 14px;
         text-align: center;
         width: 46%;
     }
 
     .chooseWrapper {
-        padding: 0px;
-        height: 80px;
-        justify-content: space-evenly;
+        height: 70px;
     }
 
     .input {
         font-size: 14px;
     }
+
+    .btnWrapperTwo {
+       margin: 10px 0;
+    }
+
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -909,16 +924,16 @@
     }
 
     .backBtn {
-        height: 40px;
-        width: 40px;
+        height: 35px;
+        width: 35px;
     }
 
     .backArrow {
-        height: 22px;
+        height: 17px;
     }
 
     .btn {
-        padding: 10px;
+        padding: 7px;
         font-size: 16px;
     }
 
@@ -935,7 +950,7 @@
     }
 
     .uploadImage {
-        height: 200px;
+        height: 190px;
     }
 
     .icon {
@@ -944,31 +959,32 @@
     }
 
     .seletedImg {
-        height: 200px;
+        height: 190px;
     }
 
     .uploadImgtext {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .uploadImg {
-        width: 22px;
+        width: 17px;
     }
 
-    .textFeild {
+    /* .textFeild {
         margin-left: 10px;
-    }
+    } */
 
     .inputHeading {
         margin-top: 5px;
+        font-size: 16px;
     }
 
     .textInput {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .textInputTwo {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .row {
@@ -1011,7 +1027,6 @@
 
     .infoheading {
         font-size: 18px;
-        font-weight: 500;
         margin-bottom: 5px;
     }
 
@@ -1025,7 +1040,7 @@
     .headingWrapperThree {
         width: 80%;
         margin-top: 10px;
-        margin-left: 30px;
+        margin-left: 10px;
     }
 
     .infoheadingTwo {
@@ -1081,8 +1096,7 @@
     }
 
     .chooseWrapper {
-        justify-content: space-between;
-        padding: 10px;
+        height: 80px;
     }
 
     .actionHeading {
@@ -1092,6 +1106,7 @@
     .input {
         font-size: 16px;
     }
+
     .plusIcon {
         width: 12px;
     }

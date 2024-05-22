@@ -18,6 +18,7 @@
     border: 1px solid #EBEBEB;
     border-radius: 10px;
     background-color: #F6F6F6;
+    height: 70vh;
 }
 
 .boxLelt {
@@ -36,6 +37,7 @@
     display: flex;
     gap: 10px;
     justify-content: center;
+    margin: 10px;
 }
 
 /* .adminBtnWhite {
@@ -58,7 +60,7 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
-    padding: 10px 60px;
+    padding: 10px 50px;
     border-radius: 10px;
     font-weight: 500;
     cursor: pointer;
@@ -74,7 +76,7 @@
 }
 
 .logo {
-    width: 60%;
+    width: 50%;
 }
 
 .headingWrapper {
@@ -87,7 +89,7 @@
     font-size: 20px;
     text-align: center;
     color: #8C8C8C;
-    width:50% ;
+    width: 50%;
 }
 
 .bold {
@@ -118,29 +120,29 @@
 
 }
 
-
 .boxRight {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 50%;
-    height: 70vh;
 
 }
 
 .logInHeading {
     margin-top: 30px;
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 500;
     margin-bottom: 20px;
 }
-.infoWrapper{
+
+.infoWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.inputWrapper{
+
+.inputWrapper {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -171,8 +173,8 @@
     background-image: linear-gradient(to right, #287C76, #60B0AA);
     color: #fff;
     border-radius: 5px;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
     cursor: pointer;
 }
 
@@ -181,14 +183,14 @@
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 5px;
-    
+
 }
 
 .arrowImg {
-    width: 20px;
+    width: 15px;
 }
 
 .inputHeading {
@@ -204,10 +206,12 @@
     margin-top: 20px;
     margin-bottom: 30px;
 }
-.paraWrapper{
+
+.paraWrapper {
     width: 70%;
 }
-.varifyPara{
+
+.varifyPara {
     text-align: center;
     margin-bottom: 20px;
     width: 70%;
@@ -225,6 +229,7 @@
         width: 100%;
         flex-direction: column;
         border: none;
+        height: 100vh;
     }
 
 
@@ -235,6 +240,7 @@
         align-items: center;
         justify-content: center;
         background: none;
+        margin-bottom: 20px;
     }
 
     .mobileLogoWrapper {
@@ -269,20 +275,22 @@
 
     .logInHeading {
         margin-top: 10px;
-        font-size: 20px;
+        font-size: 14px;
         margin-bottom: 0px;
     }
+
     .userInput {
         font-size: 12px;
     }
+
     .inputHeading {
         font-size: 12px;
         margin-top: 0;
         padding-top: 10px;
     }
+
     .btn {
         font-size: 12px;
-        height: 40px;
     }
 
     .arrow {
@@ -294,8 +302,12 @@
     .arrowImg {
         width: 10px;
     }
+
     .btnWrapper {
         margin-top: 10px;
+    }
+    .varifyPara {
+        font-size: 12px;
     }
 }
 
@@ -303,30 +315,21 @@
 
 
     .logInBox {
-        width: 70%;
-    }
-
-    .adminBtnWrapper {
-        margin: 20px 20px;
-    }
-
-    .adminBtnWhite {
-        font-size: 16px;
-        padding: 5px 10px;
-
+        width: 60%;
     }
 
     .adminBtnGreen {
-        font-size: 16px;
+        font-size: 14px;
 
     }
 
     .logo {
-      width: 50%;
+        width: 60%;
     }
 
     .logoHeading {
         width: 70%;
+        font-size: 14px;
     }
 
     .logInPara {
@@ -334,19 +337,19 @@
     }
 
     .backWrapper {
-        margin-top: 50px;
+        margin-top: 25px;
         margin-left: 20px;
         width: 90%;
     }
 
     .backBTn {
-        height: 35px;
-        width: 35px;
+        height: 30px;
+        width: 30px;
 
     }
 
     .backArrow {
-        height: 15px;
+        height: 13px;
 
     }
 
@@ -371,5 +374,16 @@
     .arrowImg {
         width: 15px;
     }
-
+    .varifyPara{
+        font-size: 14px;
+    }
+    .logInHeading {
+        font-size: 20px;
+    }
+    .varifyPara {
+        font-size: 14px;
+    }
+    .userInput {
+    font-size: 14px;
+    }
 }

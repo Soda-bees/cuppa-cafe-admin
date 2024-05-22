@@ -490,6 +490,7 @@ export default function Setting() {
                         className={style.editInput}
                         type="text"
                       />
+                      <img className={style.hideIcon} src={images.hidePassword} />
                     </div>
                     <div className={style.passwordInfo}>
                       <div className={style.inputHeading}>Enter New Password</div>
@@ -497,6 +498,7 @@ export default function Setting() {
                         className={style.editInput}
                         type="text"
                       />
+                      <img className={style.hideIcon} src={images.hidePassword} />
                     </div>
                     <div className={style.passwordInfo}>
                       <div className={style.inputHeading}>Enter Password Again</div>
@@ -504,6 +506,7 @@ export default function Setting() {
                         className={style.editInput}
                         type="text"
                       />
+                      <img className={style.hideIcon} src={images.hidePassword} />
                     </div>
                   </div>
 
@@ -531,9 +534,6 @@ export default function Setting() {
                             Logout
                           </div>
                         </div>
-
-
-
                       </div>
                     </Modal>
                   </>)}

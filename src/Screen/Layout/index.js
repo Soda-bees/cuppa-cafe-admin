@@ -32,7 +32,7 @@ const Layout = () => {
   };
 
   if (authToken) {
-    if (activePath === "/login" || activePath === "/signup" ||  activePath === "/outlet"  ) {
+    if (activePath === "/login" || activePath === "/signup" ||  activePath === "/outlet" || activePath === "/resetpassword" ) {
       navigate("/");
        return null; 
     }

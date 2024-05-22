@@ -39,7 +39,7 @@ export default function VarificationCode() {
                 <div className={style.boxRight}>
                     <div className={style.logInHeading}>Verification Code</div>
                     <div className={style.infoWrapper}>
-                    <div className={style.varifyPara}>You would've received an varification code sent to the email tester@gmail.com</div>
+                    <div className={style.varifyPara}>You would've received an varification code sent to the email </div>
                     <div className={style.inputWrapper}>
                         <div className={style.textField}>
                             <input className={style.userInput} type="text" onChange={(e) => setEmail(e.target.value)} />

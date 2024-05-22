@@ -724,5 +724,12 @@
   .dropDown {
     top: 16px;
   }
+  .Icon {
+    width: 30px;
+  }
+  
+  .IconTwo {
+    width: 45px;
+  }
 
 }

@@ -188,6 +188,7 @@
     border-radius: 10px;
     margin-bottom: 10px;
     width: 90%;
+    position:relative;
 }
 
 .contactWrapper {
@@ -556,6 +557,12 @@
 .downArrow {
     width: 15px;
 }
+.hideIcon{
+    position: absolute;
+    top:30px;
+    right: 20px;
+    width: 20px;
+}
 
 @media screen and (max-width: 768px) {
     .container {
@@ -878,6 +885,7 @@
     .country {
         top: 50px;
     }
+    
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -909,7 +917,7 @@
     }
 
     .headingWrapper {
-        width: 100%;
+        width: 95%;
         margin: 10px 0
     }
 
@@ -918,7 +926,7 @@
     }
 
     .settingWrapper {
-        width: 100%;
+        width: 95%;
         gap: 10px;
     }
 
@@ -1047,5 +1055,10 @@
     }
     .modalOfferCardBtn {
         width: 80%;
+    }
+    .settingLeft {
+        width: 33%;
+        background-color: #F3F3F3;
+        border-radius: 10px;
     }
 }

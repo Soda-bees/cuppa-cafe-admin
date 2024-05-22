@@ -141,7 +141,7 @@ export default function AddItem() {
                 <div className={style.inputHeading}>Description</div>
                 <textarea
                   cols={"10"}
-                  rows={"5"}
+                  rows={"3"}
                   className={style.textInputTwo}
                   onChange={(e) => setItenDescription(e.target.value)}
                 ></textarea>
