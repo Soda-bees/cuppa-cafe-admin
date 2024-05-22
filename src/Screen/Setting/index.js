@@ -9,6 +9,10 @@ import Modal from "react-modal";
 import { Country } from 'country-state-city';
 
 export default function Setting() {
+  const [outletName,setOutletName] = useState('Havana Cafe')
+  const [outletLocation,setOutletLocation] = useState('NY, Newyork')
+  const [outletRatings, setOutletRatings] = useState('4.8')
+
   const [isSelected, setIsSelect] = useState(false);
   const [adminName, setAdminName] = useState("");
   const [email, setEmail] = useState("");
@@ -48,12 +52,14 @@ export default function Setting() {
   const [faceId, setFaceId] = useState(false);
   const [touchId, setTouchId] = useState(false);
   const [remember, setRemember] = useState(false);
-
+ 
 
   const [eventDropDown, seteventDropDown] = useState(false);
   const [registration, setRegistration] = useState("Push Notification & Email");
   const [message, setMessage] = useState(false);
   const [messageOption, setMessageOption] = useState("Messages");
+ 
+
   return (
     <div className={style.container}>
       <div className={style.menu}>
@@ -72,15 +78,15 @@ export default function Setting() {
 
         <img className={style.coverImg} src={images.settingCoverImg} />
         <div className={style.headingWrapper}>
-          <div className={style.cafeName}>Havana Cafe</div>
+          <div className={style.cafeName}>{outletName}</div>
           <div className={style.infoWrapper}>
             <div className={style.location}>
               <img className={style.locationIcon} src={images.locationIcon} />
-              <span>NY, Newyork</span>
+              <span>{outletLocation}</span>
             </div>
             <div className={style.rating}>
               <img src={images.ratingIcon} className={style.starRating} />
-              <span>4.8</span>
+              <span>{outletRatings}</span>
             </div>
           </div>
         </div>
@@ -169,6 +175,7 @@ export default function Setting() {
                   defaultCountry="US"
                   onChange={setValue}
                   className={style.custom_phone_input}
+                  
                 />
               </div>
               <div className={style.locationWrapper}>
@@ -186,6 +193,7 @@ export default function Setting() {
                     <img className={style.downArrowIcon}  src={images.downArrow} /></div>}
               </div>
             </div>
+         
           </div></>) :
             panel === 'outlet' ? (<>
               <div className={style.settingRight}>

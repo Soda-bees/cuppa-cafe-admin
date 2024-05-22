@@ -672,6 +672,9 @@ export default function Menu() {
                   accept="image/png,image/jpeg"
                   onChange={handleEditImageChange}
                 />
+
+
+                
                 {/* <img className={style.uploadImgIcon} src={images.uploadImgIcon} />
                     <input className={style.inputImg} id="img" type='file' accept="image/png,image/jpeg" /> */}
               </label>

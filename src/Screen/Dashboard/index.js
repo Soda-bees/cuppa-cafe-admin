@@ -23,9 +23,6 @@ export default function Dashboard() {
   const [totalCustomer, setTotalCustomer] = useState("2,486");
   const [totalProfit, setTotalProfit] = useState("$15,239.58");
   const [growth, setGrowth] = useState("$192.20");
-  // const [orderDate, setOrderData] = useState("10/24 , 2024");
-  // const [quantity, setQuantity] = useState("1");
-  // const [coffeePrice, setCoffeePrice] = useState("$3.45");
   const [totalAveragesRating, setTotalAveragesRating] = useState("4.8");
   const [totalRatings, setTotalRatings] = useState("1000")
 
@@ -60,46 +57,63 @@ export default function Dashboard() {
     },
   ]);
 
+  const getDate = (date) => {
+    const now = new Date();
+    const yesterday = new Date(now);
+    yesterday.setDate(now.getDate() - 1);
+  
+    const dateToCheck = new Date(date);
+  
+    if (dateToCheck.toDateString() === now.toDateString()) {
+      return 'Today';
+    } else if (dateToCheck.toDateString() === yesterday.toDateString()) {
+      return 'Yesterday';
+    } else {
+      return dateToCheck.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+  };
+
+
   const [commitCard, setCommitCard] = useState([
     {
       image: images.profMarkPic,
       name:"Mark",
-      date: "Yesterday",
+      date: getDate(new Date()),
       rating: 4,
       review: "The coffee was really good and milky",
     },
     {
       image: images.profMarkPic,
       name:"Mark",
-      date: "Yesterday",
+      date: getDate(new Date()),
       rating: 5,
       review: "The coffee was really good and milky",
     },
     {
       image: images.profMarkPic,
       name:"Mark",
-      date: "Yesterday",
+      date: getDate(new Date()),
       rating: 4.5,
       review: "The coffee was really good and milky",
     },
     {
       image: images.profMarkPic,
       name:"Mark",
-      date: "Yesterday",
+      date: getDate(new Date()),
       rating: 4,
       review: "The coffee was really good and milky",
     },
     {
       image: images.profMarkPic,
       name:"Mark",
-      date: "Yesterday",
+      date: getDate(new Date()),
       rating: 5,
       review: "The coffee was really good and milky",
     },
     {
       image: images.profMarkPic,
       name:"Mark",
-      date: "Yesterday",
+      date: getDate(new Date()),
       rating: 4.5,
       review: "The coffee was really good and milky",
     },
@@ -115,8 +129,6 @@ export default function Dashboard() {
     setCard(updatedCard);
   };
   
-  
-
   const [reply, setReply] = useState(null);
   const togglereply = (index) => {
     setReply((prevIndex) => (prevIndex === index ? null : index));
@@ -201,8 +213,7 @@ export default function Dashboard() {
                     />
                   </div>
                   <div
-                    className={`${style.quantity} biggerlaptop:text-2xl md:text-xl font-semibold sm:text-lg text-lg `}
-                  >
+                    className={`${style.quantity} biggerlaptop:text-2xl md:text-xl font-semibold sm:text-lg text-lg `}>
                     {cancelledOrder}
                   </div>
                 </div>
@@ -368,13 +379,7 @@ export default function Dashboard() {
                           </div>
                         </div>
                       )}
-                      {/* {dropDown === index && (
-                        <div className={style.dropDown}>
-                          <div className={style.dropDownOption}>Ready</div>
-                          <div className={style.dropDownOption}>Picked</div>
-                          <div className={style.dropDownOption}>Cancelled</div>
-                        </div>
-                      )} */}
+                    
                     </div>
                   </div>
                 </div>
@@ -431,94 +436,8 @@ export default function Dashboard() {
                       <div className={style.totalAverage}>{Math.floor((progress.completed / progress.maxCompleted) * 100)}%</div>
                     </div>
                     ))
-
                     }
-                    {/* <div className={style.ProgressBarWrapper}>
-                      <div className={style.starNumbar}>5</div>
-                      <div>
-                        <img className={style.starImg} src={images.star} />
-                      </div>
-                      <div className={style.ProgressBar}>
-                        <ProgressBar
-                          completed={60}
-                          maxCompleted={100}
-                          bgColor="#FCC767"
-                          height="3px"
-                          width="100%"
-                          isLabelVisible={false}
-                        />
-                      </div>
-                      <div className={style.totalAverage}>60%</div>
-                    </div>
-                    <div className={style.ProgressBarWrapper}>
-                      <div className={style.starNumbar}>4</div>
-                      <div>
-                        <img className={style.starImg} src={images.star} />
-                      </div>
-                      <div className={style.ProgressBar}>
-                        <ProgressBar
-                          completed={50}
-                          maxCompleted={100}
-                          bgColor="#FCC767"
-                          height="3px"
-                          width="100%"
-                          isLabelVisible={false}
-                        />
-                      </div>
-                      <div className={style.totalAverage}>50%</div>
-                    </div>
-                    <div className={style.ProgressBarWrapper}>
-                      <div className={style.starNumbar}>3</div>
-                      <div>
-                        <img className={style.starImg} src={images.star} />
-                      </div>
-                      <div className={style.ProgressBar}>
-                        <ProgressBar
-                          completed={40}
-                          maxCompleted={100}
-                          bgColor="#FCC767"
-                          height="3px"
-                          width="100%"
-                          isLabelVisible={false}
-                        />
-                      </div>
-                      <div className={style.totalAverage}>40%</div>
-                    </div>
-                    <div className={style.ProgressBarWrapper}>
-                      <div className={style.starNumbar}>2</div>
-                      <div>
-                        <img className={style.starImg} src={images.star} />
-                      </div>
-                      <div className={style.ProgressBar}>
-                        <ProgressBar
-                          completed={30}
-                          maxCompleted={100}
-                          bgColor="#FCC767"
-                          height="3px"
-                          width="100%"
-                          isLabelVisible={false}
-                        />
-                      </div>
-                      <div classNam={style.totalAverage}>30%</div>
-                    </div>
-                    <div className={style.ProgressBarWrapper}>
-                      <div className={style.starNumbar}>1</div>
-                      <div>
-                        <img className={style.starImg} src={images.star} />
-                      </div>
-                      <div className={style.ProgressBar}>
-                        <ProgressBar
-                          completed={20}
-                          maxCompleted={100}
-                          bgColor="#FCC767"
-                          height="3px"
-                          width="100%"
-                          isLabelVisible={false}
-                        />
-                      </div>
-                      <div className={style.totalAverage}>20%</div>
-                    </div>
-                     */}
+            
                   </div>
                 </div>
               </div>
