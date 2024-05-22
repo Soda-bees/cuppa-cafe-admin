@@ -149,6 +149,7 @@ export default function Setting() {
                 <div className={style.btn}>Save</div>
               </div>
             </div>
+            
             <div className={style.InputFeild}>
               <div className={style.editinputWrapper}>
                 <div className={style.inputHeadingTwo}>Admin Name</div>
@@ -243,11 +244,12 @@ export default function Setting() {
                   </div>
                   <div className={style.editinputWrapper}>
                     <div className={style.inputHeadingTwo}>Description</div>
-                    <input
+                    <textarea
                       onChange={(e) => setDescription(e.target.value)}
                       className={style.editInput}
                       type="text"
-                    />
+                      rows={1}
+/>
                   </div>
                 </div>
                 <div className={style.contactInfoWrapper}>
@@ -595,8 +597,6 @@ export default function Setting() {
                             logout
                           </div>
                         </div>
-
-
 
                       </div>
                     </Modal>

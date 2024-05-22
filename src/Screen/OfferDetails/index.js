@@ -9,6 +9,11 @@ export default function OfferDetails() {
     const location = useLocation();
     const [item, setItem] = useState()
 
+    const [isEditable,setIsEditable] = useState(false)
+
+    const toggleEditOfferMode = () => {
+        setIsEditable(!isEditable)
+    }
     // useEffect(() => {
 
     //     if (location.state && location.state.item) {
@@ -20,7 +25,6 @@ export default function OfferDetails() {
 
 
     const activePath = location.pathname;
-
     const navigate = useNavigate();
     const [selectBtn, setSelectBtn] = useState(false);
     const [offerTitle, setOfferTitle] = useState('');
@@ -77,8 +81,9 @@ export default function OfferDetails() {
                 <div className={style.heading}>
                     Offer Details
                 </div>
-                <div className={style.btn}>
-                    Edit Offer
+                <div className={style.btn} onClick={toggleEditOfferMode}>
+                    {isEditable ? "Save Offer" : "Edit Offer"}
+                    {/* Edit Offer */}
                 </div>
             </div>
             <div className={style.offerDetailsCard}>
@@ -90,14 +95,16 @@ export default function OfferDetails() {
                     {selectBtn ? (
                         <div
                             className={style.ovalBtn}
-                            onClick={() => setSelectBtn(!selectBtn)}
+                            onClick={() => isEditable && setSelectBtn(!selectBtn)}
+                            // onClick={() => setSelectBtn(!selectBtn)}
                         >
                             <div className={style.whiteBtn}></div>
                         </div>
                     ) : (
                         <div
                             className={style.notSelectedBtn}
-                            onClick={() => setSelectBtn(!selectBtn)}
+                            onClick={() => isEditable && setSelectBtn(!selectBtn)}
+                            // onClick={() => setSelectBtn(!selectBtn)}
                         >
                             <div className={style.notSelectedgreen}></div>
                         </div>
@@ -120,6 +127,7 @@ export default function OfferDetails() {
                             type="file"
                             accept="image/png,image/jpeg"
                             onChange={handleImageChange}
+                            disabled={!isEditable}
                         />
                         {/* <img className={style.uploadImgIcon} src={images.uploadImgIcon} />
                                             <input className={style.inputImg} id="img" type='file' accept="image/png,image/jpeg" /> */}
@@ -137,6 +145,7 @@ export default function OfferDetails() {
                             onChange={(e) => setOfferTitle(e.target.value)}
                             className={style.editInput}
                             type="text"
+                            disabled={!isEditable}
                         />
                     </div>
                     <div className={style.textfield}>
@@ -146,6 +155,7 @@ export default function OfferDetails() {
                                 selected={startDate}
                                 onChange={(date) => setStartDate(date)}
                                 className={style.datePicker}
+                                disabled={!isEditable}
                             />
                             <img className={style.calenderImg} src={images.calendar} />
                         </div>
@@ -161,46 +171,46 @@ export default function OfferDetails() {
                                 cols="50"
                                 onChange={(e) => setOfferDescription(e.target.value)}
                                 className={style.userInput}
+                                disabled={!isEditable}
                             ></textarea>
                         </div>
                         <div className={style.promo}>
                             <div className={style.inputHeading}>Exclusive Promo</div>
-                            {eventDropDown ? (
+                        {isEditable  ? (
+                            eventDropDown ? (
                                 <div className={style.dropDownTwo}>
-                                    <div
-                                        className={style.registrationHeading}
-                                        onClick={() => {
-                                            seteventDropDown(!eventDropDown);
-                                            setRegistration("Yes");
-                                        }}
-                                    >
+                                    <div className={style.registrationHeading}
+                                    onClick={() => {
+                                        seteventDropDown(!eventDropDown)
+                                        setRegistration("Yes")
+                                    }}>
                                         Yes
                                     </div>
-                                    <div
-                                        className={style.registrationHeading}
-                                        onClick={() => {
-                                            seteventDropDown(!eventDropDown);
-                                            setRegistration("No");
-                                        }}
-                                    >
+                                    <div className={style.registrationHeading}
+                                    onClick={() => {
+                                        seteventDropDown(!eventDropDown)
+                                        setRegistration("No")
+                                    }}>
                                         No
                                     </div>
                                 </div>
                             ) : (
-                                <div
-                                    onClick={() => seteventDropDown(!eventDropDown)}
-                                    className={style.registrationDropDown}
-                                >
-                                    <div className={style.registrationHeading}>
-                                        {registration}
-                                    </div>
-                                    <img
-                                        className={style.dropDownIcon}
-                                        src={images.downArrow}
-                                    />
+                                <div onClick={() => seteventDropDown(!eventDropDown)}
+                                className={style.registrationDropDown}>
+                                        <div className={style.registrationHeading}>
+                                            {registration}
+                                        </div>
+                                        <img className={style.dropDownIcon} src={images.downArrow} alt="Dropdown"/>
                                 </div>
-                            )}
+                            )
+                        ):(
+                            <div className={style.registrationDropDown}>
+                                <div className={style.registrationHeading}>{registration}</div>
+                                <img className={style.dropDownIcon} src={images.downArrow} alt="Dropdown"/>
+                            </div>
+                        )}
                         </div>
+                        
                     </div>
                     <div className={style.infoWrapper}>
                         <div className={style.discount}>
@@ -214,6 +224,7 @@ export default function OfferDetails() {
                                         }
                                         value={todo.name}
                                         className={style.textInput}
+                                        disabled={!isEditable}
                                     />
                                     <input
                                         type="text"
@@ -222,6 +233,7 @@ export default function OfferDetails() {
                                         }
                                         value={todo.price}
                                         className={style.textInput}
+                                        disabled={!isEditable}
                                     />
                                 </div>
                             ))}

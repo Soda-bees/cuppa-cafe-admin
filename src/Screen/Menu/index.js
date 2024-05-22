@@ -613,6 +613,7 @@ export default function Menu() {
                 // src={images.cappuccinoNotrounded}
                 className="rounded-2xl h-24 w-24 sm:h-32 sm:w-32 md:h-36 md:w-52 pt-2 px-2"
               />
+              
               <div className="px-4 pb-3 pt-2 w-full">
                 <div className="font-semibold text-sm md:text-xl">{item.name}</div>
                 <div className="flex w-full justify-between items-center ">

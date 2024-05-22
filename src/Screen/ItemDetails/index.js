@@ -75,7 +75,6 @@ export default function ItemDetails() {
             <div className={style.headingWrapper}>
                 <div className={style.backBtn} onClick={() => navigate('/menu')}>
                     <img className={style.backArrow} src={images.backArrow}
-
                     />
                 </div>
                 <div className={style.heading}>
