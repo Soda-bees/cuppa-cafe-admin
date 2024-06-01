@@ -4,6 +4,9 @@ import images from "../../asset";
 import Modal from "react-modal";
 import Pagination from "../../Component/Pagination";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectAuthToken } from "../../store/authTokenSlice";
+import axios from "axios";
 
 export default function Rewards() {
   const [search, setSearch] = useState("");
@@ -494,6 +497,8 @@ export default function Rewards() {
     },
   ]);
 
+  const authToken = useSelector(selectAuthToken);
+
   const [numberOfStamps, setNumberOfStamps] = useState([
     { number: 1 },
     { number: 2 },
@@ -540,7 +545,33 @@ export default function Rewards() {
     setSelectedRewardType(type);
   };
 
-  
+  const handleCreateReward = async () => {
+    try {
+      console.log(selectedNumberOfStamps, selectedRewardType);
+
+      const body = {
+        numberOfOrders: selectedNumberOfStamps,
+        rewardItem: selectedRewardType,
+      };
+
+      const response = await axios.post(
+        "http://192.168.100.30:8080/outlet/createOutletReward",
+        body,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
+      );
+      console.log("Reward created successfully: ", response.data.message);
+      setModalComplete(!modalComplete);
+      setOpenNextModal(!openNextModal);
+      setIsOfferModalVisible(!isOfferModalVisible);
+    } catch (error) {
+      console.log("Failed to create reward: ", error.message);
+    }
+  };
 
   return (
     <div className={style.container}>
@@ -726,9 +757,10 @@ export default function Rewards() {
                 {selectImgTwo && (
                   <div className={style.dropDown}>
                     {chooseReward.map((item, index) => (
-                      <div key={index} 
-                      className={style.dropDownOption}
-                      onClick={() => handleSelectRewardType(item.type)}
+                      <div
+                        key={index}
+                        className={style.dropDownOption}
+                        onClick={() => handleSelectRewardType(item.type)}
                       >
                         {item.type}
                       </div>
@@ -760,7 +792,9 @@ export default function Rewards() {
               <div className={style.orderHeading}>
                 Number of stamps to collect
               </div>
-              <div className={style.orderQuantity}>{selectedNumberOfStamps}</div>
+              <div className={style.orderQuantity}>
+                {selectedNumberOfStamps}
+              </div>
             </div>
             <div className={style.orderInfo}>
               <div className={style.orderHeading}>Reward</div>
@@ -770,17 +804,21 @@ export default function Rewards() {
           <div className={style.logoutBtnWrapper}>
             <div
               className={style.logoutBtn}
-              onClick={() => {
-                setModalComplete(!modalComplete);
-                setOpenNextModal(!openNextModal);
-                setIsOfferModalVisible(!isOfferModalVisible);
-              }}
+              onClick={handleCreateReward}
+              // onClick={() => {
+              //   setModalComplete(!modalComplete);
+              //   setOpenNextModal(!openNextModal);
+              //   setIsOfferModalVisible(!isOfferModalVisible);
+              // }}
             >
               Create
             </div>
-            <div className={style.cancelBtn}
-            onClick={() => setOpenNextModal(false)}
-            >Edit</div>
+            <div
+              className={style.cancelBtn}
+              onClick={() => setOpenNextModal(false)}
+            >
+              Edit
+            </div>
           </div>
         </div>
       </Modal>

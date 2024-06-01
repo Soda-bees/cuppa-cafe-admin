@@ -1,15 +1,16 @@
 import React, { Profiler, useEffect, useState } from "react";
 import style from "./style.module.css";
 import images from "../../asset/index";
-import { useDispatch } from "react-redux";
-import { clearAuthToken } from "../../store/authTokenSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { clearAuthToken, selectAuthToken } from "../../store/authTokenSlice";
 import { useNavigate } from "react-router-dom";
 import PhoneInput from "react-phone-number-input";
 import Modal from "react-modal";
 import { Country } from 'country-state-city';
+import axios from "axios";
 
 export default function Setting() {
-  const [outletName,setOutletName] = useState('Havana Cafe')
+  const [mainOutletName,setMainOutletName] = useState('Havana Cafe')
   const [outletLocation,setOutletLocation] = useState('NY, Newyork')
   const [outletRatings, setOutletRatings] = useState('4.8')
 
@@ -20,10 +21,11 @@ export default function Setting() {
   const navigate = useNavigate();
   const [value, setValue] = useState("");
   const [panel, setPanel] = useState('profile')
-  const [selectedCountry, setSelectedCountry] = useState(false)
+  const [outletCountry, setOutletCountry] = useState(false)
+  const [adminCountry, setAdminCountry] = useState(false)
   const [countryName, setcountryName] = useState("Select Country")
   const country = Country.getAllCountries()
-  const [outletNmae, setOutletNmae] = useState('')
+  const [outletName, setOutletName] = useState('')
   const [description, setDescription] = useState('')
 
   const handleLogout = () => {
@@ -58,6 +60,39 @@ export default function Setting() {
   const [registration, setRegistration] = useState("Push Notification & Email");
   const [message, setMessage] = useState(false);
   const [messageOption, setMessageOption] = useState("Messages");
+  const authToken = useSelector(selectAuthToken);
+
+
+
+  const handleEditOutlet = async () => {
+    try {
+      console.log(
+        selectedImage, outletName, description, value, outletCountry);
+
+      const body = {
+        outletCover: selectedImage,
+        outletName: outletName,
+        description,
+        phoneNumber: value,
+        outletLocation: outletCountry,
+      };
+
+      const response = await axios.post(
+        "http://192.168.100.30:8080/outlet/updateOutletProfile",
+        body,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
+      );
+      console.log("Outlet edited successfully: ", response.data.message);
+      // navigate("/menu");
+    } catch (error) {
+      console.log("Failed to edit outlet details: ", error.message);
+    }
+  };
  
 
   return (
@@ -78,7 +113,7 @@ export default function Setting() {
 
         <img className={style.coverImg} src={images.settingCoverImg} />
         <div className={style.headingWrapper}>
-          <div className={style.cafeName}>{outletName}</div>
+          <div className={style.cafeName}>{mainOutletName}</div>
           <div className={style.infoWrapper}>
             <div className={style.location}>
               <img className={style.locationIcon} src={images.locationIcon} />
@@ -181,16 +216,16 @@ export default function Setting() {
               </div>
               <div className={style.locationWrapper}>
                 <div className={style.inputHeadingTwo}>location</div>
-                {selectedCountry ? <div className={style.country}>
+                {adminCountry ? <div className={style.country}>
                   {country.map((country, index) => (
                     <div key={index} onClick={() => {
                       setcountryName(country.name)
-                      setSelectedCountry(!selectedCountry)
+                      setAdminCountry(!adminCountry)
                     }} className={style.countryName}>{country.name}</div>
                   ))}
                 </div>
                   :
-                  <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName}
+                  <div onClick={() => setAdminCountry(!adminCountry)} className={style.conutrySelect} >{countryName}
                     <img className={style.downArrowIcon}  src={images.downArrow} /></div>}
               </div>
             </div>
@@ -204,7 +239,8 @@ export default function Setting() {
                       <img className={style.editIcon} src={images.editIconGreen} />
                       Edit Outlet
                     </div>
-                    <div className={style.btn}>Save</div>
+                    <div className={style.btn}
+                    onClick={handleEditOutlet}>Save</div>
                   </div>
                 </div>
                 <div className={style.InputImg}>
@@ -237,7 +273,7 @@ export default function Setting() {
                   <div className={style.editinputWrapper}>
                     <div className={style.inputHeadingTwo}>Outlet Name</div>
                     <input
-                      onChange={(e) => setOutletNmae(e.target.value)}
+                      onChange={(e) => setOutletName(e.target.value)}
                       className={style.editInput}
                       type="text"
                     />
@@ -264,16 +300,16 @@ export default function Setting() {
                   </div>
                   <div className={style.locationWrapper}>
                     <div className={style.inputHeadingTwo}>location</div>
-                    {selectedCountry ? <div className={style.country}>
+                    {outletCountry ? <div className={style.country}>
                       {country.map((country, index) => (
                         <div key={index} onClick={() => {
                           setcountryName(country.name)
-                          setSelectedCountry(!selectedCountry)
+                          setOutletCountry(!outletCountry)
                         }} className={style.countryName}>{country.name}</div>
                       ))}
                     </div>
                       :
-                      <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName}
+                      <div onClick={() => setOutletCountry(!outletCountry)} className={style.conutrySelect} >{countryName}
                         <img src={images.downArrow} className={style.downArrowIcon}  /></div>}
                   </div>
                 </div>

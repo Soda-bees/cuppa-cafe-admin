@@ -21,36 +21,72 @@ export default function SignUp() {
   const country = Country.getAllCountries();
   const [isSelected, setIsSelected] = useState("cafe");
   const [errorMessage, setErrorMessage] = useState("");
+  const [countryCode,setCountryCode] = useState("US")
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  // const handleSignin = () => {
-  //     const token = "authToken";
-  //     dispatch(setAuthToken(token));
-  //     navigate("/menu");
-  // };
 
-
+  
   const handleSignUP = async () => {
     try {
-      console.log(shopName,adminName, countryName,email,value,password);
+      console.log(
+        shopName,adminName, countryName,email,value,password
+      );
+
+      const body = {
+        outletName: shopName,
+        adminName,
+        location: countryName,
+        email,
+        countryCode:countryCode,
+        phoneNumber:value,
+        password,
+      };
+
       const response = await axios.post(
         "http://192.168.100.30:8080/outlet/signUp",
-        {
-          outletName: shopName,
-          adminName,
-          location: countryName,
-          email,
-          phoneNumber:value,
-          password
-        }
-      );
-      console.log("SignUp successful: ", response.data);
+        body);
+      console.log("SignUp successful:  ", response.data.message);
       navigate("/outlet");
     } catch (error) {
-      console.error("SignUp failed: ", error);
+      console.log("SignUp failed:  ", error.message);
     }
   };
+
+ 
+  //   try {
+  //     console.log(shopName,adminName, countryName,email,value,password);
+  //     const response = await axios.post(
+  //       "http://192.168.100.30:8080/outlet/signUp",
+  //       {
+  //         outletName: shopName,
+  //         adminName,
+  //         location: countryName,
+  //         email,
+  //         countryCode:countryCode,
+  //         phoneNumber:value,
+  //         password,
+  //         // openHours:"07:00 AM - 10:00 PM",
+  //         // description:"Melbourne IS ONE OF THE WORLD’S BIGGEST PREMIUM COFFEE CHAINS. BASED IN AUSTRALIA, IT OPERATES MORE THAN 1000 OUTLETS",
+  //         // outletLocation: {
+  //         //   longitude: "1.2342312",
+  //         //   latitude: "2.34534435",
+  //         // },
+  //         // adminLocation: {
+  //         //   longitude: "1.2342312",
+  //         //   latitude: "2.34534435",
+  //         // },
+  //         // outletCover: "https://res.cloudinary.com/doohobw9k/image/upload/v1711950652/Cuppa/Profile/swetseo5aakip5051ngo.jpg",
+  //         // distance: "1.8"
+        
+  //       }
+  //     );
+  //     console.log("SignUp successful: ", response.data);
+  //     navigate("/outlet");
+  //   } catch (error) {
+  //     console.error("SignUp failed: ", error);
+  //   }
+  // };
 
   return (
     <div className={style.container}>
@@ -177,7 +213,7 @@ export default function SignUp() {
             <div className={style.inputHeading}>Contact Number</div>
             <PhoneInput
               value={value}
-              defaultCountry="US"
+              defaultCountry={countryCode}
               onChange={setValue}
               className={style.custom_phone_input}
             />

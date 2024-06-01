@@ -4,20 +4,20 @@ import Modal from "react-modal";
 import images from "../../asset";
 import { useNavigate } from "react-router-dom";
 import Pagination from "../../Component/Pagination";
+import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
+import { selectAuthToken, setAuthToken } from "../../store/authTokenSlice";
 
 export default function Menu() {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [isRemoveModalVisible,setIsRemoveVisible] = useState(false)
+  const [isRemoveModalVisible, setIsRemoveVisible] = useState(false);
   const handleDropdownToggle = (index) => {
     setDropDown(dropDown === index ? null : index);
-    // setIsEditModalVisible(dropDown === index)
   };
 
   const navigate = useNavigate();
-
-  // import { useDispatch } from 'react-redux';
-  // const dispatch = useDispatch()
-  // dispatch(clearAuthToken())
+  const dispatch = useDispatch();
+  const authToken = useSelector(selectAuthToken)
 
   const [dropDown, setDropDown] = useState(null);
 
@@ -26,7 +26,6 @@ export default function Menu() {
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [editselectedImage, setEditSelectedImage] = useState(null);
-
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -72,368 +71,368 @@ export default function Menu() {
   const [itemCard, setItemCard] = useState([
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
     {
       images: images.cappuccinoNotrounded,
-      name:"Cappuccino",
-      price:"$3.45"
+      name: "Cappuccino",
+      price: "$3.45",
     },
   ]);
 
@@ -451,6 +450,40 @@ export default function Menu() {
     setCurrentPage(page);
   };
 
+ 
+
+  const handleAddCategory = async () => {
+    try {
+      console.log(
+        selectedImage,categoryName,selectBtn
+      );
+
+      const body = {
+        categoryCover: selectedImage,
+        name: categoryName,
+        activeStatus: selectBtn,
+      };
+
+      const response = await axios.post(
+        "http://192.168.100.30:8080/outlet/addCategory",
+        body,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
+      );
+      console.log("Category added successfully: ", response.data.message);
+      setIsModalVisible(false);
+    
+    } catch (error) {
+      console.log("Failed to add category: ", error.message);
+    }
+  };
+
+
+  
   return (
     <div className={`${style.container} biggerlaptop:pl-[18%] pl-[20%]  `}>
       <div className={`${style.menuTwo}`}>
@@ -506,45 +539,31 @@ export default function Menu() {
         >
           {cardData.map((Item, index) => (
             <div key={index} className={`${style.categoriesCard}  `}>
-              <img className={`${style.categoriesCardImg} `} src={Item.image}/>
+              <img className={`${style.categoriesCardImg} `} src={Item.image} />
               <div className={`${style.cardCover} `}>
                 <div
                   onClick={() => handleDropdownToggle(index)}
                   className={`${style.dotMenu} w-20 md:w-full`}
                 >
                   {dropDown === index ? (
-                    // <div className={style.dropdown}>
-                    //   <div
-                    //     onClick={() => setIsEditModalVisible(true)}
-                    //     className={`${style.edit}  w-full flex `}
-                    //   >
-                    //     <img className={`${style.editIcon}  `} src={images.editIcon} />
-                    //     <div className="w-full">Edit</div>
-                    //   </div>
-                    //   <div className={style.line}></div>
-                    //   <div className={style.remove}>
-                    //     <img
-                    //       className={style.removeIcon}
-                    //       src={images.removeIcon}
-                    //     />
-                    //     Remove
-                    //   </div>
-                    // </div>
                     <div className="bg-bgColor md:w-24 w-10 rounded-lg pl-1 flex flex-col ">
-                      <div className="border-b w-full flex items-center active:opacity-50 px-2 pt-2 pb-1 gap-2 " 
-                      onClick={()=> setIsEditModalVisible(true)}>
-                        <div className="h-4 w-4"
-                          >
+                      <div
+                        className="border-b w-full flex items-center active:opacity-50 px-2 pt-2 pb-1 gap-2 "
+                        onClick={() => setIsEditModalVisible(true)}
+                      >
+                        <div className="h-4 w-4">
                           <img src={images.editIcon} className="" />
                         </div>
-                        <div className="text-sm hidden  md:flex" >Edit</div>
+                        <div className="text-sm hidden  md:flex">Edit</div>
                       </div>
-                      <div className="w-full flex items-center  active:opacity-50 px-2 py-2 gap-2 " onClick={() =>setDropDown(null)}>
+                      <div
+                        className="w-full flex items-center  active:opacity-50 px-2 py-2 gap-2 "
+                        onClick={() => setDropDown(null)}
+                      >
                         <div className="h-4 w-4 ">
                           <img src={images.removeIcon} className="" />
                         </div>
-                        <div className=" text-sm hidden  md:flex"
-                        >Remove</div>
+                        <div className=" text-sm hidden  md:flex">Remove</div>
                       </div>
                     </div>
                   ) : (
@@ -587,35 +606,22 @@ export default function Menu() {
             <div className="md:flex hidden">Add Items</div>
           </div>
         </div>
-        {/* <div className={`${style.row} bg-green-500`}>
-          {currentProducts.map((item, index) => (
-            <div
-              key={index}
-              className={`${style.itemCard} bg-red-500 `}
-              onClick={() => navigate("/itemdetails", { state: { item } })}
-            >
-              <img className={style.itemCardImg} src={item.images} />
-              <div>
-                <div className={`${style.itemName} text-sm lg:text-2xl`}>cappuccino</div>
-                <div className={style.price}>
-                  $3.35
-                  <img className={style.blackDots} src={images.blackDots} />
-                </div>
-              </div>
-            </div>
-          ))}
-        </div> */}
+
         <div className=" pt-10  w-full flex flex-wrap gap-2 sm:gap-10 items-center justify-center ">
           {currentProducts.map((item, index) => (
-            <div  onClick={() => navigate("/itemdetails")} className="flex flex-col border items-center  rounded-xl border-borderColor ">
+            <div
+              onClick={() => navigate("/itemdetails")}
+              className="flex flex-col border items-center  rounded-xl border-borderColor "
+            >
               <img
-              src={item.images}
-                // src={images.cappuccinoNotrounded}
+                src={item.images}
                 className="rounded-2xl h-24 w-24 sm:h-32 sm:w-32 md:h-36 md:w-52 pt-2 px-2"
               />
-              
+
               <div className="px-4 pb-3 pt-2 w-full">
-                <div className="font-semibold text-sm md:text-xl">{item.name}</div>
+                <div className="font-semibold text-sm md:text-xl">
+                  {item.name}
+                </div>
                 <div className="flex w-full justify-between items-center ">
                   <div className="font-semibold  text-xs md:text-xl text-textPrice">
                     {item.price}
@@ -648,11 +654,15 @@ export default function Menu() {
             </div>
             <div className={style.modalHeading}>Add Category</div>
 
-            <div className={style.modalBtn} 
-            onClick={() => {
-              setIsModalVisible(false);
-            }}
-            >Save</div>
+            <div
+              className={style.modalBtn}
+              onClick={handleAddCategory}
+              // onClick={() => {
+              //   setIsModalVisible(false);
+              // }}
+            >
+              Save
+            </div>
           </div>
           <div className={style.imageUploadWrapper}>
             <div className={style.InputImg}>
@@ -673,11 +683,6 @@ export default function Menu() {
                   accept="image/png,image/jpeg"
                   onChange={handleEditImageChange}
                 />
-
-
-                
-                {/* <img className={style.uploadImgIcon} src={images.uploadImgIcon} />
-                    <input className={style.inputImg} id="img" type='file' accept="image/png,image/jpeg" /> */}
               </label>
               <div className={style.uploadImgtext}>
                 <img className={style.uploadImg} src={images.uploadImg} />
@@ -758,10 +763,7 @@ export default function Menu() {
                   className={selectedImage ? style.seletedImg : style.icon}
                   alt="Upload Image"
                 />
-                {/* <img
-                  className={style.uploadImgIcon}
-                  src={images.uploadImgIcon}
-                /> */}
+
                 <input
                   className={style.inputImg}
                   id="img"

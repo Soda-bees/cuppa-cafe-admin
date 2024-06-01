@@ -16,6 +16,7 @@ import EventDetails from "../../Screen/EventDetails";
 import ItemDetails from "../../Screen/ItemDetails";
 import Rewards from "../../Screen/Rewards"
 import RewardDetail from "../../Screen/RewardDetails";
+import Dashboard from "../../Screen/Dashboard";
 
 const router = createBrowserRouter([
   {

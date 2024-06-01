@@ -2,45 +2,59 @@ import { React, useState } from "react";
 import style from "./style.module.css";
 import images from "../../asset";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setAuthToken } from "../../store/authTokenSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectAuthToken, setAuthToken } from "../../store/authTokenSlice";
 import axios from "axios";
 
 export default function AdminLogIn() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const authToken = useSelector(selectAuthToken);
 
   const [userName, setUserName] = useState("");
   const [password, setUserPassword] = useState("");
   const [isSelected, setIsSelected] = useState("cafe");
-  const [errorMessage, setErrorMessage] = useState("")
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSignin = () => {
-    const token = "authToken";
-    dispatch(setAuthToken(token));
-    navigate("/");
-  };
-
+  // const handleSignin = () => {
+  //   const token = "authToken";
+  //   dispatch(setAuthToken(token));
+  //   navigate("/");
+  // };
+  
   const handleAdminLogin = async () => {
-    if(!userName && !password) {
-      setErrorMessage("*UserName and Password are required.")
-      return
+    if (!userName && !password) {
+      setErrorMessage("*UserName and Password are required.");
+      return;
     }
     try {
       console.log(userName, password);
-      const response = await axios.post("http://192.168.100.30:8080/outlet/signIn", {
+
+      const body = {
         email: userName,
         password,
-      });
-      console.log("SignIn successful: ", response.data);
-      //  navigate("/");
+      };
+
+      const response = await axios.post(
+        "http://192.168.100.30:8080/outlet/signIn",
+        body,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
+      );
+      console.log("Login successfull", response.data.message);
+      const token = "authToken";
+      dispatch(setAuthToken(token));
+      navigate("/");
     } catch (error) {
-      setErrorMessage("Login failed. Please check your username and password.")
-      console.error("Login failed: ", error);
+      console.log("login Failed", error.message);
     }
   };
 
-
+ 
 
   return (
     <div className={style.container}>
@@ -100,7 +114,9 @@ export default function AdminLogIn() {
             Offering coffee shop owners a platform to enhance their sales with
             Cuppa.
           </div>
-          {errorMessage && <div className={style.errorMessage}>{errorMessage}</div>}
+          {errorMessage && (
+            <div className={style.errorMessage}>{errorMessage}</div>
+          )}
           <div className={style.textFeild}>
             <div className={style.inputHeading}>Username/Email</div>
             <input

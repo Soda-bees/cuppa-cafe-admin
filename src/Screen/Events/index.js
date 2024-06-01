@@ -10,253 +10,254 @@ import "react-clock/dist/Clock.css";
 import Pagination from "../../Component/Pagination";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useSelector } from "react-redux";
+import { selectAuthToken } from "../../store/authTokenSlice";
 export default function Events() {
   const [isSelected, setIsSelect] = useState(false);
   const [search, setSearch] = useState("");
-  const [eventTypeDD, setEventTypeDD] = useState(false)
-  const [eventType, setEventType] = useState('Open')
-
+  const [eventTypeDD, setEventTypeDD] = useState(false);
+  const [eventType, setEventType] = useState("Open");
 
   const [eventCard, setEventCard] = useState([
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
   ]);
 
@@ -264,245 +265,244 @@ export default function Events() {
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
       title: "Name of Events",
-      date: "27 Jan 2023"
+      date: "27 Jan 2023",
     },
   ]);
-
 
   const [dropDown, setDropDown] = useState(false);
   const handleDropdownToggle = (index) => {
@@ -516,34 +516,35 @@ export default function Events() {
     setSelectedImage(file);
   };
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const authToken = useSelector(selectAuthToken)
 
   const [btn, setBtn] = useState(false);
   const [isEventModalVisible, setIsEventModalVisible] = useState(false);
   const [eventName, setEventName] = useState("");
   const [startDate, setStartDate] = useState(new Date());
 
-  const [startTimeHour, setStartTimeHour] = useState('00');
-  const [startTimeMinutes, setStartTimeMinutes] = useState('00');
-  const [amStart, setAmStart] = useState('AM');
-  const [closingTimeHour, setClosingTimeHour] = useState('00');
-  const [closingTimeMinutes, setClosingTimeMinutes] = useState('00');
-  const [amClose, setAmClose] = useState('AM');
+  const [startTimeHour, setStartTimeHour] = useState("00");
+  const [startTimeMinutes, setStartTimeMinutes] = useState("00");
+  const [amStart, setAmStart] = useState("AM");
+  const [closingTimeHour, setClosingTimeHour] = useState("00");
+  const [closingTimeMinutes, setClosingTimeMinutes] = useState("00");
+  const [amClose, setAmClose] = useState("AM");
 
   // Function to convert time to 12-hour format
   function convertTo12HourFormat(time) {
     // Parse the time string to extract hours and minutes
-    const [hours, minutes] = time.split(':').map(Number);
+    const [hours, minutes] = time.split(":").map(Number);
 
     // Determine AM or PM
-    const period = hours >= 12 ? 'PM' : 'AM';
+    const period = hours >= 12 ? "PM" : "AM";
 
     // Convert hours to 12-hour format
     let twelveHour = hours % 12;
     twelveHour = twelveHour === 0 ? 12 : twelveHour;
 
     // Format minutes with leading zero if needed
-    const formattedMinutes = String(minutes).padStart(2, '0');
+    const formattedMinutes = String(minutes).padStart(2, "0");
 
     // Return the formatted time
     return `${twelveHour}:${formattedMinutes} ${period}`;
@@ -557,13 +558,11 @@ export default function Events() {
   //   setStartTimeMinutes(minutes);
   //   setAmStart(amPm);
 
-
   //   setClosingTimeHour(+hour + 1)
   //   setClosingTimeMinutes(minutes)
   //   setAmClose(amPm)
 
   // }, []);
-
 
   const [timeModal, setTimeModal] = useState(false);
   // const [startTimeHour, setStartTimeHour] = useState(startDate.getHours());
@@ -575,62 +574,53 @@ export default function Events() {
   const [startTimeFinal, setStartTimeFinal] = useState("AM");
   const [selectBtn, setSelectBtn] = useState(false);
 
-
   const handleInputChange = (text, setter, type) => {
-    if (text === "" || (Number(text) >= 0)) {
+    if (text === "" || Number(text) >= 0) {
       if (type === "hours") {
         if (+text > 12) {
-          setter(0)
-          if (amStart === 'AM') setAmStart('PM')
-          else setAmStart('AM')
-        }
-        else {
+          setter(0);
+          if (amStart === "AM") setAmStart("PM");
+          else setAmStart("AM");
+        } else {
           setter(text);
         }
-      }
-      else {
+      } else {
         if (+text > 59) {
-          setter(0)
+          setter(0);
           if (+startTimeHour + 1 > 11) {
-            setStartTimeHour(0)
-            if (amStart === 'AM') setAmStart('PM')
-            else setAmStart('AM')
-          }
-          else {
+            setStartTimeHour(0);
+            if (amStart === "AM") setAmStart("PM");
+            else setAmStart("AM");
+          } else {
             setStartTimeHour(+startTimeHour + 1);
           }
-        }
-        else {
+        } else {
           setter(text);
         }
       }
     }
   };
   const handleInputChangeTwo = (text, setter, type) => {
-    if (text === "" || (Number(text) >= 0)) {
+    if (text === "" || Number(text) >= 0) {
       if (type === "hours") {
         if (+text > 12) {
-          setter(0)
-          if (amClose === 'AM') setAmClose('PM')
-          else setAmClose('AM')
-        }
-        else {
+          setter(0);
+          if (amClose === "AM") setAmClose("PM");
+          else setAmClose("AM");
+        } else {
           setter(text);
         }
-      }
-      else {
+      } else {
         if (+text > 59) {
-          setter(0)
+          setter(0);
           if (+startTimeHour + 1 > 11) {
-            setStartTimeHour(0)
-            if (amStart === 'AM') setAmStart('PM')
-            else setAmStart('AM')
-          }
-          else {
+            setStartTimeHour(0);
+            if (amStart === "AM") setAmStart("PM");
+            else setAmStart("AM");
+          } else {
             setStartTimeHour(+startTimeHour + 1);
           }
-        }
-        else {
+        } else {
           setter(text);
         }
       }
@@ -650,7 +640,6 @@ export default function Events() {
       }
     }
   };
-
 
   const toggleAmPmStart = (amPm) => {
     setAmStart(amPm);
@@ -676,40 +665,57 @@ export default function Events() {
     setCurrentPage(page);
   };
 
-  const [createEventTime, setCreateEventTime] = useState ({
-    startTimeHour:0,
-    startTimeMinutes:0,
-    amStart: 'AM',
-    closingTimeHour:0,
-    closingTimeMinutes:0,
-    amClose:'AM'
-  })
-  
+  const [createEventTime, setCreateEventTime] = useState({
+    startTimeHour: 0,
+    startTimeMinutes: 0,
+    amStart: "AM",
+    closingTimeHour: 0,
+    closingTimeMinutes: 0,
+    amClose: "AM",
+  });
+
   const handleCreateEventTime = (updatedTime) => {
-    setCreateEventTime(prevTime => ({...prevTime, ...updatedTime}))
-  }
+    setCreateEventTime((prevTime) => ({ ...prevTime, ...updatedTime }));
+  };
 
   const handleAdminCreateEvent = async () => {
     try {
-      console.log(selectedImage,eventName,startDate,createEventTime,eventType,description);
-      const response = await axios.post("http://192.168.100.30:8080/outlet/createEvent", {
-        coverPhoto: selectedImage,
-        title:eventName,
-        date:startDate,
-        timing:createEventTime,
-        exclusive:eventType,
-        // registration,
+      console.log(
+        selectedImage,
+        eventName,
+        startDate,
+        createEventTime,
+        eventType,
         description
-      })
-      console.log("Event created successfully: ",response.data)
-      setIsEventModalVisible(false)
+      );
+
+      const body = {
+        coverPhoto: selectedImage,
+        title: eventName,
+        timing: createEventTime,
+        date: startDate,
+        description,
+        exclusive: eventType,
+      };
+
+      const response = await axios.post(
+        "http://192.168.100.30:8080/outlet/createEvent",
+        body,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
+      );
+      console.log("Event added successfully: ", response.data.message);
+      setIsEventModalVisible(false);
     } catch (error) {
-      console.error("Event not created: ", error)
+      console.log("Failed to add event: ", error.message);
     }
-  }
+  };
 
 
-  
   return (
     <div className={style.container}>
       <div className={`${style.menuTwo}`}>
@@ -757,43 +763,46 @@ export default function Events() {
 
           <div
             onClick={() => setIsEventModalVisible(!isEventModalVisible)}
-            className={style.btn}>
+            className={style.btn}
+          >
             Create Event
           </div>
         </div>
         <div className={style.row}>
-          {btn ? (
-            pastEventCard.map((item,index) => (
-              <div key={index} className={style.eventCard} 
-              // onClick={() => navigate('/eventdetails')}
-              >
-              <img className={style.offerCardImg} src={item.images} />
-              <div className={style.cardHeading}>
-                <div>
-                  <div className={style.eventName}>{item.title}</div>
-                  <div className={style.eventDate}>{item.date}</div>
+          {btn
+            ? pastEventCard.map((item, index) => (
+                <div
+                  key={index}
+                  className={style.eventCard}
+                  // onClick={() => navigate('/eventdetails')}
+                >
+                  <img className={style.offerCardImg} src={item.images} />
+                  <div className={style.cardHeading}>
+                    <div>
+                      <div className={style.eventName}>{item.title}</div>
+                      <div className={style.eventDate}>{item.date}</div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            ))
-            
-          ):(
-            currentProducts.map((item,index) => (
-              <div key={index} className={style.eventCard} onClick={() => navigate('/eventdetails')}>
-              <img className={style.offerCardImg} src={item.images} />
-              <div className={style.cardHeading}>
-                <div>
-                  <div className={style.eventName}>{item.title}</div>
-                  <div className={style.eventDate}>{item.date}</div>
+              ))
+            : currentProducts.map((item, index) => (
+                <div
+                  key={index}
+                  className={style.eventCard}
+                  onClick={() => navigate("/eventdetails")}
+                >
+                  <img className={style.offerCardImg} src={item.images} />
+                  <div className={style.cardHeading}>
+                    <div>
+                      <div className={style.eventName}>{item.title}</div>
+                      <div className={style.eventDate}>{item.date}</div>
+                    </div>
+                    <div className={style.cardBtnWrapper}>
+                      <div className={style.cardBtn}>Upcoming</div>
+                    </div>
+                  </div>
                 </div>
-                <div className={style.cardBtnWrapper}>
-                  <div className={style.cardBtn}>Upcoming</div>
-                </div>
-              </div>
-            </div>
-            ))
-          )
-          }
+              ))}
           {/* {currentProducts.map((item, index) => (
             <div key={index} className={style.eventCard} onClick={() => navigate('/eventdetails')}>
               <img className={style.offerCardImg} src={item.images} />
@@ -821,7 +830,7 @@ export default function Events() {
             <div>
               <img
                 onClick={() => {
-                  setIsEventModalVisible(false)
+                  setIsEventModalVisible(false);
                 }}
                 src={images.cross}
                 className={style.cross}
@@ -830,10 +839,10 @@ export default function Events() {
             <div className={style.modalHeading}>Add Event</div>
 
             <div
-            onClick={()=> 
-              // handleAdminCreateEvent()
-              setIsEventModalVisible(false)
-            }
+              onClick={() =>
+                handleAdminCreateEvent()
+                // setIsEventModalVisible(false)
+              }
               // onClick={() => setIsEventModalVisible(false)}
               className={style.btn}
             >
@@ -898,7 +907,7 @@ export default function Events() {
                     onClick={() => setTimeModal(true)}
                   >
                     <div className={style.timefield}>
-                      {startTimeHour}:{startTimeMinutes} {amStart} - {" "}
+                      {startTimeHour}:{startTimeMinutes} {amStart} -{" "}
                       {closingTimeHour} : {closingTimeMinutes} {amClose}{" "}
                     </div>
                     <img className={style.clockImg} src={images.clock} />
@@ -912,7 +921,7 @@ export default function Events() {
                         className={style.registrationHeading}
                         onClick={() => {
                           setEventTypeDD(!eventTypeDD);
-                          setEventType('Open')
+                          setEventType("Open");
                         }}
                       >
                         Open
@@ -921,7 +930,7 @@ export default function Events() {
                         className={style.registrationHeading}
                         onClick={() => {
                           setEventTypeDD(!eventTypeDD);
-                          setEventType('Exclusive')
+                          setEventType("Exclusive");
                         }}
                       >
                         Exclusive
@@ -1004,44 +1013,45 @@ export default function Events() {
             <div>
               <div className={style.inputTitle}>Opening Time</div>
               <div class={style.timeRow}>
-      
                 <input
-                value={startTimeHour}
-                onChange={(e) => handleInputChange(e.target.value,setStartTimeHour, 12)}  
-               
+                  value={startTimeHour}
+                  onChange={(e) =>
+                    handleInputChange(e.target.value, setStartTimeHour, 12)
+                  }
                   type="number"
                   class={style.timeInput}
                   onFocus={() => handleFocus("startHour")}
                 />
                 <div class={style.columnEqual}>:</div>
-                
+
                 <input
-                value={startTimeMinutes}
-                onChange={(e) => handleInputChange(e.target.value, setStartTimeMinutes, 60)
-                }
-                
+                  value={startTimeMinutes}
+                  onChange={(e) =>
+                    handleInputChange(e.target.value, setStartTimeMinutes, 60)
+                  }
                   type="number"
                   class={style.timeInput}
                   onFocus={() => handleFocus("startMinutes")}
                 />
                 <div className={style.btnCol}>
-              
                   <div
-                 className={ amStart === "AM" ? style.clickable : style.clickableTwo}
-                 onClick={() => {
-                  toggleAmPmStart("AM")
-                 }}
-                 
+                    className={
+                      amStart === "AM" ? style.clickable : style.clickableTwo
+                    }
+                    onClick={() => {
+                      toggleAmPmStart("AM");
+                    }}
                   >
                     AM
                   </div>
 
                   <div
-                  className={amStart === "PM" ? style.clickable : style.clickableTwo}
-                  onClick={() => {
-                    toggleAmPmStart("PM")
-                  }}
-                  
+                    className={
+                      amStart === "PM" ? style.clickable : style.clickableTwo
+                    }
+                    onClick={() => {
+                      toggleAmPmStart("PM");
+                    }}
                   >
                     PM
                   </div>
@@ -1062,7 +1072,7 @@ export default function Events() {
                   class={style.timeInput}
                   value={closingTimeHour}
                   onChange={(e) => {
-                    const value = e.target.value.replace(/^0+/, ''); // Remove leading zeros
+                    const value = e.target.value.replace(/^0+/, ""); // Remove leading zeros
                     handleInputChangeTwo(value, setClosingTimeHour, "hours");
                   }}
                   type="number"
