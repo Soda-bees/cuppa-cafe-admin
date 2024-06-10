@@ -20,149 +20,489 @@ export default function Events() {
   const [eventCard, setEventCard] = useState([
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
     {
       images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
     },
   ]);
+
+  const [pastEventCard, setPastEventCard] = useState([
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+    {
+      images: images.eventCardImg2,
+      title: "Name of Events",
+      date: "27 Jan 2023",
+    },
+  ]);
+
   const [dropDown, setDropDown] = useState(false);
   const handleDropdownToggle = (index) => {
     setDropDown(dropDown === index ? false : index);
@@ -182,34 +522,27 @@ export default function Events() {
   const [eventName, setEventName] = useState("");
   const [startDate, setStartDate] = useState(new Date());
 
-  const [startTimeHour, setStartTimeHour] = useState('');
-  const [startTimeMinutes, setStartTimeMinutes] = useState('');
-  const [amStart, setAmStart] = useState('');
-  const [closingTimeHour, setClosingTimeHour] = useState('');
-  const [closingTimeMinutes, setClosingTimeMinutes] = useState('');
-  const [amClose, setAmClose] = useState('');
+  const [startTimeHour, setStartTimeHour] = useState('00');
+  const [startTimeMinutes, setStartTimeMinutes] = useState('00');
+  const [amStart, setAmStart] = useState('AM');
+  const [closingTimeHour, setClosingTimeHour] = useState('00');
+  const [closingTimeMinutes, setClosingTimeMinutes] = useState('00');
+  const [amClose, setAmClose] = useState('AM');
 
-  // Function to convert time to 12-hour format
   function convertTo12HourFormat(time) {
-    // Parse the time string to extract hours and minutes
     const [hours, minutes] = time.split(':').map(Number);
 
-    // Determine AM or PM
     const period = hours >= 12 ? 'PM' : 'AM';
 
-    // Convert hours to 12-hour format
     let twelveHour = hours % 12;
     twelveHour = twelveHour === 0 ? 12 : twelveHour;
 
-    // Format minutes with leading zero if needed
     const formattedMinutes = String(minutes).padStart(2, '0');
 
-    // Return the formatted time
     return `${twelveHour}:${formattedMinutes} ${period}`;
   }
 
   useEffect(() => {
-    // Update state variables with current time in 12-hour format
     const currentTime12Hour = convertTo12HourFormat(`${startDate.getHours()}:${startDate.getMinutes()}`);
     const [hour, minutes, amPm] = currentTime12Hour.split(/:|\s/);
     setStartTimeHour(hour);
@@ -225,8 +558,6 @@ export default function Events() {
 
 
   const [timeModal, setTimeModal] = useState(false);
-  // const [startTimeHour, setStartTimeHour] = useState(startDate.getHours());
-  // const [startTimeMinutes, setStartTimeMinutes] = useState(startDate.getMinutes());
   const [startTime, setStartTime] = useState("AM");
   const [closingTime, setClosingTime] = useState("AM");
   const [focusedInput, setFocusedInput] = useState(null);
@@ -310,7 +641,6 @@ export default function Events() {
     }
   };
 
-
   const toggleAmPmStart = (amPm) => {
     setAmStart(amPm);
   };
@@ -321,19 +651,41 @@ export default function Events() {
   const [eventDropDown, seteventDropDown] = useState(false);
   const [registration, setRegistration] = useState("select");
 
-  const [currentPage, setCurrentPage] = useState(1);
-
   const productsPerPage = 12;
-  const indexOfLastProduct = currentPage * productsPerPage;
-  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = eventCard.slice(
-    indexOfFirstProduct,
-    indexOfLastProduct
-  );
+  const [currentPageActive, setCurrentPageActive] = useState(1)
+  const [currentPageAll, setCurrentPageAll] = useState(1)
+  
+  const upcomingEvent = eventCard.slice(
+    (currentPageActive - 1) * productsPerPage,
+    currentPageActive * productsPerPage
+  )
 
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
+  const pastEvent = pastEventCard.slice(
+    (currentPageAll - 1) * productsPerPage,
+    currentPageAll * productsPerPage
+  )
+
+  const handlePageChangeActive = (page) => {
+    setCurrentPageActive(page)
+  }
+
+  const handlePageChangeAll = (page) => {
+    setCurrentPageAll(page)
+  }
+
+  const [createEventTime,setCreateEventTime] = useState({
+    startTimeHour:0,
+    startTimeMinutes:0,
+    amStart: "AM",
+    closingTimeHour:0,
+    closingTimeMinutes:0,
+    amClose:"AM"
+  })
+
+  const handleCreateEventTime = (updatedTime) => {
+    setCreateEventTime((prevTime) => ({...prevTime,...updatedTime}))
+  }
+
   return (
     <div className={style.container}>
       <div className={`${style.menuTwo}`}>
@@ -386,20 +738,40 @@ export default function Events() {
           </div>
         </div>
         <div className={style.row}>
-          {currentProducts.map((item, index) => (
-            <div key={index} className={style.eventCard} onClick={() => navigate('/eventdetails')}>
-              <img className={style.offerCardImg} src={item.images} />
-              <div className={style.cardHeading}>
-                <div>
-                  <div className={style.eventName}>Name of Events</div>
-                  <div className={style.eventDate}>27 Jan 2023 </div>
+        {btn
+            ? pastEvent.map((item, index) => (
+                <div
+                  key={index}
+                  className={style.eventCard}
+                >
+                  <img className={style.offerCardImg} src={item.images} />
+                  <div className={style.cardHeading}>
+                    <div>
+                      <div className={style.eventName}>{item.title}</div>
+                      <div className={style.eventDate}>{item.date}</div>
+                    </div>
+                  </div>
                 </div>
-                <div className={style.cardBtnWrapper}>
-                  <div className={style.cardBtn}>Upcoming</div>
+              ))
+            : upcomingEvent.map((item, index) => (
+                <div
+                  key={index}
+                  className={style.eventCard}
+                  onClick={() => navigate("/eventdetails")}
+                >
+                  <img className={style.offerCardImg} src={item.images} />
+                  <div className={style.cardHeading}>
+                    <div>
+                      <div className={style.eventName}>{item.title}</div>
+                      <div className={style.eventDate}>{item.date}</div>
+                    </div>
+                    <div className={style.cardBtnWrapper}>
+                      <div className={style.cardBtn}>Upcoming</div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              ))}
+          
         </div>
       </div>
 
@@ -696,12 +1068,20 @@ export default function Events() {
           </div>
         </>
       </Modal>
-
-      <Pagination
-        currentPage={currentPage}
+      { btn ? (
+        <Pagination
+        currentPage={currentPageAll}
         totalPages={Math.ceil(eventCard.length / productsPerPage)}
-        onPageChange={handlePageChange}
-      />
+        onPageChange={handlePageChangeAll}
+      /> 
+      ) : (
+        <Pagination
+        currentPage={currentPageActive}
+        totalPages={Math.ceil(pastEventCard.length / productsPerPage)}
+        onPageChange={handlePageChangeActive}
+      /> 
+      )}
+    
     </div>
   );
 }

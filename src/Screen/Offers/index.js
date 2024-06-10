@@ -14,165 +14,795 @@ export default function Offer() {
   const [isSelected, setIsSelect] = useState(false);
   const [search, setSearch] = useState("");
   const [btn, setBtn] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
+  const [isOfferModalVisible, setIsOfferModalVisible] = useState(false);
+ 
+
+
   const [offerCard, setOfferCard] = useState([
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
     {
       images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
     },
   ]);
-  const [dropDown, setDropDown] = useState(false);
+
+  const [pastOfferCard, setPastOfferCard] = useState([
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+    {
+      images: images.offerCardImg,
+      title: "Free Coffee Just For You",
+      date: "08/17/2023",
+      descriptionOne: "Free Coffee on Manhattan Outlet",
+      descriptionTwo: "Offer Valid Till 08/17/2023",
+      descriptionThree: "Terms and Conditions Apply",
+    },
+  ]);
+
   const handleDropdownToggle = (index) => {
     setDropDown(dropDown === index ? false : index);
   };
-  const [isOfferModalVisible, setIsOfferModalVisible] = useState(false);
-
+  
   const navigate = useNavigate();
-
 
   const [filterTodo, setFilterTodo] = useState([
     { name: "Name 1", price: "Price 1" },
     { name: "Name 2", price: "Price 2" },
-    { name: "Name 3", price: "Price 3" }
+    { name: "Name 3", price: "Price 3" },
   ]);
 
   const addFilterTodo = () => {
@@ -199,39 +829,46 @@ export default function Offer() {
     setFilterTodo(updatedFilterTodos);
   };
 
-
-
   const [selectedImage, setSelectedImage] = useState(null);
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     setSelectedImage(file);
   };
+
   const [startDate, setStartDate] = useState(new Date());
   const [offerTitle, setOfferTitle] = useState("");
   const [offerDescription, setOfferDescription] = useState("");
-  const [discountOfferName, setDiscountOfferName] = useState("");
-  const [discountOfferPrice, setDiscountOfferPrice] = useState("");
   const [eventDropDown, seteventDropDown] = useState(false);
   const [registration, setRegistration] = useState("select");
   const [selectBtn, setSelectBtn] = useState(false);
 
-  const [currentPage, setCurrentPage] = useState(1);
 
-  const productsPerPage = 9;
-  const indexOfLastProduct = currentPage * productsPerPage;
-  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = offerCard.slice(
-    indexOfFirstProduct,
-    indexOfLastProduct
-  );
+  const productsPerPage = 12;
 
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
+  const [currentPageActive,setCurrentPageActive] = useState(1)
+  const [currentPageAll, setCurrentPageAll] = useState(1)
+
+  const currentOffer = offerCard.slice(
+    (currentPageActive - 1) * productsPerPage,
+    currentPageActive * productsPerPage
+  )
+
+  const pastOffer = pastOfferCard.slice(
+    (currentPageAll - 1) * productsPerPage,
+    currentPageAll * productsPerPage
+  )
+  const handlePageChangeActive = (page) => {
+    setCurrentPageActive(page)
+  }
+
+  const handlePageChangeAll = (page) => {
+    setCurrentPageAll(page)
+  }
+
 
   return (
     <div className={style.container}>
-       <div className={`${style.menuTwo}`}>
+      <div className={`${style.menuTwo}`}>
         <div
           className={`${style.searchWrapper}  flex items-center justify-between`}
         >
@@ -262,12 +899,12 @@ export default function Offer() {
       <div className={style.menu}>
         <div className={style.btnWrapper}>
           <div className={style.offerHeadingWrapper}>
-            <div onClick={() => setBtn(!btn)}>
+            <div onClick={() => setBtn(false)}>
               <div className={btn ? style.word : style.greenBtn}>
                 Current Offers
               </div>
             </div>
-            <div onClick={() => setBtn(!btn)}>
+            <div onClick={() => setBtn(true)}>
               <div className={btn ? style.greenBtn : style.word}>
                 Past Offers
               </div>
@@ -281,48 +918,136 @@ export default function Offer() {
           </div>
         </div>
         <div className={style.row}>
-          {currentProducts.map((item, index) => (
-            <div key={index} className={style.itemCard}
-              onClick={() => navigate('/createoffer')}
-              //  onClick={() => navigate('/createoffer', { state: { item } })}
-            >
-              <img className={style.offerCardImg} src={item.images} />
-              <div className={style.cardHeading}>
-                <div className={style.itemName}>Free Coffee Just For You</div>
-                <div className={style.OfferCardDate } >08/17/2023</div>
-              </div>
-              <div className={style.OfferInfo}>
-                <ul>
-                  <li>Free Coffee on Manhattan Outlet</li>
-                  <li>Offer Valid Till 08/17/2023</li>
-                  <li>Terms and Conditions Apply</li>
-                </ul>
+          {btn
+            ? pastOffer.map((item, index) => (
                 <div
-                  onClick={() => handleDropdownToggle(index)}
-                  className={style.dotMenu}
+                  key={index}
+                  className={style.itemCard}
+                  // onClick={() => navigate('/createoffer')}
+                  //  onClick={() => navigate('/createoffer', { state: { item } })}
                 >
-                  {dropDown === index ? (
-                    <div className={style.dropdown}>
-                      <div className={style.edit}>
-                        <img className={style.editIcon} src={images.editIcon} />
-                        Edit
-                      </div>
-                      <div className={style.line}></div>
-                      <div className={style.remove}>
+                  <img
+                    className={style.offerCardImg}
+                    src={item.images}
+                  />
+                  <div
+                    className={style.cardHeading}
+                  >
+                    <div className={style.itemName}>{item.title}</div>
+                    <div className={style.OfferCardDate}>{item.date}</div>
+                  </div>
+                  <div className={style.OfferInfo}>
+                    <ul
+                      className="list-disc ml-5"
+                    >
+                      <li className="text-black text-base">
+                        {item.descriptionOne}
+                      </li>
+                      <li className="text-black text-base">
+                        {item.descriptionTwo}
+                      </li>
+                      <li className="text-black text-base">
+                        {item.descriptionThree}
+                      </li>
+                    </ul>
+                    <div
+                      onClick={() => handleDropdownToggle(index)}
+                      className={style.dotMenu}
+                    >
+                      {dropDown === index ? (
+                        <div className={style.dropdown}>
+                          <div className={style.edit}>
+                            <img
+                              className={style.editIcon}
+                              src={images.editIcon}
+                            />
+                            Edit
+                          </div>
+                          <div className={style.line}></div>
+                          <div className={style.remove}>
+                            <img
+                              className={style.removeIcon}
+                              src={images.removeIcon}
+                            />
+                            Remove
+                          </div>
+                        </div>
+                      ) : (
                         <img
-                          className={style.removeIcon}
-                          src={images.removeIcon}
+                          className={style.blackDots}
+                          src={images.blackDots}
                         />
-                        Remove
-                      </div>
+                      )}
                     </div>
-                  ) : (
-                    <img className={style.blackDots} src={images.blackDots} />
-                  )}
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              ))
+            : currentOffer.map((item, index) => (
+                <div
+                  key={index}
+                  className={style.itemCard}
+                  // onClick={() => navigate('/createoffer')}
+                  //  onClick={() => navigate('/createoffer', { state: { item } })}
+                >
+                  <img
+                    className={style.offerCardImg}
+                    src={item.images}
+                    onClick={() => navigate("/createoffer")}
+                  />
+                  <div
+                    className={style.cardHeading}
+                    onClick={() => navigate("/createoffer")}
+                  >
+                    <div className={style.itemName}>{item.title}</div>
+                    <div className={style.OfferCardDate}>{item.date}</div>
+                  </div>
+                  <div className={style.OfferInfo}>
+                    <ul
+                      onClick={() => navigate("/createoffer")}
+                      className="list-disc ml-5"
+                    >
+                      <li className="text-black text-base">
+                        {item.descriptionOne}
+                      </li>
+                      <li className="text-black text-base">
+                        {item.descriptionTwo}
+                      </li>
+                      <li className="text-black text-base">
+                        {item.descriptionThree}
+                      </li>
+                    </ul>
+                    <div
+                      onClick={() => handleDropdownToggle(index)}
+                      className={style.dotMenu}
+                    >
+                      {dropDown === index ? (
+                        <div className={style.dropdown}>
+                          <div className={style.edit} onClick={() => navigate("/createoffer")} >
+                            <img
+                              className={style.editIcon}
+                              src={images.editIcon}
+                            />
+                            Edit
+                          </div>
+                          <div className={style.line}></div>
+                          <div className={style.remove}>
+                            <img
+                              className={style.removeIcon}
+                              src={images.removeIcon}
+                            />
+                            Remove
+                          </div>
+                        </div>
+                      ) : (
+                        <img
+                          className={style.blackDots}
+                          src={images.blackDots}
+                        />
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
         </div>
       </div>
       <Modal
@@ -513,12 +1238,20 @@ export default function Offer() {
           </div>
         </div>
       </Modal>
-
-      <Pagination
-        currentPage={currentPage}
+      { btn ? (
+        <Pagination
+        currentPage={currentPageAll}
         totalPages={Math.ceil(offerCard.length / productsPerPage)}
-        onPageChange={handlePageChange}
-      />
+        onPageChange={handlePageChangeAll}
+      /> 
+      ) : (
+        <Pagination
+        currentPage={currentPageActive}
+        totalPages={Math.ceil(pastOfferCard.length / productsPerPage)}
+        onPageChange={handlePageChangeActive}
+      /> 
+      )}
+      
     </div>
   );
 }

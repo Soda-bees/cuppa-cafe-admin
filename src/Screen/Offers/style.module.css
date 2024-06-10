@@ -149,7 +149,7 @@
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     border-radius: 10px;
     border: 1px solid #727272;
@@ -164,6 +164,7 @@
 .edit {
     display: flex;
     font-size: 18px;
+    margin-right: 30px;
 }
 
 .editIcon {

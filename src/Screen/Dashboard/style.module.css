@@ -104,7 +104,6 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-  margin-right: 30px;
 }
 
 .graphHeading {
@@ -114,6 +113,7 @@
 
 .graphSettingIcon {
   width: 20px;
+  margin-left: 20px;
 }
 
 .graph {
@@ -148,6 +148,8 @@
   color: #4cad00;
   font-size: 22px;
   font-weight: 500;
+  display: flex;
+  align-items: center;
 }
 
 .growthArrow {
@@ -233,7 +235,7 @@
 }
 
 .listItemFour {
-  /* width: 90px; */
+  width: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -591,6 +593,8 @@
 
   .grothPrice {
     font-size: 15px;
+    display: flex;
+    align-items: center;
   }
 
   /* .quantity {

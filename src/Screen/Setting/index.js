@@ -14,13 +14,21 @@ export default function Setting() {
   const [email, setEmail] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [value, setValue] = useState("");
+  const [profileCountryCode, setProfileCountryCode] = useState("US")
+  const [profileCountryCodeValue, setProfileCountryCodeValue] = useState("");
+  const [outletCountryCode, setOultetCountryCode]= useState("US")
+  const [outletCountryCodeValue, setOutletCountryCodeValue] = useState("");
   const [panel, setPanel] = useState('profile')
   const [selectedCountry, setSelectedCountry] = useState(false)
-  const [countryName, setcountryName] = useState("Select Country")
+  const [profileCountryName, setProfileCountryName] = useState("Select Country")
+  const [outletCountryName, setOutletCountryName] = useState("Select Country")
   const country = Country.getAllCountries()
   const [outletNmae, setOutletNmae] = useState('')
   const [description, setDescription] = useState('')
+  const [cafeName, setCafeName] = useState("Havana Cafe")
+  const [mainLocation, setMainLocation] = useState("NY, Newyork")
+  const [outletRating, setOutletRating] = useState("4.8")
+
 
   const handleLogout = () => {
     dispatch(clearAuthToken());
@@ -72,15 +80,15 @@ export default function Setting() {
 
         <img className={style.coverImg} src={images.settingCoverImg} />
         <div className={style.headingWrapper}>
-          <div className={style.cafeName}>Havana Cafe</div>
+          <div className={style.cafeName}>{cafeName}</div>
           <div className={style.infoWrapper}>
             <div className={style.location}>
               <img className={style.locationIcon} src={images.locationIcon} />
-              <span>NY, Newyork</span>
+              <span>{mainLocation}</span>
             </div>
             <div className={style.rating}>
               <img src={images.ratingIcon} className={style.starRating} />
-              <span>4.8</span>
+              <span>{outletRating}</span>
             </div>
           </div>
         </div>
@@ -165,9 +173,9 @@ export default function Setting() {
               <div className={style.contactWrapper}>
                 <div className={style.inputHeadingTwo}>Contact Number</div>
                 <PhoneInput
-                  value={value}
-                  defaultCountry="US"
-                  onChange={setValue}
+                  value={profileCountryCodeValue}
+                  defaultCountry={profileCountryCode}
+                  onChange={setProfileCountryCodeValue}
                   className={style.custom_phone_input}
                 />
               </div>
@@ -176,13 +184,13 @@ export default function Setting() {
                 {selectedCountry ? <div className={style.country}>
                   {country.map((country, index) => (
                     <div key={index} onClick={() => {
-                      setcountryName(country.name)
+                      setProfileCountryName(country.name)
                       setSelectedCountry(!selectedCountry)
                     }} className={style.countryName}>{country.name}</div>
                   ))}
                 </div>
                   :
-                  <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName}
+                  <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{profileCountryName}
                     <img className={style.downArrowIcon}  src={images.downArrow} /></div>}
               </div>
             </div>
@@ -246,9 +254,9 @@ export default function Setting() {
                   <div className={style.contactWrapper}>
                     <div className={style.inputHeadingTwo}>Contact Number</div>
                     <PhoneInput
-                      value={value}
-                      defaultCountry="US"
-                      onChange={setValue}
+                      value={outletCountryCodeValue}
+                      defaultCountry={outletCountryCode}
+                      onChange={setOutletCountryCodeValue}
                       className={style.custom_phone_input}
                     />
                   </div>
@@ -257,13 +265,13 @@ export default function Setting() {
                     {selectedCountry ? <div className={style.country}>
                       {country.map((country, index) => (
                         <div key={index} onClick={() => {
-                          setcountryName(country.name)
+                          setOutletCountryName(country.name)
                           setSelectedCountry(!selectedCountry)
                         }} className={style.countryName}>{country.name}</div>
                       ))}
                     </div>
                       :
-                      <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{countryName}
+                      <div onClick={() => setSelectedCountry(!selectedCountry)} className={style.conutrySelect} >{outletCountryName}
                         <img src={images.downArrow} className={style.downArrowIcon}  /></div>}
                   </div>
                 </div>

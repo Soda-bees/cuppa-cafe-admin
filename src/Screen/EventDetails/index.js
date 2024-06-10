@@ -28,6 +28,11 @@ export default function EventDetails() {
     const [closingTimeFinal, setClosingTimeFinal] = useState("AM");
     const [startTimeFinal, setStartTimeFinal] = useState("AM");
     const [selectBtn, setSelectBtn] = useState(false);
+    const [isEditable, setIsEditable] = useState(false)
+
+    const toggleEditEventDetailMode = () => {
+        setIsEditable(!isEditable)
+    }
 
     const handleInputChange = (text, setter, maxValue) => {
         if (text === "" || (Number(text) >= 0 && Number(text) <= maxValue)) {
@@ -71,8 +76,8 @@ export default function EventDetails() {
                     Event Details
                 </div>
 
-                <div className={style.btn}>
-                    Edit Event
+                <div className={style.btn} onClick={toggleEditEventDetailMode}>
+                    {isEditable ? "Save Event" : "Edit Event"}
                 </div>
             </div>
             <div className={style.eventDeatailWrapper}>
@@ -89,7 +94,7 @@ export default function EventDetails() {
                         <div className={style.infoWrapper}>
                             <div className={style.textField}>
                                 <div className={style.inputHeading}>Event Name</div>
-                                <input className={style.userIput} />
+                                <input className={style.userIput} disabled={!isEditable}/>
                             </div>
                             <div className={style.textField}>
                                 <div className={style.inputHeading}>Date</div>
@@ -98,13 +103,14 @@ export default function EventDetails() {
                                         selected={startDate}
                                         onChange={(date) => setStartDate(date)}
                                         className={style.datePicker}
+                                        disabled={!isEditable}
                                     />
                                     <img className={style.calenderImg} src={images.calendar} />
                                 </div>
                             </div>
                         </div>
                         <div className={style.infoWrapper}>
-                            <div className={style.textField} onClick={() => setTimeModal(true)}>
+                            <div className={style.textField} onClick={() => isEditable && setTimeModal(true)}>
                                 <div className={style.inputHeading}>Time</div>
                                 <div className={style.registrationDropDown}>
                                     <div className={style.registrationHeading}> {startTimeHour}:{startTimeMinutes} {amStart} -{" "}
@@ -117,7 +123,7 @@ export default function EventDetails() {
                             </div>
                             <div className={style.textField3}>
                                 <div className={style.inputHeading}>Event Type</div>
-                                {eventTypeDD ? (
+                                {eventTypeDD && isEditable ? (
                                     <div className={style.dropDown}>
                                         <div
                                             className={style.registrationHeading}
@@ -140,7 +146,7 @@ export default function EventDetails() {
                                     </div>
                                 ) : (
                                     <div
-                                        onClick={() => setEventTypeDD(!eventTypeDD)}
+                                        onClick={() => isEditable && setEventTypeDD(!eventTypeDD)}
                                         className={style.registrationDropDown}
                                     >
                                         <div className={style.registrationHeading}>
@@ -157,7 +163,7 @@ export default function EventDetails() {
                         <div className={style.infoWrapper}>
                             <div className={style.textField2}>
                                 <div className={style.inputHeading}>Registration</div>
-                                {eventDropDown ? (
+                                {eventDropDown && isEditable ? (
                                     <div className={style.dropDown}>
                                         <div
                                             className={style.registrationHeading}
@@ -180,7 +186,7 @@ export default function EventDetails() {
                                     </div>
                                 ) : (
                                     <div
-                                        onClick={() => seteventDropDown(!eventDropDown)}
+                                        onClick={() => isEditable && seteventDropDown(!eventDropDown)}
                                         className={style.registrationDropDown}
                                     >
                                         <div className={style.registrationHeading}>
@@ -196,7 +202,7 @@ export default function EventDetails() {
                             </div>
                             <div className={style.textField}>
                                 <div className={style.inputHeading}>Description</div>
-                                <input className={style.userIput}onChange={(e) => setDescription(e.target.value)} />
+                                <input className={style.userIput}onChange={(e) => setDescription(e.target.value)}  disabled={!isEditable}/>
                             </div>
                         </div>
                     </div>

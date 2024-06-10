@@ -10,6 +10,7 @@ import { setAuthToken } from '../../store/authTokenSlice';
 
 export default function SignUp() {
     const [value, setValue] = useState('')
+    const [countryCode, setCountryCode] = useState("US")
     const [selectedCountry, setSelectedCountry] = useState(false)
     const [shopName, setShopName] = useState('')
     const [adminName, setAdminName] = useState('')
@@ -95,7 +96,7 @@ export default function SignUp() {
                         <div className={style.inputHeading}>Contact Number</div>
                         <PhoneInput
                             value={value}
-                            defaultCountry='US'
+                            defaultCountry={countryCode}
                             onChange={setValue}
                             className={style.custom_phone_input}
                         />

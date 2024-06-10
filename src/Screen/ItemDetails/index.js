@@ -196,33 +196,6 @@ export default function ItemDetails() {
                             </div>
                         }
 
-
-                        {/* <div>
-                            <div className={style.headingWrapperThree}>
-                                <div className={style.infoheadingTwo}>Name</div>
-                                <div className={style.infoheadingTwo}>Extra Charges</div>
-                            </div>
-                            <div className={style.row}>
-                                <div><input className={style.textInputFour} value='Whole Milk' type='text' /></div>
-                                <div><input className={style.textInputFour} value='$4.50' type='text' /></div>
-                            </div>
-                            <div className={style.row}>
-                                <div><input className={style.textInputFour} value='2% Milk' type='text' /></div>
-                                <div><input className={style.textInputFour} value='$4.50' type='text' /></div>
-                            </div>
-                            <div className={style.row}>
-                                <div><input className={style.textInputFour} value='Skim Milk' type='text' /></div>
-                                <div><input className={style.textInputFour} value='$4.50' type='text' /></div>
-                            </div>
-                            <div className={style.row}>
-                                <div><input className={style.textInputFour} value='Almond Milk' type='text' /></div>
-                                <div><input className={style.textInputFour} value='$4.50' type='text' /></div>
-                            </div>
-                            <div className={style.row}>
-                                <div><input className={style.textInputFour} value='Lactose-Free Milk' type='text' /></div>
-                                <div><input className={style.textInputFour} value='$4.50' type='text' /></div>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </div>
