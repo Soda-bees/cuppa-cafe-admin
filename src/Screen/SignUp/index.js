@@ -7,6 +7,8 @@ import { Country } from 'country-state-city';
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux"
 import { setAuthToken } from '../../store/authTokenSlice';
+import { signUp } from '../../services/config/Api';
+import { ClipLoader } from "react-spinners"
 
 export default function SignUp() {
     const [value, setValue] = useState('')
@@ -17,10 +19,26 @@ export default function SignUp() {
     const [password, setPassword] = useState('')
     const [isChecked, setIsChecked] = useState(false)
     const [countryName, setcountryName] = useState("Select Country")
-    const country = Country.getAllCountries()
+    const [isSelected, setIsSelected] = useState('cafe');
+    const [loader, setLoader] = useState(false)
 
+    const country = Country.getAllCountries()
     const navigate = useNavigate();
     const dispatch = useDispatch()
+
+    const handleSignUp = async () => {
+        setLoader(true)
+        try {
+            const body = {
+
+            }
+            const response = await signUp(body)
+            console.log("respons=-=--=-=-==-=->", response);
+            setLoader(false)
+        } catch (error) {
+            console.log("signup error ", error);
+        }
+    }
 
     // const handleSignin = () => {
     //     const token = "authToken";
@@ -28,7 +46,6 @@ export default function SignUp() {
     //     navigate("/menu");
     // };
 
-    const [isSelected, setIsSelected] = useState('cafe');
     return (
 
         <div className={style.container}>
@@ -125,13 +142,22 @@ export default function SignUp() {
                     </div>
                     <div className={style.btnWrapper}>
                         <div className={style.btn}
-                            onClick={() => navigate('/outlet')}>
+                            onClick={() =>
+                                //  navigate('/outlet')
+                                handleSignUp()
+                            }>
                             <div className={style.btnheading}>
                                 Get Started
                             </div>
                             <div className={style.arrow}>
-                                <img className={style.arrowImg} src={images.singInArrow} />
-                            </div>
+                                {
+                                    loader ?
+                                        <ClipLoader color="#36d7b7" size={24} speedMultiplier={0.8} />
+                                        :
+
+                                        <img className={style.arrowImg} src={images.singInArrow} />
+                                        }
+                                    </div>
                         </div>
 
                     </div>
