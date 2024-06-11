@@ -1,204 +1,354 @@
-import React, { useEffect, useState } from 'react'
-import style from './style.module.css'
-import images from '../../asset'
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import style from "./style.module.css";
+import images from "../../asset/index";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useSelector } from "react-redux";
 
-export default function ItemDetails() {
+export default function AddItem() {
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [itemName, setItemName] = useState("");
+  const [itemDescription, setItemDescription] = useState("");
+  const [sizes, setSizes] = useState([{ size: "", price: "", serving: "" }]);
 
-    const navigate = useNavigate()
+  const [specifications, setSpecifications] = useState([
+    {
+      filterName: "",
+      options: [{ optionName: "", extraCharges: "" }],
+      multiple: false,
+      optional: false,
+    },
+  ]);
+  const [isEditMode, setIsEditMode] = useState(false);
+  const navigate = useNavigate();
 
-    const location = useLocation();
-    const [item, setItem] = useState()
+  const addSizes = () => {
+    setSizes([...sizes, { size: "", price: "", serving: "" }]);
+  };
 
-    useEffect(() => {
-        if (location.state && location.state.item) {
-            setItem(location.state.item);
-            console.log("-==-offer details=-", location?.state?.item);
-        }
-    }, [location.state]);
+  const handleSizesChange = (index, field, value) => {
+    const updatedSizes = [...sizes];
+    updatedSizes[index] = { ...updatedSizes[index], [field]: value };
+    setSizes(updatedSizes);
+  };
 
+  const deleteSizes = (index) => {};
 
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    setSelectedImage(file);
+  };
 
-
-    const [itenName, setItenName] = useState('')
-    const [itenDescription, setItenDescription] = useState('')
-    const [specification, setSpecification] = useState(false)
-    const [todos, setTodos] = useState([
-        {
-            size: "",
-            price: "",
-            serves: "",
-        }
-    ]);
-    const addTodo = () => {
-        const newTodo = {
-            size: "",
-            price: "",
-            serves: "",
-        };
-        setTodos([...todos, newTodo]);
+  const handleSpecification = (index, field, value) => {
+    const updatedSpecifications = [...specifications];
+    updatedSpecifications[index] = {
+      ...updatedSpecifications[index],
+      [field]: value,
     };
+    setSpecifications(updatedSpecifications);
+  };
 
-    const handleTodoChange = (index, field, value) => {
-        const updatedTodos = [...todos];
-        updatedTodos[index] = { ...updatedTodos[index], [field]: value };
-        setTodos(updatedTodos);
+  const addOptions = (specificIndex) => {
+    const updatedSpecifications = [...specifications];
+    updatedSpecifications[specificIndex].options.push({
+      optionName: "",
+      extraCharges: "",
+    });
+    setSpecifications(updatedSpecifications);
+  };
+
+  const handleOptionChange = (specificIndex, optionIndex, field, value) => {
+    const updatedSpecifications = [...specifications];
+    updatedSpecifications[specificIndex].options[optionIndex] = {
+      ...updatedSpecifications[specificIndex].options[optionIndex],
+      [field]: value,
     };
+    setSpecifications(updatedSpecifications);
+  };
 
+  const handleDeleteOption = (specificIndex, optionIndex) => {
+    const updatedSpecifications = [...specifications];
+    updatedSpecifications[specificIndex].options.splice(optionIndex, 1);
+    setSpecifications(updatedSpecifications);
+  };
 
-    const [filterTodo, setFilterTodo] = useState([{
-        name: "",
-        price: "",
-    }]);
-
-    const addFilterTodo = () => {
-        // Create a new todo object and add it to the todos array
-        const newFilterTodo = {
-            name: "",
-            price: "",
-        };
-        setFilterTodo([...filterTodo, newFilterTodo]);
-    };
-
-    const handleFilterTodoChange = (index, field, value) => {
-        const updatedFilterTodos = [...filterTodo];
-        updatedFilterTodos[index] = {
-            ...updatedFilterTodos[index],
-            [field]: value,
-        };
-        setFilterTodo(updatedFilterTodos);
-    };
-
-
-    return (
-        <div className={style.container}>
-            <div className={style.headingWrapper}>
-                <div className={style.backBtn} onClick={() => navigate('/menu')}>
-                    <img className={style.backArrow} src={images.backArrow}
-
-                    />
-                </div>
-                <div className={style.heading}>
-                    Item Details
-                </div>
-
-                <div className={style.btn}>
-                    Edit Items
-                </div>
-            </div>
-            <div className={style.itemDetailsWrapper}>
-                <div className={style.addItemLeft}>
-                    <div className={style.addItemDetails}>
-                        <div>
-                        <img className={style.itemImg} src={item?.images} />
-                        </div>
-                        <div className={style.infoWrapper}>
-                            <div className={style.textFeild}>
-                                <div className={style.inputHeading}>Item Name</div>
-                                <input className={`${style.textInput}`} type='text' onChange={(e) => setItenName(e.target.value)} />
-                            </div>
-                            <div className={style.textFeildTwo}>
-                                <div className={style.inputHeading}>Description</div>
-                                <textarea
-                                    className={`${style.textInputTwo}`} type='text' onChange={(e) => setItenDescription(e.target.value)}
-                                    rows={5}
-                                />
-                            </div>
-                        </div>
-
-                    </div>
-                    <div className={style.rowHeadingWrapper}>
-                        <div className={style.headingWrapperTwo}>
-                            <div className={style.infoheading}>Size</div>
-                            <div className={style.infoheading}>Price</div>
-                            <div className={style.infoheading}>Serves</div>
-                        </div>
-
-                    </div>
-                    {todos.map((todo, index) => (
-                        <div className={style.row} key={index}>
-                            <input
-                                className={style.textInputThree}
-                                type="text"
-                                onChange={(e) =>
-                                    handleTodoChange(index, "size", e.target.value)
-                                }
-                                value={todo.size}
-                            />
-                            <input
-                                className={style.textInputThree}
-                                type="text"
-                                onChange={(e) =>
-                                    handleTodoChange(index, "price", e.target.value)
-                                }
-                                value={todo.price}
-                            />
-                            <input
-                                className={style.textInputThree}
-                                type="text"
-                                onChange={(e) =>
-                                    handleTodoChange(index, "serves", e.target.value)
-                                }
-                                value={todo.serves}
-                            />
-                        </div>
-                    ))}
-                </div>
-                <div className={style.addItemRight}>
-                    <div className={style.specHeadingWrapper}>
-                        <div className={style.specHeading}>
-                            Specifications
-                        </div>
-                    </div>
-
-                    <div className={style.filteritem} >
-                        <div className={style.filter}>
-                            <div>
-                                <div className={style.filterlable}> Filter Name</div>
-                            </div>
-                            <div className={style.filterNameWrapper} onClick={() => setSpecification(!specification)}>
-                                <div className={style.filterName}>Milk</div>
-                                <img className={style.menuDot} src={images.downArrow} />
-                            </div>
-
-                        </div>
-                        {specification &&
-                            <div>
-                                <div className={style.rowHeadingWrapper}>
-                                    <div className={style.headingWrapperThree}>
-                                        <div className={style.infoheadingTwo}>Name</div>
-                                        <div className={style.infoheadingTwo}>Extra Charges</div>
-                                    </div>
-                                </div>
-                                {filterTodo.map((index, todo) => (
-                                    <div className={style.row} key={index}>
-                                        <input
-                                            className={style.textInputFour}
-                                            type="text"
-                                            onChange={(e) =>
-                                                handleFilterTodoChange(index, "name", e.target.value)
-                                            }
-                                            value={todo.name}
-                                        />
-
-
-                                        <input
-                                            className={style.textInputFour}
-                                            type="text"
-                                            onChange={(e) =>
-                                                handleFilterTodoChange(index, "price", e.target.value)
-                                            }
-                                            value={todo.price}
-                                        />
-
-                                    </div>
-                                ))}
-                            </div>
-                        }
-
-                    </div>
-                </div>
-            </div>
+  return (
+    <div className={style.container}>
+      <div className={style.headingWrapper}>
+        <div
+          className={style.backBtn}
+          onClick={() => {
+            navigate("/menu");
+          }}
+        >
+          <img className={style.backArrow} src={images.backArrow} />
         </div>
-    )
+        <div className={style.heading}>Items Details</div>
+        <div className={style.btn} onClick={() => setIsEditMode(!isEditMode)}>
+          {isEditMode ? "Save Items" : "Edit Items"}
+        </div>
+      </div>
+      <div className={style.addItem}>
+        <div className={style.addItemLeft}>
+          <div className={style.addItemDetails}>
+            <div className={style.InputImg}>
+              <label for="img" className={style.uploadImage}>
+                <img
+                  src={
+                    selectedImage
+                      ? URL.createObjectURL(selectedImage)
+                      : images.uploadImgIcon
+                  }
+                  className={selectedImage ? style.seletedImg : style.icon}
+                  alt="Upload Image"
+                />
+                <input
+                  id="img"
+                  className={style.inputImg}
+                  type="file"
+                  accept="image/png,image/jpeg"
+                  onChange={handleImageChange}
+                />
+              </label>
+              <div className={style.uploadImgtext}>
+                <img className={style.uploadImg} src={images.uploadImg} />
+                Upload Images
+              </div>
+            </div>
+            <div className={style.textFeild}>
+              <div className={style.inputWrapper}>
+                <div className={style.inputHeading}>Item Name</div>
+                <input
+                  className={style.textInput}
+                  type="text"
+                  onChange={(e) => setItemName(e.target.value)}
+                />
+              </div>
+              <div className={style.inputWrapper}>
+                <div className={style.inputHeading}>Description</div>
+                <textarea
+                  cols={"10"}
+                  rows={"5"}
+                  className={style.textInputTwo}
+                  onChange={(e) => setItemDescription(e.target.value)}
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div className={style.rowHeadingWrapper}>
+            <div className={style.headingWrapperTwo}>
+              <div className={style.infoheading}>Size</div>
+              <div className={style.infoheading}>Price</div>
+              <div className={style.infoheading}>Serves</div>
+            </div>
+          </div>
+
+          {sizes.map((todo, index) => (
+            <div className={style.row} key={index}>
+              <div onClick={() => deleteSizes(index)} className={style.circle}>
+                <div className={style.greenLine}></div>
+              </div>
+
+              <input
+                className={style.textInputThree}
+                type="text"
+                onChange={(e) =>
+                  handleSizesChange(index, "size", e.target.value)
+                }
+                value={todo.size}
+              />
+
+              <input
+                className={style.textInputThree}
+                type="text"
+                onChange={(e) =>
+                  handleSizesChange(index, "price", e.target.value)
+                }
+                value={todo.price}
+              />
+
+              <input
+                className={style.textInputThree}
+                type="text"
+                onChange={(e) =>
+                  handleSizesChange(index, "serves", e.target.value)
+                }
+                value={todo.serves}
+              />
+            </div>
+          ))}
+          <div className={style.btnWrapper}>
+            <div className={style.btnTwo} onClick={addSizes}>
+              <img className={style.plusIcon} src={images.plusIcon} />
+              Add interval
+            </div>
+          </div>
+        </div>
+        <div className={style.addItemRight}>
+          <div className={style.specHeading}>
+            Specifications
+            <img className={style.rightArrow} src={images.rightArrow} />
+          </div>
+
+          <div className={style.filteritem}>
+            <div className={style.filter}>
+              <div className={style.filterName}>Filter Name</div>
+              {specifications.map((specification, specificIndex) => (
+                <div key={specificIndex}>
+                  <input
+                    className={style.input}
+                    type="text"
+                    onChange={(e) =>
+                      handleSpecification(
+                        specificIndex,
+                        "filterName",
+                        e.target.value
+                      )
+                    }
+                    value={specification.filterName}
+                  />
+                </div>
+              ))}
+            </div>
+            <div>
+              <div className={style.filterOption}>Filter Options</div>
+              <div className={style.rowHeadingWrapper}>
+                <div className={style.headingWrapperThree}>
+                  <div className={style.infoheadingTwo}>Name</div>
+                  <div className={style.infoheadingTwo}>Extra Charges</div>
+                </div>
+              </div>
+              {specifications.map((specification, specificIndex) => (
+                <div key={specificIndex}>
+                  {specification.options.map((option, optionIndex) => (
+                    <div className={style.row} key={optionIndex}>
+                      <div
+                        onClick={() =>
+                          handleDeleteOption(specificIndex, optionIndex)
+                        }
+                        className={style.circle}
+                      >
+                        <div className={style.greenLine}></div>
+                      </div>
+
+                      <input
+                        className={style.textInputFour}
+                        type="text"
+                        onChange={(e) =>
+                          handleOptionChange(
+                            specificIndex,
+                            optionIndex,
+                            "optionName",
+                            e.target.value
+                          )
+                        }
+                        value={option.optionName}
+                      />
+
+                      <input
+                        className={style.textInputFour}
+                        type="text"
+                        onChange={(e) =>
+                          handleOptionChange(
+                            specificIndex,
+                            optionIndex,
+                            "extraCharges",
+                            e.target.value
+                          )
+                        }
+                        value={option.extraCharges}
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            {specifications.map((specification, specificIndex) => (
+              <div className={style.btnWrapperTwo} key={specificIndex}>
+                <div
+                  className={style.btnThree}
+                  onClick={() => addOptions(specificIndex)}
+                >
+                  <img className={style.plusIcon} src={images.plusIcon} />
+                  Add option
+                </div>
+              </div>
+            ))}
+
+            {specifications.map((specification, specificIndex) => (
+              <div key={specificIndex}>
+                <div className={style.required}>
+                  Make it required
+                  {specifications[specificIndex].multiple ? (
+                    <div
+                      className={style.ovalBtn}
+                      onClick={() =>
+                        handleSpecification(specificIndex, "multiple", false)
+                      }
+                    >
+                      <div className={style.whiteBtn}></div>
+                    </div>
+                  ) : (
+                    <div
+                      className={style.notSelectedBtn}
+                      onClick={() =>
+                        handleSpecification(specificIndex, "multiple", true)
+                      }
+                    >
+                      <div className={style.notSelectedgreen}></div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+
+            <div className={style.actionWrapper}>
+              <div className={style.actionHeading}>Action</div>
+              <div className={style.chooseWrapper}>
+                {specifications.map((specification, specificIndex) => (
+                  <React.Fragment key={specificIndex}>
+                    <div
+                      onClick={() =>
+                        handleSpecification(
+                          specificIndex,
+                          "optional",
+                          !specifications[specificIndex].optional
+                        )
+                      }
+                      className={
+                        specifications[specificIndex].optional
+                          ? style.chooseMany
+                          : style.chooseOne
+                      }
+                    >
+                      Choose One
+                    </div>
+                    <div
+                      onClick={() =>
+                        handleSpecification(
+                          specificIndex,
+                          "optional",
+                          !specifications[specificIndex].optional
+                        )
+                      }
+                      className={
+                        specifications[specificIndex].optional
+                          ? style.chooseOne
+                          : style.chooseMany
+                      }
+                    >
+                      Choose Many
+                    </div>
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
+            {/* <div className={style.btnWrapperFour}>
+              <div className={style.btn}>Add filter</div>
+            </div> */}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }

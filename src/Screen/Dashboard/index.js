@@ -134,10 +134,6 @@ export default function Dashboard() {
     setDropDown((prevIndex) => (prevIndex === index ? null : index));
   };
 
-  // const handleRaitngChange = (newRating) => {
-  //   setTotalAveragesRating(newRating);
-  // };
-
   const [reply, setReply] = useState(null);
   
   const togglereply = (index) => {

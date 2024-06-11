@@ -528,11 +528,12 @@ export default function Menu() {
                     //   </div>
                     // </div>
                     <div className="bg-bgColor md:w-24 w-10 rounded-lg pl-1 flex flex-col ">
-                      <div className="border-b w-full flex items-center active:opacity-50 px-2 pt-2 pb-1 gap-2 ">
+                      <div className="border-b w-full flex items-center active:opacity-50 px-2 pt-2 pb-1 gap-2 "
+                      onClick={() => setIsEditModalVisible(true)}>
                         <div className="h-4 w-4">
                           <img src={images.editIcon} className="" />
                         </div>
-                        <div className="text-sm hidden  md:flex">Edit</div>
+                        <div className="text-sm hidden  md:flex" >Edit</div>
                       </div>
                       <div className="w-full flex items-center  active:opacity-50 px-2 py-2 gap-2 ">
                         <div className="h-4 w-4 ">
