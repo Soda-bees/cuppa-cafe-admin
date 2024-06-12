@@ -1,4 +1,3 @@
-// import { React, useState } from "react";
 import style from "./style.module.css";
 import images from "../../asset/index";
 import PhoneInput from "react-phone-number-input";
@@ -7,7 +6,7 @@ import { Country } from "country-state-city";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setAuthToken } from "../../store/authTokenSlice";
-import { signUp } from "../../services/config/Api";
+import { emailVerification, signUp } from "../../services/config/Api";
 import { ClipLoader } from "react-spinners";
 import React, { useState, useEffect } from "react";
 
@@ -23,64 +22,66 @@ export default function SignUp() {
   const [countryCode, setCountryCode] = useState("US");
   const [isSelected, setIsSelected] = useState("cafe");
   const [loader, setLoader] = useState(false);
-  const [latitude, setLatitude] = useState('')
-  const [longitude, setLongitude] = useState('')
 
   const country = Country.getAllCountries();
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  React.useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-        setLatitude(position.coords.latitude)
-        setLongitude(position.coords.longitude)
-        console.log(position.coords)
-        alert(position.coords)
-    })
-  }, [])
-//   useEffect(() => {
-//     navigator.geolocation.getCurrentPosition((position) => {
-//       const lat = position.coords.latitude;
-//       const lon = position.coords.longitude;
 
-//       setLatitude(lat);
-//       setLongitude(lon);
-
-//       console.log(position.coords);
-//       alert(`Latitude: ${lat}, Longitude: ${lon}`);
-//     });
-//   }, []);
-
-// setTimeout(() => {
-//   alert(`lat: ${latitude} long: ${longitude}`)
-// }, 2000);
-
-  const handleSignUp = async () => {
-    setLoader(true);
-    try {
-      const body = {
-        outletName: shopName,
-        adminName,
-        // location:countryName,
-        email,
-        countryCode,
-        phoneNumber: value,
-        password,
-      };
-      const response = await signUp(body);
-      console.log("respons=-=--=-=-==-=->", response);
-      setLoader(false);
-      response?.success && navigate("/outlet");
-    } catch (error) {
-      console.log("signup error ", error);
-    }
-  };
+  // const handleSignUp = async () => {
+  //   setLoader(true);
+  //   try {
+  //     const body = {
+        // outletName: shopName,
+        // adminName,
+        // // location:countryName,
+        // email,
+        // countryCode,
+        // phoneNumber: value,
+        // password,
+  //     };
+  //     const response = await signUp(body);
+  //     console.log("respons=-=--=-=-==-=->", response);
+  //     setLoader(false);
+  //     response?.success && navigate("/outlet");
+  //   } catch (error) {
+  //     console.log("signup error ", error);
+  //   }
+  // };
 
   // const handleSignin = () => {
   //     const token = "authToken";
   //     dispatch(setAuthToken(token));
   //     navigate("/menu");
   // };
+
+
+  const handleEmailVerification = async () => {
+    setLoader(true)
+    try {
+      const body = {
+        email
+      }
+      const response = await emailVerification(body)
+      console.log("response=-=-=-=-=-=-=-=->", response)
+      setLoader(false)
+    } catch (error) {
+      console.log("Email Verification failed", error)
+    }
+  }
+
+  const data = {
+    outletName: shopName,
+    adminName,
+    email,
+    countryCode,
+    phoneNumber: value,
+    password
+  }
+
+  navigate('/outlet', {
+    state: data
+  })
 
   return (
     <div className={style.container}>
@@ -211,7 +212,8 @@ export default function SignUp() {
               className={style.btn}
               onClick={() =>
                 //  navigate('/outlet')
-                handleSignUp()
+                // handleSignUp()
+                handleEmailVerification()
               }
             >
               <div className={style.btnheading}>Get Started</div>
